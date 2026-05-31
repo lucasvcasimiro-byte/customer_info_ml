@@ -3,8 +3,7 @@ import pandas as pd
 from sklearn.preprocessing import RobustScaler
 
 
-
-
+REFERENCE_YEAR=2026
 
 SPEND_COLS = [
     'lifetime_spend_groceries',
@@ -42,7 +41,7 @@ FEATURE_COLS = [
     'total_spend',
     'spend_per_distinct_product',
     # Shares de categoria
-
+    
     'share_groceries',
     'share_electronics',
     'share_vegetables',
@@ -90,10 +89,10 @@ def build_features(df_raw: pd.DataFrame) -> pd.DataFrame:
     df['has_loyalty_card'] = df['loyalty_card_number'].notna().astype(int)
     
 
-    #  year_first_transaction — existem valores futuros (2026-2029)
+    #  2026-2029
     df['year_first_transaction'] = df['year_first_transaction'].clip(upper=REFERENCE_YEAR)
 
-    #  NaN é 0 (assumimos que nao existe filhos/teens)
+    #  Se NaN é 0 (assumimos que nao existe filhos/teens)
     df['kids_home'] = df['kids_home'].fillna(0)
     df['teens_home'] = df['teens_home'].fillna(0)
 

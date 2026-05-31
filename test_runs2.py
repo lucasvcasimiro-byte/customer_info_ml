@@ -93,16 +93,3 @@ print('\nResultados DBSCAN:')
 print(dbscan_results.to_string(index=False))
 
 
-######## MEAN SHIFT — opcional
-
-"""
-from clustering import compare_mean_shift
-
-mean_shift_results = compare_mean_shift(
-    customer_scaled,
-    FEATURE_COLS,
-    quantiles=(0.1, 0.2, 0.3),
-    sample_size=3000,
-)
-print(mean_shift_results.to_string(index=False))
-"""
