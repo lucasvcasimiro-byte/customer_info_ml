@@ -88,8 +88,6 @@ Evaluate a practical range such as `k = 3..10`. Favor a solution that balances s
 Track:
 
 - silhouette score;
-- Davies-Bouldin score;
-- Calinski-Harabasz score;
 - cluster sizes and tiny-cluster risk;
 - stability across random seeds;
 - interpretability of profiles.

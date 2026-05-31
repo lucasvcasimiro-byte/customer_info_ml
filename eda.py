@@ -6,8 +6,8 @@ from utils import *
 
 
 
-customer_info = load_data('customer_info.csv')
-customer_basket = load_data('customer_basket.csv')
+customer_info = pd.read_csv('data/customer_info.csv')
+customer_basket = pd.read_csv('data/customer_basket.csv')
 
 ####### muitas visualizacoes para entnder os dados e descobrir insights, deixei pa depois, foquei em experimentar 
 ####### clustering ja e so fiz preprocessing basico, tem mt a explorar ainda
