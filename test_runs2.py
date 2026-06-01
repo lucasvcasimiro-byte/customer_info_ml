@@ -3,7 +3,7 @@
 import numpy as np
 import pandas as pd
 
-from preprocessing import build_features, scale_features, FEATURE_COLS
+from functions.preprocessing import build_features, scale_features, FEATURE_COLS
 
 
 customer_info   = pd.read_csv('data/customer_info.csv')
@@ -18,7 +18,7 @@ print(f"Preprocessing concluído: {customer_features.shape[0]} clientes, {len(FE
 
 ######## CLUSTERING
 
-from clustering import (compare_clustering_models,fit_final_kmeans,add_clusters,cluster_size_summary,profile_clusters,plot_metric_comparison,plot_pca_cluster_map,plot_umap_cluster_map,export_customer_clusters,compare_dbscan,)
+from functions.clustering import (compare_clustering_models,fit_final_kmeans,add_clusters,cluster_size_summary,profile_clusters,plot_metric_comparison,plot_pca_cluster_map,plot_umap_cluster_map,export_customer_clusters,compare_dbscan,)
 
 # Comparar K-Means e Hierarchical para k=3,...,10
 results = compare_clustering_models(

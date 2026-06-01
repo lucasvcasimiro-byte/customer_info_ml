@@ -1,8 +1,8 @@
 import numpy as np
 import pandas as pd
 
-from utils import *
-from preprocessing import build_features, scale_features, FEATURE_COLS
+from functions.utils import *
+from functions.preprocessing import build_features, scale_features, FEATURE_COLS
 
 ####### LOADUING DATA
 
@@ -46,7 +46,7 @@ customer_scaled[num_cols] = scaler.fit_transform(customer_info[num_cols])
 
 ######## CLUSTERING
 
-from clustering import *
+from functions.clustering import *
 
 # Check which scaled modeling features still have missing values.
 # clustering.py will median-impute them before fitting the models.

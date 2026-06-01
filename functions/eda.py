@@ -8,9 +8,23 @@ import pandas as pd
 import seaborn as sns
 from matplotlib.gridspec import GridSpec
 
-from preprocessing import SPEND_COLS, build_features
+
+# Columns with lifetime_spend_, for convenience in EDA and preprocessing
+SPEND_COLS = [
+    'lifetime_spend_groceries',
+    'lifetime_spend_electronics',
+    'lifetime_spend_vegetables',
+    'lifetime_spend_nonalcohol_drinks',
+    'lifetime_spend_alcohol_drinks',
+    'lifetime_spend_meat',
+    'lifetime_spend_fish',
+    'lifetime_spend_hygiene',
+    'lifetime_spend_videogames',
+    'lifetime_spend_petfood']
 
 
+
+# Custom palette and styling 
 PALETTE   = "muted"
 BG_COLOR  = "#F8F7F4"
 ACCENT    = "#2D6A4F"
@@ -33,29 +47,25 @@ plt.rcParams.update({
 })
 
 
-
-def _save_or_show(fig, name: str) -> None:
-    """Show the figure.  Replace with fig.savefig(f'{name}.png') if needed."""
+# Lowkey parece inutil
+"""
+def     fig.tight_layout()
+    plt.show()(fig, name: str) -> None:
+    #Show the figure.  Replace with fig.savefig(f'{name}.png') if needed.
     fig.tight_layout()
     plt.show()
     plt.close(fig)
+"""
 
-
-
-
-def load_raw_data(info_path: str = "data/customer_info.csv",
-                  basket_path: str = "data/customer_basket.csv"):
-    df_info   = pd.read_csv(info_path)
-    df_basket = pd.read_csv(basket_path)
-    return df_info, df_basket
-
-
-def print_overview(df_info: pd.DataFrame, df_basket: pd.DataFrame) -> None:
+def print_overview(df_info: pd.DataFrame, df_basket: pd.DataFrame):
+    """
+    Print basic info about the datasets, customer counts, and total spend stats
+    """
     print("=" * 60)
     print("DATASET OVERVIEW")
     print("=" * 60)
-    print(f"\ncustomer_info  : {df_info.shape[0]:,} rows  ×  {df_info.shape[1]} columns")
-    print(f"customer_basket: {df_basket.shape[0]:,} rows  ×  {df_basket.shape[1]} columns")
+    print(f"\ncustomer_info  : {df_info.shape[0]:,} rows  x  {df_info.shape[1]} columns")
+    print(f"customer_basket: {df_basket.shape[0]:,} rows  x  {df_basket.shape[1]} columns")
 
     spend_cols = [c for c in df_info.columns if c.startswith("lifetime_spend")]
     df_info_copy = df_info.copy()
@@ -72,9 +82,10 @@ def print_overview(df_info: pd.DataFrame, df_basket: pd.DataFrame) -> None:
 
 # MISSING VALUES
 
-
-def plot_missing_values(df_info: pd.DataFrame) -> None:
-    """Bar chart of missing-value percentages per column."""
+def plot_missing_values(df_info: pd.DataFrame):
+    """
+    Bar chart of missing-value percentages per column
+    """
     miss_pct = (df_info.isnull().mean() * 100).sort_values(ascending=False)
     miss_pct = miss_pct[miss_pct > 0]
 
@@ -90,15 +101,17 @@ def plot_missing_values(df_info: pd.DataFrame) -> None:
     ax.set_title("Missing Values per Column", fontweight="bold", pad=12)
     ax.xaxis.set_major_formatter(mticker.PercentFormatter())
     ax.invert_yaxis()
-    _save_or_show(fig, "missing_values")
+    fig.tight_layout()
+    plt.show()
 
 
 
 # DEMOGRAPHICS
 
-
-def plot_demographics(df_info: pd.DataFrame) -> None:
-    """Age distribution, gender split, education level, household size."""
+def plot_demographics(df_info: pd.DataFrame):
+    """
+    Age distribution, gender split, education level, household size
+    """
 
     df = df_info.copy()
 
@@ -124,7 +137,7 @@ def plot_demographics(df_info: pd.DataFrame) -> None:
     fig.suptitle("Customer Demographics", fontsize=14, fontweight="bold", y=1.01)
     gs = GridSpec(2, 2, figure=fig, hspace=0.45, wspace=0.35)
 
-    # ── Age distribution ──────────────────────────────────────────────────
+    # Age distribution
     ax1 = fig.add_subplot(gs[0, 0])
     sns.histplot(df["age"].dropna(), bins=30, kde=True,
                  color=ACCENT, ax=ax1, edgecolor="white", linewidth=0.4)
@@ -135,7 +148,7 @@ def plot_demographics(df_info: pd.DataFrame) -> None:
     ax1.set_ylabel("Count")
     ax1.legend(fontsize=8)
 
-    # ── Gender split ──────────────────────────────────────────────────────
+    # Gender split
     ax2 = fig.add_subplot(gs[0, 1])
     gender_counts = df["customer_gender"].value_counts()
     colors = [ACCENT, ACCENT2]
@@ -151,7 +164,7 @@ def plot_demographics(df_info: pd.DataFrame) -> None:
         t.set_fontsize(10)
     ax2.set_title("Gender Split")
 
-    # ── Education level ───────────────────────────────────────────────────
+    # Education level
     ax3 = fig.add_subplot(gs[1, 0])
     edu_order = ["No Degree", "Bsc", "Msc", "Phd"]
     edu_counts = df["education_level"].value_counts().reindex(edu_order)
@@ -166,7 +179,7 @@ def plot_demographics(df_info: pd.DataFrame) -> None:
     ax3.set_title("Education Level")
     ax3.set_ylabel("Customers")
 
-    # ── Household size ────────────────────────────────────────────────────
+    # Household size 
     ax4 = fig.add_subplot(gs[1, 1])
     hh_counts = df["household_size"].value_counts().sort_index()
     ax4.bar(hh_counts.index.astype(int), hh_counts.values,
@@ -176,15 +189,16 @@ def plot_demographics(df_info: pd.DataFrame) -> None:
     ax4.set_ylabel("Customers")
     ax4.xaxis.set_major_locator(mticker.MaxNLocator(integer=True))
 
-    _save_or_show(fig, "demographics")
+    fig.tight_layout()
+    plt.show()
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# 4. CUSTOMER BEHAVIOUR
-# ─────────────────────────────────────────────────────────────────────────────
+# Customer behavior
 
-def plot_customer_behaviour(df_info: pd.DataFrame) -> None:
-    """Tenure, loyalty card, typical shopping hour, complaints, promo %."""
+def plot_customer_behavior(df_info: pd.DataFrame):
+    """
+    Tenure, loyalty card, typical shopping hour, complaints, promo %
+    """
 
     df = df_info.copy()
     df["customer_tenure"] = 2026 - df["year_first_transaction"].clip(upper=2026)
@@ -200,7 +214,7 @@ def plot_customer_behaviour(df_info: pd.DataFrame) -> None:
     fig.suptitle("Customer Behaviour", fontsize=14, fontweight="bold", y=1.01)
     gs = GridSpec(2, 3, figure=fig, hspace=0.45, wspace=0.38)
 
-    # ── Customer tenure ───────────────────────────────────────────────────
+    # Customer tenure
     ax1 = fig.add_subplot(gs[0, 0])
     sns.histplot(df["customer_tenure"].dropna(), bins=25, kde=True,
                  color=ACCENT, ax=ax1, edgecolor="white", linewidth=0.4)
@@ -208,7 +222,7 @@ def plot_customer_behaviour(df_info: pd.DataFrame) -> None:
     ax1.set_xlabel("Years as customer")
     ax1.set_ylabel("Count")
 
-    # ── Loyalty card ──────────────────────────────────────────────────────
+    # Loyalty card
     ax2 = fig.add_subplot(gs[0, 1])
     lc_counts = df["has_loyalty_card"].value_counts()
     ax2.bar(["No Card", "Has Card"], lc_counts.reindex([False, True]).values,
@@ -219,7 +233,7 @@ def plot_customer_behaviour(df_info: pd.DataFrame) -> None:
     ax2.set_title("Loyalty Card Ownership")
     ax2.set_ylabel("Customers")
 
-    # ── Typical shopping hour ─────────────────────────────────────────────
+    # Typical shopping hour
     ax3 = fig.add_subplot(gs[0, 2])
     hour_counts = df["typical_hour"].value_counts().sort_index()
     ax3.bar(hour_counts.index, hour_counts.values,
@@ -229,7 +243,7 @@ def plot_customer_behaviour(df_info: pd.DataFrame) -> None:
     ax3.set_ylabel("Customers")
     ax3.xaxis.set_major_locator(mticker.MultipleLocator(4))
 
-    # ── Complaints distribution ───────────────────────────────────────────
+    # Complaints
     ax4 = fig.add_subplot(gs[1, 0])
     comp_counts = df["number_complaints"].value_counts().sort_index()
     ax4.bar(comp_counts.index.astype(int), comp_counts.values,
@@ -239,7 +253,7 @@ def plot_customer_behaviour(df_info: pd.DataFrame) -> None:
     ax4.set_ylabel("Customers")
     ax4.xaxis.set_major_locator(mticker.MaxNLocator(integer=True))
 
-    # ── Promo % distribution ──────────────────────────────────────────────
+    # Promotions % distribution
     ax5 = fig.add_subplot(gs[1, 1])
     sns.histplot(df["percentage_of_products_bought_promotion"] * 100,
                  bins=30, kde=True, color="#457B9D", ax=ax5,
@@ -248,7 +262,7 @@ def plot_customer_behaviour(df_info: pd.DataFrame) -> None:
     ax5.set_xlabel("Promotion %")
     ax5.set_ylabel("Count")
 
-    # ── Distinct stores visited ───────────────────────────────────────────
+    # Distinct stores visited
     ax6 = fig.add_subplot(gs[1, 2])
     stores = df["distinct_stores_visited"].fillna(df["distinct_stores_visited"].median())
     store_counts = stores.value_counts().sort_index()
@@ -259,15 +273,16 @@ def plot_customer_behaviour(df_info: pd.DataFrame) -> None:
     ax6.set_ylabel("Customers")
     ax6.xaxis.set_major_locator(mticker.MaxNLocator(integer=True))
 
-    _save_or_show(fig, "customer_behaviour")
+    fig.tight_layout()
+    plt.show()
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# 5. SPEND ANALYSIS
-# ─────────────────────────────────────────────────────────────────────────────
+# Spending analysis
 
 def plot_spend_analysis(df_info: pd.DataFrame) -> None:
-    """Total spend distribution + category spend shares."""
+    """
+    Total spend distribution + category spend shares
+    """
 
     df = df_info.copy()
     for col in SPEND_COLS:
@@ -286,7 +301,7 @@ def plot_spend_analysis(df_info: pd.DataFrame) -> None:
     fig.suptitle("Spend Analysis", fontsize=14, fontweight="bold", y=1.01)
     gs = GridSpec(2, 2, figure=fig, hspace=0.45, wspace=0.35)
 
-    # ── Total spend distribution ──────────────────────────────────────────
+    # Total spend distribution
     ax1 = fig.add_subplot(gs[0, 0])
     sns.histplot(df["total_spend"], bins=50, kde=True,
                  color=ACCENT, ax=ax1, edgecolor="white", linewidth=0.4)
@@ -298,7 +313,7 @@ def plot_spend_analysis(df_info: pd.DataFrame) -> None:
     ax1.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"€{x/1000:.0f}k"))
     ax1.legend(fontsize=8)
 
-    # ── Spend by category (median absolute) ──────────────────────────────
+    # Spend by category (median bar chart)
     ax2 = fig.add_subplot(gs[0, 1])
     cat_medians = {
         col.replace("lifetime_spend_", ""): df[col].median()
@@ -313,7 +328,7 @@ def plot_spend_analysis(df_info: pd.DataFrame) -> None:
     ax2.invert_yaxis()
     ax2.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"€{x:,.0f}"))
 
-    # ── Category spend shares (pie) ───────────────────────────────────────
+    # Category shares pie chart
     ax3 = fig.add_subplot(gs[1, 0])
     share_vals = list(shares.values())
     share_labels = [f"{k}\n{v*100:.1f}%" for k, v in shares.items()]
@@ -325,7 +340,7 @@ def plot_spend_analysis(df_info: pd.DataFrame) -> None:
                bbox_to_anchor=(1, 0, 0.5, 1), fontsize=7)
     ax3.set_title("Median Category Share of Total Spend")
 
-    # ── Box-plot: log-scaled spend per category ───────────────────────────
+    # Box-plot: log-scaled spend per category 
     ax4 = fig.add_subplot(gs[1, 1])
     spend_long = pd.melt(
         df[[c for c in SPEND_COLS]].rename(
@@ -343,15 +358,15 @@ def plot_spend_analysis(df_info: pd.DataFrame) -> None:
     ax4.set_xlabel("log(1 + spend)")
     ax4.set_ylabel("")
 
-    _save_or_show(fig, "spend_analysis")
+    fig.tight_layout()
+    plt.show()
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# 6. GEOGRAPHIC DISTRIBUTION
-# ─────────────────────────────────────────────────────────────────────────────
-
+# Geographic distribution
 def plot_geographic_distribution(df_info: pd.DataFrame) -> None:
-    """Scatter map of customer home locations, coloured by total spend."""
+    """
+    Scatter map of customer home locations, coloured by total spend.
+    """
 
     df = df_info.copy()
     spend_cols = [c for c in df.columns if c.startswith("lifetime_spend")]
@@ -376,15 +391,16 @@ def plot_geographic_distribution(df_info: pd.DataFrame) -> None:
     ax.set_xlabel("Longitude")
     ax.set_ylabel("Latitude")
 
-    _save_or_show(fig, "geographic_distribution")
+    fig.tight_layout()
+    plt.show()
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# 7. BASKET ANALYSIS
-# ─────────────────────────────────────────────────────────────────────────────
+# Basket analysis
 
-def plot_basket_analysis(df_basket: pd.DataFrame, top_n: int = 20) -> None:
-    """Top N most frequent products and basket size distribution."""
+def plot_basket_analysis(df_basket: pd.DataFrame, top_n: int = 20):
+    """
+    Top N most frequent products and basket size distribution
+    """
 
     # Parse product lists
     all_products = []
@@ -424,16 +440,16 @@ def plot_basket_analysis(df_basket: pd.DataFrame, top_n: int = 20) -> None:
     ax2.set_ylabel("Count")
     ax2.legend(fontsize=8)
 
-    _save_or_show(fig, "basket_analysis")
+    fig.tight_layout()
+    plt.show()
 
 
-# ─────────────────────────────────────────────────────────────────────────────
-# 8. CORRELATION HEATMAP
-# ─────────────────────────────────────────────────────────────────────────────
 
 def plot_correlation_heatmap(df_features: pd.DataFrame,
-                             feature_cols: list) -> None:
-    """Lower-triangle correlation heatmap of the engineered feature set."""
+                             feature_cols: list):
+    """
+    Lower-triangle correlation heatmap of the engineered feature set
+    """
     corr = df_features[feature_cols].corr()
     mask = np.triu(np.ones_like(corr, dtype=bool))
 
@@ -447,18 +463,20 @@ def plot_correlation_heatmap(df_features: pd.DataFrame,
     ax.tick_params(axis="x", rotation=45, labelsize=7)
     ax.tick_params(axis="y", labelsize=7)
 
-    _save_or_show(fig, "correlation_heatmap")
+    fig.tight_layout()
+    plt.show()
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # MAIN
 # ─────────────────────────────────────────────────────────────────────────────
 
+"""
 def run_eda(info_path: str = "data/customer_info.csv",
             basket_path: str = "data/customer_basket.csv") -> None:
-    """Run the full EDA pipeline end-to-end."""
+    #Run the full EDA pipeline end-to-end.
 
-    from preprocessing import FEATURE_COLS
+    from functions.preprocessing import FEATURE_COLS
 
     # Load raw data
     df_info, df_basket = load_raw_data(info_path, basket_path)
@@ -497,6 +515,6 @@ def run_eda(info_path: str = "data/customer_info.csv",
 
     print("\nEDA complete.")
 
-
 if __name__ == "__main__":
     run_eda()
+"""

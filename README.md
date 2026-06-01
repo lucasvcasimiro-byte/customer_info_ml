@@ -31,3 +31,21 @@ pip install -r requirements.txt
 4. Profile final clusters and export the customer-to-cluster CSV.
 5. Use `customer_basket.csv` association rules per segment to design targeted promotions.
 6. Produce a business-facing report or app without code blocks.
+
+"""
+recomendacoes professor:
+
+dbscan is good for outliers (-1 db cluster), not for cluster (2% flag is the reference for this case)
+
+cluster associated with karen behavior
+
+association rules for each cluster (we know 1 of them is vegetarian cluster), tweak parameters for each
+
+use basket for recomendation (cross basket, after clustering), use practical example from week 11 (no train_test_split)
+
+pca not that useful in this project
+
+tsne is good for visualization maybe
+
+use umap for cluster visualization (good definitions)
+"""
