@@ -91,7 +91,7 @@ def plot_missing_values(df_info: pd.DataFrame):
 
     fig, ax = plt.subplots(figsize=(10, 4), facecolor=BG_COLOR)
     bars = ax.barh(miss_pct.index, miss_pct.values,
-                   color=ACCENT2, edgecolor="white", linewidth=0.5)
+                color=ACCENT2, edgecolor="white", linewidth=0.5)
 
     for bar, val in zip(bars, miss_pct.values):
         ax.text(val + 0.2, bar.get_y() + bar.get_height() / 2,

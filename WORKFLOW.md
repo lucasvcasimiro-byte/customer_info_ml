@@ -11,13 +11,19 @@ Build a clean, reproducible customer segmentation solution that:
 
 ## Professor Tips To Respect
 
-- There is a cluster that acts as a Karen
-- Use DBSCAN mainly as an outlier/noise diagnostic. Treat the `-1` label as a possible small outlier flag, not as the main segmentation if it only captures a tiny share of customers.
-- Use association rules after clustering for each cluster (one is vegetarian), and tweak parameters until good results
-- Do not use `train_test_split`; this is unsupervised segmentation, not supervised prediction.
-- PCA is useful as a diagnostic, but should not be the main justification if it does not preserve cluster structure well.
-- Use t-SNE or UMAP mainly for visualization. UMAP is preferred for showing cluster separation if it gives cleaner definitions.
-- Keep the final segmentation practical, interpretable, and marketing-ready.
+- dbscan is good for outliers (-1 db cluster), not for cluster (2% flag is the reference for this case)
+
+- cluster associated with karen behavior
+
+- association rules for each cluster (we know 1 of them is vegetarian cluster), tweak parameters for each
+
+- use basket for recomendation (cross basket, after clustering), use practical example from week 11 (no train_test_split)
+
+- pca not that useful in this project
+
+- tsne is good for visualization maybe
+
+- use umap for cluster visualization (good definitions)
 
 ## Deliverables
 
