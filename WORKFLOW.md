@@ -32,8 +32,6 @@ Build a clean, reproducible customer segmentation solution that:
 - Notebook(s) with exploration and evidence, but no large blocks of final business-report code.
 - README with setup and run instructions.
 
-
-
 ## Workflow
 
 ### 1. Data Audit

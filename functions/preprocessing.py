@@ -58,6 +58,42 @@ def check_nulls(df: pd.DataFrame, cols: list):
             f"There's NaN after preprocessing:\n{missing}")
 
 
+def parse_customer_age(birthdate: pd.Series, current_year: int = current_year):
+    """Convert customer_birthdate into age with safe fallbacks for parser issues."""
+    parsed_birthdate = pd.to_datetime(
+        birthdate,
+        format='%m/%d/%Y %I:%M %p',
+        errors='coerce',
+    )
+
+    missing_date = parsed_birthdate.isna()
+    if missing_date.any():
+        fallback_birthdate = pd.to_datetime(
+            birthdate.loc[missing_date],
+            format='mixed',
+            errors='coerce',
+        )
+        parsed_birthdate.loc[missing_date] = fallback_birthdate
+
+    age = current_year - parsed_birthdate.dt.year
+
+    # Last fallback: if pandas cannot parse a value, extract the year from text.
+    birth_year = pd.to_numeric(
+        birthdate.astype(str).str.extract(r'(\d{4})', expand=False),
+        errors='coerce',
+    )
+    age = age.fillna(current_year - birth_year)
+
+    invalid_age = (age < 0) | (age > 120)
+    age = age.mask(invalid_age)
+
+    median_age = age.median()
+    if pd.isna(median_age):
+        raise ValueError('Could not derive age from customer_birthdate.')
+
+    return age.fillna(median_age)
+
+
 
 
 def preprocessing(df_raw: pd.DataFrame):
@@ -92,13 +128,8 @@ def preprocessing(df_raw: pd.DataFrame):
     for col in SPEND_COLS:
         df[col] = df[col].fillna(0)
 
-    # Age from birthdate, assuming invalid/missing dates mean median age (invalid dates become NaN in age)
-    df['customer_birthdate'] = pd.to_datetime(df['customer_birthdate'],
-        format='%m/%d/%Y %I:%M %p',
-        errors='coerce' )
-    
-    df['age'] = current_year - df['customer_birthdate'].dt.year
-    df['age'] = df['age'].fillna(df['age'].median())  
+    # Age from birthdate, assuming invalid/missing dates mean median age.
+    df['age'] = parse_customer_age(df['customer_birthdate'], current_year=current_year)
 
     # Drop birthdate after extracting age
     df = df.drop(columns=['customer_birthdate'])
