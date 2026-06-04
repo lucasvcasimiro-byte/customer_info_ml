@@ -1,12 +1,15 @@
 import ast
 from collections import Counter
 
+import contextily as ctx
+import geopandas as gpd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import numpy as np
 import pandas as pd
 import seaborn as sns
 from matplotlib.gridspec import GridSpec
+from shapely.geometry import Point
 
 
 # Columns with lifetime_spend_, for convenience in EDA and preprocessing
@@ -365,31 +368,90 @@ def plot_spend_analysis(df_info: pd.DataFrame) -> None:
 # Geographic distribution
 def plot_geographic_distribution(df_info: pd.DataFrame) -> None:
     """
-    Scatter map of customer home locations, coloured by total spend.
+    GeoPandas map of customer home locations overlaid on a CartoDB basemap
+    (via contextily). Axes show WGS-84 latitude / longitude degrees.
     """
+    from pyproj import Transformer
 
     df = df_info.copy()
-    spend_cols = [c for c in df.columns if c.startswith("lifetime_spend")]
-    df["total_spend"] = df[spend_cols].fillna(0).sum(axis=1)
 
-    fig, ax = plt.subplots(figsize=(9, 8), facecolor=BG_COLOR)
-    sc = ax.scatter(
-        df["longitude"], df["latitude"],
-        c=df["total_spend"],
-        cmap="YlOrRd",
-        s=4,
-        alpha=0.4,
+    # ── Build GeoDataFrame (WGS-84) then reproject to Web Mercator ──────────
+    geometry = [Point(lon, lat)
+                for lon, lat in zip(df["longitude"], df["latitude"])]
+    gdf = gpd.GeoDataFrame(df, geometry=geometry, crs="EPSG:4326")
+    gdf_merc = gdf.to_crs(epsg=3857)
+
+    # ── Single panel map ─────────────────────────────────────────────────────
+    fig, ax_map = plt.subplots(figsize=(10, 9), facecolor=BG_COLOR)
+    fig.suptitle(
+        "Geographic Distribution of Customers",
+        fontsize=15, fontweight="bold", y=1.01,
+    )
+
+    ax_map.set_facecolor(BG_COLOR)
+
+    gdf_merc.plot(
+        ax=ax_map,
+        color=ACCENT,
+        markersize=8,
+        alpha=0.6,
         linewidths=0,
     )
-    cbar = plt.colorbar(sc, ax=ax, pad=0.02)
-    cbar.set_label("Total lifetime spend (€)", fontsize=9)
-    cbar.formatter = mticker.FuncFormatter(lambda x, _: f"€{x/1000:.0f}k")
-    cbar.update_ticks()
 
-    ax.set_title("Geographic Distribution of Customers\n(colour = total spend)",
-                 fontweight="bold")
-    ax.set_xlabel("Longitude")
-    ax.set_ylabel("Latitude")
+    # ── Zoom out 20% around the data extent ──────────────────────────────────
+    x_min, y_min, x_max, y_max = gdf_merc.total_bounds
+    x_pad = (x_max - x_min) * 0.20
+    y_pad = (y_max - y_min) * 0.20
+    ax_map.set_xlim(x_min - x_pad, x_max + x_pad)
+    ax_map.set_ylim(y_min - y_pad, y_max + y_pad)
+
+    # Basemap tile (CartoDB Positron – clean, light)
+    try:
+        ctx.add_basemap(
+            ax_map,
+            crs=gdf_merc.crs.to_string(),
+            source=ctx.providers.CartoDB.Positron,
+            zoom="auto",
+            attribution_size=6,
+        )
+    except Exception:
+        try:
+            ctx.add_basemap(
+                ax_map,
+                crs=gdf_merc.crs.to_string(),
+                source=ctx.providers.OpenStreetMap.Mapnik,
+                zoom="auto",
+                attribution_size=6,
+            )
+        except Exception:
+            pass   # No network – map still shows without tiles
+
+    # ── Convert Web Mercator tick positions → lat/lon for axis labels ─────────
+    transformer = Transformer.from_crs("EPSG:3857", "EPSG:4326", always_xy=True)
+
+    x_ticks = ax_map.get_xticks()
+    y_ticks = ax_map.get_yticks()
+
+    # Filter to ticks within the current view
+    xl, xr = ax_map.get_xlim()
+    yb, yt = ax_map.get_ylim()
+    x_ticks = [t for t in x_ticks if xl <= t <= xr]
+    y_ticks = [t for t in y_ticks if yb <= t <= yt]
+
+    lon_labels = [f"{transformer.transform(t, 0)[0]:.3f}°" for t in x_ticks]
+    lat_labels = [f"{transformer.transform(0, t)[1]:.3f}°" for t in y_ticks]
+
+    ax_map.set_xticks(x_ticks)
+    ax_map.set_yticks(y_ticks)
+    ax_map.set_xticklabels(lon_labels, fontsize=8)
+    ax_map.set_yticklabels(lat_labels, fontsize=8)
+    ax_map.set_xlabel("Longitude", fontsize=9)
+    ax_map.set_ylabel("Latitude", fontsize=9)
+    ax_map.tick_params(length=3, color="#AAAAAA")
+    for spine in ax_map.spines.values():
+        spine.set_edgecolor("#CCCCCC")
+
+    ax_map.set_title("Customer Locations", fontweight="bold")
 
     fig.tight_layout()
     plt.show()
@@ -465,56 +527,3 @@ def plot_correlation_heatmap(df_features: pd.DataFrame,
 
     fig.tight_layout()
     plt.show()
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# MAIN
-# ─────────────────────────────────────────────────────────────────────────────
-
-"""
-def run_eda(info_path: str = "data/customer_info.csv",
-            basket_path: str = "data/customer_basket.csv") -> None:
-    #Run the full EDA pipeline end-to-end.
-
-    from functions.preprocessing import FEATURE_COLS
-
-    # Load raw data
-    df_info, df_basket = load_raw_data(info_path, basket_path)
-
-    # 1. Overview
-    print_overview(df_info, df_basket)
-
-    # 2. Missing values
-    print("\n[1/7] Plotting missing values...")
-    plot_missing_values(df_info)
-
-    # 3. Demographics
-    print("[2/7] Plotting demographics...")
-    plot_demographics(df_info)
-
-    # 4. Behaviour
-    print("[3/7] Plotting customer behaviour...")
-    plot_customer_behaviour(df_info)
-
-    # 5. Spend analysis
-    print("[4/7] Plotting spend analysis...")
-    plot_spend_analysis(df_info)
-
-    # 6. Geography
-    print("[5/7] Plotting geographic distribution...")
-    plot_geographic_distribution(df_info)
-
-    # 7. Basket analysis
-    print("[6/7] Plotting basket analysis...")
-    plot_basket_analysis(df_basket)
-
-    # 8. Correlation heatmap (needs engineered features)
-    print("[7/7] Plotting correlation heatmap...")
-    df_features = build_features(df_info)
-    plot_correlation_heatmap(df_features, FEATURE_COLS)
-
-    print("\nEDA complete.")
-
-if __name__ == "__main__":
-    run_eda()
-"""

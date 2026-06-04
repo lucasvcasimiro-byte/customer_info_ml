@@ -12,7 +12,7 @@ FEATURE_COLS = [
     # Demographics 
     'age',
     'is_female',
-    'household_size',
+    'dependants',
     # Checkem as colunas de educação, acho que devemos retirar, mas deixo aqui para experimentarmos com e sem
     #'edu_Bsc',
     #'edu_Msc',
@@ -47,8 +47,7 @@ FEATURE_COLS = [
 def check_nulls(df: pd.DataFrame, cols: list):
     """
     Verify if there's nulls in specified columns, to confirm that 
-    preprocessing worked as expected
-    
+    preprocessing worked as expected  
     """
     missing = df[cols].isnull().sum()
     missing = missing[missing > 0]
@@ -57,6 +56,8 @@ def check_nulls(df: pd.DataFrame, cols: list):
         raise ValueError(
             f"There's NaN after preprocessing:\n{missing}")
 
+
+### NO FIM APAGAR
 
 def parse_customer_age(birthdate: pd.Series, current_year: int = current_year):
     """Convert customer_birthdate into age with safe fallbacks for parser issues."""
@@ -155,8 +156,8 @@ def preprocessing(df_raw: pd.DataFrame):
     #)
     #df = pd.concat([df, edu_dummies], axis=1)  
 
-    # Number of people at home
-    df['household_size'] = df['kids_home'] + df['teens_home']
+    # Dependant people at home (under age)
+    df['dependants'] = df['kids_home'] + df['teens_home']
 
     # Customer tenure (years since first transaction)
     df['customer_tenure'] = current_year - df['year_first_transaction']

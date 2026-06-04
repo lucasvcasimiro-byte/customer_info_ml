@@ -210,10 +210,7 @@ def plot_dbscan_knn_distance(df_scaled, feature_cols, min_samples=25):
 
     fig, ax = plt.subplots(figsize=(9, 5))
     ax.plot(kth_distances, linewidth=1.5, color='steelblue')
-    ax.set_title(
-        f'K-Distance Plot  (k = min_samples = {min_samples})\n'
-        'Pick eps at the elbow — values above it become outliers'
-    )
+    ax.set_title(f'K-Distance Plot  (k = min_samples = {min_samples})')
     ax.set_xlabel('Points (sorted by distance)')
     ax.set_ylabel(f'Distance to {min_samples}-th nearest neighbour')
 
