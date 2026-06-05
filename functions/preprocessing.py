@@ -84,7 +84,7 @@ FEATURE_COLS =[
     'total_spend',
 
     # Spend shares
-    'share_groceries',
+    # 'share_groceries',       #Might be removed
     'share_electronics',
     'share_vegetables',
     'share_nonalcohol_drinks',
@@ -275,12 +275,11 @@ def preprocessing(df_raw):
 
 
 # Scaling
-def scale_features(df_features):
+def scale_features(df_features, chosen_scaler):
     """
-    Scale FEATURE_COLS with RobustScaler.
-    Returns (df_scaled, scaler) so the scaler can be reused on new data.
+    Scale FEATURE_COLS with chosen scaler.
     """
     df_scaled = df_features.copy()
-    scaler = RobustScaler()
+    scaler = chosen_scaler()
     df_scaled[FEATURE_COLS] = scaler.fit_transform(df_features[FEATURE_COLS])
-    return df_scaled, scaler
+    return df_scaled

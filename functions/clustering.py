@@ -4,32 +4,13 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from sklearn.cluster import AgglomerativeClustering, DBSCAN, KMeans
+from sklearn.cluster import AgglomerativeClustering, KMeans
 from sklearn.decomposition import PCA
 from sklearn.metrics import silhouette_score
-from sklearn.neighbors import NearestNeighbors
 
 
 RANDOM_STATE = 42
 SAMPLE_SIZE = 5000
-
-
-# Helper for DBScan
-
-#### UNDERSTAND BETTER
-
-def _silhouette(X, labels):
-    """
-    Silhouette score, ignoring DBSCAN noise points (-1)
-    """
-    labels = np.asarray(labels)
-    mask = labels != -1
-    X_clean = X.loc[mask] if isinstance(X, pd.DataFrame) else X[mask]
-    labels_clean = labels[mask]
-    if len(set(labels_clean)) < 2:
-        return np.nan
-    return silhouette_score(X_clean, labels_clean)
-
 
 ##### Model comparisons
 
@@ -46,7 +27,7 @@ def compare_clustering_models(df_scaled, feature_cols, k_range=range(3, 11)):
             ('hierarchical_ward', AgglomerativeClustering(n_clusters=k, linkage='ward'))]:
             labels = model.fit_predict(X)
 
-            results.append({'model': name, 'k': k, 'silhouette': _silhouette(X, labels)})
+            results.append({'model': name, 'k': k, 'silhouette': silhouette_score(X, labels)})
 
     return pd.DataFrame(results).sort_values('silhouette', ascending=False).reset_index(drop=True)
 
@@ -63,55 +44,15 @@ def compare_kmeans_inertia(df_scaled, feature_cols, k_range=range(1, 11)):
     # Plot the elbow curve
     plt.figure(figsize=(8, 5))
     plt.plot(inertia_df['k'], inertia_df['inertia'], marker='o', linewidth=2, color='steelblue')
-    plt.title('Elbow Method – K-Means Inertia')
+    plt.title('Elbow Method')
     plt.xlabel('Number of Clusters (k)')
-    plt.ylabel('Inertia (Within-cluster SSE)')
+    plt.ylabel('Inertia')
     plt.xticks(inertia_df['k'])
     plt.grid(True, alpha=0.3)
     plt.tight_layout()
     plt.show()
 
     return inertia_df
-
-
-def compare_stability(df_scaled, feature_cols, k_range=range(3, 11), seeds=range(10)):
-    """
-    Check k-means stability across random seeds for the compared algorithms above
-    """
-    X = df_scaled[feature_cols].sample(n=min(SAMPLE_SIZE, len(df_scaled)), random_state=RANDOM_STATE)
-
-    results = [
-        {'k': k, 'silhouette': _silhouette(X, KMeans(n_clusters=k, random_state=s, n_init=10).fit_predict(X))}
-        for k in k_range for s in seeds]
-    
-    return (
-        pd.DataFrame(results)
-        .groupby('k')['silhouette']
-        .agg(['mean', 'std'])
-        .rename(columns={'mean': 'silhouette_mean', 'std': 'silhouette_std'})
-        .sort_values('silhouette_mean', ascending=False)
-        .reset_index()
-    )
-
-
-def compare_dbscan(df_scaled, feature_cols, eps_values=(0.8, 1.0, 1.2, 1.5), min_samples_values=(10, 25, 50)):
-    """
-    Grid-search DBSCAN over eps and min_samples combinations
-    """
-    X = df_scaled[feature_cols].sample(n=min(SAMPLE_SIZE, len(df_scaled)), random_state=RANDOM_STATE)
-    results = []
-
-    for eps in eps_values:
-        for min_samples in min_samples_values:
-            labels = DBSCAN(eps=eps, min_samples=min_samples).fit_predict(X)
-            results.append({
-                'eps': eps,
-                'min_samples': min_samples,
-                'n_clusters': len(set(labels) - {-1}),
-                'noise_share': round((labels == -1).mean(), 3),
-                'silhouette': _silhouette(X, labels)})
-
-    return pd.DataFrame(results).sort_values('silhouette', ascending=False).reset_index(drop=True)
 
 
 ######## Final fitting
@@ -190,44 +131,108 @@ def top_cluster_differences(clustered_df, profile_cols, cluster_col='cluster', t
     return pd.DataFrame(rows)
 
 
+def analyze_cluster_patterns(df_original, labels, feature_cols):
+    """
+    Comprehensive analysis of the generated clusters.
+    Prints cluster sizes, the most distinct features for each cluster, 
+    and plots a heatmap of the cluster profiles.
+    """
+    from IPython.display import display
+    
+    # Add labels to original dataframe
+    clustered_df = add_clusters(df_original, labels)
+    
+    print("\n" + "="*50)
+    print("                 CLUSTER SIZES")
+    print("="*50)
+    sizes = cluster_size_summary(clustered_df)
+    display(sizes)
+    
+    print("\n" + "="*50)
+    print("        TOP DEFINING FEATURES PER CLUSTER")
+    print("="*50)
+    top_diffs = top_cluster_differences(clustered_df, feature_cols, top_n=4)
+    display(top_diffs)
+    
+    print("\n" + "="*50)
+    print("       CLUSTER HEATMAP (Z-Scores vs Global Mean)")
+    print("="*50)
+    plot_cluster_feature_heatmap(clustered_df, feature_cols)
+    
+    return clustered_df
+
+
 ####### Plots
 
-
-def plot_dbscan_knn_distance(df_scaled, feature_cols, min_samples=25):
+def plot_r2_hc(df_scaled, feature_cols, max_nclus=10, min_nclus=2):
     """
-    K-distance elbow plot for DBSCAN eps calibration.
-    Fits a k-NN model (k = min_samples) on the scaled features and plots the
-    sorted distance to each point's k-th nearest neighbour.
-    The elbow of the resulting curve is a reliable estimate for eps:
-    points to the left of the elbow are dense (core points), points to the
-    right are increasingly isolated (candidate outliers).
+    Plots the R2 statistic for different hierarchical clustering linkage methods,
+    proving the superiority of 'ward' at explaining variance.
     """
-    X = df_scaled[feature_cols]
+    # Sample data to avoid MemoryError in AgglomerativeClustering
+    X = df_scaled[feature_cols].sample(n=min(SAMPLE_SIZE, len(df_scaled)), random_state=RANDOM_STATE)
+    
+    def get_ss(df):
+        return np.sum(df.var() * (df.count() - 1))
 
-    nbrs = NearestNeighbors(n_neighbors=min_samples).fit(X)
-    distances, _ = nbrs.kneighbors(X)
-    kth_distances = np.sort(distances[:, -1])  # distance to the k-th neighbour
+    sst = get_ss(X)
+    hc_methods = ["ward", "complete", "average", "single"]
+    
+    results = {method: [] for method in hc_methods}
+    k_range = list(range(min_nclus, max_nclus + 1))
+    
+    for method in hc_methods:
+        for k in k_range:
+            cluster = AgglomerativeClustering(n_clusters=k, metric="euclidean", linkage=method)
+            labels = cluster.fit_predict(X)
+            
+            X_concat = pd.concat((X, pd.Series(labels, name='labels', index=X.index)), axis=1)
+            ssw_labels = X_concat.groupby('labels').apply(get_ss)
+            ssb = sst - np.sum(ssw_labels)
+            results[method].append(ssb / sst)
 
-    fig, ax = plt.subplots(figsize=(9, 5))
-    ax.plot(kth_distances, linewidth=1.5, color='steelblue')
-    ax.set_title(f'K-Distance Plot  (k = min_samples = {min_samples})')
-    ax.set_xlabel('Points (sorted by distance)')
-    ax.set_ylabel(f'Distance to {min_samples}-th nearest neighbour')
-
-    p25 = np.percentile(kth_distances, 25)
-    p75 = np.percentile(kth_distances, 75)
-    p95 = np.percentile(kth_distances, 95)
-    for pct, val, ls in [(25, p25, ':'), (75, p75, '--'), (95, p95, '-')]:
-        ax.axhline(val, linestyle=ls, color='tomato', alpha=0.7,
-                   label=f'p{pct} = {val:.2f}')
-
-    ax.legend(title='Reference lines', framealpha=0.7)
-    ax.grid(True, alpha=0.3)
+    r2_df = pd.DataFrame(results, index=k_range)
+    
+    plt.figure(figsize=(9, 5))
+    sns.lineplot(data=r2_df, linewidth=2.5, markers=["o"]*4)
+    plt.title("R² Metric by Hierarchical Linkage Method", fontsize=16)
+    plt.xlabel("Number of Clusters (k)", fontsize=12)
+    plt.ylabel("R² (Explained Variance)", fontsize=12)
+    plt.xticks(k_range)
+    plt.gca().invert_xaxis()
+    plt.grid(True, alpha=0.3)
+    plt.legend(title="Linkage Methods")
     plt.tight_layout()
     plt.show()
 
-    print(f'Suggested eps range  →  p75: {p75:.2f}  |  p95: {p95:.2f}')
-    return kth_distances
+def plot_dendrogram(df_scaled, feature_cols, linkage_method='ward', truncate_p=5):
+    """
+    Plots a hierarchical clustering dendrogram using scipy.
+    Samples the data and truncates the plot to only show the top p levels.
+    """
+    from scipy.cluster import hierarchy
+    
+    # Sample data 
+    X = df_scaled[feature_cols].sample(n=min(SAMPLE_SIZE, len(df_scaled)), random_state=RANDOM_STATE)
+    
+    # Calculate the linkage matrix
+    Z = hierarchy.linkage(X, method=linkage_method, metric='euclidean')
+    
+    plt.figure(figsize=(10, 6))
+    hierarchy.dendrogram(
+        Z,
+        truncate_mode='level',
+        p=truncate_p,
+        show_leaf_counts=True,
+        leaf_rotation=90.,
+        leaf_font_size=10.,
+        show_contracted=True
+    )
+    plt.title(f'Hierarchical Clustering Dendrogram (Truncated top {truncate_p} levels)')
+    plt.xlabel('Cluster size (or individual index)')
+    plt.ylabel('Distance')
+    plt.tight_layout()
+    plt.show()
 
 
 def plot_metric_comparison(results):
@@ -287,70 +292,7 @@ def plot_umap_cluster_map(df_scaled, feature_cols, labels, n_neighbors=15, min_d
     plt.show()
 
 
-def plot_dbscan_outliers(df_scaled, feature_cols, eps, min_samples):
-    """
-    Fit DBSCAN and visualise outliers vs valid clusters on a PCA 2D projection.
-    Noise points (label == -1) are rendered as red crosses; valid cluster members
-    are coloured by cluster label.
-    Returns the DBSCAN label array so it can be reused downstream.
-    """
-    X = df_scaled[feature_cols]
-    labels = DBSCAN(eps=eps, min_samples=min_samples).fit_predict(X)
 
-    coords = PCA(n_components=2, random_state=RANDOM_STATE).fit_transform(X)
-    plot_df = pd.DataFrame({
-        'pca_1': coords[:, 0],
-        'pca_2': coords[:, 1],
-        'cluster': labels,
-    })
-
-    n_clusters = len(set(labels) - {-1})
-    n_outliers = int((labels == -1).sum())
-    outlier_pct = round(100 * n_outliers / len(labels), 1)
-
-    is_noise = plot_df['cluster'] == -1
-    cluster_ids = sorted(set(labels) - {-1})
-    palette = sns.color_palette('tab10', n_colors=max(len(cluster_ids), 1))
-    colour_map = {cid: palette[i] for i, cid in enumerate(cluster_ids)}
-
-    fig, ax = plt.subplots(figsize=(10, 7))
-
-    for cid in cluster_ids:
-        mask = plot_df['cluster'] == cid
-        ax.scatter(
-            plot_df.loc[mask, 'pca_1'],
-            plot_df.loc[mask, 'pca_2'],
-            c=[colour_map[cid]],
-            s=25,
-            alpha=0.6,
-            linewidths=0,
-            label=f'Cluster {cid}',
-        )
-
-    ax.scatter(
-        plot_df.loc[is_noise, 'pca_1'],
-        plot_df.loc[is_noise, 'pca_2'],
-        c='red',
-        marker='X',
-        s=80,
-        alpha=0.85,
-        edgecolors='darkred',
-        linewidths=0.8,
-        label=f'Outliers — noise (n={n_outliers}, {outlier_pct}%)',
-        zorder=3,
-    )
-
-    ax.set_title(
-        f'DBSCAN Outlier Detection  (eps={eps}, min_samples={min_samples})\n'
-        f'{n_clusters} clusters · {n_outliers} outliers ({outlier_pct}%)'
-    )
-    ax.set_xlabel('PCA 1')
-    ax.set_ylabel('PCA 2')
-    ax.legend(loc='best', framealpha=0.7)
-    plt.tight_layout()
-    plt.show()
-
-    return labels
 
 
 # Export
