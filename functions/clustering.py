@@ -66,6 +66,15 @@ def fit_final_kmeans(df_scaled, feature_cols, n_clusters):
     return model.fit_predict(X), model
 
 
+def fit_final_hierarchical(df_scaled, feature_cols, n_clusters, linkage_method='ward'):
+    """
+    Fit the final Hierarchical Clustering model on the full dataset
+    """
+    X = df_scaled[feature_cols]
+    model = AgglomerativeClustering(n_clusters=n_clusters, linkage=linkage_method, metric='euclidean')
+    return model.fit_predict(X), model
+
+
 ###### Analysis
 
 def add_clusters(df_original, labels, cluster_col='cluster'):
@@ -91,6 +100,13 @@ def profile_clusters(clustered_df, profile_cols, cluster_col='cluster'):
     Mean and median of each feature per cluster
     """
     return clustered_df.groupby(cluster_col)[profile_cols].agg(['mean', 'median']).round(2)
+
+
+def calculate_group_means(df, cluster_col):
+    """
+    Calculates the mean of all numeric features grouped by a specific cluster column
+    """
+    return df.groupby(cluster_col).mean(numeric_only=True).T
 
 
 def cluster_mean_profile(clustered_df, profile_cols, cluster_col='cluster'):
