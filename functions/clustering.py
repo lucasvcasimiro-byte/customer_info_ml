@@ -147,37 +147,6 @@ def top_cluster_differences(clustered_df, profile_cols, cluster_col='cluster', t
     return pd.DataFrame(rows)
 
 
-def analyze_cluster_patterns(df_original, labels, feature_cols):
-    """
-    Comprehensive analysis of the generated clusters.
-    Prints cluster sizes, the most distinct features for each cluster, 
-    and plots a heatmap of the cluster profiles.
-    """
-    from IPython.display import display
-    
-    # Add labels to original dataframe
-    clustered_df = add_clusters(df_original, labels)
-    
-    print("\n" + "="*50)
-    print("                 CLUSTER SIZES")
-    print("="*50)
-    sizes = cluster_size_summary(clustered_df)
-    display(sizes)
-    
-    print("\n" + "="*50)
-    print("        TOP DEFINING FEATURES PER CLUSTER")
-    print("="*50)
-    top_diffs = top_cluster_differences(clustered_df, feature_cols, top_n=4)
-    display(top_diffs)
-    
-    print("\n" + "="*50)
-    print("       CLUSTER HEATMAP (Z-Scores vs Global Mean)")
-    print("="*50)
-    plot_cluster_feature_heatmap(clustered_df, feature_cols)
-    
-    return clustered_df
-
-
 ####### Plots
 
 def plot_r2_hc(df_scaled, feature_cols, max_nclus=10, min_nclus=2):
@@ -279,32 +248,124 @@ def plot_cluster_feature_heatmap(clustered_df, profile_cols, cluster_col='cluste
     plt.show()
 
 
-def plot_pca_cluster_map(df_scaled, feature_cols, labels):
-    """
-    Scatter plot of clusters projected to 2 PCA dimensions
-    """
-    coords = PCA(n_components=2, random_state=RANDOM_STATE).fit_transform(df_scaled[feature_cols])
-    plot_df = pd.DataFrame({'pca_1': coords[:, 0], 'pca_2': coords[:, 1], 'cluster': labels})
-
-    plt.figure(figsize=(8, 6))
-    sns.scatterplot(data=plot_df, x='pca_1', y='pca_2', hue='cluster', palette='tab10', s=18, alpha=0.7)
-    plt.title('Customer segments — PCA')
-    plt.tight_layout()
-    plt.show()
-
-
 def plot_umap_cluster_map(df_scaled, feature_cols, labels, n_neighbors=15, min_dist=0.1):
     """
     Scatter plot of clusters projected with UMAP
     """
     import umap
-    coords = umap.UMAP(n_neighbors=n_neighbors, min_dist=min_dist, random_state=RANDOM_STATE).fit_transform(df_scaled[feature_cols])
+    # Using pure Unsupervised UMAP to show the true mathematical topology of the data.
+    coords = umap.UMAP(
+        n_neighbors=n_neighbors, 
+        min_dist=min_dist, 
+        random_state=RANDOM_STATE
+    ).fit_transform(df_scaled[feature_cols])
     plot_df = pd.DataFrame({'umap_1': coords[:, 0], 'umap_2': coords[:, 1], 'cluster': labels})
 
     plt.figure(figsize=(8, 6))
     sns.scatterplot(data=plot_df, x='umap_1', y='umap_2', hue='cluster', palette='tab10', s=18, alpha=0.7)
     plt.title('Customer segments — UMAP')
     plt.tight_layout()
+    plt.show()
+
+
+def plot_cluster_geography(df, labels, point_size=12, alpha=0.7, cols=3):
+    """
+    Plots the geographic distribution of customers as a grid of maps (one per cluster).
+    Other customers are shown in light grey for geographic context.
+    Overlays points on a CartoDB basemap.
+    Note: df must be the original dataframe containing 'latitude' and 'longitude'.
+    """
+    import math
+    import geopandas as gpd
+    import contextily as ctx
+    from shapely.geometry import Point
+    from pyproj import Transformer
+
+    if 'latitude' not in df.columns or 'longitude' not in df.columns:
+        print("Error: DataFrame must contain 'latitude' and 'longitude' columns.")
+        return
+
+    df = df.copy()
+    df['cluster'] = labels
+
+    # Build GeoDataFrame
+    geometry = [Point(lon, lat) for lon, lat in zip(df["longitude"], df["latitude"])]
+    gdf = gpd.GeoDataFrame(df, geometry=geometry, crs="EPSG:4326")
+    gdf_merc = gdf.to_crs(epsg=3857)
+
+    cluster_ids = sorted(df['cluster'].unique())
+    n_clusters = len(cluster_ids)
+    palette = sns.color_palette('tab10', n_clusters)
+    color_map = {c: palette[i] for i, c in enumerate(cluster_ids)}
+
+    rows = math.ceil(n_clusters / cols)
+    fig, axes = plt.subplots(rows, cols, figsize=(5 * cols, 5 * rows))
+    
+    # Flatten axes for easy iteration
+    if isinstance(axes, np.ndarray):
+        axes = axes.flatten()
+    else:
+        axes = [axes]
+
+    # Pre-calculate bounds for all subplots to keep maps consistent
+    x_min, y_min, x_max, y_max = gdf_merc.total_bounds
+    x_pad = (x_max - x_min) * 0.15
+    y_pad = (y_max - y_min) * 0.15
+    xlim = (x_min - x_pad, x_max + x_pad)
+    ylim = (y_min - y_pad, y_max + y_pad)
+
+    # Pre-calculate ticks (only few ticks for small maps)
+    transformer = Transformer.from_crs("EPSG:3857", "EPSG:4326", always_xy=True)
+    
+    for i in range(len(axes)):
+        ax = axes[i]
+        
+        # If we have more subplots than clusters, hide the extra ones
+        if i >= n_clusters:
+            ax.set_visible(False)
+            continue
+            
+        cid = cluster_ids[i]
+        color = color_map[cid]
+
+        # 2. Plot highlight (this cluster's points)
+        sub = gdf_merc[gdf_merc['cluster'] == cid]
+        sub.plot(
+            ax=ax, color=color, markersize=point_size, alpha=alpha, 
+            linewidths=0.2, edgecolor='white'
+        )
+        
+        ax.set_xlim(xlim)
+        ax.set_ylim(ylim)
+        ax.set_title(f"Cluster {cid} (n={len(sub)})", fontweight='bold', color=color)
+        
+        # 3. Add basemap
+        try:
+            ctx.add_basemap(
+                ax, crs=gdf_merc.crs.to_string(),
+                source=ctx.providers.CartoDB.Positron,
+                zoom="auto", attribution_size=4
+            )
+        except Exception:
+            pass
+
+        # 4. Format axes
+        ax.tick_params(length=3, color="#AAAAAA", labelsize=7)
+        ax.grid(True, alpha=0.15)
+        
+        # Convert tick labels to lat/lon for the first col and last row
+        if i % cols == 0:
+            ax.set_ylabel("Latitude", fontsize=8)
+        else:
+            ax.set_yticklabels([])
+            
+        if i >= len(axes) - cols:
+            ax.set_xlabel("Longitude", fontsize=8)
+        else:
+            ax.set_xticklabels([])
+
+    fig.suptitle("Geographic Distribution by Cluster", fontsize=16, fontweight="bold", y=1.02)
+    fig.tight_layout()
     plt.show()
 
 
