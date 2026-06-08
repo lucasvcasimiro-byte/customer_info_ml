@@ -1,0 +1,218 @@
+[
+  {
+    "product_name": "airpods",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/apple/airpods-e-airpods-pro",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/AirPods_with_Charging_Case.jpg"
+  },
+  {
+    "product_name": "bluetooth headphones",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/audio/auscultadores/bluetooth",
+    "image_url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+  },
+  {
+    "product_name": "ring light",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/produtos/ring-light-led-10-lampada-anelar-regulavel-7301047",
+    "image_url": "https://images.unsplash.com/photo-1608248597481-496100c80836"
+  },
+  {
+    "product_name": "laptop",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/informatica-e-gaming/computadores/portateis",
+    "image_url": "https://images.unsplash.com/photo-1593642634367-d91a135587b5"
+  },
+  {
+    "product_name": "iphone 10",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Apple-iPhone-X/s803623",
+    "image_url": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5"
+  },
+  {
+    "product_name": "ipad",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/tablets/tablets-apple",
+    "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0"
+  },
+  {
+    "product_name": "imac",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/computadores/computadores-apple/imac",
+    "image_url": "https://images.unsplash.com/photo-1501504905252-473c47e087f8"
+  },
+  {
+    "product_name": "samsung galaxy 10",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Samsung-Galaxy-S10/s586821",
+    "image_url": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf"
+  },
+  {
+    "product_name": "phone charger",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/telemoveis-e-smartwatches/acessorios-de-telemovel/carregadores-e-baterias",
+    "image_url": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0"
+  },
+  {
+    "product_name": "phone car charger",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/telemoveis-e-smartwatches/acessorios-de-telemovel/carregadores-e-baterias/carregadores-de-carro",
+    "image_url": "https://images.unsplash.com/photo-1622445262465-2481c4574875"
+  },
+  {
+    "product_name": "vacuum cleaner",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/pequenos-eletrodomesticos/aspiradores",
+    "image_url": "https://images.unsplash.com/photo-1558317374-067fb5f30001"
+  },
+  {
+    "product_name": "gadget for tiktok streaming",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/fotografia-e-drones/acessorios-fotografia/ring-lights",
+    "image_url": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f"
+  },
+  {
+    "product_name": "minecraft",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/gaming/jogos-videojogos/minecraft",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover_art.jpg"
+  },
+  {
+    "product_name": "portal",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/400/Portal/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/9/9f/Portal_standalonebox.png"
+  },
+  {
+    "product_name": "portal 2",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/620/Portal_2/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/f/f9/Portal2cover.jpg"
+  },
+  {
+    "product_name": "half-life 2",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/220/HalfLife_2/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/2/25/Half-Life_2_cover.jpg"
+  },
+  {
+    "product_name": "half-life: alyx",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/546560/HalfLife_Alyx/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/f/fa/Half-Life_Alyx_Cover_Art.jpg"
+  },
+  {
+    "product_name": "pokemon scarlet",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Pokemon-Scarlet-Nintendo-Switch-Jogo-Nintendo-Switch/a10055106",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/f/fb/Pok%C3%A9mon_Scarlet_and_Violet_box_art.jpg"
+  },
+  {
+    "product_name": "pokemon shield",
+    "search_source": "nintendo.pt",
+    "product_page": "https://www.nintendo.pt/Jogos/Jogos-Nintendo-Switch/Pokemon-Shield-1466859.html",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/d/d9/Pok%C3%A9mon_Sword_and_Shield_box_art.png"
+  },
+  {
+    "product_name": "pokemon sword",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Pokemon-Sword-Nintendo-Switch-Jogo-Nintendo-Switch/a6668725",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/d/d9/Pok%C3%A9mon_Sword_and_Shield_box_art.png"
+  },
+  {
+    "product_name": "pokemon violet",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Pokemon-Violet-Nintendo-Switch-Jogo-Nintendo-Switch/a10055107",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/f/fb/Pok%C3%A9mon_Scarlet_and_Violet_box_art.jpg"
+  },
+  {
+    "product_name": "final fantasy xix",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Final-Fantasy-XVI-PS5-Jogo-PlayStation-5/a10741258",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/a/ae/Final_Fantasy_XVI_cover_art.png"
+  },
+  {
+    "product_name": "final fantasy xx",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Final-Fantasy-XVI-PS5-Jogo-PlayStation-5/a10741258",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/a/ae/Final_Fantasy_XVI_cover_art.png"
+  },
+  {
+    "product_name": "final fantasy xxii",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Final-Fantasy-XVI-PS5-Jogo-PlayStation-5/a10741258",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/a/ae/Final_Fantasy_XVI_cover_art.png"
+  },
+  {
+    "product_name": "megaman zero",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/999020/Mega_Man_ZeroZX_Legacy_Collection/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/1/1b/Mega_Man_Zero_ZX_Legacy_Collection_cover_art.jpg"
+  },
+  {
+    "product_name": "megaman zero 2",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/999020/Mega_Man_ZeroZX_Legacy_Collection/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/1/1b/Mega_Man_Zero_ZX_Legacy_Collection_cover_art.jpg"
+  },
+  {
+    "product_name": "megaman zero 3",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/999020/Mega_Man_ZeroZX_Legacy_Collection/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/1/1b/Mega_Man_Zero_ZX_Legacy_Collection_cover_art.jpg"
+  },
+  {
+    "product_name": "megaman zero 4",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/999020/Mega_Man_ZeroZX_Legacy_Collection/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/1/1b/Mega_Man_Zero_ZX_Legacy_Collection_cover_art.jpg"
+  },
+  {
+    "product_name": "metroid fusion",
+    "search_source": "nintendo.pt",
+    "product_page": "https://www.nintendo.pt/Jogos/Jogos-Nintendo-Switch/Metroid-Fusion-2353723.html",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/d/db/Metroid_Fusion_box_art.jpg"
+  },
+  {
+    "product_name": "metroid prime",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Metroid-Prime-Remastered-Nintendo-Switch-Jogo-Nintendo-Switch/a10006764",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/6/6d/Metroid_Prime_Remastered_box_art.jpg"
+  },
+  {
+    "product_name": "ratchet & clank",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/1895880/Ratchet__Clank_Rift_Apart/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/8/87/Ratchet_%26_Clank_-_Rift_Apart_cover_art.jpg"
+  },
+  {
+    "product_name": "ratchet & clank 2",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/1895880/Ratchet__Clank_Rift_Apart/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/8/87/Ratchet_%26_Clank_-_Rift_Apart_cover_art.jpg"
+  },
+  {
+    "product_name": "ratchet & clank 3",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/1895880/Ratchet__Clank_Rift_Apart/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/8/87/Ratchet_%26_Clank_-_Rift_Apart_cover_art.jpg"
+  },
+  {
+    "product_name": "catfish",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/filetes-de-peixe-gato-riscado-congelado-continente-5444391.html",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Clarias_garie_080516_9142_tdp.jpg"
+  },
+  {
+    "product_name": "green grapes",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/uva-branca-sem-grainha-continente-5079632.html",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Table_grapes_on_white.jpg"
+  },
+  {
+    "product_name": "water spray",
+    "search_source": "wells.pt",
+    "product_page": "https://www.wells.pt/cosmetica-rosto-e-corpo/cosmetica-rosto/agua-termal",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Spray_bottle.jpg"
+  }
+]

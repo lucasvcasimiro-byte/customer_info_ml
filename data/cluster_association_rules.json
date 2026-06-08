@@ -1,0 +1,3578 @@
+{
+  "0": [
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "airpods",
+        "energy drink"
+      ],
+      "support": 0.01686548745372275,
+      "confidence": 0.18711967545638947,
+      "lift": 4.657555607861599
+    },
+    {
+      "antecedents": [
+        "airpods",
+        "energy drink"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.01686548745372275,
+      "confidence": 0.41979522184300344,
+      "lift": 4.657555607861599
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "salad"
+      ],
+      "consequents": [
+        "asparagus",
+        "tomatoes"
+      ],
+      "support": 0.012843365784542255,
+      "confidence": 0.2995735607675906,
+      "lift": 4.510922185845915
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "tomatoes"
+      ],
+      "consequents": [
+        "spinach",
+        "salad"
+      ],
+      "support": 0.012843365784542255,
+      "confidence": 0.19339298004129385,
+      "lift": 4.510922185845915
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "asparagus"
+      ],
+      "consequents": [
+        "tomatoes",
+        "salad"
+      ],
+      "support": 0.012843365784542255,
+      "confidence": 0.18745830553702467,
+      "lift": 4.502085913111485
+    },
+    {
+      "antecedents": [
+        "tomatoes",
+        "salad"
+      ],
+      "consequents": [
+        "spinach",
+        "asparagus"
+      ],
+      "support": 0.012843365784542255,
+      "confidence": 0.30845225027442374,
+      "lift": 4.502085913111485
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods",
+        "bluetooth headphones"
+      ],
+      "support": 0.01686548745372275,
+      "confidence": 0.18403990024937655,
+      "lift": 4.488973219126097
+    },
+    {
+      "antecedents": [
+        "airpods",
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.01686548745372275,
+      "confidence": 0.411371237458194,
+      "lift": 4.488973219126097
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "protein bar",
+        "airpods"
+      ],
+      "support": 0.010101010101010102,
+      "confidence": 0.11022443890274315,
+      "lift": 4.4494474146736485
+    },
+    {
+      "antecedents": [
+        "protein bar",
+        "airpods"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.010101010101010102,
+      "confidence": 0.40774907749077494,
+      "lift": 4.4494474146736485
+    },
+    {
+      "antecedents": [
+        "avocado",
+        "salad"
+      ],
+      "consequents": [
+        "asparagus",
+        "tomatoes"
+      ],
+      "support": 0.012157776863659217,
+      "confidence": 0.29198682766191003,
+      "lift": 4.396682589411514
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "tomatoes"
+      ],
+      "consequents": [
+        "avocado",
+        "salad"
+      ],
+      "support": 0.012157776863659217,
+      "confidence": 0.18306951135581556,
+      "lift": 4.396682589411514
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "carrots"
+      ],
+      "consequents": [
+        "avocado",
+        "salad"
+      ],
+      "support": 0.012112070935600348,
+      "confidence": 0.1828847481021394,
+      "lift": 4.392245229118231
+    },
+    {
+      "antecedents": [
+        "avocado",
+        "salad"
+      ],
+      "consequents": [
+        "asparagus",
+        "carrots"
+      ],
+      "support": 0.012112070935600348,
+      "confidence": 0.29088913282107576,
+      "lift": 4.392245229118231
+    },
+    {
+      "antecedents": [
+        "avocado",
+        "asparagus"
+      ],
+      "consequents": [
+        "tomatoes",
+        "salad"
+      ],
+      "support": 0.012157776863659217,
+      "confidence": 0.1824417009602195,
+      "lift": 4.381604802753724
+    },
+    {
+      "antecedents": [
+        "tomatoes",
+        "salad"
+      ],
+      "consequents": [
+        "avocado",
+        "asparagus"
+      ],
+      "support": 0.012157776863659217,
+      "confidence": 0.29198682766191003,
+      "lift": 4.381604802753724
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "salad"
+      ],
+      "consequents": [
+        "asparagus",
+        "carrots"
+      ],
+      "support": 0.012386306503953563,
+      "confidence": 0.2889125799573561,
+      "lift": 4.3624005085486495
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "carrots"
+      ],
+      "consequents": [
+        "spinach",
+        "salad"
+      ],
+      "support": 0.012386306503953563,
+      "confidence": 0.1870255348516218,
+      "lift": 4.3624005085486495
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "asparagus"
+      ],
+      "consequents": [
+        "avocado",
+        "salad"
+      ],
+      "support": 0.012340600575894693,
+      "confidence": 0.1801200800533689,
+      "lift": 4.325847674519933
+    },
+    {
+      "antecedents": [
+        "avocado",
+        "salad"
+      ],
+      "consequents": [
+        "spinach",
+        "asparagus"
+      ],
+      "support": 0.012340600575894693,
+      "confidence": 0.296377607025247,
+      "lift": 4.325847674519933
+    },
+    {
+      "antecedents": [
+        "avocado",
+        "asparagus"
+      ],
+      "consequents": [
+        "spinach",
+        "salad"
+      ],
+      "support": 0.012340600575894693,
+      "confidence": 0.1851851851851852,
+      "lift": 4.319474058280029
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "salad"
+      ],
+      "consequents": [
+        "avocado",
+        "asparagus"
+      ],
+      "support": 0.012340600575894693,
+      "confidence": 0.2878464818763326,
+      "lift": 4.319474058280028
+    },
+    {
+      "antecedents": [
+        "avocado",
+        "asparagus"
+      ],
+      "consequents": [
+        "salad",
+        "carrots"
+      ],
+      "support": 0.012112070935600348,
+      "confidence": 0.18175582990397807,
+      "lift": 4.3083811511041565
+    },
+    {
+      "antecedents": [
+        "salad",
+        "carrots"
+      ],
+      "consequents": [
+        "avocado",
+        "asparagus"
+      ],
+      "support": 0.012112070935600348,
+      "confidence": 0.2871072589382449,
+      "lift": 4.3083811511041565
+    },
+    {
+      "antecedents": [
+        "salad",
+        "carrots"
+      ],
+      "consequents": [
+        "spinach",
+        "asparagus"
+      ],
+      "support": 0.012386306503953563,
+      "confidence": 0.29360780065005415,
+      "lift": 4.2854203271664675
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "asparagus"
+      ],
+      "consequents": [
+        "salad",
+        "carrots"
+      ],
+      "support": 0.012386306503953563,
+      "confidence": 0.18078719146097397,
+      "lift": 4.2854203271664675
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "tomatoes"
+      ],
+      "consequents": [
+        "spinach",
+        "avocado"
+      ],
+      "support": 0.012112070935600348,
+      "confidence": 0.182381280110117,
+      "lift": 4.263162422573985
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "avocado"
+      ],
+      "consequents": [
+        "asparagus",
+        "tomatoes"
+      ],
+      "support": 0.012112070935600348,
+      "confidence": 0.28311965811965817,
+      "lift": 4.263162422573985
+    },
+    {
+      "antecedents": [
+        "tomatoes",
+        "salad"
+      ],
+      "consequents": [
+        "asparagus",
+        "carrots"
+      ],
+      "support": 0.011746423511129393,
+      "confidence": 0.28210757409440174,
+      "lift": 4.259649146729755
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "carrots"
+      ],
+      "consequents": [
+        "tomatoes",
+        "salad"
+      ],
+      "support": 0.011746423511129393,
+      "confidence": 0.1773636991028295,
+      "lift": 4.259649146729755
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "salad"
+      ],
+      "consequents": [
+        "avocado",
+        "tomatoes"
+      ],
+      "support": 0.012157776863659217,
+      "confidence": 0.17697937458416502,
+      "lift": 4.250419030216188
+    },
+    {
+      "antecedents": [
+        "avocado",
+        "tomatoes"
+      ],
+      "consequents": [
+        "asparagus",
+        "salad"
+      ],
+      "support": 0.012157776863659217,
+      "confidence": 0.29198682766191003,
+      "lift": 4.250419030216187
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "asparagus"
+      ],
+      "consequents": [
+        "avocado",
+        "tomatoes"
+      ],
+      "support": 0.012112070935600348,
+      "confidence": 0.17678452301534356,
+      "lift": 4.245739384251045
+    },
+    {
+      "antecedents": [
+        "avocado",
+        "tomatoes"
+      ],
+      "consequents": [
+        "spinach",
+        "asparagus"
+      ],
+      "support": 0.012112070935600348,
+      "confidence": 0.29088913282107576,
+      "lift": 4.245739384251045
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "salad"
+      ],
+      "consequents": [
+        "avocado",
+        "carrots"
+      ],
+      "support": 0.012112070935600348,
+      "confidence": 0.1763140385894877,
+      "lift": 4.234440011305599
+    },
+    {
+      "antecedents": [
+        "avocado",
+        "carrots"
+      ],
+      "consequents": [
+        "asparagus",
+        "salad"
+      ],
+      "support": 0.012112070935600348,
+      "confidence": 0.29088913282107576,
+      "lift": 4.234440011305599
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "carrots"
+      ],
+      "consequents": [
+        "asparagus",
+        "tomatoes"
+      ],
+      "support": 0.012066365007541479,
+      "confidence": 0.28115015974440893,
+      "lift": 4.23350608743835
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "tomatoes"
+      ],
+      "consequents": [
+        "spinach",
+        "carrots"
+      ],
+      "support": 0.012066365007541479,
+      "confidence": 0.18169304886441845,
+      "lift": 4.23350608743835
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "carrots"
+      ],
+      "consequents": [
+        "asparagus",
+        "salad"
+      ],
+      "support": 0.012386306503953563,
+      "confidence": 0.288604898828541,
+      "lift": 4.20118867695918
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "salad"
+      ],
+      "consequents": [
+        "spinach",
+        "carrots"
+      ],
+      "support": 0.012386306503953563,
+      "confidence": 0.18030605455755155,
+      "lift": 4.20118867695918
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "avocado"
+      ],
+      "consequents": [
+        "asparagus",
+        "salad"
+      ],
+      "support": 0.012340600575894693,
+      "confidence": 0.2884615384615385,
+      "lift": 4.199101796407186
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "salad"
+      ],
+      "consequents": [
+        "spinach",
+        "avocado"
+      ],
+      "support": 0.012340600575894693,
+      "confidence": 0.17964071856287422,
+      "lift": 4.199101796407185
+    },
+    {
+      "antecedents": [
+        "salad",
+        "carrots"
+      ],
+      "consequents": [
+        "asparagus",
+        "tomatoes"
+      ],
+      "support": 0.011746423511129393,
+      "confidence": 0.27843986998916576,
+      "lift": 4.192695055397769
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "tomatoes"
+      ],
+      "consequents": [
+        "salad",
+        "carrots"
+      ],
+      "support": 0.011746423511129393,
+      "confidence": 0.17687543014452856,
+      "lift": 4.192695055397769
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "avocado"
+      ],
+      "consequents": [
+        "asparagus",
+        "carrots"
+      ],
+      "support": 0.011837835367247132,
+      "confidence": 0.2767094017094017,
+      "lift": 4.178140096618358
+    },
+    {
+      "antecedents": [
+        "asparagus",
+        "carrots"
+      ],
+      "consequents": [
+        "spinach",
+        "avocado"
+      ],
+      "support": 0.011837835367247132,
+      "confidence": 0.178743961352657,
+      "lift": 4.178140096618358
+    },
+    {
+      "antecedents": [
+        "tomatoes",
+        "carrots"
+      ],
+      "consequents": [
+        "spinach",
+        "asparagus"
+      ],
+      "support": 0.012066365007541479,
+      "confidence": 0.28448275862068967,
+      "lift": 4.152233673023395
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "asparagus"
+      ],
+      "consequents": [
+        "tomatoes",
+        "carrots"
+      ],
+      "support": 0.012066365007541479,
+      "confidence": 0.1761174116077385,
+      "lift": 4.152233673023395
+    },
+    {
+      "antecedents": [
+        "avocado",
+        "carrots"
+      ],
+      "consequents": [
+        "spinach",
+        "asparagus"
+      ],
+      "support": 0.011837835367247132,
+      "confidence": 0.2843029637760703,
+      "lift": 4.1496094359283795
+    },
+    {
+      "antecedents": [
+        "spinach",
+        "asparagus"
+      ],
+      "consequents": [
+        "avocado",
+        "carrots"
+      ],
+      "support": 0.011837835367247132,
+      "confidence": 0.17278185456971312,
+      "lift": 4.1496094359283795
+    }
+  ],
+  "1": [
+    {
+      "antecedents": [
+        "cooking oil",
+        "dog food"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.01380474294616583,
+      "confidence": 0.37093023255813956,
+      "lift": 2.8667076300847794
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "cooking oil",
+        "dog food"
+      ],
+      "support": 0.01380474294616583,
+      "confidence": 0.10668896321070234,
+      "lift": 2.866707630084779
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "babies food"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.013415267439847672,
+      "confidence": 0.363849765258216,
+      "lift": 2.8119867476879117
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "cooking oil",
+        "babies food"
+      ],
+      "support": 0.013415267439847672,
+      "confidence": 0.1036789297658863,
+      "lift": 2.8119867476879117
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "napkins",
+        "babies food"
+      ],
+      "support": 0.013415267439847672,
+      "confidence": 0.1091165082717353,
+      "lift": 2.81099696002593
+    },
+    {
+      "antecedents": [
+        "napkins",
+        "babies food"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.013415267439847672,
+      "confidence": 0.3455964325529543,
+      "lift": 2.81099696002593
+    },
+    {
+      "antecedents": [
+        "napkins",
+        "dog food"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.01380474294616583,
+      "confidence": 0.3448648648648649,
+      "lift": 2.8050465671584996
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "napkins",
+        "dog food"
+      ],
+      "support": 0.01380474294616583,
+      "confidence": 0.11228440689897923,
+      "lift": 2.8050465671584996
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "babies food",
+        "dog food"
+      ],
+      "support": 0.013025791933529514,
+      "confidence": 0.10594860964449138,
+      "lift": 2.6325381415751687
+    },
+    {
+      "antecedents": [
+        "babies food",
+        "dog food"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.013025791933529514,
+      "confidence": 0.32365591397849464,
+      "lift": 2.6325381415751687
+    },
+    {
+      "antecedents": [
+        "babies food",
+        "dog food"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.013588367664877964,
+      "confidence": 0.33763440860215055,
+      "lift": 2.6093832488222395
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "babies food",
+        "dog food"
+      ],
+      "support": 0.013588367664877964,
+      "confidence": 0.10501672240802676,
+      "lift": 2.609383248822239
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "cooking oil",
+        "napkins"
+      ],
+      "support": 0.013415267439847672,
+      "confidence": 0.09538461538461539,
+      "lift": 2.5900677935460545
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "napkins"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.013415267439847672,
+      "confidence": 0.36427732079905994,
+      "lift": 2.5900677935460545
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.01393456811493855,
+      "confidence": 0.1573802541544477,
+      "lift": 2.490919803425327
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.01393456811493855,
+      "confidence": 0.22054794520547946,
+      "lift": 2.490919803425327
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "cooking oil",
+        "dog food"
+      ],
+      "support": 0.013025791933529514,
+      "confidence": 0.09261538461538463,
+      "lift": 2.4885538461538466
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "dog food"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.013025791933529514,
+      "confidence": 0.35000000000000003,
+      "lift": 2.4885538461538466
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "napkins"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.01380474294616583,
+      "confidence": 0.37485311398354876,
+      "lift": 2.4636250733594554
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "cooking oil",
+        "napkins"
+      ],
+      "support": 0.01380474294616583,
+      "confidence": 0.09072810011376564,
+      "lift": 2.4636250733594554
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "napkins",
+        "dog food"
+      ],
+      "support": 0.013588367664877964,
+      "confidence": 0.09661538461538462,
+      "lift": 2.4136089812889816
+    },
+    {
+      "antecedents": [
+        "napkins",
+        "dog food"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.013588367664877964,
+      "confidence": 0.33945945945945943,
+      "lift": 2.413608981288981
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.013761467889908258,
+      "confidence": 0.20934825543120475,
+      "lift": 2.364427901517243
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.013761467889908258,
+      "confidence": 0.15542521994134897,
+      "lift": 2.364427901517243
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "cooking oil",
+        "babies food"
+      ],
+      "support": 0.013025791933529514,
+      "confidence": 0.08560864618885097,
+      "lift": 2.32188332879339
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "babies food"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.013025791933529514,
+      "confidence": 0.35328638497652587,
+      "lift": 2.32188332879339
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.03682707287519474,
+      "confidence": 0.29954241464273146,
+      "lift": 2.3149920125632906
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.03682707287519474,
+      "confidence": 0.28461538461538466,
+      "lift": 2.3149920125632906
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "napkins",
+        "babies food"
+      ],
+      "support": 0.013588367664877964,
+      "confidence": 0.08930602957906712,
+      "lift": 2.3006507597693235
+    },
+    {
+      "antecedents": [
+        "napkins",
+        "babies food"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.013588367664877964,
+      "confidence": 0.35005574136008916,
+      "lift": 2.300650759769323
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.0388177254630431,
+      "confidence": 0.276,
+      "lift": 2.1330461538461543
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.0388177254630431,
+      "confidence": 0.30000000000000004,
+      "lift": 2.1330461538461543
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.03687034793145231,
+      "confidence": 0.29989440337909185,
+      "lift": 2.132295345625863
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.03687034793145231,
+      "confidence": 0.2621538461538461,
+      "lift": 2.1322953456258626
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.04002942703825515,
+      "confidence": 0.3093645484949833,
+      "lift": 2.0332184262292587
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.04002942703825515,
+      "confidence": 0.2630830489192264,
+      "lift": 2.0332184262292587
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.03721654838151289,
+      "confidence": 0.30271031326997533,
+      "lift": 1.9894851874410096
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.03721654838151289,
+      "confidence": 0.24459613196814559,
+      "lift": 1.9894851874410096
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "pet food"
+      ],
+      "support": 0.021074952397438118,
+      "confidence": 0.17141851460753257,
+      "lift": 1.9219500415093949
+    },
+    {
+      "antecedents": [
+        "pet food"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.021074952397438118,
+      "confidence": 0.23629306162057256,
+      "lift": 1.9219500415093949
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "pet food"
+      ],
+      "support": 0.0220702786913623,
+      "confidence": 0.17056856187290972,
+      "lift": 1.9124203434057245
+    },
+    {
+      "antecedents": [
+        "pet food"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.0220702786913623,
+      "confidence": 0.24745269286754004,
+      "lift": 1.9124203434057243
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.02224337891639259,
+      "confidence": 0.2452290076335878,
+      "lift": 1.8952347519722232
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "fresh bread"
+      ],
+      "support": 0.02224337891639259,
+      "confidence": 0.17190635451505018,
+      "lift": 1.895234751972223
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.040245802319543014,
+      "confidence": 0.2645051194539249,
+      "lift": 1.8806720924127067
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.040245802319543014,
+      "confidence": 0.28615384615384615,
+      "lift": 1.8806720924127067
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "milk"
+      ],
+      "support": 0.02181062835381686,
+      "confidence": 0.168561872909699,
+      "lift": 1.8495383471972102
+    },
+    {
+      "antecedents": [
+        "milk"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.02181062835381686,
+      "confidence": 0.2393162393162393,
+      "lift": 1.84953834719721
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "milk"
+      ],
+      "support": 0.020642201834862386,
+      "confidence": 0.1678986272439282,
+      "lift": 1.8422609108987145
+    },
+    {
+      "antecedents": [
+        "milk"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.020642201834862386,
+      "confidence": 0.2264957264957265,
+      "lift": 1.8422609108987145
+    }
+  ],
+  "2": [
+    {
+      "antecedents": [
+        "fresh bread",
+        "eggs"
+      ],
+      "consequents": [
+        "chocolate bread",
+        "cereals"
+      ],
+      "support": 0.010750712119819903,
+      "confidence": 0.08850226928895613,
+      "lift": 1.767284764535247
+    },
+    {
+      "antecedents": [
+        "chocolate bread",
+        "cereals"
+      ],
+      "consequents": [
+        "fresh bread",
+        "eggs"
+      ],
+      "support": 0.010750712119819903,
+      "confidence": 0.21467889908256882,
+      "lift": 1.767284764535247
+    },
+    {
+      "antecedents": [
+        "salt",
+        "cereals"
+      ],
+      "consequents": [
+        "fresh bread",
+        "eggs"
+      ],
+      "support": 0.010658825691445373,
+      "confidence": 0.20209059233449478,
+      "lift": 1.6636550048232275
+    },
+    {
+      "antecedents": [
+        "fresh bread",
+        "eggs"
+      ],
+      "consequents": [
+        "salt",
+        "cereals"
+      ],
+      "support": 0.010658825691445373,
+      "confidence": 0.08774583963691376,
+      "lift": 1.6636550048232273
+    },
+    {
+      "antecedents": [
+        "eggs",
+        "salt"
+      ],
+      "consequents": [
+        "fresh bread",
+        "cereals"
+      ],
+      "support": 0.010658825691445373,
+      "confidence": 0.20788530465949823,
+      "lift": 1.6000111531890517
+    },
+    {
+      "antecedents": [
+        "fresh bread",
+        "cereals"
+      ],
+      "consequents": [
+        "eggs",
+        "salt"
+      ],
+      "support": 0.010658825691445373,
+      "confidence": 0.08203677510608204,
+      "lift": 1.6000111531890517
+    },
+    {
+      "antecedents": [
+        "butter",
+        "eggs"
+      ],
+      "consequents": [
+        "tea",
+        "cereals"
+      ],
+      "support": 0.014701828539924654,
+      "confidence": 0.11773362766740252,
+      "lift": 1.5996193132388785
+    },
+    {
+      "antecedents": [
+        "tea",
+        "cereals"
+      ],
+      "consequents": [
+        "butter",
+        "eggs"
+      ],
+      "support": 0.014701828539924654,
+      "confidence": 0.1997503121098627,
+      "lift": 1.5996193132388783
+    },
+    {
+      "antecedents": [
+        "fresh bread",
+        "black tea"
+      ],
+      "consequents": [
+        "salt"
+      ],
+      "support": 0.01102637140494349,
+      "confidence": 0.21660649819494585,
+      "lift": 1.5938664772519242
+    },
+    {
+      "antecedents": [
+        "salt"
+      ],
+      "consequents": [
+        "fresh bread",
+        "black tea"
+      ],
+      "support": 0.01102637140494349,
+      "confidence": 0.08113590263691685,
+      "lift": 1.5938664772519242
+    },
+    {
+      "antecedents": [
+        "fresh bread",
+        "eggs"
+      ],
+      "consequents": [
+        "tea",
+        "cereals"
+      ],
+      "support": 0.014242396398052007,
+      "confidence": 0.1172465960665658,
+      "lift": 1.59300212857982
+    },
+    {
+      "antecedents": [
+        "tea",
+        "cereals"
+      ],
+      "consequents": [
+        "fresh bread",
+        "eggs"
+      ],
+      "support": 0.014242396398052007,
+      "confidence": 0.19350811485642946,
+      "lift": 1.59300212857982
+    },
+    {
+      "antecedents": [
+        "fresh bread",
+        "chocolate bread"
+      ],
+      "consequents": [
+        "eggs",
+        "cereals"
+      ],
+      "support": 0.010750712119819903,
+      "confidence": 0.20930232558139536,
+      "lift": 1.5895584154238143
+    },
+    {
+      "antecedents": [
+        "eggs",
+        "cereals"
+      ],
+      "consequents": [
+        "fresh bread",
+        "chocolate bread"
+      ],
+      "support": 0.010750712119819903,
+      "confidence": 0.08164689462665736,
+      "lift": 1.589558415423814
+    },
+    {
+      "antecedents": [
+        "fresh bread",
+        "cereals"
+      ],
+      "consequents": [
+        "eggs",
+        "chocolate bread"
+      ],
+      "support": 0.010750712119819903,
+      "confidence": 0.08274398868458276,
+      "lift": 1.5881884106778026
+    },
+    {
+      "antecedents": [
+        "eggs",
+        "chocolate bread"
+      ],
+      "consequents": [
+        "fresh bread",
+        "cereals"
+      ],
+      "support": 0.010750712119819903,
+      "confidence": 0.20634920634920634,
+      "lift": 1.5881884106778024
+    },
+    {
+      "antecedents": [
+        "butter",
+        "cereals"
+      ],
+      "consequents": [
+        "eggs",
+        "tea"
+      ],
+      "support": 0.014701828539924654,
+      "confidence": 0.11404133998574484,
+      "lift": 1.577016395253953
+    },
+    {
+      "antecedents": [
+        "eggs",
+        "tea"
+      ],
+      "consequents": [
+        "butter",
+        "cereals"
+      ],
+      "support": 0.014701828539924654,
+      "confidence": 0.20330368487928843,
+      "lift": 1.5770163952539529
+    },
+    {
+      "antecedents": [
+        "butter",
+        "tea",
+        "cereals"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.014701828539924654,
+      "confidence": 0.49689440993788825,
+      "lift": 1.576589464534705
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "butter",
+        "tea",
+        "cereals"
+      ],
+      "support": 0.014701828539924654,
+      "confidence": 0.046647230320699715,
+      "lift": 1.576589464534705
+    },
+    {
+      "antecedents": [
+        "green tea"
+      ],
+      "consequents": [
+        "butter",
+        "tea"
+      ],
+      "support": 0.011577689975190665,
+      "confidence": 0.11290322580645162,
+      "lift": 1.5712606220608862
+    },
+    {
+      "antecedents": [
+        "butter",
+        "tea"
+      ],
+      "consequents": [
+        "green tea"
+      ],
+      "support": 0.011577689975190665,
+      "confidence": 0.16112531969309463,
+      "lift": 1.571260622060886
+    },
+    {
+      "antecedents": [
+        "eggs",
+        "cereals"
+      ],
+      "consequents": [
+        "butter",
+        "tea"
+      ],
+      "support": 0.014701828539924654,
+      "confidence": 0.11165387299371948,
+      "lift": 1.5538735291440526
+    },
+    {
+      "antecedents": [
+        "butter",
+        "tea"
+      ],
+      "consequents": [
+        "eggs",
+        "cereals"
+      ],
+      "support": 0.014701828539924654,
+      "confidence": 0.20460358056265984,
+      "lift": 1.5538735291440524
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "green tea",
+        "oatmeal"
+      ],
+      "support": 0.010199393549572729,
+      "confidence": 0.03112731351654515,
+      "lift": 1.539811604548004
+    },
+    {
+      "antecedents": [
+        "green tea",
+        "oatmeal"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.010199393549572729,
+      "confidence": 0.5045454545454545,
+      "lift": 1.5398116045480037
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "fresh bread",
+        "eggs",
+        "salt"
+      ],
+      "support": 0.010658825691445373,
+      "confidence": 0.03252944475602917,
+      "lift": 1.5392084664341976
+    },
+    {
+      "antecedents": [
+        "fresh bread",
+        "eggs",
+        "salt"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.010658825691445373,
+      "confidence": 0.5043478260869565,
+      "lift": 1.5392084664341974
+    },
+    {
+      "antecedents": [
+        "butter",
+        "eggs"
+      ],
+      "consequents": [
+        "milk",
+        "cereals"
+      ],
+      "support": 0.013874850684553892,
+      "confidence": 0.11111111111111112,
+      "lift": 1.538450664404863
+    },
+    {
+      "antecedents": [
+        "milk",
+        "cereals"
+      ],
+      "consequents": [
+        "butter",
+        "eggs"
+      ],
+      "support": 0.013874850684553892,
+      "confidence": 0.1921119592875318,
+      "lift": 1.538450664404863
+    },
+    {
+      "antecedents": [
+        "fresh bread",
+        "chocolate bread",
+        "cereals"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.010750712119819903,
+      "confidence": 0.48347107438016534,
+      "lift": 1.5339987470785248
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "fresh bread",
+        "chocolate bread",
+        "cereals"
+      ],
+      "support": 0.010750712119819903,
+      "confidence": 0.034110787172011665,
+      "lift": 1.5339987470785248
+    },
+    {
+      "antecedents": [
+        "milk",
+        "eggs"
+      ],
+      "consequents": [
+        "butter",
+        "cereals"
+      ],
+      "support": 0.013874850684553892,
+      "confidence": 0.196870925684485,
+      "lift": 1.5271178077150749
+    },
+    {
+      "antecedents": [
+        "butter",
+        "cereals"
+      ],
+      "consequents": [
+        "milk",
+        "eggs"
+      ],
+      "support": 0.013874850684553892,
+      "confidence": 0.10762651461154668,
+      "lift": 1.5271178077150749
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "green tea",
+        "bacon"
+      ],
+      "support": 0.011210144261692548,
+      "confidence": 0.03492699685084455,
+      "lift": 1.5265482197901254
+    },
+    {
+      "antecedents": [
+        "green tea",
+        "bacon"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.011210144261692548,
+      "confidence": 0.4899598393574297,
+      "lift": 1.5265482197901252
+    },
+    {
+      "antecedents": [
+        "butter",
+        "chocolate bread"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.010475052834696316,
+      "confidence": 0.20430107526881722,
+      "lift": 1.5249716064132632
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "butter",
+        "chocolate bread"
+      ],
+      "support": 0.010475052834696316,
+      "confidence": 0.07818930041152264,
+      "lift": 1.5249716064132632
+    },
+    {
+      "antecedents": [
+        "fresh bread",
+        "chocolate bread"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.010475052834696316,
+      "confidence": 0.20393559928443653,
+      "lift": 1.5222435713391789
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "fresh bread",
+        "chocolate bread"
+      ],
+      "support": 0.010475052834696316,
+      "confidence": 0.07818930041152264,
+      "lift": 1.5222435713391786
+    },
+    {
+      "antecedents": [
+        "salt",
+        "oatmeal"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.01405862354130295,
+      "confidence": 0.47962382445141066,
+      "lift": 1.5217918604969978
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "salt",
+        "oatmeal"
+      ],
+      "support": 0.01405862354130295,
+      "confidence": 0.0446064139941691,
+      "lift": 1.5217918604969978
+    },
+    {
+      "antecedents": [
+        "eggs",
+        "tea"
+      ],
+      "consequents": [
+        "fresh bread",
+        "cereals"
+      ],
+      "support": 0.014242396398052007,
+      "confidence": 0.19695044472681067,
+      "lift": 1.51584985145819
+    },
+    {
+      "antecedents": [
+        "fresh bread",
+        "cereals"
+      ],
+      "consequents": [
+        "eggs",
+        "tea"
+      ],
+      "support": 0.014242396398052007,
+      "confidence": 0.10961810466760961,
+      "lift": 1.5158498514581897
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "oil",
+        "oatmeal"
+      ],
+      "support": 0.011669576403565193,
+      "confidence": 0.03702623906705539,
+      "lift": 1.5148742848374581
+    },
+    {
+      "antecedents": [
+        "oil",
+        "oatmeal"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.011669576403565193,
+      "confidence": 0.4774436090225564,
+      "lift": 1.5148742848374581
+    },
+    {
+      "antecedents": [
+        "butter",
+        "green tea"
+      ],
+      "consequents": [
+        "tea"
+      ],
+      "support": 0.011577689975190665,
+      "confidence": 0.28314606741573034,
+      "lift": 1.5060990477445715
+    },
+    {
+      "antecedents": [
+        "tea"
+      ],
+      "consequents": [
+        "butter",
+        "green tea"
+      ],
+      "support": 0.011577689975190665,
+      "confidence": 0.06158357771260997,
+      "lift": 1.5060990477445715
+    },
+    {
+      "antecedents": [
+        "milk",
+        "green tea"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.010107507121198199,
+      "confidence": 0.4824561403508772,
+      "lift": 1.50316924575969
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "milk",
+        "green tea"
+      ],
+      "support": 0.010107507121198199,
+      "confidence": 0.031491554537646724,
+      "lift": 1.50316924575969
+    }
+  ],
+  "3": [
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "babies food",
+        "toilet paper"
+      ],
+      "support": 0.01163378856853819,
+      "confidence": 0.08598130841121496,
+      "lift": 3.1772905930648965
+    },
+    {
+      "antecedents": [
+        "babies food",
+        "toilet paper"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.01163378856853819,
+      "confidence": 0.42990654205607476,
+      "lift": 3.1772905930648965
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "dog food"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.3885350318471337,
+      "lift": 2.988847307244293
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "cooking oil",
+        "dog food"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.1186770428015564,
+      "lift": 2.988847307244293
+    },
+    {
+      "antecedents": [
+        "dog food",
+        "toilet paper"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.010875063227111785,
+      "confidence": 0.3839285714285714,
+      "lift": 2.9534116175653136
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "dog food",
+        "toilet paper"
+      ],
+      "support": 0.010875063227111785,
+      "confidence": 0.08365758754863813,
+      "lift": 2.9534116175653136
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "napkins",
+        "babies food"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.11401869158878504,
+      "lift": 2.9466006963533076
+    },
+    {
+      "antecedents": [
+        "napkins",
+        "babies food"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.39869281045751637,
+      "lift": 2.9466006963533076
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "napkins",
+        "toilet paper"
+      ],
+      "support": 0.010875063227111785,
+      "confidence": 0.07337883959044368,
+      "lift": 2.8726725914912308
+    },
+    {
+      "antecedents": [
+        "napkins",
+        "toilet paper"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.010875063227111785,
+      "confidence": 0.4257425742574257,
+      "lift": 2.8726725914912308
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "babies food"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.3674698795180723,
+      "lift": 2.8268013688997233
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "cooking oil",
+        "babies food"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.1186770428015564,
+      "lift": 2.826801368899723
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "napkins",
+        "dog food"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.11401869158878504,
+      "lift": 2.81768691588785
+    },
+    {
+      "antecedents": [
+        "napkins",
+        "dog food"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.38125,
+      "lift": 2.81768691588785
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "toilet paper"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.01163378856853819,
+      "confidence": 0.42201834862385323,
+      "lift": 2.79976602425959
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "cooking oil",
+        "toilet paper"
+      ],
+      "support": 0.01163378856853819,
+      "confidence": 0.07718120805369127,
+      "lift": 2.79976602425959
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "milk",
+        "babies food"
+      ],
+      "support": 0.010116337885685382,
+      "confidence": 0.06825938566552901,
+      "lift": 2.754057254301038
+    },
+    {
+      "antecedents": [
+        "milk",
+        "babies food"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.010116337885685382,
+      "confidence": 0.40816326530612246,
+      "lift": 2.754057254301038
+    },
+    {
+      "antecedents": [
+        "dog food",
+        "toilet paper"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.010369246332827516,
+      "confidence": 0.36607142857142855,
+      "lift": 2.7055073431241654
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "dog food",
+        "toilet paper"
+      ],
+      "support": 0.010369246332827516,
+      "confidence": 0.07663551401869158,
+      "lift": 2.705507343124165
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "babies food"
+      ],
+      "consequents": [
+        "toilet paper"
+      ],
+      "support": 0.01163378856853819,
+      "confidence": 0.27710843373493976,
+      "lift": 2.6529945447650163
+    },
+    {
+      "antecedents": [
+        "toilet paper"
+      ],
+      "consequents": [
+        "cooking oil",
+        "babies food"
+      ],
+      "support": 0.01163378856853819,
+      "confidence": 0.11138014527845036,
+      "lift": 2.6529945447650163
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.015174506828528073,
+      "confidence": 0.17910447761194032,
+      "lift": 2.6523561965453637
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.015174506828528073,
+      "confidence": 0.22471910112359553,
+      "lift": 2.6523561965453633
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "napkins"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.3860759493670886,
+      "lift": 2.605024409210697
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "cooking oil",
+        "napkins"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.10409556313993175,
+      "lift": 2.605024409210697
+    },
+    {
+      "antecedents": [
+        "babies food",
+        "dog food"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.014668689934243804,
+      "confidence": 0.33720930232558144,
+      "lift": 2.5940186408469823
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "babies food",
+        "dog food"
+      ],
+      "support": 0.014668689934243804,
+      "confidence": 0.11284046692607003,
+      "lift": 2.594018640846982
+    },
+    {
+      "antecedents": [
+        "toilet paper"
+      ],
+      "consequents": [
+        "napkins",
+        "dog food"
+      ],
+      "support": 0.010875063227111785,
+      "confidence": 0.10411622276029055,
+      "lift": 2.57297215496368
+    },
+    {
+      "antecedents": [
+        "napkins",
+        "dog food"
+      ],
+      "consequents": [
+        "toilet paper"
+      ],
+      "support": 0.010875063227111785,
+      "confidence": 0.26875,
+      "lift": 2.57297215496368
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "cooking oil",
+        "napkins"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.1023489932885906,
+      "lift": 2.5613159459689063
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "napkins"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.015427415275670207,
+      "confidence": 0.3860759493670886,
+      "lift": 2.5613159459689063
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "napkins",
+        "babies food"
+      ],
+      "support": 0.014668689934243804,
+      "confidence": 0.09897610921501707,
+      "lift": 2.557853175399853
+    },
+    {
+      "antecedents": [
+        "napkins",
+        "babies food"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.014668689934243804,
+      "confidence": 0.3790849673202615,
+      "lift": 2.557853175399853
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "cooking oil",
+        "toilet paper"
+      ],
+      "support": 0.010369246332827516,
+      "confidence": 0.06996587030716724,
+      "lift": 2.538027992610452
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "toilet paper"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.010369246332827516,
+      "confidence": 0.3761467889908257,
+      "lift": 2.538027992610452
+    },
+    {
+      "antecedents": [
+        "babies food",
+        "dog food"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.014921598381385938,
+      "confidence": 0.3430232558139535,
+      "lift": 2.5351662682025644
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "babies food",
+        "dog food"
+      ],
+      "support": 0.014921598381385938,
+      "confidence": 0.11028037383177569,
+      "lift": 2.5351662682025644
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "milk",
+        "dog food"
+      ],
+      "support": 0.010116337885685382,
+      "confidence": 0.06711409395973154,
+      "lift": 2.5273250239693192
+    },
+    {
+      "antecedents": [
+        "milk",
+        "dog food"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.010116337885685382,
+      "confidence": 0.380952380952381,
+      "lift": 2.5273250239693192
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "babies food",
+        "toilet paper"
+      ],
+      "support": 0.010116337885685382,
+      "confidence": 0.06825938566552901,
+      "lift": 2.5224075787056237
+    },
+    {
+      "antecedents": [
+        "babies food",
+        "toilet paper"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.010116337885685382,
+      "confidence": 0.37383177570093457,
+      "lift": 2.5224075787056233
+    },
+    {
+      "antecedents": [
+        "toilet paper"
+      ],
+      "consequents": [
+        "cooking oil",
+        "dog food"
+      ],
+      "support": 0.010369246332827516,
+      "confidence": 0.09927360774818401,
+      "lift": 2.500177356919233
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "dog food"
+      ],
+      "consequents": [
+        "toilet paper"
+      ],
+      "support": 0.010369246332827516,
+      "confidence": 0.2611464968152866,
+      "lift": 2.500177356919233
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "cooking oil",
+        "dog food"
+      ],
+      "support": 0.014921598381385938,
+      "confidence": 0.09899328859060402,
+      "lift": 2.4931175992818364
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "dog food"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.014921598381385938,
+      "confidence": 0.375796178343949,
+      "lift": 2.493117599281836
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "napkins",
+        "dog food"
+      ],
+      "support": 0.014668689934243804,
+      "confidence": 0.09731543624161074,
+      "lift": 2.404907718120805
+    },
+    {
+      "antecedents": [
+        "napkins",
+        "dog food"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.014668689934243804,
+      "confidence": 0.3625,
+      "lift": 2.404907718120805
+    },
+    {
+      "antecedents": [
+        "cooking oil",
+        "babies food"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.014921598381385938,
+      "confidence": 0.35542168674698793,
+      "lift": 2.3981866030675603
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "cooking oil",
+        "babies food"
+      ],
+      "support": 0.014921598381385938,
+      "confidence": 0.10068259385665529,
+      "lift": 2.3981866030675603
+    }
+  ],
+  "4": [
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.017915194346289753,
+      "confidence": 0.21611253196930946,
+      "lift": 2.649906696157477
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.017915194346289753,
+      "confidence": 0.21967071057192372,
+      "lift": 2.649906696157477
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.027879858657243815,
+      "confidence": 0.19012048192771086,
+      "lift": 2.3312000167046003
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.027879858657243815,
+      "confidence": 0.3418544194107452,
+      "lift": 2.3312000167046
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.011590106007067138,
+      "confidence": 0.1699481865284974,
+      "lift": 2.3045202102330986
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.011590106007067138,
+      "confidence": 0.1571633924293244,
+      "lift": 2.3045202102330986
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.027314487632508835,
+      "confidence": 0.18626506024096387,
+      "lift": 2.2469314598547645
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.027314487632508835,
+      "confidence": 0.3294970161977835,
+      "lift": 2.2469314598547645
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.011201413427561837,
+      "confidence": 0.15834165834165834,
+      "lift": 2.205250458203214
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.011201413427561837,
+      "confidence": 0.15600393700787402,
+      "lift": 2.205250458203214
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.011590106007067138,
+      "confidence": 0.1571633924293244,
+      "lift": 2.2007540849826226
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.011590106007067138,
+      "confidence": 0.16229589312221673,
+      "lift": 2.2007540849826226
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.010565371024734982,
+      "confidence": 0.15492227979274611,
+      "lift": 2.1693718545941194
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.010565371024734982,
+      "confidence": 0.14794656110836218,
+      "lift": 2.169371854594119
+    },
+    {
+      "antecedents": [
+        "dog food"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.012932862190812721,
+      "confidence": 0.1753713464302827,
+      "lift": 2.153149285890239
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "dog food"
+      ],
+      "support": 0.012932862190812721,
+      "confidence": 0.15878524945770067,
+      "lift": 2.153149285890239
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.011696113074204947,
+      "confidence": 0.17275574112734865,
+      "lift": 2.118278801518183
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.011696113074204947,
+      "confidence": 0.14341421143847485,
+      "lift": 2.118278801518183
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "napkins"
+      ],
+      "support": 0.01137809187279152,
+      "confidence": 0.13969631236442517,
+      "lift": 2.048396704618255
+    },
+    {
+      "antecedents": [
+        "napkins"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.01137809187279152,
+      "confidence": 0.16683937823834197,
+      "lift": 2.048396704618255
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.011660777385159011,
+      "confidence": 0.14621178555604786,
+      "lift": 2.036315714191021
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "fresh bread"
+      ],
+      "support": 0.011660777385159011,
+      "confidence": 0.16240157480314962,
+      "lift": 2.036315714191021
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "pancakes"
+      ],
+      "support": 0.010565371024734982,
+      "confidence": 0.12954939341421143,
+      "lift": 1.9903625589696978
+    },
+    {
+      "antecedents": [
+        "pancakes"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.010565371024734982,
+      "confidence": 0.16232356134636264,
+      "lift": 1.9903625589696978
+    },
+    {
+      "antecedents": [
+        "pancakes"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.010706713780918729,
+      "confidence": 0.16449511400651468,
+      "lift": 1.984318723949005
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "pancakes"
+      ],
+      "support": 0.010706713780918729,
+      "confidence": 0.12915601023017903,
+      "lift": 1.9843187239490048
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.011130742049469965,
+      "confidence": 0.13427109974424553,
+      "lift": 1.9832317968487208
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.011130742049469965,
+      "confidence": 0.16440501043841338,
+      "lift": 1.9832317968487208
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.010848056537102474,
+      "confidence": 0.1385379061371841,
+      "lift": 1.9583530188223328
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.010848056537102474,
+      "confidence": 0.15334665334665334,
+      "lift": 1.9583530188223328
+    },
+    {
+      "antecedents": [
+        "babies food"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.011342756183745584,
+      "confidence": 0.13926247288503255,
+      "lift": 1.9500880666236622
+    },
+    {
+      "antecedents": [
+        "cooking oil"
+      ],
+      "consequents": [
+        "babies food"
+      ],
+      "support": 0.011342756183745584,
+      "confidence": 0.15883226125680358,
+      "lift": 1.9500880666236622
+    },
+    {
+      "antecedents": [
+        "protein bar"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.01187279151943463,
+      "confidence": 0.15782057303898545,
+      "lift": 1.935148274264856
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "protein bar"
+      ],
+      "support": 0.01187279151943463,
+      "confidence": 0.14558058925476602,
+      "lift": 1.935148274264856
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "fresh bread"
+      ],
+      "support": 0.010706713780918729,
+      "confidence": 0.15134865134865136,
+      "lift": 1.8977256682174717
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.010706713780918729,
+      "confidence": 0.13424900310146212,
+      "lift": 1.8977256682174715
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.011484098939929329,
+      "confidence": 0.15587529976019185,
+      "lift": 1.880337162495068
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.011484098939929329,
+      "confidence": 0.13853367433930094,
+      "lift": 1.880337162495068
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.018586572438162544,
+      "confidence": 0.12674698795180725,
+      "lift": 1.872097995321579
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.018586572438162544,
+      "confidence": 0.2745302713987474,
+      "lift": 1.8720979953215788
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "protein bar"
+      ],
+      "support": 0.011625441696113074,
+      "confidence": 0.1402387041773231,
+      "lift": 1.8641405956872914
+    },
+    {
+      "antecedents": [
+        "protein bar"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.011625441696113074,
+      "confidence": 0.15453264443400655,
+      "lift": 1.8641405956872914
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.010424028268551237,
+      "confidence": 0.14517716535433073,
+      "lift": 1.8540224636857219
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.010424028268551237,
+      "confidence": 0.13312274368231047,
+      "lift": 1.8540224636857217
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.019434628975265017,
+      "confidence": 0.13253012048192772,
+      "lift": 1.798850076565254
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.019434628975265017,
+      "confidence": 0.26378896882494,
+      "lift": 1.7988500765652538
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.0107773851590106,
+      "confidence": 0.13214904679376083,
+      "lift": 1.7936777094788638
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.0107773851590106,
+      "confidence": 0.1462829736211031,
+      "lift": 1.7936777094788636
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "protein bar"
+      ],
+      "support": 0.019469964664310953,
+      "confidence": 0.1327710843373494,
+      "lift": 1.7648763206890503
+    },
+    {
+      "antecedents": [
+        "protein bar"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.019469964664310953,
+      "confidence": 0.25880695162047906,
+      "lift": 1.76487632068905
+    }
+  ],
+  "5": [
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "airpods",
+        "energy drink"
+      ],
+      "support": 0.015984360625574977,
+      "confidence": 0.21092564491654023,
+      "lift": 5.332004093587889
+    },
+    {
+      "antecedents": [
+        "airpods",
+        "energy drink"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.015984360625574977,
+      "confidence": 0.40406976744186046,
+      "lift": 5.332004093587889
+    },
+    {
+      "antecedents": [
+        "energy drink",
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.015984360625574977,
+      "confidence": 0.6525821596244131,
+      "lift": 4.9005651641570775
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "energy drink",
+        "bluetooth headphones"
+      ],
+      "support": 0.015984360625574977,
+      "confidence": 0.12003454231433505,
+      "lift": 4.9005651641570775
+    },
+    {
+      "antecedents": [
+        "airpods",
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.015984360625574977,
+      "confidence": 0.42249240121580545,
+      "lift": 4.734528248676088
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods",
+        "bluetooth headphones"
+      ],
+      "support": 0.015984360625574977,
+      "confidence": 0.1791237113402062,
+      "lift": 4.734528248676088
+    },
+    {
+      "antecedents": [
+        "airpods",
+        "energy bar"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.01046458141674333,
+      "confidence": 0.32499999999999996,
+      "lift": 4.288619119878604
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "airpods",
+        "energy bar"
+      ],
+      "support": 0.01046458141674333,
+      "confidence": 0.13808801213960545,
+      "lift": 4.288619119878604
+    },
+    {
+      "antecedents": [
+        "energy bar",
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.01046458141674333,
+      "confidence": 0.5515151515151515,
+      "lift": 4.141602554037787
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "energy bar",
+        "bluetooth headphones"
+      ],
+      "support": 0.01046458141674333,
+      "confidence": 0.07858376511226252,
+      "lift": 4.141602554037787
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "protein bar",
+        "airpods"
+      ],
+      "support": 0.011039558417663294,
+      "confidence": 0.12371134020618559,
+      "lift": 3.9844215349369994
+    },
+    {
+      "antecedents": [
+        "protein bar",
+        "airpods"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.011039558417663294,
+      "confidence": 0.35555555555555557,
+      "lift": 3.984421534936999
+    },
+    {
+      "antecedents": [
+        "protein bar",
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.011039558417663294,
+      "confidence": 0.5133689839572193,
+      "lift": 3.855143941702918
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "protein bar",
+        "energy drink"
+      ],
+      "support": 0.011039558417663294,
+      "confidence": 0.08290155440414508,
+      "lift": 3.855143941702918
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.03783348666053358,
+      "confidence": 0.28411053540587217,
+      "lift": 3.749051920924832
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.03783348666053358,
+      "confidence": 0.4992412746585736,
+      "lift": 3.749051920924832
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.015064397424103036,
+      "confidence": 0.19878603945371776,
+      "lift": 3.6858068210864174
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.015064397424103036,
+      "confidence": 0.279317697228145,
+      "lift": 3.685806821086417
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods",
+        "energy bar"
+      ],
+      "support": 0.010579576816927323,
+      "confidence": 0.11855670103092784,
+      "lift": 3.682032400589102
+    },
+    {
+      "antecedents": [
+        "airpods",
+        "energy bar"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.010579576816927323,
+      "confidence": 0.32857142857142857,
+      "lift": 3.682032400589102
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.024494020239190433,
+      "confidence": 0.323216995447648,
+      "lift": 3.6220296293978698
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.024494020239190433,
+      "confidence": 0.27448453608247425,
+      "lift": 3.6220296293978698
+    },
+    {
+      "antecedents": [
+        "energy bar",
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.010579576816927323,
+      "confidence": 0.46,
+      "lift": 3.4543696027633852
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "energy bar",
+        "energy drink"
+      ],
+      "support": 0.010579576816927323,
+      "confidence": 0.07944732297063903,
+      "lift": 3.4543696027633852
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.03955841766329347,
+      "confidence": 0.2970639032815198,
+      "lift": 3.3289532254331142
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.03955841766329347,
+      "confidence": 0.44329896907216493,
+      "lift": 3.3289532254331142
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "gadget for tiktok streaming"
+      ],
+      "support": 0.012419503219871205,
+      "confidence": 0.13917525773195877,
+      "lift": 3.2709947060462525
+    },
+    {
+      "antecedents": [
+        "gadget for tiktok streaming"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.012419503219871205,
+      "confidence": 0.29189189189189185,
+      "lift": 3.270994706046252
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.01529438822447102,
+      "confidence": 0.1713917525773196,
+      "lift": 3.1778735190029237
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.01529438822447102,
+      "confidence": 0.2835820895522388,
+      "lift": 3.1778735190029233
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.02276908923643054,
+      "confidence": 0.1709844559585492,
+      "lift": 3.170321597048068
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.02276908923643054,
+      "confidence": 0.42217484008528783,
+      "lift": 3.170321597048068
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.02276908923643054,
+      "confidence": 0.4133611691022964,
+      "lift": 3.104135342412409
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.02276908923643054,
+      "confidence": 0.1709844559585492,
+      "lift": 3.1041353424124085
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.01517939282428703,
+      "confidence": 0.2755741127348643,
+      "lift": 3.0881346447711087
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.01517939282428703,
+      "confidence": 0.17010309278350516,
+      "lift": 3.088134644771108
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.012879484820607176,
+      "confidence": 0.23382045929018788,
+      "lift": 3.0854365917867588
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.012879484820607176,
+      "confidence": 0.16995447647951442,
+      "lift": 3.0854365917867583
+    },
+    {
+      "antecedents": [
+        "ring light"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.017249310027598896,
+      "confidence": 0.40431266846361186,
+      "lift": 3.036185634680111
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "ring light"
+      ],
+      "support": 0.017249310027598896,
+      "confidence": 0.12953367875647667,
+      "lift": 3.036185634680111
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "megaman zero 4"
+      ],
+      "support": 0.012419503219871205,
+      "confidence": 0.09326424870466321,
+      "lift": 2.9069028915259905
+    },
+    {
+      "antecedents": [
+        "megaman zero 4"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.012419503219871205,
+      "confidence": 0.38709677419354843,
+      "lift": 2.9069028915259905
+    },
+    {
+      "antecedents": [
+        "ring light"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.010809567617295308,
+      "confidence": 0.25336927223719674,
+      "lift": 2.83930308166838
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "ring light"
+      ],
+      "support": 0.010809567617295308,
+      "confidence": 0.1211340206185567,
+      "lift": 2.83930308166838
+    },
+    {
+      "antecedents": [
+        "metroid prime"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.01138454461821527,
+      "confidence": 0.3778625954198473,
+      "lift": 2.8375588339991293
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "metroid prime"
+      ],
+      "support": 0.01138454461821527,
+      "confidence": 0.0854922279792746,
+      "lift": 2.8375588339991293
+    },
+    {
+      "antecedents": [
+        "gadget for tiktok streaming"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.015984360625574977,
+      "confidence": 0.37567567567567567,
+      "lift": 2.8211361620688042
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "gadget for tiktok streaming"
+      ],
+      "support": 0.015984360625574977,
+      "confidence": 0.12003454231433505,
+      "lift": 2.8211361620688042
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "portal 2"
+      ],
+      "support": 0.013454461821527139,
+      "confidence": 0.10103626943005181,
+      "lift": 2.7892425363927957
+    },
+    {
+      "antecedents": [
+        "portal 2"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.013454461821527139,
+      "confidence": 0.37142857142857144,
+      "lift": 2.7892425363927953
+    }
+  ]
+}

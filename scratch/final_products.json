@@ -1,0 +1,902 @@
+[
+  {
+    "product_name": "airpods",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/apple/airpods-e-airpods-pro",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/AirPods_with_Charging_Case.jpg"
+  },
+  {
+    "product_name": "almonds",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/bretzel-de-amendoa-7772568.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw2174f8fe/images/col/777/7772568-cima.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "antioxydant juice",
+    "search_source": "auchan.pt",
+    "product_page": "https://www.auchan.pt/pt/bebidas-e-garrafeira/sumos-e-nectares/refrigerados/super-smoothie-innocent-antioxidante-300ml-%28sdr%29/4012865.html",
+    "image_url": "https://www.auchan.pt/dw/image/v2/BFRC_PRD/on/demandware.static/-/Sites-auchan-pt-master-catalog/default/dw20e6f71f/images/hi-res/004012865.jpg?sw=250&sh=250&sm=fit&bgcolor=FFFFFF"
+  },
+  {
+    "product_name": "asparagus",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/espargos-verdes-continente-continente-7162145.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw8404d062/images/col/716/7162145-cima.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "avocado",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/abacate-continente-continente-8385352.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw7b85af03/images/col/838/8385352-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "babies food",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/saqueta-de-frutas-variadas-12m-nestle-nestle-7319491.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwb250906d/images/col/731/7319491-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "bacon",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/bacon-fatiado-elpozo-elpozo-6645078.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwd9c1dd56/images/col/664/6645078-frente.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "barbecue sauce",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/molho-barbecue-top-down-continente-continente-7047899.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwf140e5db/images/col/704/7047899-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "beer",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/cerveja-com-alcool-gutbier-gutbier-6451162.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwbe3a3d33/images/col/645/6451162-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "black beer",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/cerveja-com-alcool-preta-sagres-sagres-7705534.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw917ea13f/images/col/770/7705534-hero.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "black tea",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/cha-preto-saquetas-tetley-tetley-3646776.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw82b6fd8b/images/col/364/3646776-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "blueberries",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/mirtilos-origens-bio-origens-bio-7594144.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw2dd54277/images/col/759/7594144-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "bluetooth headphones",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/audio/auscultadores/bluetooth",
+    "image_url": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+  },
+  {
+    "product_name": "body spray",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/desodorizante-spray-black-axe-axe-5479817.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwfcfbc262/images/col/547/5479817-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "bramble",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/gomas-amoras-vidal-vidal-7646467.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwf2e9ec3a/images/col/764/7646467-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "brownies",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/brownies-de-amor-8701354.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw23194ff8/images/col/870/8701354-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "burger sauce",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/molho-burger-top-down-calve-calve-4959793.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwccdb8ae5/images/col/495/4959793-frente.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "burgers",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/hamburguer-de-bovino-continente-continente-6152474.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw66cb9153/images/col/615/6152474-topshot.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "butter",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/manteiga-magra-matinal-matinal-2416978.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwca6ed47a/images/col/241/2416978-frente.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "cake",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/bolo-moreno-8651175.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw75f4d716/images/col/865/8651175-topshot.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "candy bars",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/barras-de-cereais-chocolate-fitness-fitness-2894904.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw9f703b4b/images/col/289/2894904-direito.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "canned_tuna",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/atum-em-azeite-continente-continente-3697794.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw3e836405/images/col/369/3697794-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "carrots",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/cenoura-continente-continente-2885107.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwaa0ae3ae/images/col/288/2885107-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "cat food",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/comida-humida-para-gato-frango-purina-gourmet-nature-purina-gourmet-nature-7399548.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwa8d0db83/images/col/739/7399548-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "catfish",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/filetes-de-peixe-gato-riscado-congelado-continente-5444391.html",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Clarias_garie_080516_9142_tdp.jpg"
+  },
+  {
+    "product_name": "cauliflower",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/couve-flor-continente-continente-2076768.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw2ef44391/images/col/207/2076768-cima.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "cotton buds",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/cotonetes-continente-continente-7643709.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwee7f15af/images/col/764/7643709-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "cream",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/natas-cremosas-mimosa-mimosa-2211007.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw53964de9/images/col/221/2211007-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "deodorant",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/desodorizante-creme-original-dove-dove-2383653.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwfca9a6c7/images/col/238/2383653-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "dessert wine",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/contemporal-vinho-do-porto-tawny-porto-contemporal-6968117.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw6a083b46/images/col/696/6968117-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "dog food",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/comida-humida-para-cao-saquetas-pedigree-pedigree-5704638.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwcacfae85/images/col/570/5704638-frente.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "eggplant",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/beringela-continente-continente-2076738.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw4ed24e5e/images/col/207/2076738-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "eggs",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/ovos-cozidos-continente-continente-7295696.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw95b789a9/images/col/729/7295696-frente.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "energy bar",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/barra-proteica-de-amendoim-billion-prozis-prozis-7642161.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw998c0839/images/col/764/7642161-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "energy drink",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/bebida-energetica-burn-burn-2747594.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw0c0bc8cb/images/col/274/2747594-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "escalope",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/escalopes-de-bovino-continente-continente-7303747.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwb355ab64/images/col/730/7303747-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "extra dark chocolate",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/tablete-de-chocolate-com-creme-extra-de-cacau-milka-milka-8458786.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw8a80aabf/images/col/845/8458786-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "final fantasy xix",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Final-Fantasy-XVI-PS5-Jogo-PlayStation-5/a10741258",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/a/ae/Final_Fantasy_XVI_cover_art.png"
+  },
+  {
+    "product_name": "final fantasy xx",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Final-Fantasy-XVI-PS5-Jogo-PlayStation-5/a10741258",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/a/ae/Final_Fantasy_XVI_cover_art.png"
+  },
+  {
+    "product_name": "final fantasy xxii",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Final-Fantasy-XVI-PS5-Jogo-PlayStation-5/a10741258",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/a/ae/Final_Fantasy_XVI_cover_art.png"
+  },
+  {
+    "product_name": "flax seed",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/sementes-de-linhaca-continente-continente-8117181.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw356d8c71/images/col/811/8117181-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "french fries",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/batata-frita-ondulada-continente-continente-2005830.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwfdbc08ec/images/col/200/2005830-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "fresh bread",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/pao-padeira-7649357.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw370ad135/images/col/764/7649357-cima-acessorio.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "fresh tuna",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/bife-de-atum-fresco-continente-continente-7629112.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwceb2b74e/images/col/762/7629112-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "fromage blanc",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/queijo-fresco-santiago-santiago-2112706.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw605ca8eb/images/col/211/2112706-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "frozen smoothie",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/smoothie-berrylicious-continente-equilibrio-continente-equilibrio-7837967.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw7155feb4/images/col/783/7837967-frente.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "frozen vegetables",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/brocolos-iglo-iglo-7473092.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw90b8c12e/images/col/747/7473092-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "gadget for tiktok streaming",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/fotografia-e-drones/acessorios-fotografia/ring-lights",
+    "image_url": "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f"
+  },
+  {
+    "product_name": "gluten free bar",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/barra-amendoim-sem-gluten-continente-bio-continente-bio-6753429.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw0f3eadf6/images/col/675/6753429-direito.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "grated cheese",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/queijo-mozzarella-ralado-campainha-campainha-7484560.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwb2b0dd66/images/col/748/7484560-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "green beans",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/feijao-verde-continente-continente-3835925.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw59e6c42f/images/col/383/3835925-cima.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "green grapes",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/uva-branca-sem-grainha-continente-5079632.html",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Table_grapes_on_white.jpg"
+  },
+  {
+    "product_name": "green tea",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/cha-verde-saquetas-lipton-lipton-2712654.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw7f3160a7/images/col/271/2712654-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "ground beef",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/preparado-de-carne-picada-de-bovino-continente-continente-7430620.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw4583d027/images/col/743/7430620-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "gums",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/gomas-tijolos-continente-continente-7324628.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw3d90a5c1/images/col/732/7324628-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "half-life 2",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/220/HalfLife_2/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/2/25/Half-Life_2_cover.jpg"
+  },
+  {
+    "product_name": "half-life: alyx",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/546560/HalfLife_Alyx/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/f/fa/Half-Life_Alyx_Cover_Art.jpg"
+  },
+  {
+    "product_name": "ham",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/fiambre-da-pa-fatiado-continente-continente-7102478.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw5dd09797/images/col/710/7102478-frente.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "hand protein bar",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/barra-proteina-cookies-corny-corny-8091616.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw071fa34b/images/col/809/8091616-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "herb & pepper",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/atum-posta-pimenta-da-terra-e-ervas-finas-bom-petisco-bom-petisco-5647227.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw39cf7b65/images/col/564/5647227-frente.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "honey",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/mel-serramel-serramel-6813140.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw3281b282/images/col/681/6813140-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "hot dogs",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/salsichas-hot-dog-frasco-8-un-nobre-nobre-7029516.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw051f3bf2/images/col/702/7029516-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "imac",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/computadores/computadores-apple/imac",
+    "image_url": "https://images.unsplash.com/photo-1501504905252-473c47e087f8"
+  },
+  {
+    "product_name": "ipad",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/tablets/tablets-apple",
+    "image_url": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0"
+  },
+  {
+    "product_name": "iphone 10",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Apple-iPhone-X/s803623",
+    "image_url": "https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5"
+  },
+  {
+    "product_name": "ketchup",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/ketchup-pickle-heinz-heinz-8070035.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw3a7e2a51/images/col/807/8070035-frente.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "laptop",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/informatica-e-gaming/computadores/portateis",
+    "image_url": "https://images.unsplash.com/photo-1593642634367-d91a135587b5"
+  },
+  {
+    "product_name": "light cream",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/nata-cremosa-para-bater-light-mimosa-mimosa-2523245.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw17fc4002/images/col/252/2523245-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "light mayo",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/maionese-light-sem-gluten-hellmanns-hellmanns-8460610.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw138e8b21/images/col/846/8460610-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "low fat yogurt",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/iogurte-magro-natural-pastoret-pastoret-6293453.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwdb9bbe81/images/col/629/6293453-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "mashed potato",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/pure-de-batata-knorr-knorr-8190856.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwead4b084/images/col/819/8190856-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "mayonnaise",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/maionese-hellmanns-hellmanns-5141248.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw28872976/images/col/514/5141248-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "meatballs",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/almondegas-nobre-nobre-4449161.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwd154e02a/images/col/444/4449161-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "megaman zero",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/999020/Mega_Man_ZeroZX_Legacy_Collection/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/1/1b/Mega_Man_Zero_ZX_Legacy_Collection_cover_art.jpg"
+  },
+  {
+    "product_name": "megaman zero 2",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/999020/Mega_Man_ZeroZX_Legacy_Collection/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/1/1b/Mega_Man_Zero_ZX_Legacy_Collection_cover_art.jpg"
+  },
+  {
+    "product_name": "megaman zero 3",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/999020/Mega_Man_ZeroZX_Legacy_Collection/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/1/1b/Mega_Man_Zero_ZX_Legacy_Collection_cover_art.jpg"
+  },
+  {
+    "product_name": "megaman zero 4",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/999020/Mega_Man_ZeroZX_Legacy_Collection/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/1/1b/Mega_Man_Zero_ZX_Legacy_Collection_cover_art.jpg"
+  },
+  {
+    "product_name": "melons",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/melao-verde-continente-continente-2076563.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwd665401f/images/col/207/2076563-cima.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "metroid fusion",
+    "search_source": "nintendo.pt",
+    "product_page": "https://www.nintendo.pt/Jogos/Jogos-Nintendo-Switch/Metroid-Fusion-2353723.html",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/d/db/Metroid_Fusion_box_art.jpg"
+  },
+  {
+    "product_name": "metroid prime",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Metroid-Prime-Remastered-Nintendo-Switch-Jogo-Nintendo-Switch/a10006764",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/6/6d/Metroid_Prime_Remastered_box_art.jpg"
+  },
+  {
+    "product_name": "milk",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/leite-achocolatado-agros-agros-5499368.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw55d18990/images/col/549/5499368-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "minecraft",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/gaming/jogos-videojogos/minecraft",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover_art.jpg"
+  },
+  {
+    "product_name": "mineral water",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/agua-sem-gas-vitalis-vitalis-8777815.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw2c4161e4/images/col/877/8777815-esquerdo.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "mint",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/hortela-fresca-continente-continente-6690954.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw6ef61b63/images/col/669/6690954-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "mint green tea",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/cha-verde-e-menta-pyramid-saquetas-lipton-lipton-7377068.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw28a2eb8a/images/col/737/7377068-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "muffins",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/forma-6-muffins-antiaderente-lekue-lekue-8678348.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw07e00064/images/col/867/8678348-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "mushroom cream sauce",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/massa-penne-com-molho-de-cogumelos-continente-continente-3692075.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwe2009974/images/col/369/3692075-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "napkins",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/conjunto-2-guardanapos-40x40cm-kasa-340779.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwc89e0fd6/images/col/777/7777591-topshot.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "nonfat milk",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/leite-uht-magro-gresso-gresso-8175146.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw81a452be/images/col/817/8175146-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "oatmeal",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/bolachas-de-aveia-continente-continente-5027383.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw5bbc99c7/images/col/502/5027383-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "oil",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/oleo-alimentar-fula-fula-2004635.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw83578ab6/images/col/200/2004635-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "olive oil",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/azeite-continente-continente-7082533.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw1f5fdd34/images/col/708/7082533-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "pancakes",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/panquecas-simples-continente-continente-8542528.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw983ca0cf/images/col/854/8542528-cima.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "parmesan cheese",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/queijo-parmigiano-reggiano-dop-continente-continente-8421688.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw7e9bb8a0/images/col/842/8421688-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "pasta",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/massa-esparguete-milaneza-milaneza-6009925.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw238946d1/images/col/600/6009925-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "pepper",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/pate-de-pimenta-continente-continente-6483224.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw90b4cf82/images/col/648/6483224-cima.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "pet food",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/comida-humida-para-gato-vitela-continente-continente-7246061.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw3210e1c2/images/col/724/7246061-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "phone car charger",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/telemoveis-e-smartwatches/acessorios-de-telemovel/carregadores-e-baterias/carregadores-de-carro",
+    "image_url": "https://images.unsplash.com/photo-1622445262465-2481c4574875"
+  },
+  {
+    "product_name": "phone charger",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/telemoveis-e-smartwatches/acessorios-de-telemovel/carregadores-e-baterias",
+    "image_url": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0"
+  },
+  {
+    "product_name": "pickles",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/pickles-continente-continente-7621700.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw638f7b1a/images/col/762/7621700-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "pokemon scarlet",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Pokemon-Scarlet-Nintendo-Switch-Jogo-Nintendo-Switch/a10055106",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/f/fb/Pok%C3%A9mon_Scarlet_and_Violet_box_art.jpg"
+  },
+  {
+    "product_name": "pokemon shield",
+    "search_source": "nintendo.pt",
+    "product_page": "https://www.nintendo.pt/Jogos/Jogos-Nintendo-Switch/Pokemon-Shield-1466859.html",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/d/d9/Pok%C3%A9mon_Sword_and_Shield_box_art.png"
+  },
+  {
+    "product_name": "pokemon sword",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Pokemon-Sword-Nintendo-Switch-Jogo-Nintendo-Switch/a6668725",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/d/d9/Pok%C3%A9mon_Sword_and_Shield_box_art.png"
+  },
+  {
+    "product_name": "pokemon violet",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Pokemon-Violet-Nintendo-Switch-Jogo-Nintendo-Switch/a10055107",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/f/fb/Pok%C3%A9mon_Scarlet_and_Violet_box_art.jpg"
+  },
+  {
+    "product_name": "portal",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/400/Portal/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/9/9f/Portal_standalonebox.png"
+  },
+  {
+    "product_name": "portal 2",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/620/Portal_2/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/f/f9/Portal2cover.jpg"
+  },
+  {
+    "product_name": "protein bar",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/barra-proteica-morango-zero-prozis-prozis-7407845.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw54ea6a1b/images/col/740/7407845-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "ratchet & clank",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/1895880/Ratchet__Clank_Rift_Apart/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/8/87/Ratchet_%26_Clank_-_Rift_Apart_cover_art.jpg"
+  },
+  {
+    "product_name": "ratchet & clank 2",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/1895880/Ratchet__Clank_Rift_Apart/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/8/87/Ratchet_%26_Clank_-_Rift_Apart_cover_art.jpg"
+  },
+  {
+    "product_name": "ratchet & clank 3",
+    "search_source": "store.steampowered.com",
+    "product_page": "https://store.steampowered.com/app/1895880/Ratchet__Clank_Rift_Apart/",
+    "image_url": "https://upload.wikimedia.org/wikipedia/en/8/87/Ratchet_%26_Clank_-_Rift_Apart_cover_art.jpg"
+  },
+  {
+    "product_name": "razor",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/recarga-de-laminas-mach3-gillette-gillette-7361155.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw7d6ada7a/images/col/736/7361155-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "red wine",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/ea-alentejano-vinho-tinto-ea-5331018.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw7c8d0a7f/images/col/533/5331018-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "rice",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/arroz-basmati-continente-continente-4949515.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw3e2924b4/images/col/494/4949515-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "ring light",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/produtos/ring-light-led-10-lampada-anelar-regulavel-7301047",
+    "image_url": "https://images.unsplash.com/photo-1608248597481-496100c80836"
+  },
+  {
+    "product_name": "salad",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/salada-proteina-vitacress-vitacress-8464848.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwa8ad94fc/images/col/846/8464848-topshot.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "salmon",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/salmao-pequeno-fresco-2566219.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwf75f5b5c/images/col/256/2566219-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "salt",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/sal-grosso-continente-continente-5621031.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw9455edbd/images/col/562/5621031-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "samsung galaxy 10",
+    "search_source": "fnac.pt",
+    "product_page": "https://www.fnac.pt/Samsung-Galaxy-S10/s586821",
+    "image_url": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf"
+  },
+  {
+    "product_name": "sandwich",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/sacos-para-sandes-continente-continente-7520138.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw7f15c596/images/col/752/7520138-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "seabass",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/robalo-medio-fresco-2147671.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw4444131d/images/col/214/2147671-cima-marmore.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "shallot",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/cebola-chalota-continente-continente-3800766.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw4e746bae/images/col/380/3800766-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "shampoo",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/champo-purificante-pantene-pantene-8696621.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw0ce93fc5/images/col/869/8696621-hero.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "shower gel",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/gel-de-banho-multifrutos-mylabel-mylabel-8095597.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw9e427d53/images/col/809/8095597-frente.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "shrimp",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/noodles-camarao-indomie-indomie-8118458.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwdafbda86/images/col/811/8118458-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "soda",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/refrigerante-com-gas-laranja-sumol-sumol-2050376.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwcad50f31/images/col/205/2050376-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "soup",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/sopa-tailandesa-knorr-knorr-6649495.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw19405504/images/col/664/6649495-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "spaghetti",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/massa-esparguete-milaneza-milaneza-6009925.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw238946d1/images/col/600/6009925-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "sparkling water",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/agua-com-gas-castello-castello-3036323.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw484eeadc/images/col/303/3036323-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "spinach",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/espinafres-mil-folhas-bonduelle-bonduelle-5383692.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwae251a28/images/col/538/5383692-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "strawberries",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/morango-continente-continente-2471513.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw8727d039/images/col/247/2471513-cima-fora-embalagem.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "strong cheese",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/queijo-de-vaca-curado-apimentado-fonte-mourisca-fonte-mourisca-5711927.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw76a180c4/images/col/571/5711927-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "tea",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/cha-verde-saquetas-lipton-lipton-2712654.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw7f3160a7/images/col/271/2712654-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "toilet paper",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/papel-higienico-seda-foxy-foxy-5127706.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dweef33bd8/images/col/512/5127706-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "tomato juice",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/sumo-tomate-compal-vital-anti-ox-compal-vital-anti-ox-5586392.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw16a15664/images/col/558/5586392-frente.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "tomato sauce",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/molho-de-tomate-e-manjericao-guloso-guloso-7721827.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw692f54b6/images/col/772/7721827-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "tomatoes",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/tomate-chucha-continente-continente-2076838.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw6a1b00e1/images/col/207/2076838-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "tooth brush",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/escova-de-dentes-twister-colgate-colgate-7844725.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwae409ada/images/col/784/7844725-frente-1.png?sw=280&sh=280"
+  },
+  {
+    "product_name": "toothpaste",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/pasta-de-dentes-herbal-colgate-colgate-2521932.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw2fbb22ac/images/col/252/2521932-hero.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "trout",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/truta-salmonada-fresca-2148073.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw1a3338ec/images/col/214/2148073-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "turkey",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/espetadas-de-peru-continente-continente-6244478.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw56ef7f47/images/col/624/6244478-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "vacuum cleaner",
+    "search_source": "worten.pt",
+    "product_page": "https://www.worten.pt/pequenos-eletrodomesticos/aspiradores",
+    "image_url": "https://images.unsplash.com/photo-1558317374-067fb5f30001"
+  },
+  {
+    "product_name": "vegetables mix",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/mistura-de-legumes-orientais-continente-continente-6781813.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwa7ebda78/images/col/678/6781813-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "water spray",
+    "search_source": "wells.pt",
+    "product_page": "https://www.wells.pt/cosmetica-rosto-e-corpo/cosmetica-rosto/agua-termal",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Spray_bottle.jpg"
+  },
+  {
+    "product_name": "white wine",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/cantarinha-vinho-branco-cantarinha-8209355.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw13b57d6a/images/col/820/8209355-direito.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "whole weat flour",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/farinha-centeio-integral-seara-seara-3638198.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw618c1acc/images/col/363/3638198-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "whole wheat pasta",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/massa-fusilli-integral-garofalo-garofalo-6192798.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwa2e807c7/images/col/619/6192798-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "whole wheat rice",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/arroz-integral-seara-seara-2232432.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw5f250411/images/col/223/2232432-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "yams",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/inhame-continente-continente-5099121.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dwcfdde7cb/images/col/509/5099121-frente.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "yogurt cake",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/bolo-de-iogurte-da-nossa-pastelaria-da-nossa-pastelaria-7624734.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw3f7f2498/images/col/762/7624734-cima.jpg?sw=280&sh=280"
+  },
+  {
+    "product_name": "zucchini",
+    "search_source": "continente.pt",
+    "product_page": "https://www.continente.pt/produto/curgete-verde-continente-continente-2076759.html",
+    "image_url": "https://www.continente.pt/dw/image/v2/BDVS_PRD/on/demandware.static/-/Sites-col-master-catalog/default/dw501f0905/images/col/207/2076759-frente.jpg?sw=280&sh=280"
+  }
+]
