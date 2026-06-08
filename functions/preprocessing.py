@@ -6,21 +6,14 @@ from functions.eda import SPEND_COLS
 
 current_year = 2026
 
-
-# Columns used as features in the clustering model and profiling
+# All numerical columns
 NUMERICAL_COLS = [
     # Demographics
     'age',
-    'is_female',
     'dependants',
     'education_level',
-    'vegetarian',
-    'pescatarian',
-    'carnivore',
-    'omnivore',
 
     # Buying behaviour
-    'has_loyalty_card',
     'customer_tenure',
     'distinct_stores_visited',
     'typical_hour',
@@ -55,24 +48,18 @@ NUMERICAL_COLS = [
     
     # Location
     'latitude',
-    'longitude']
-
+    'longitude'
+    ]
 
 
 # Updated after eda
 FEATURE_COLS =[
-        # Demographics
+    # Demographics
     'age',
-    'is_female',
     'dependants',
     'education_level',
-    'vegetarian',
-    'pescatarian',
-    'carnivore',
-    'omnivore',
 
     # Buying behaviour
-    'has_loyalty_card',
     'customer_tenure',
     'distinct_stores_visited',
     'typical_hour',
@@ -84,7 +71,7 @@ FEATURE_COLS =[
     'total_spend',
 
     # Spend shares
-    'share_groceries',       #Might be removed
+    #'share_groceries',       
     'share_electronics',
     'share_vegetables',
     'share_nonalcohol_drinks',
@@ -93,12 +80,7 @@ FEATURE_COLS =[
     'share_fish',
     'share_hygiene',
     'share_videogames',
-    'share_petfood',
-    
-    # Location
-    'latitude',
-    'longitude']
-
+    'share_petfood']
 
 
 # Preprocessing steps
@@ -170,20 +152,17 @@ def add_education(df):
 
 def add_dietary_preferences(df):
     """
-    Derive dietary preference binary flags based on meat and fish lifetime spend.
-    - vegetarian: no meat, no fish
-    - pescatarian: no meat, buys fish
-    - carnivore: buys meat, no fish
-    - omnivore: buys both
+    Derive dietary preference category based on meat, fish, and vegetables spend shares
     """
-    meat = df['lifetime_spend_meat']
-    fish = df['lifetime_spend_fish']
+    meat = df['share_meat']
+    fish = df['share_fish']
+    veggies = df['share_vegetables']
     
-    df['vegetarian'] = ((meat < 15) & (fish < 15)).astype(int)
-    df['pescatarian'] = ((meat < 15) & (fish >= 15)).astype(int)
-    df['carnivore'] = ((meat >= 15) & (fish < 15)).astype(int)
-    df['omnivore'] = ((meat >= 15) & (fish >= 15)).astype(int)
-    
+    conditions = [(meat < 0.02) & (fish < 0.02) & (veggies > 0.10),
+                (meat < 0.02) & (fish >= 0.10),
+                (meat >= 0.10) & (fish < 0.02)]
+    choices = ['vegetarian', 'pescatarian', 'carnivore']
+    df['dietary_preference'] = np.select(conditions, choices, default = 'omnivore')   
     return df
 
 
@@ -233,45 +212,6 @@ def check_nulls(df, cols):
     missing = missing[missing > 0]
     if not missing.empty:
         raise ValueError(f"NaN values remain after preprocessing:\n{missing}")
-
-
-# Conjunction of all above
-def preprocessing(df_raw):
-    """
-    Full preprocessing pipeline. Applies every step in order and returns
-    a clean dataframe ready for scaling and clustering.
-
-    Steps:
-        1. fill_missing_with_zero     - fill NaN complaints, kids, teens, spend with 0
-        2. fill_missing_with_median   - fill NaN behavioural cols with median
-        3. clean_loyalty_card         - binary has_loyalty_card flag
-        4. add_age                    - derive age, drop raw birthdate
-        5. add_gender                 - binary is_female flag
-        6. add_education              - ordinal education level from name prefix (0–3)
-        7. add_dietary_preferences    - binary flags for veg/pescatarian/carnivore/omnivore
-        8. add_dependants             - kids_home + teens_home
-        9. add_tenure                 - years since first transaction
-        10. add_total_spend            - sum of all spend categories
-        11. add_spend_shares           - per-category fraction of total spend
-        12. check_nulls                - raise if any feature column has NaN
-    """
-    df = df_raw.copy()
-
-    df = fill_missing_with_zero(df)
-    df = fill_missing_with_median(df)
-    df = clean_loyalty_card(df)
-    df = add_age(df)
-    df = add_gender(df)
-    df = add_education(df)
-    df = add_dietary_preferences(df)
-    df = add_dependants(df)
-    df = add_tenure(df)
-    df = add_total_spend(df)
-    df = add_spend_shares(df)
-
-    check_nulls(df, FEATURE_COLS)
-
-    return df
 
 
 # Scaling
