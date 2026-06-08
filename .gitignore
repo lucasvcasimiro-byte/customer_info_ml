@@ -3,6 +3,7 @@ aulas/
 
 # Python
 __pycache__/
+__pycache__/
 *.py[cod]
 .ipynb_checkpoints/
 
@@ -11,15 +12,9 @@ ml2/
 .venv/
 venv/
 
-# Frontend
-node_modules/
-dist/
-.vite/
-
 # Generated project outputs
 outputs/
 
 # Local OS/editor files
 .DS_Store
 Thumbs.db
-

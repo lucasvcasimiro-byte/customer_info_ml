@@ -20,8 +20,8 @@ import { clustersByK, clusterConfigs } from '../data/clusterData'
 const RADAR_COLORS = ['#f59e0b', '#3b82f6', '#2dd4bf', '#f43f5e', '#a78bfa', '#06b6d4', '#10b981']
 
 export default function Clustering() {
-  const [selectedScaler, setSelectedScaler] = useState('StandardScaler')
-  const [selectedK, setSelectedK]           = useState(6)
+  const [selectedScaler, setSelectedScaler] = useState('RobustScaler')
+  const [selectedK, setSelectedK]           = useState(7)
 
   // ── Derive the active cluster list from the selected k ─────────────────────
   // This is the key fix: every chart below reads `activeClusters`, not the

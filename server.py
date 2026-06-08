@@ -13,37 +13,14 @@ CORS(app)
 
 # 1. Caminhos de dados
 DATA_DIR = os.path.join(os.path.dirname(__file__), 'data')
-CLUSTERING_FILE = os.path.join(DATA_DIR, 'ci_clustering.csv')
+CLUSTERING_FILE = os.path.join(DATA_DIR, 'ci_clustered.csv')
 BASKET_FILE = os.path.join(DATA_DIR, 'customer_basket.csv')
 RULES_FILE = os.path.join(DATA_DIR, 'cluster_association_rules.json')
 
 # 2. Carregar e indexar dados dos clientes
-print("A carregar base de dados de clientes (ci_clustering.csv)...")
+print("A carregar base de dados de clientes (ci_clustered.csv)...")
 df_ci = pd.read_csv(CLUSTERING_FILE)
 print(f"Carregados {len(df_ci)} clientes com sucesso!")
-
-# Colunas de características (features)
-FEATURE_COLS = [
-    'age', 'is_female', 'dependants', 'education_level',
-    'vegetarian', 'pescatarian', 'carnivore', 'omnivore',
-    'has_loyalty_card', 'customer_tenure', 'distinct_stores_visited',
-    'typical_hour', 'percentage_of_products_bought_promotion',
-    'lifetime_total_distinct_products', 'number_complaints',
-    'total_spend',
-    'share_groceries', 'share_electronics', 'share_vegetables',
-    'share_nonalcohol_drinks', 'share_alcohol_drinks', 'share_meat',
-    'share_fish', 'share_hygiene', 'share_videogames', 'share_petfood',
-    'latitude', 'longitude'
-]
-
-print("A normalizar características...")
-scaler = StandardScaler()
-X = scaler.fit_transform(df_ci[FEATURE_COLS])
-
-print("A treinar modelo K-Means (K=6)...")
-kmeans = KMeans(n_clusters=6, random_state=42, n_init=10)
-df_ci['cluster'] = kmeans.fit_predict(X)
-print("Treino concluído com sucesso!")
 
 # Indexar base de dados de clientes para lookup instantâneo
 customer_lookup = {}
@@ -90,58 +67,66 @@ if os.path.exists(RULES_FILE):
     print("Regras de associação carregadas com sucesso!")
 else:
     print("AVISO: Ficheiro de regras não encontrado. A inicializar vazio.")
-    cluster_rules = {str(i): [] for i in range(6)}
+    cluster_rules = {str(i): [] for i in range(7)}
 
 # 5. Mapeamento estrito dos clusters com base na análise de centróides
 # campaignItems = itens sobre os quais o desconto se aplica (devem bater com nextBestOffer)
 # items         = itens default de fallback para cross-selling (da análise de cestas)
 CLUSTER_SEGMENTS = {
     0: {
-        'segment': 'Younger Promo-Sensitive Shoppers',
-        'discount': '25%',
-        'nextBestOffer': '25% off Next Promotional Visit',
-        'campaignItems': ['fresh bread', 'milk', 'eggs'],          # itens com desconto
-        'items': ['asparagus', 'airpods', 'tomatoes'],             # fallback cross-sell
-        'propensity': 0.82
-    },
-    1: {
-        'segment': 'Vegetable Heavy / Healthy Shoppers',
+        'segment': 'Vegans',
         'discount': '15%',
         'nextBestOffer': '15% off Organic Vegetables Subscription',
-        'campaignItems': ['asparagus', 'spinach', 'tomatoes'],     # itens com desconto (vegetais)
-        'items': ['dog food', 'babies food', 'napkins'],           # fallback cross-sell
+        'campaignItems': ['napkins', 'babies food', 'cooking oil'],
+        'items': ['napkins', 'babies food', 'cooking oil'],
         'propensity': 0.88
     },
-    2: {
-        'segment': 'Premium Large Families',
-        'discount': '15%',
-        'nextBestOffer': 'Bundle: School-Week Groceries (save €5.00)',
-        'campaignItems': ['cereals', 'fresh bread', 'milk'],       # itens com desconto
-        'items': ['butter', 'eggs', 'oatmeal'],                   # fallback cross-sell
-        'propensity': 0.91
-    },
-    3: {
-        'segment': 'Diet-Specific (Non-Omnivores)',
+    1: {
+        'segment': 'Loyal core spenders',
         'discount': '10%',
-        'nextBestOffer': '10% off Fresh Fish & Meat Packs',
-        'campaignItems': ['salmon', 'chicken', 'bacon'],           # itens com desconto
-        'items': ['babies food', 'dog food', 'cooking oil'],       # fallback cross-sell
-        'propensity': 0.76
+        'nextBestOffer': '10% off Grocery Essentials',
+        'campaignItems': ['eggs', 'cereals', 'fresh bread'],
+        'items': ['eggs', 'cereals', 'fresh bread'],
+        'propensity': 0.32
     },
-    4: {
-        'segment': 'Groceries Heavy Omnivores',
-        'discount': '12%',
-        'nextBestOffer': '12% off Groceries Bundle',
-        'campaignItems': ['fresh bread', 'butter', 'eggs'],        # itens com desconto
-        'items': ['airpods', 'asparagus', 'bluetooth headphones'], # fallback cross-sell
+    2: {
+        'segment': 'Big families (big spenders)',
+        'discount': '15%',
+        'nextBestOffer': '15% off Family Bulk Packs',
+        'campaignItems': ['honey', 'milk', 'oatmeal', 'cereals'],
+        'items': ['honey', 'milk', 'oatmeal', 'cereals'],
         'propensity': 0.85
     },
-    5: {
-        'segment': 'Late-Hour & Hygiene Shoppers',
+    3: {
+        'segment': 'Bargain hunters',
+        'discount': '25%',
+        'nextBestOffer': '25% off Promotional Items',
+        'campaignItems': ['laptop', 'energy drink', 'bluetooth headphones'],
+        'items': ['laptop', 'energy drink', 'bluetooth headphones'],
+        'propensity': 0.55
+    },
+    4: {
+        'segment': 'Gamers',
         'discount': '10%',
-        'nextBestOffer': '10% off Electronics Flash Sale (after 18:00)',
-        'campaignItems': ['shampoo', 'toothpaste', 'deodorant'],   # itens com desconto
-        'items': ['energy bar', 'protein bar', 'antioxydant juice'],# fallback cross-sell
+        'nextBestOffer': '10% off Gaming Snack Bundles',
+        'campaignItems': ['airpods', 'iphone 10', 'energy drink', 'bluetooth headphones'],
+        'items': ['airpods', 'iphone 10', 'energy drink', 'bluetooth headphones'],
+        'propensity': 0.77
+    },
+    5: {
+        'segment': 'Karens',
+        'discount': '10%',
+        'nextBestOffer': '10% off Next Purchase & Priority Support',
+        'campaignItems': ['salad', 'tomatoes', 'carrots', 'frozen vegetables'],
+        'items': ['salad', 'tomatoes', 'carrots', 'frozen vegetables'],
+        'propensity': 0.65
+    },
+    6: {
+        'segment': 'Tech enthusiasts',
+        'discount': '12%',
+        'nextBestOffer': '12% off Late-Hour Electronics Deals',
+        'campaignItems': ['energy drink', 'airpods', 'gadget for tiktok streaming', 'bluetooth headphones'],
+        'items': ['energy drink', 'airpods', 'gadget for tiktok streaming', 'bluetooth headphones'],
         'propensity': 0.79
     }
 }
@@ -163,7 +148,7 @@ def recommend_items(cluster_idx, basket_items):
                     
     # Camada 2: Regras dos outros clusters (caso falte recomendações)
     if len(matched_consequents) < 3:
-        for c_id in range(6):
+        for c_id in range(7):
             if c_id == cluster_idx:
                 continue
             other_rules = cluster_rules.get(str(c_id), [])
@@ -249,7 +234,7 @@ def get_recommendations():
         return jsonify({'notFound': True, 'error': f'Cliente ID {cid_raw} não encontrado'}), 404
         
     row = customer_lookup[customer_id]
-    cluster_idx = int(row['cluster'])
+    cluster_idx = int(row['final_cluster_nr'])
     profile = CLUSTER_SEGMENTS[cluster_idx]
     
     # 3. Lógica adaptativa em tempo real com base no cesto de compras
@@ -260,17 +245,17 @@ def get_recommendations():
     has_meat = any(x in basket_lower for x in ['ground beef', 'chicken', 'salmon', 'bacon', 'beef', 'fish', 'shrimp', 'pork'])
     has_electronics = any(x in basket_lower for x in ['ring light', 'airpods', 'headphones', 'earbuds', 'samsung', 'galaxy', 'iphone'])
     
-    # Adaptação dinâmica para o Cluster 1 (Vegetable Heavy)
+    # Adaptação dinâmica para o Cluster 0 (Vegans)
     campaign_items = profile['campaignItems'][:]
-    if cluster_idx == 1:
+    if cluster_idx == 0:
         if has_meat:
-            segment_name = 'Vegetable Heavy / Flexitarian'
+            segment_name = 'Vegan / Flexitarian'
             next_best_offer = '15% off Fresh Produce & Protein Bundle'
-            campaign_items = ['asparagus', 'salmon', 'chicken']   # vegetais + proteína
+            campaign_items = ['napkins', 'salmon', 'chicken']
         elif has_electronics:
-            segment_name = 'Healthy Tech Shopper'
-            next_best_offer = '15% off Smart Kitchen & Fresh Produce'
-            campaign_items = ['asparagus', 'spinach', 'tomatoes']
+            segment_name = 'Vegan Tech Shopper'
+            next_best_offer = '15% off Veggies & Kitchen Appliances'
+            campaign_items = ['napkins', 'cooking oil', 'tomatoes']
             
     # 4. Calcular itens de cross-sell via regras de associação
     cross_sell_items = recommend_items(cluster_idx, basket_found)
@@ -288,9 +273,9 @@ def get_recommendations():
         'basket': basket_found,
         'campaignItems': campaign_items,         # itens sobre os quais o desconto se aplica
         'items': cross_sell_items,               # sugestões adicionais de cross-selling
-        'propensity': float(row['percentage_of_products_bought_promotion'] if cluster_idx == 0 else profile['propensity']),
+        'propensity': float(row['percentage_of_products_bought_promotion'] if cluster_idx == 3 else profile['propensity']),
         'totalSpend': float(row['total_spend']),
-        'algorithm': 'K-Means (K=6) + Apriori (Real-Time)'
+        'algorithm': 'RobustScaler Ward (K=7) + Apriori (Real-Time)'
     }
     return jsonify(response)
 

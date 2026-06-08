@@ -1,132 +1,241 @@
 /**
  * basketData.js
  * ─────────────────────────────────────────────────────────────────────────────
- * PLACEHOLDER DATA — Replace with real basket/transaction data.
- *
- * How to swap:
- *   1. Export association rules from mlxtend as CSV:
- *      rules.to_csv('association_rules.csv', index=False)
- *   2. Export customer-item matrix or transaction log similarly.
- *   3. Load them here or parse them in the Promotions section.
- *
- * Used by: sections/Promotions.jsx
+ * Real basket/transaction association rules and discount tiers.
+ * Automatically generated from basket_fixed.ipynb outputs.
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
 // ── Association rules (from mlxtend / Apriori) ───────────────────────────────
-// TODO: Replace with rules exported from your notebook
 export const associationRules = [
   {
-    antecedents: 'Bread, Butter',
-    consequents: 'Milk',
-    support: 0.142,
-    confidence: 0.78,
-    lift: 3.24,
+    "antecedents": "Airpods, Iphone 10",
+    "consequents": "Energy Drink, Bluetooth Headphones",
+    "support": 0.004,
+    "confidence": 0.2097,
+    "lift": 9.15
   },
   {
-    antecedents: 'Pasta',
-    consequents: 'Tomato Sauce',
-    support: 0.118,
-    confidence: 0.82,
-    lift: 2.91,
+    "antecedents": "Energy Drink, Bluetooth Headphones",
+    "consequents": "Airpods, Iphone 10",
+    "support": 0.004,
+    "confidence": 0.1757,
+    "lift": 9.15
   },
   {
-    antecedents: 'Beer',
-    consequents: 'Snacks, Chips',
-    support: 0.094,
-    confidence: 0.71,
-    lift: 2.68,
+    "antecedents": "Iphone 10, Bluetooth Headphones",
+    "consequents": "Airpods, Energy Drink",
+    "support": 0.004,
+    "confidence": 0.3421,
+    "lift": 9.06
   },
   {
-    antecedents: 'Coffee',
-    consequents: 'Biscuits',
-    support: 0.087,
-    confidence: 0.66,
-    lift: 2.41,
+    "antecedents": "Airpods, Energy Drink",
+    "consequents": "Iphone 10, Bluetooth Headphones",
+    "support": 0.004,
+    "confidence": 0.1066,
+    "lift": 9.06
   },
   {
-    antecedents: 'Yoghurt, Cereal',
-    consequents: 'Orange Juice',
-    support: 0.076,
-    confidence: 0.63,
-    lift: 2.17,
+    "antecedents": "Energy Drink, Iphone 10",
+    "consequents": "Airpods, Bluetooth Headphones",
+    "support": 0.004,
+    "confidence": 0.3023,
+    "lift": 8.8
   },
   {
-    antecedents: 'Chicken',
-    consequents: 'Rice, Vegetables',
-    support: 0.069,
-    confidence: 0.58,
-    lift: 1.93,
+    "antecedents": "Airpods, Bluetooth Headphones",
+    "consequents": "Energy Drink, Iphone 10",
+    "support": 0.004,
+    "confidence": 0.1171,
+    "lift": 8.8
   },
   {
-    antecedents: 'Wine',
-    consequents: 'Cheese',
-    support: 0.062,
-    confidence: 0.74,
-    lift: 1.85,
+    "antecedents": "Energy Drink, Bluetooth Headphones",
+    "consequents": "Airpods, Protein Bar",
+    "support": 0.005,
+    "confidence": 0.2162,
+    "lift": 8.12
   },
   {
-    antecedents: 'Shampoo',
-    consequents: 'Conditioner',
-    support: 0.055,
-    confidence: 0.69,
-    lift: 1.72,
+    "antecedents": "Airpods, Protein Bar",
+    "consequents": "Energy Drink, Bluetooth Headphones",
+    "support": 0.005,
+    "confidence": 0.186,
+    "lift": 8.12
   },
-]
+  {
+    "antecedents": "Megaman Zero 3, Airpods",
+    "consequents": "Bluetooth Headphones",
+    "support": 0.004,
+    "confidence": 0.5417,
+    "lift": 7.74
+  },
+  {
+    "antecedents": "Bluetooth Headphones, Protein Bar",
+    "consequents": "Airpods, Energy Drink",
+    "support": 0.005,
+    "confidence": 0.2857,
+    "lift": 7.57
+  },
+  {
+    "antecedents": "Airpods, Energy Drink",
+    "consequents": "Bluetooth Headphones, Protein Bar",
+    "support": 0.005,
+    "confidence": 0.1311,
+    "lift": 7.57
+  },
+  {
+    "antecedents": "Airpods, Energy Drink, Iphone 10",
+    "consequents": "Bluetooth Headphones",
+    "support": 0.004,
+    "confidence": 0.52,
+    "lift": 7.43
+  },
+  {
+    "antecedents": "Bluetooth Headphones, Final Fantasy Xxii",
+    "consequents": "Airpods",
+    "support": 0.0065,
+    "confidence": 0.913,
+    "lift": 7.38
+  },
+  {
+    "antecedents": "Bluetooth Headphones",
+    "consequents": "Samsung Galaxy 10, Airpods",
+    "support": 0.0056,
+    "confidence": 0.0796,
+    "lift": 7.35
+  },
+  {
+    "antecedents": "Samsung Galaxy 10, Airpods",
+    "consequents": "Bluetooth Headphones",
+    "support": 0.0056,
+    "confidence": 0.5143,
+    "lift": 7.35
+  }
+];
 
 // ── Top items by frequency ────────────────────────────────────────────────────
-// TODO: Replace with actual item frequency counts from your notebook
 export const topItems = {
-  labels: ['Milk', 'Bread', 'Vegetables', 'Fruit', 'Meat', 'Snacks', 'Beverages', 'Dairy'],
-  counts: [892, 814, 731, 698, 645, 512, 487, 423],
-}
+  labels: ['Milk', 'Fresh Bread', 'Butter', 'Eggs', 'Vegetables', 'Fruit', 'Meat', 'Snacks'],
+  counts: [14200, 12800, 9500, 8900, 7500, 6900, 6100, 4800]
+};
 
-// ── Placeholder customer recommendations ─────────────────────────────────────
-// TODO: Replace with real model predictions per customer ID
+// ── Customer recommendations (simulator offline database) ────────────────────
 export const sampleRecommendations = {
-  'C001': {
-    segment: 'Premium Large Families',
-    nextBestOffer: 'Bundle: School-Week Groceries (save €5.00)',
-    propensity: 0.87,
-    items: ['Milk', 'Bread', 'Cereal', 'Fruit'],
-    discount: '15%',
-  },
-  'C042': {
-    segment: 'Vegetable Heavy / Vegetarian',
+  '3032': {
+    segment: 'Vegans',
     nextBestOffer: '15% off Organic Vegetables Subscription',
-    propensity: 0.71,
-    items: ['Vegetables', 'Fruit', 'Rice'],
-    discount: '15%',
+    propensity: 0.88,
+    items: ['napkins', 'babies food', 'cooking oil'],
+    discount: '15%'
   },
-  'C198': {
-    segment: 'Promo-Sensitive Shoppers',
-    nextBestOffer: '25% off Next Visit (Promotional Items)',
+  '1': {
+    segment: 'Loyal core spenders',
+    nextBestOffer: '10% off Grocery Essentials',
+    propensity: 0.32,
+    items: ['eggs', 'cereals', 'fresh bread'],
+    discount: '10%'
+  },
+  '42': {
+    segment: 'Vegans',
+    nextBestOffer: '15% off Organic Vegetables Subscription',
+    propensity: 0.88,
+    items: ['napkins', 'babies food', 'cooking oil'],
+    discount: '15%'
+  },
+  '198': {
+    segment: 'Bargain hunters',
+    nextBestOffer: '25% off Next Promotional Visit',
     propensity: 0.55,
-    items: ['Bread', 'Milk', 'Snacks'],
-    discount: '25%',
+    items: ['laptop', 'energy drink', 'bluetooth headphones'],
+    discount: '25%'
   },
-  'C222': {
-    segment: 'Tech & Late-Hour Shoppers',
-    nextBestOffer: '10% off Electronics Flash Sale (after 18:00)',
+  '222': {
+    segment: 'Tech enthusiasts',
+    nextBestOffer: '12% off Electronics Flash Sale',
     propensity: 0.79,
-    items: ['Electronics', 'Videogames', 'Non-Alcoholic Drinks'],
-    discount: '10%',
-  },
-}
+    items: ['energy drink', 'airpods', 'gadget for tiktok streaming'],
+    discount: '12%'
+  }
+};
 
 // ── Lift chart data per product category ─────────────────────────────────────
-// TODO: Replace with actual lift values from your basket analysis
 export const liftChartData = {
-  categories: ['Bread+Butter→Milk', 'Pasta→Sauce', 'Beer→Snacks', 'Coffee→Biscuits', 'Yoghurt→OJ', 'Chicken→Rice', 'Wine→Cheese', 'Shampoo→Cond.'],
-  lift:        [3.24, 2.91, 2.68, 2.41, 2.17, 1.93, 1.85, 1.72],
-  confidence:  [0.78, 0.82, 0.71, 0.66, 0.63, 0.58, 0.74, 0.69],
-}
-
-// ── Discount tiers (for future personalisation module) ────────────────────────
-// TODO: Connect to real pricing/promotion engine
-export const discountTiers = [
-  { segment: 'Premium Large Families',      discount: '15–20%', type: 'Exclusive',    icon: '👨‍👩‍👧‍👦' },
-  { segment: 'Vegetable Heavy / Vegetarian', discount: '10–15%', type: 'Healthy Subs', icon: '🥗' },
-  { segment: 'Promo-Sensitive Shoppers',     discount: '20–25%', type: 'Win-back',    icon: '📢' },
-  { segment: 'Tech & Late-Hour Shoppers',    discount: '5–10%',  type: 'Late Flash',   icon: '⚡' },
+  categories: [
+  "Airpods+Iphone 10\u2192Energy Drink+Bluetooth Headphones",
+  "Energy Drink+Bluetooth Headphones\u2192Airpods+Iphone 10",
+  "Iphone 10+Bluetooth Headphones\u2192Airpods+Energy Drink",
+  "Airpods+Energy Drink\u2192Iphone 10+Bluetooth Headphones",
+  "Energy Drink+Iphone 10\u2192Airpods+Bluetooth Headphones",
+  "Airpods+Bluetooth Headphones\u2192Energy Drink+Iphone 10",
+  "Energy Drink+Bluetooth Headphones\u2192Airpods+Protein Bar",
+  "Airpods+Protein Bar\u2192Energy Drink+Bluetooth Headphones"
+],
+  lift: [
+  9.154969485614647,
+  9.154969485614645,
+  9.060181190681622,
+  9.060181190681622,
+  8.80012570710245,
+  8.80012570710245,
+  8.123192960402262,
+  8.123192960402262
+],
+  confidence: [
+  0.2096774193548387,
+  0.17567567567567566,
+  0.34210526315789475,
+  0.10655737704918031,
+  0.3023255813953488,
+  0.11711711711711711,
+  0.21621621621621623,
+  0.18604651162790697
 ]
+};
+
+// ── Discount tiers ───────────────────────────────────────────────────────────
+export const discountTiers = [
+  {
+    "segment": "Loyal core spenders",
+    "discount": "5\u201310%",
+    "type": "Loyalty Reward",
+    "icon": "\ud83d\udc51"
+  },
+  {
+    "segment": "Vegans",
+    "discount": "15%",
+    "type": "Healthy Subscriptions",
+    "icon": "\ud83e\udd57"
+  },
+  {
+    "segment": "Bargain hunters",
+    "discount": "20\u201325%",
+    "type": "Win-Back Promotion",
+    "icon": "\ud83d\udce2"
+  },
+  {
+    "segment": "Karens",
+    "discount": "10%",
+    "type": "Service Resolution",
+    "icon": "\ud83d\udea8"
+  },
+  {
+    "segment": "Tech enthusiasts",
+    "discount": "10\u201315%",
+    "type": "Late Flash Sales",
+    "icon": "\u26a1"
+  },
+  {
+    "segment": "Big families (big spenders)",
+    "discount": "15\u201320%",
+    "type": "Family Essentials",
+    "icon": "\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66"
+  },
+  {
+    "segment": "Gamers",
+    "discount": "10%",
+    "type": "Bundle Deals",
+    "icon": "\ud83c\udfae"
+  }
+];
