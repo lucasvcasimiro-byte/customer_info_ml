@@ -15,7 +15,7 @@ import SectionHeader from '../components/common/SectionHeader'
 import InteractivePlot from '../components/common/InteractivePlot'
 import { elbowData, silhouetteByK, pcaData, clusters } from '../data/clusterData'
 
-const CLUSTER_COLORS = ['#f59e0b', '#3b82f6', '#2dd4bf', '#f43f5e', '#a78bfa', '#06b6d4']
+const CLUSTER_COLORS = ['#f59e0b', '#3b82f6', '#2dd4bf', '#f43f5e', '#a78bfa', '#06b6d4', '#10b981']
 
 export default function Visualizations() {
 
@@ -103,7 +103,7 @@ export default function Visualizations() {
   //   sklearn.metrics.silhouette_samples(X_scaled, labels)
   const silSampleTraces = useMemo(() => {
     const clusterNames  = clusters.map(c => c.name)
-    const avgSilhouette = [0.12, 0.11, 0.14, 0.09, 0.13, 0.10]  // TODO: replace with real values
+    const avgSilhouette = [0.12, 0.11, 0.14, 0.09, 0.13, 0.10, 0.12]  // TODO: replace with real values
 
     return clusterNames.map((name, i) => ({
       type:        'bar',

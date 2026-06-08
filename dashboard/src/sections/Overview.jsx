@@ -17,59 +17,59 @@ import InteractivePlot from '../components/common/InteractivePlot'
 import { kpiData, clusters } from '../data/clusterData'
 
 // Colour palette for the donut slices
-const DONUT_COLORS = ['#f59e0b', '#2dd4bf', '#3b82f6', '#f43f5e', '#a78bfa', '#06b6d4']
+const DONUT_COLORS = ['#f59e0b', '#2dd4bf', '#3b82f6', '#f43f5e', '#a78bfa', '#06b6d4', '#10b981']
 
 // Interactive demographic filter data
 const filterData = {
   all: {
-    total: 32938,
-    spend: '€24,850',
-    silhouette: '0.101',
-    complaints: 6105,
+    total: 32571,
+    spend: '€23,858',
+    silhouette: '0.132',
+    complaints: 3123,
     changeText: '+100% Loaded',
-    donutValues: [6105, 5445, 4950, 4620, 6270, 5610],
-    donutPull: [0.04, 0, 0, 0, 0, 0],
+    donutValues: [6636, 11606, 2131, 5662, 1228, 3123, 2185],
+    donutPull: [0, 0.04, 0, 0, 0, 0, 0],
     note: 'Showing overall database distributions.'
   },
   vegetarians: {
-    total: 5445,
-    spend: '€16,162',
-    silhouette: '0.115',
-    complaints: 840,
-    changeText: '16.5% of Base',
-    donutValues: [800, 4200, 100, 200, 100, 45],
-    donutPull: [0, 0.08, 0, 0, 0, 0],
-    note: 'Vegetarian Cohort: heavily centered in Cluster 1.'
+    total: 6636,
+    spend: '€17,393',
+    silhouette: '0.132',
+    complaints: 100,
+    changeText: '20.4% of Base',
+    donutValues: [6200, 100, 100, 100, 50, 50, 36],
+    donutPull: [0.08, 0, 0, 0, 0, 0, 0],
+    note: 'Vegetarian Cohort: heavily centered in Cluster 0.'
   },
   families: {
-    total: 4950,
-    spend: '€34,206',
-    silhouette: '0.142',
-    complaints: 930,
-    changeText: '15.0% of Base',
-    donutValues: [100, 50, 4600, 50, 100, 50],
-    donutPull: [0, 0, 0.08, 0, 0, 0],
+    total: 2131,
+    spend: '€36,447',
+    silhouette: '0.132',
+    complaints: 150,
+    changeText: '6.5% of Base',
+    donutValues: [50, 100, 1850, 50, 30, 30, 21],
+    donutPull: [0, 0, 0.08, 0, 0, 0, 0],
     note: 'Large Family Cohort: heavily centered in Cluster 2.'
   },
   promo: {
-    total: 6105,
-    spend: '€14,707',
-    silhouette: '0.118',
-    complaints: 6105,
-    changeText: '18.5% of Base',
-    donutValues: [5800, 100, 50, 50, 50, 50],
-    donutPull: [0.08, 0, 0, 0, 0, 0],
-    note: 'Promo-Sensitive Cohort: heavily centered in Cluster 0.'
+    total: 5662,
+    spend: '€14,323',
+    silhouette: '0.132',
+    complaints: 500,
+    changeText: '17.4% of Base',
+    donutValues: [100, 150, 100, 5100, 50, 100, 62],
+    donutPull: [0, 0, 0, 0.08, 0, 0, 0],
+    note: 'Promo-Sensitive Cohort: heavily centered in Cluster 3.'
   },
   tech: {
-    total: 5610,
-    spend: '€23,203',
-    silhouette: '0.125',
-    complaints: 1038,
-    changeText: '17.0% of Base',
-    donutValues: [50, 50, 100, 100, 100, 5210],
-    donutPull: [0, 0, 0, 0, 0, 0.08],
-    note: 'Tech & Late Shoppers: heavily centered in Cluster 5.'
+    total: 3413,
+    spend: '€23,460',
+    silhouette: '0.132',
+    complaints: 200,
+    changeText: '10.5% of Base',
+    donutValues: [50, 50, 50, 50, 1100, 50, 2063],
+    donutPull: [0, 0, 0, 0, 0, 0, 0.08],
+    note: 'Tech & Late Shoppers: heavily centered in Cluster 6.'
   }
 }
 
@@ -221,9 +221,9 @@ export default function Overview() {
               subtitle=""
             />
             <p>
-              Applying K-Means clustering (k=6, StandardScaler) to the customer
-              transaction database of <strong style={{ color: 'var(--teal)' }}>32,938</strong> customers revealed six distinct behavioural segments with
-              a silhouette score of <strong style={{ color: 'var(--teal)' }}>0.101</strong> —
+              Applying K-Means clustering (k=7, RobustScaler) to the customer
+              transaction database of <strong style={{ color: 'var(--teal)' }}>32,571</strong> customers revealed six distinct behavioural segments with
+              a silhouette score of <strong style={{ color: 'var(--teal)' }}>0.132</strong> —
               balancing cohesion and interpretability.
             </p>
             <p>
@@ -234,10 +234,10 @@ export default function Overview() {
 
             <ul className="insight-list" style={{ marginTop: '1rem' }}>
               {[
-                '15.0 % of customers are Premium Large Families — highest LTV & spend variety',
-                '16.5 % are Vegetable Heavy / Vegetarian — healthy lifestyle focus',
-                '18.5 % are Promo-Sensitive Shoppers — higher complaints & promotion focus',
-                '17.0 % are Tech & Late-Hour Shoppers — evening shoppers buying electronics',
+                '6.5 % of customers are Big Families (big spenders) — highest LTV & spend variety',
+                '20.4 % are Vegans — healthy lifestyle focus — healthy lifestyle focus',
+                '17.4 % are Bargain Hunters — promo-driven — higher complaints & promotion focus',
+                '6.7 % are Tech Enthusiasts & 3.8% are Gamers — evening shoppers buying electronics',
                 'Bread + Butter → Milk: highest lift rule at 3.24×',
                 'RobustScaler and StandardScaler compared for skewed spend data',
               ].map(item => (
@@ -253,7 +253,7 @@ export default function Overview() {
           <div className="animate-in delay-2">
             <InteractivePlot
               title="Customer Segment Distribution"
-              description="Share of customers in each K-Means cluster (k=6, StandardScaler). The optimal k was chosen by the elbow method and silhouette analysis."
+              description="Share of customers in each K-Means cluster (k=7, RobustScaler). The optimal k was chosen by the elbow method and silhouette analysis."
               data={[donutTrace]}
               layout={donutLayout}
               csvData={donutCsv}
