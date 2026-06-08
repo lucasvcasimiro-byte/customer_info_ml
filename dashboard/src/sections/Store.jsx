@@ -17,12 +17,68 @@ function capitalize(str) {
 
 // ═══════════════════════════════════════════════════════════════════════════
 export default function Store({ activeVoucher }) {
-  const [search,        setSearch]        = useState('')
-  const [activeCategory, setCategory]    = useState('Todas')
-  const [priceFilter,   setPriceFilter]  = useState(null)   // PRICE_RANGES index | null
-  const [onlyDiscount,  setOnlyDiscount] = useState(false)
-  const [cart,          setCart]         = useState([])      // [{product, qty}]
-  const [cartOpen,      setCartOpen]     = useState(false)
+  const [search,         setSearch]        = useState('')
+  const [activeCategory, setCategory]     = useState('Todas')
+  const [priceFilter,    setPriceFilter]   = useState(null)   // PRICE_RANGES index | null
+  const [onlyDiscount,   setOnlyDiscount]  = useState(false)
+  const [onlyFavorites,  setOnlyFavorites] = useState(false)
+  const [cart,           setCart]          = useState([])      // [{product, qty}]
+  const [cartOpen,       setCartOpen]      = useState(false)
+
+  // Load favorites from localStorage
+  const [favorites, setFavorites] = useState(() => {
+    try {
+      const saved = localStorage.getItem('grocery_favorites')
+      return saved ? new Set(JSON.parse(saved)) : new Set()
+    } catch {
+      return new Set()
+    }
+  })
+
+  // Toggle favorite helper
+  const toggleFavorite = (productId) => {
+    setFavorites(prev => {
+      const next = new Set(prev)
+      if (next.has(productId)) {
+        next.delete(productId)
+      } else {
+        next.add(productId)
+      }
+      try {
+        localStorage.setItem('grocery_favorites', JSON.stringify(Array.from(next)))
+      } catch (e) {
+        console.error('Failed to save favorites:', e)
+      }
+      return next
+    })
+  }
+
+  // Parse past basket items
+  const previousBasketProducts = useMemo(() => {
+    if (!activeVoucher?.basket || activeVoucher.basket.length === 0) return []
+    return activeVoucher.basket.map(itemName => {
+      const matched = PRODUCTS.find(p => p.id.toLowerCase() === itemName.toLowerCase())
+      if (matched) return matched
+      return { id: itemName.toLowerCase(), name: itemName, category: 'Despensa', price: 1.99 }
+    })
+  }, [activeVoucher])
+
+  // Re-add previous purchase items
+  const repeatLastPurchase = () => {
+    setCart(prev => {
+      let nextCart = [...prev]
+      previousBasketProducts.forEach(prod => {
+        const existing = nextCart.find(e => e.product.id === prod.id)
+        if (existing) {
+          nextCart = nextCart.map(e => e.product.id === prod.id ? { ...e, qty: e.qty + 1 } : e)
+        } else {
+          nextCart.push({ product: prod, qty: 1 })
+        }
+      })
+      return nextCart
+    })
+    setCartOpen(true)
+  }
 
   // Build a Set of campaign item names (lowercased) from the active voucher
   const campaignSet = useMemo(() => {
@@ -45,9 +101,10 @@ export default function Store({ activeVoucher }) {
         if (p.price < min || p.price > max) return false
       }
       if (onlyDiscount && !campaignSet.has(p.id.toLowerCase())) return false
+      if (onlyFavorites && !favorites.has(p.id)) return false
       return true
     })
-  }, [search, activeCategory, priceFilter, onlyDiscount, campaignSet])
+  }, [search, activeCategory, priceFilter, onlyDiscount, onlyFavorites, favorites, campaignSet])
 
   // ── Cart helpers ──────────────────────────────────────────────────────
   const addToCart = (product) => {
@@ -208,6 +265,30 @@ export default function Store({ activeVoucher }) {
             </div>
           )}
 
+          {/* Favorites Filter */}
+          <div style={{
+            background: onlyFavorites
+              ? 'linear-gradient(135deg, #ec4899, #db2777)'
+              : 'var(--bg-surface)',
+            borderRadius: '12px',
+            padding: '1rem',
+            border: onlyFavorites ? 'none' : '1px solid var(--border-subtle)',
+            cursor: 'pointer',
+            transition: 'all 0.2s',
+          }} onClick={() => setOnlyFavorites(o => !o)}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span style={{ fontSize: '1.2rem' }}>❤️</span>
+              <span style={{ fontWeight: 700, color: onlyFavorites ? '#fff' : 'var(--text-primary)', fontSize: '0.9rem' }}>
+                Os meus Favoritos
+              </span>
+            </div>
+            {onlyFavorites && (
+              <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.85)', marginTop: '0.35rem' }}>
+                A mostrar os teus favoritos ({favorites.size})
+              </div>
+            )}
+          </div>
+
           {/* Category filter */}
           <div style={{
             background: 'var(--bg-surface)', borderRadius: '12px', padding: '1rem',
@@ -279,6 +360,87 @@ export default function Store({ activeVoucher }) {
 
         {/* ── Product Grid ──────────────────────────────────────────── */}
         <div style={{ flex: 1, minWidth: 0 }}>
+          {/* Previous Basket / History Card */}
+          {activeVoucher && previousBasketProducts.length > 0 && (
+            <div style={{
+              background: 'linear-gradient(135deg, rgba(124,58,237,0.08) 0%, rgba(6,182,212,0.08) 100%)',
+              border: '1px solid var(--border-soft)',
+              borderRadius: '16px',
+              padding: '1.25rem',
+              marginBottom: '1.5rem',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '0.75rem',
+            }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
+                <div>
+                  <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '0.98rem', fontWeight: 800, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.4rem', margin: 0 }}>
+                    📋 Histórico de Compras (Fatura #{activeVoucher.invoiceId || 'N/A'})
+                  </h4>
+                  <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '2px', marginBottom: 0 }}>
+                    Artigos adquiridos na última transação do cliente <strong>{activeVoucher.customerName || `C-${activeVoucher.customerId}`}</strong>.
+                  </p>
+                </div>
+                <button
+                  onClick={repeatLastPurchase}
+                  style={{
+                    background: 'var(--accent-primary)',
+                    color: '#fff',
+                    border: 'none',
+                    borderRadius: '20px',
+                    padding: '0.5rem 1.25rem',
+                    fontWeight: 700,
+                    fontSize: '0.82rem',
+                    cursor: 'pointer',
+                    boxShadow: '0 2px 8px rgba(124,58,237,0.3)',
+                    transition: 'all 0.2s',
+                    whiteSpace: 'nowrap',
+                  }}
+                  onMouseEnter={e => e.currentTarget.style.opacity = '0.9'}
+                  onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+                >
+                  🔁 Repetir Carrinho
+                </button>
+              </div>
+
+              {/* Items list */}
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginTop: '0.25rem' }}>
+                {previousBasketProducts.map((prod, i) => (
+                  <div
+                    key={`${prod.id}-${i}`}
+                    onClick={() => addToCart(prod)}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '0.4rem',
+                      background: 'var(--bg-surface)',
+                      border: '1px solid var(--border-subtle)',
+                      borderRadius: '30px',
+                      padding: '0.35rem 0.75rem',
+                      fontSize: '0.78rem',
+                      cursor: 'pointer',
+                      color: 'var(--text-secondary)',
+                      transition: 'all 0.15s',
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.borderColor = 'var(--accent-primary)'
+                      e.currentTarget.style.color = 'var(--text-primary)'
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.borderColor = 'var(--border-subtle)'
+                      e.currentTarget.style.color = 'var(--text-secondary)'
+                    }}
+                    title="Adicionar artigo ao carrinho"
+                  >
+                    <span>{capitalize(prod.name)}</span>
+                    <span style={{ fontWeight: 700, color: 'var(--text-muted)' }}>€{prod.price.toFixed(2)}</span>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--accent-primary)' }}>+</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Result count */}
           <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '1rem' }}>
             {filtered.length} produto{filtered.length !== 1 ? 's' : ''} encontrado{filtered.length !== 1 ? 's' : ''}
@@ -307,6 +469,7 @@ export default function Store({ activeVoucher }) {
                 const hasDiscount = campaignSet.has(product.id.toLowerCase()) && activeVoucher
                 const discountedPrice = hasDiscount ? product.price * (1 - discountPct) : product.price
                 const inCart = cart.find(e => e.product.id === product.id)
+                const isFav = favorites.has(product.id)
 
                 return (
                   <div
@@ -343,6 +506,42 @@ export default function Store({ activeVoucher }) {
                         -{activeVoucher.discount}
                       </div>
                     )}
+
+                    {/* Favorite button */}
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        toggleFavorite(product.id)
+                      }}
+                      style={{
+                        position: 'absolute', top: '8px', right: '8px', zIndex: 5,
+                        background: 'rgba(20,24,50,0.6)',
+                        backdropFilter: 'blur(4px)',
+                        border: '1px solid rgba(255,255,255,0.2)',
+                        color: isFav ? '#f43f5e' : '#e2e8f0',
+                        borderRadius: '50%',
+                        width: '30px',
+                        height: '30px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        cursor: 'pointer',
+                        fontSize: '0.95rem',
+                        transition: 'all 0.2s',
+                        outline: 'none',
+                      }}
+                      onMouseEnter={e => {
+                        e.currentTarget.style.transform = 'scale(1.1)'
+                        e.currentTarget.style.background = 'rgba(20,24,50,0.85)'
+                      }}
+                      onMouseLeave={e => {
+                        e.currentTarget.style.transform = ''
+                        e.currentTarget.style.background = 'rgba(20,24,50,0.6)'
+                      }}
+                      title={isFav ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+                    >
+                      {isFav ? '❤️' : '🤍'}
+                    </button>
 
                     {/* Product image */}
                     <div style={{
