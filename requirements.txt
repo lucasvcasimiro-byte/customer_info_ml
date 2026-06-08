@@ -15,3 +15,5 @@ contextily
 geopandas
 pyproj
 shapely
+
+mlxtend
