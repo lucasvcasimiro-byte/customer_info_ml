@@ -16,6 +16,8 @@ import Visualizations from './sections/Visualizations'
 import Promotions     from './sections/Promotions'
 import Store          from './sections/Store'
 import Future         from './sections/Future'
+import { CaptchaModal, WheelModal, SupportModal, AboutUsModal } from './components/InteractiveModals'
+import EvaluationForm from './components/EvaluationForm'
 
 // Section IDs must match the ids used in CartNavigation
 const SECTION_IDS = ['overview', 'clustering', 'visualizations', 'promotions', 'store', 'future']
@@ -29,6 +31,12 @@ export default function App() {
   const [activeSection, setActiveSection] = useState('overview')
   // Shared voucher state — set by Promotions, consumed by Store
   const [activeVoucher, setActiveVoucher] = useState(null)
+
+  // Interactive header modal states
+  const [showCaptcha, setShowCaptcha] = useState(true)
+  const [showWheel,     setShowWheel]     = useState(false)
+  const [showSupport,   setShowSupport]   = useState(false)
+  const [showAbout,     setShowAbout]     = useState(false)
 
   // ── Smooth scroll to a section ──────────────────────────────────
   const scrollToSection = useCallback((id) => {
@@ -63,13 +71,14 @@ export default function App() {
 
   return (
     <div id="app">
-      {/* Fixed navigation — cart icon in top-right */}
       <CartNavigation
         onNavigate={scrollToSection}
         activeSection={activeSection}
+        onOpenWheel={() => setShowWheel(true)}
+        onOpenSupport={() => setShowSupport(true)}
+        onOpenAbout={() => setShowAbout(true)}
       />
 
-      {/* Main content — sections stacked vertically */}
       <main style={{ paddingTop: '68px' }}>
         <Overview />
         <Clustering />
@@ -77,6 +86,7 @@ export default function App() {
         <Promotions onVoucherChange={setActiveVoucher} />
         <Store activeVoucher={activeVoucher} />
         <Future />
+        <EvaluationForm />
       </main>
 
       {/* ── Footer ── */}
@@ -98,6 +108,12 @@ export default function App() {
           Built with React + Vite · Plotly.js · Placeholder data — replace with real notebook exports
         </p>
       </footer>
+
+      {/* ── Modals ── */}
+      {showCaptcha && <CaptchaModal onClose={() => setShowCaptcha(false)} />}
+      {showWheel && <WheelModal onClose={() => setShowWheel(false)} />}
+      {showSupport && <SupportModal onClose={() => setShowSupport(false)} />}
+      {showAbout && <AboutUsModal onClose={() => setShowAbout(false)} />}
     </div>
   )
 }

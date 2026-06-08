@@ -50,7 +50,7 @@ const sections = [
   },
 ]
 
-export default function CartNavigation({ onNavigate, activeSection }) {
+export default function CartNavigation({ onNavigate, activeSection, onOpenWheel, onOpenSupport, onOpenAbout }) {
   const [isOpen, setIsOpen] = useState(false)
   const drawerRef = useRef(null)
 
@@ -104,6 +104,13 @@ export default function CartNavigation({ onNavigate, activeSection }) {
               {sections.find(s => s.id === activeSection)?.label}
             </span>
           )}
+        </div>
+
+        {/* Header navigation actions */}
+        <div className="header-nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '0.75rem' }}>
+          <HeaderButton onClick={onOpenWheel} label="Roleta" emoji="🎰" />
+          <HeaderButton onClick={onOpenSupport} label="Apoio" emoji="💬" />
+          <HeaderButton onClick={onOpenAbout} label="Sobre Nós" emoji="👥" />
         </div>
 
         {/* Cart / Menu button */}
@@ -215,5 +222,34 @@ function CartIcon() {
       <circle cx="19" cy="21" r="1" />
       <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
     </svg>
+  )
+}
+
+function HeaderButton({ onClick, label, emoji }) {
+  const [hover, setHover] = useState(false)
+  return (
+    <button
+      onClick={onClick}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+      style={{
+        background: hover ? 'var(--accent-primary)' : 'rgba(255,255,255,0.06)',
+        border: hover ? '1px solid var(--accent-primary)' : '1px solid rgba(255,255,255,0.12)',
+        color: hover ? '#fff' : '#e2e8f0',
+        borderRadius: '20px',
+        padding: '0.4rem 0.85rem',
+        fontSize: '0.82rem',
+        fontWeight: 600,
+        cursor: 'pointer',
+        transition: 'all 0.2s',
+        boxShadow: hover ? '0 0 10px rgba(124,58,237,0.3)' : 'none',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.35rem',
+      }}
+    >
+      <span>{emoji}</span>
+      <span className="header-btn-text">{label}</span>
+    </button>
   )
 }

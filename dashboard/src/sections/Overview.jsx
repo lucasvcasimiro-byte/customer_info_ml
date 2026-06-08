@@ -235,7 +235,7 @@ export default function Overview() {
             <ul className="insight-list" style={{ marginTop: '1rem' }}>
               {[
                 '6.5 % of customers are Big Families (big spenders) — highest LTV & spend variety',
-                '20.4 % are Vegans — healthy lifestyle focus — healthy lifestyle focus',
+                '20.4 % are Vegans — healthy lifestyle focus (Cupão: lima5)',
                 '17.4 % are Bargain Hunters — promo-driven — higher complaints & promotion focus',
                 '6.7 % are Tech Enthusiasts & 3.8% are Gamers — evening shoppers buying electronics',
                 'Bread + Butter → Milk: highest lift rule at 3.24×',

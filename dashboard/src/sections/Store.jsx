@@ -7,7 +7,7 @@
  * - Product grid with AI-generated category images
  * - Shopping cart panel with per-item pricing and discount breakdown
  */
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { PRODUCTS, CATEGORIES, PRICE_RANGES, CATEGORY_IMAGES } from '../data/storeProducts'
 
 // ─── helpers ───────────────────────────────────────────────────────────────
@@ -24,6 +24,53 @@ export default function Store({ activeVoucher }) {
   const [onlyFavorites,  setOnlyFavorites] = useState(false)
   const [cart,           setCart]          = useState([])      // [{product, qty}]
   const [cartOpen,       setCartOpen]      = useState(false)
+
+  const [couponInput,    setCouponInput]   = useState('')
+  const [couponError,    setCouponError]   = useState('')
+  const [appliedCoupons, setAppliedCoupons] = useState(new Set())
+
+  useEffect(() => {
+    const handleApplyCoupon = (e) => {
+      const code = e.detail
+      if (code && (code === 'lucas5' || code === 'lima5' || code === 'lince5')) {
+        setAppliedCoupons(prev => {
+          const next = new Set(prev)
+          next.add(code)
+          return next
+        })
+      }
+    }
+    window.addEventListener('apply-coupon-event', handleApplyCoupon)
+    return () => window.removeEventListener('apply-coupon-event', handleApplyCoupon)
+  }, [])
+
+  const applyCouponCode = () => {
+    const code = couponInput.trim().toLowerCase()
+    if (!code) return
+    if (code !== 'lucas5' && code !== 'lima5' && code !== 'lince5') {
+      setCouponError('Cupão inválido!')
+      return
+    }
+    if (appliedCoupons.has(code)) {
+      setCouponError('Cupão já aplicado!')
+      return
+    }
+    setAppliedCoupons(prev => {
+      const next = new Set(prev)
+      next.add(code)
+      return next
+    })
+    setCouponInput('')
+    setCouponError('')
+  }
+
+  const removeCouponCode = (code) => {
+    setAppliedCoupons(prev => {
+      const next = new Set(prev)
+      next.delete(code)
+      return next
+    })
+  }
 
   // Load favorites from localStorage
   const [favorites, setFavorites] = useState(() => {
@@ -137,6 +184,9 @@ export default function Store({ activeVoucher }) {
     return s
   }, 0)
   const cartTotal    = cartSubtotal - cartSavings
+  const couponDiscountPct = appliedCoupons.size * 0.05
+  const couponSavings = cartTotal * couponDiscountPct
+  const finalPayableTotal = cartTotal - couponSavings
 
   return (
     <section id="store" style={{ background: 'var(--bg-base)', minHeight: '100vh' }}>
@@ -766,6 +816,78 @@ export default function Store({ activeVoucher }) {
               borderTop: '2px solid var(--border-subtle)',
               background: 'var(--bg-base)',
             }}>
+              {/* Coupon Code Input */}
+              <div style={{ marginBottom: '0.85rem' }}>
+                <label style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, display: 'block', marginBottom: '0.3rem', letterSpacing: '0.5px' }}>
+                  🎫 APLICAR CUPÃO (lucas5, lima5, lince5)
+                </label>
+                <div style={{ display: 'flex', gap: '0.4rem' }}>
+                  <input
+                    type="text"
+                    placeholder="Código (ex: lucas5)"
+                    value={couponInput}
+                    onChange={e => setCouponInput(e.target.value)}
+                    style={{
+                      flex: 1,
+                      padding: '0.45rem 0.75rem',
+                      borderRadius: '8px',
+                      border: '1px solid var(--border-subtle)',
+                      background: 'var(--bg-surface)',
+                      color: 'var(--text-primary)',
+                      fontSize: '0.82rem',
+                      outline: 'none',
+                    }}
+                  />
+                  <button
+                    onClick={applyCouponCode}
+                    style={{
+                      background: 'var(--accent-primary)',
+                      color: '#fff',
+                      border: 'none',
+                      borderRadius: '8px',
+                      padding: '0.45rem 0.9rem',
+                      fontSize: '0.82rem',
+                      fontWeight: 700,
+                      cursor: 'pointer',
+                    }}
+                  >
+                    Aplicar
+                  </button>
+                </div>
+                {couponError && (
+                  <span style={{ fontSize: '0.7rem', color: 'var(--rose)', marginTop: '0.25rem', display: 'block', fontWeight: 600 }}>
+                    ⚠️ {couponError}
+                  </span>
+                )}
+                {appliedCoupons.size > 0 && (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem', marginTop: '0.45rem' }}>
+                    {Array.from(appliedCoupons).map(cp => (
+                      <span
+                        key={cp}
+                        style={{
+                          background: 'rgba(16,185,129,0.15)',
+                          color: '#10b981',
+                          border: '1px solid rgba(16,185,129,0.25)',
+                          borderRadius: '12px',
+                          padding: '0.15rem 0.5rem',
+                          fontSize: '0.72rem',
+                          fontWeight: 700,
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '0.25rem',
+                        }}
+                      >
+                        {cp} (-5%)
+                        <span
+                          onClick={() => removeCouponCode(cp)}
+                          style={{ cursor: 'pointer', color: '#ef4444', marginLeft: '0.15rem', fontWeight: 900 }}
+                        >✕</span>
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               {/* Subtotal without discount */}
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.4rem' }}>
                 <span style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>Subtotal (sem desconto)</span>
@@ -784,16 +906,28 @@ export default function Store({ activeVoucher }) {
                 </div>
               )}
 
+              {/* Coupon savings */}
+              {couponSavings > 0 && (
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.4rem' }}>
+                  <span style={{ color: '#10b981', fontWeight: 600, fontSize: '0.88rem' }}>
+                    🎫 Desconto Cupões (-{appliedCoupons.size * 5}%)
+                  </span>
+                  <span style={{ color: '#10b981', fontWeight: 700, fontSize: '0.88rem' }}>
+                    -€{couponSavings.toFixed(2)}
+                  </span>
+                </div>
+              )}
+
               {/* Divider */}
               <div style={{ height: '1px', background: 'var(--border-subtle)', margin: '0.75rem 0' }} />
 
               {/* Total */}
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <span style={{ fontWeight: 900, fontSize: '1.05rem', color: 'var(--text-primary)' }}>
-                  TOTAL
+                  TOTAL A PAGAR
                 </span>
-                <span style={{ fontWeight: 900, fontSize: '1.25rem', color: cartSavings > 0 ? '#e74c3c' : 'var(--text-primary)' }}>
-                  €{cartTotal.toFixed(2)}
+                <span style={{ fontWeight: 900, fontSize: '1.25rem', color: 'var(--accent-primary)' }}>
+                  €{finalPayableTotal.toFixed(2)}
                 </span>
               </div>
 
@@ -819,7 +953,7 @@ export default function Store({ activeVoucher }) {
                 }}
                 onMouseEnter={e => e.currentTarget.style.opacity = '0.9'}
                 onMouseLeave={e => e.currentTarget.style.opacity = '1'}
-                onClick={() => alert(`Pedido confirmado!\nTotal: €${cartTotal.toFixed(2)}${cartSavings > 0 ? `\nPoupança: €${cartSavings.toFixed(2)}` : ''}`)}
+                onClick={() => alert(`Pedido confirmado!\nTotal a pagar: €${finalPayableTotal.toFixed(2)}${cartSavings > 0 ? `\nPoupança Voucher: €${cartSavings.toFixed(2)}` : ''}${couponSavings > 0 ? `\nPoupança Cupões: €${couponSavings.toFixed(2)}` : ''}`)}
               >
                 Finalizar Compra →
               </button>
