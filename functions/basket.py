@@ -15,7 +15,7 @@ def generate_association_rules(
     Generate association rules for a given DataFrame of transactions.
     """
 
-    # Simple string-split parse (same as aulas/utils2.py)
+    # Simple string-split parse 
     transactions = data[list_column].apply(ast.literal_eval)
 
     te = TransactionEncoder()
