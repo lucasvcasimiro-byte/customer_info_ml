@@ -200,54 +200,63 @@ export const discountTiers = [
     "segment": "Loyal big spenders",
     "discount": "10%",
     "type": "Loyalty Reward",
-    "icon": "👑"
+    "icon": "👑",
+    "items": ["Eggs", "Cereals", "Fresh Bread", "Butter", "Oatmeal"]
   },
   {
     "segment": "Vegans",
     "discount": "15%",
     "type": "Healthy Subscriptions",
-    "icon": "🥗"
+    "icon": "🥗",
+    "items": ["Salad", "Tomatoes", "Carrots", "Spinach", "Avocado", "Asparagus"]
   },
   {
     "segment": "Bargain hunters",
     "discount": "25%",
     "type": "Win-Back Promotion",
-    "icon": "📢"
+    "icon": "📢",
+    "items": ["Laptop", "Energy Drink", "Bluetooth Headphones", "Energy Bar"]
   },
   {
     "segment": "Karens",
     "discount": "10%",
     "type": "Service Resolution",
-    "icon": "🚨"
+    "icon": "🚨",
+    "items": ["Napkins", "Babies Food", "Cooking Oil", "Dog Food"]
   },
   {
     "segment": "Tech enthusiasts",
     "discount": "12%",
     "type": "Electronics Flash Sale",
-    "icon": "⚡"
+    "icon": "⚡",
+    "items": ["Airpods", "Bluetooth Headphones", "Energy Drink", "iPhone 10", "Samsung Galaxy"]
   },
   {
     "segment": "Big families (big spenders)",
     "discount": "15%",
     "type": "Family Essentials",
-    "icon": "👨‍👩‍👧‍👦"
+    "icon": "👨‍👩‍👧‍👦",
+    "items": ["Milk", "Honey", "Oatmeal", "Cereals", "Butter"]
   },
   {
     "segment": "Gamers",
     "discount": "10%",
     "type": "Bundle Deals",
-    "icon": "🎮"
+    "icon": "🎮",
+    "items": ["Airpods", "iPhone 10", "Energy Drink", "Bluetooth Headphones"]
   },
   {
     "segment": "Clean and healthy",
     "discount": "10%",
     "type": "Healthy Choice",
-    "icon": "🟢"
+    "icon": "🟢",
+    "items": ["Salad", "Tomatoes", "Carrots", "Avocado", "Spinach", "Asparagus"]
   },
   {
     "segment": "Average customer",
     "discount": "10%",
     "type": "Grocery Essentials",
-    "icon": "👤"
+    "icon": "👤",
+    "items": ["Eggs", "Milk", "Fresh Bread", "Butter"]
   }
 ];
