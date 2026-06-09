@@ -1,0 +1,10 @@
+cluster,min_support,min_threshold
+Average customer,0.05,1.0
+Bargain hunters,0.03,1.0
+Big families (big spenders),0.01,1.5
+Clean and healthy,0.01,1.0
+Gamers,0.08,1.5
+Karens,0.15,1.5
+Loyal big spenders,0.02,1.0
+Tech enthusiasts,0.03,1.5
+Vegans,0.05,1.0
