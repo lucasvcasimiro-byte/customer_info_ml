@@ -1,16 +1,5 @@
 {
-  "3": [
-    {
-      "antecedents": [
-        "energy drink"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.0385663082437276,
-      "confidence": 0.3122460824143935,
-      "lift": 2.5713298994573726
-    },
+  "0": [
     {
       "antecedents": [
         "bluetooth headphones"
@@ -18,31 +7,20 @@
       "consequents": [
         "energy drink"
       ],
-      "support": 0.0385663082437276,
-      "confidence": 0.31759149940968123,
-      "lift": 2.5713298994573726
+      "support": 0.01797958250799939,
+      "confidence": 0.20665499124343256,
+      "lift": 2.52096042291942
     },
     {
       "antecedents": [
-        "airpods"
+        "energy drink"
       ],
       "consequents": [
         "bluetooth headphones"
       ],
-      "support": 0.06258064516129032,
-      "confidence": 0.28651132261240564,
-      "lift": 2.359405519742065
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "airpods"
-      ],
-      "support": 0.06258064516129032,
-      "confidence": 0.5153482880755608,
-      "lift": 2.359405519742065
+      "support": 0.01797958250799939,
+      "confidence": 0.21933085501858735,
+      "lift": 2.5209604229194196
     },
     {
       "antecedents": [
@@ -51,9 +29,9 @@
       "consequents": [
         "energy drink"
       ],
-      "support": 0.0621505376344086,
-      "confidence": 0.2845421726288152,
-      "lift": 2.3037511945281324
+      "support": 0.030473868657626087,
+      "confidence": 0.19212295869356388,
+      "lift": 2.343685832538773
     },
     {
       "antecedents": [
@@ -62,9 +40,75 @@
       "consequents": [
         "airpods"
       ],
-      "support": 0.0621505376344086,
-      "confidence": 0.5031921067904817,
-      "lift": 2.3037511945281324
+      "support": 0.030473868657626087,
+      "confidence": 0.37174721189591076,
+      "lift": 2.3436858325387724
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.03138808471735487,
+      "confidence": 0.19788664745437076,
+      "lift": 2.2744834802855256
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.03138808471735487,
+      "confidence": 0.36077057793345,
+      "lift": 2.2744834802855256
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "fresh bread"
+      ],
+      "support": 0.010361115343592868,
+      "confidence": 0.16075650118203308,
+      "lift": 2.1934405764192997
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.010361115343592868,
+      "confidence": 0.14137214137214138,
+      "lift": 2.1934405764192997
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.010361115343592868,
+      "confidence": 0.16075650118203308,
+      "lift": 2.1798448703671136
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.010361115343592868,
+      "confidence": 0.14049586776859502,
+      "lift": 2.1798448703671136
     },
     {
       "antecedents": [
@@ -73,9 +117,9 @@
       "consequents": [
         "bluetooth headphones"
       ],
-      "support": 0.022652329749103944,
-      "confidence": 0.2668918918918919,
-      "lift": 2.1978405501132774
+      "support": 0.012951394179491087,
+      "confidence": 0.188470066518847,
+      "lift": 2.1662505193751187
     },
     {
       "antecedents": [
@@ -84,152 +128,31 @@
       "consequents": [
         "pancakes"
       ],
-      "support": 0.022652329749103944,
-      "confidence": 0.18654073199527746,
-      "lift": 2.1978405501132774
-    },
-    {
-      "antecedents": [
-        "pancakes"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.022222222222222223,
-      "confidence": 0.26182432432432434,
-      "lift": 2.119819689102916
-    },
-    {
-      "antecedents": [
-        "energy drink"
-      ],
-      "consequents": [
-        "pancakes"
-      ],
-      "support": 0.022222222222222223,
-      "confidence": 0.17991874637260594,
-      "lift": 2.119819689102916
-    },
-    {
-      "antecedents": [
-        "candy bars"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.014336917562724014,
-      "confidence": 0.25673940949935814,
-      "lift": 2.078650471570543
-    },
-    {
-      "antecedents": [
-        "energy drink"
-      ],
-      "consequents": [
-        "candy bars"
-      ],
-      "support": 0.014336917562724014,
-      "confidence": 0.11607661056297155,
-      "lift": 2.078650471570543
-    },
-    {
-      "antecedents": [
-        "energy bar"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.024587813620071685,
-      "confidence": 0.255779269202088,
-      "lift": 2.0708768458323434
-    },
-    {
-      "antecedents": [
-        "energy drink"
-      ],
-      "consequents": [
-        "energy bar"
-      ],
-      "support": 0.024587813620071685,
-      "confidence": 0.19907138711549624,
-      "lift": 2.0708768458323434
-    },
-    {
-      "antecedents": [
-        "protein bar"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.024731182795698924,
-      "confidence": 0.24731182795698922,
-      "lift": 2.0023215322112593
-    },
-    {
-      "antecedents": [
-        "energy drink"
-      ],
-      "consequents": [
-        "protein bar"
-      ],
-      "support": 0.024731182795698924,
-      "confidence": 0.20023215322112595,
-      "lift": 2.0023215322112593
-    },
-    {
-      "antecedents": [
-        "energy bar"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.022867383512544803,
-      "confidence": 0.23788217747949292,
-      "lift": 1.958947093175281
+      "support": 0.012951394179491087,
+      "confidence": 0.148861646234676,
+      "lift": 2.1662505193751187
     },
     {
       "antecedents": [
         "bluetooth headphones"
       ],
       "consequents": [
-        "energy bar"
+        "iphone 10"
       ],
-      "support": 0.022867383512544803,
-      "confidence": 0.18831168831168832,
-      "lift": 1.958947093175281
+      "support": 0.013408502209355478,
+      "confidence": 0.15411558669001751,
+      "lift": 2.142924990352934
     },
     {
       "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "protein bar"
-      ],
-      "support": 0.023727598566308242,
-      "confidence": 0.19539551357733176,
-      "lift": 1.9539551357733176
-    },
-    {
-      "antecedents": [
-        "protein bar"
+        "iphone 10"
       ],
       "consequents": [
         "bluetooth headphones"
       ],
-      "support": 0.023727598566308242,
-      "confidence": 0.23727598566308242,
-      "lift": 1.9539551357733174
-    },
-    {
-      "antecedents": [
-        "samsung galaxy 10"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.017706093189964158,
-      "confidence": 0.2386473429951691,
-      "lift": 1.9321708849579855
+      "support": 0.013408502209355478,
+      "confidence": 0.1864406779661017,
+      "lift": 2.142924990352934
     },
     {
       "antecedents": [
@@ -238,53 +161,119 @@
       "consequents": [
         "samsung galaxy 10"
       ],
-      "support": 0.017706093189964158,
-      "confidence": 0.1433546140452699,
-      "lift": 1.9321708849579855
+      "support": 0.011884808776474173,
+      "confidence": 0.1449814126394052,
+      "lift": 2.0866513402465268
     },
     {
       "antecedents": [
-        "candy bars"
+        "samsung galaxy 10"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.011884808776474173,
+      "confidence": 0.17105263157894735,
+      "lift": 2.0866513402465268
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "pancakes"
+      ],
+      "support": 0.01097059271674539,
+      "confidence": 0.13382899628252787,
+      "lift": 1.9474937973441915
+    },
+    {
+      "antecedents": [
+        "pancakes"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.01097059271674539,
+      "confidence": 0.1596452328159645,
+      "lift": 1.9474937973441913
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.010361115343592868,
+      "confidence": 0.14137214137214138,
+      "lift": 1.9169945533581896
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "fresh bread"
+      ],
+      "support": 0.010361115343592868,
+      "confidence": 0.14049586776859502,
+      "lift": 1.9169945533581894
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.01417034892579613,
+      "confidence": 0.17286245353159851,
+      "lift": 1.9099264015620891
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.01417034892579613,
+      "confidence": 0.15656565656565655,
+      "lift": 1.909926401562089
+    },
+    {
+      "antecedents": [
+        "energy bar"
       ],
       "consequents": [
         "bluetooth headphones"
       ],
-      "support": 0.012903225806451613,
-      "confidence": 0.23106546854942234,
-      "lift": 1.902811857298962
+      "support": 0.013560871552643608,
+      "confidence": 0.16573556797020483,
+      "lift": 1.9049431393843332
     },
     {
       "antecedents": [
         "bluetooth headphones"
       ],
       "consequents": [
-        "candy bars"
+        "energy bar"
       ],
-      "support": 0.012903225806451613,
-      "confidence": 0.10625737898465171,
-      "lift": 1.9028118572989619
+      "support": 0.013560871552643608,
+      "confidence": 0.15586690017513133,
+      "lift": 1.9049431393843332
     },
     {
       "antecedents": [
-        "iphone 10"
+        "pancakes"
       ],
       "consequents": [
-        "bluetooth headphones"
+        "airpods"
       ],
-      "support": 0.022724014336917564,
-      "confidence": 0.23054545454545455,
-      "lift": 1.89852956960395
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "iphone 10"
-      ],
-      "support": 0.022724014336917564,
-      "confidence": 0.1871310507674144,
-      "lift": 1.8985295696039497
+      "support": 0.020722230687185737,
+      "confidence": 0.3015521064301552,
+      "lift": 1.9011397449578369
     },
     {
       "antecedents": [
@@ -293,42 +282,141 @@
       "consequents": [
         "pancakes"
       ],
-      "support": 0.03505376344086022,
-      "confidence": 0.16048572366261898,
-      "lift": 1.890857977274945
+      "support": 0.020722230687185737,
+      "confidence": 0.1306436119116234,
+      "lift": 1.9011397449578367
     },
     {
       "antecedents": [
-        "pancakes"
+        "energy drink"
+      ],
+      "consequents": [
+        "energy bar"
+      ],
+      "support": 0.012646655492914825,
+      "confidence": 0.15427509293680297,
+      "lift": 1.885488705668972
+    },
+    {
+      "antecedents": [
+        "energy bar"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.012646655492914825,
+      "confidence": 0.15456238361266295,
+      "lift": 1.885488705668972
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.02148407740362639,
+      "confidence": 0.13544668587896252,
+      "lift": 1.8833402530161676
+    },
+    {
+      "antecedents": [
+        "iphone 10"
       ],
       "consequents": [
         "airpods"
       ],
-      "support": 0.03505376344086022,
-      "confidence": 0.4130067567567568,
-      "lift": 1.890857977274945
+      "support": 0.02148407740362639,
+      "confidence": 0.298728813559322,
+      "lift": 1.8833402530161674
     },
     {
       "antecedents": [
-        "gadget for tiktok streaming"
+        "energy drink"
+      ],
+      "consequents": [
+        "protein bar"
+      ],
+      "support": 0.012494286149626695,
+      "confidence": 0.1524163568773234,
+      "lift": 1.8802792296726947
+    },
+    {
+      "antecedents": [
+        "protein bar"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.012494286149626695,
+      "confidence": 0.15413533834586465,
+      "lift": 1.8802792296726947
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.011122962060033522,
+      "confidence": 0.13468634686346864,
+      "lift": 1.826335732365588
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.011122962060033522,
+      "confidence": 0.15082644628099173,
+      "lift": 1.826335732365588
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "samsung galaxy 10"
+      ],
+      "support": 0.01097059271674539,
+      "confidence": 0.12609457092819612,
+      "lift": 1.8148216425476997
+    },
+    {
+      "antecedents": [
+        "samsung galaxy 10"
       ],
       "consequents": [
         "bluetooth headphones"
       ],
-      "support": 0.01835125448028674,
-      "confidence": 0.22755555555555557,
-      "lift": 1.8739079102715468
+      "support": 0.01097059271674539,
+      "confidence": 0.15789473684210523,
+      "lift": 1.8148216425476997
     },
     {
       "antecedents": [
-        "bluetooth headphones"
+        "butter"
       ],
       "consequents": [
-        "gadget for tiktok streaming"
+        "fresh bread"
       ],
-      "support": 0.01835125448028674,
-      "confidence": 0.1511216056670602,
-      "lift": 1.8739079102715466
+      "support": 0.01097059271674539,
+      "confidence": 0.1328413284132841,
+      "lift": 1.8125522627367643
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.01097059271674539,
+      "confidence": 0.14968814968814967,
+      "lift": 1.8125522627367643
     },
     {
       "antecedents": [
@@ -337,9 +425,9 @@
       "consequents": [
         "iphone 10"
       ],
-      "support": 0.022652329749103944,
-      "confidence": 0.18340104468949509,
-      "lift": 1.8606869624861502
+      "support": 0.01066585403016913,
+      "confidence": 0.13011152416356878,
+      "lift": 1.8091566378930124
     },
     {
       "antecedents": [
@@ -348,53 +436,9 @@
       "consequents": [
         "energy drink"
       ],
-      "support": 0.022652329749103944,
-      "confidence": 0.22981818181818184,
-      "lift": 1.8606869624861502
-    },
-    {
-      "antecedents": [
-        "energy bar"
-      ],
-      "consequents": [
-        "airpods"
-      ],
-      "support": 0.03906810035842294,
-      "confidence": 0.4064131245339299,
-      "lift": 1.8606705242035846
-    },
-    {
-      "antecedents": [
-        "airpods"
-      ],
-      "consequents": [
-        "energy bar"
-      ],
-      "support": 0.03906810035842294,
-      "confidence": 0.17886445684279617,
-      "lift": 1.8606705242035844
-    },
-    {
-      "antecedents": [
-        "protein bar"
-      ],
-      "consequents": [
-        "airpods"
-      ],
-      "support": 0.04021505376344086,
-      "confidence": 0.40215053763440856,
-      "lift": 1.8411552346570395
-    },
-    {
-      "antecedents": [
-        "airpods"
-      ],
-      "consequents": [
-        "protein bar"
-      ],
-      "support": 0.04021505376344086,
-      "confidence": 0.18411552346570395,
-      "lift": 1.8411552346570395
+      "support": 0.01066585403016913,
+      "confidence": 0.1483050847457627,
+      "lift": 1.8091566378930122
     },
     {
       "antecedents": [
@@ -403,9 +447,9 @@
       "consequents": [
         "bluetooth headphones"
       ],
-      "support": 0.025232974910394265,
-      "confidence": 0.2227848101265823,
-      "lift": 1.8346210751274044
+      "support": 0.013865610239219868,
+      "confidence": 0.1531986531986532,
+      "lift": 1.7608454657491432
     },
     {
       "antecedents": [
@@ -414,198 +458,662 @@
       "consequents": [
         "laptop"
       ],
-      "support": 0.025232974910394265,
-      "confidence": 0.20779220779220778,
-      "lift": 1.8346210751274041
+      "support": 0.013865610239219868,
+      "confidence": 0.159369527145359,
+      "lift": 1.7608454657491432
     },
     {
       "antecedents": [
-        "gadget for tiktok streaming"
+        "bluetooth headphones"
       ],
       "consequents": [
-        "energy drink"
+        "protein bar"
       ],
-      "support": 0.01806451612903226,
-      "confidence": 0.22400000000000003,
-      "lift": 1.813580963435868
+      "support": 0.012341916806338565,
+      "confidence": 0.14185639229422067,
+      "lift": 1.7500065838852825
     },
     {
       "antecedents": [
-        "energy drink"
+        "protein bar"
       ],
       "consequents": [
-        "gadget for tiktok streaming"
+        "bluetooth headphones"
       ],
-      "support": 0.01806451612903226,
-      "confidence": 0.14625652930934419,
-      "lift": 1.813580963435868
+      "support": 0.012341916806338565,
+      "confidence": 0.15225563909774437,
+      "lift": 1.7500065838852823
     },
     {
       "antecedents": [
-        "pancakes"
+        "protein bar"
       ],
       "consequents": [
         "energy bar"
       ],
-      "support": 0.014767025089605736,
-      "confidence": 0.17398648648648649,
-      "lift": 1.8099265372755304
+      "support": 0.011122962060033522,
+      "confidence": 0.13721804511278196,
+      "lift": 1.6770242645720448
     },
     {
       "antecedents": [
         "energy bar"
       ],
       "consequents": [
-        "pancakes"
+        "protein bar"
       ],
-      "support": 0.014767025089605736,
-      "confidence": 0.15361670395227442,
-      "lift": 1.8099265372755304
+      "support": 0.011122962060033522,
+      "confidence": 0.13594040968342644,
+      "lift": 1.6770242645720446
     },
     {
       "antecedents": [
-        "extra dark chocolate"
+        "airpods"
       ],
       "consequents": [
-        "bluetooth headphones"
+        "ring light"
       ],
-      "support": 0.01763440860215054,
-      "confidence": 0.21964285714285717,
-      "lift": 1.8087472592342724
+      "support": 0.01737010513484687,
+      "confidence": 0.10951008645533142,
+      "lift": 1.6714295288519538
     },
     {
       "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "extra dark chocolate"
-      ],
-      "support": 0.01763440860215054,
-      "confidence": 0.14521841794569068,
-      "lift": 1.8087472592342724
-    },
-    {
-      "antecedents": [
-        "iphone 10"
-      ],
-      "consequents": [
-        "pancakes"
-      ],
-      "support": 0.015125448028673836,
-      "confidence": 0.15345454545454545,
-      "lift": 1.8080159705159706
-    },
-    {
-      "antecedents": [
-        "pancakes"
-      ],
-      "consequents": [
-        "iphone 10"
-      ],
-      "support": 0.015125448028673836,
-      "confidence": 0.17820945945945946,
-      "lift": 1.8080159705159704
-    },
-    {
-      "antecedents": [
-        "samsung galaxy 10"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.015913978494623657,
-      "confidence": 0.21449275362318843,
-      "lift": 1.766336430368051
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "samsung galaxy 10"
-      ],
-      "support": 0.015913978494623657,
-      "confidence": 0.13105076741440377,
-      "lift": 1.7663364303680509
-    },
-    {
-      "antecedents": [
-        "candy bars"
+        "ring light"
       ],
       "consequents": [
         "airpods"
       ],
-      "support": 0.02136200716845878,
-      "confidence": 0.38254172015404364,
-      "lift": 1.7513807010662648
+      "support": 0.01737010513484687,
+      "confidence": 0.2651162790697675,
+      "lift": 1.6714295288519538
     },
     {
       "antecedents": [
-        "pokemon violet"
+        "samsung galaxy 10"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.01828432119457565,
+      "confidence": 0.2631578947368421,
+      "lift": 1.6590828656656047
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "samsung galaxy 10"
+      ],
+      "support": 0.01828432119457565,
+      "confidence": 0.11527377521613831,
+      "lift": 1.6590828656656045
+    }
+  ],
+  "1": [
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.032404298186702485,
+      "confidence": 0.26438356164383564,
+      "lift": 3.86896435663559
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.032404298186702485,
+      "confidence": 0.4742014742014742,
+      "lift": 3.8689643566355896
+    },
+    {
+      "antecedents": [
+        "metroid prime"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.007051712558764272,
+      "confidence": 0.2641509433962264,
+      "lift": 3.8655602429187335
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "metroid prime"
+      ],
+      "support": 0.007051712558764272,
+      "confidence": 0.1031941031941032,
+      "lift": 3.8655602429187335
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.012424445936870383,
+      "confidence": 0.2633451957295374,
+      "lift": 3.8537690067939185
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.012424445936870383,
+      "confidence": 0.18181818181818182,
+      "lift": 3.853769006793918
+    },
+    {
+      "antecedents": [
+        "ratchet & clank 3"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.00789120214909335,
+      "confidence": 0.26256983240223464,
+      "lift": 3.8424224122548143
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "ratchet & clank 3"
+      ],
+      "support": 0.00789120214909335,
+      "confidence": 0.11547911547911546,
+      "lift": 3.842422412254814
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "ratchet & clank 3"
+      ],
+      "support": 0.005708529214237743,
+      "confidence": 0.11111111111111112,
+      "lift": 3.6970825574177533
+    },
+    {
+      "antecedents": [
+        "ratchet & clank 3"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.005708529214237743,
+      "confidence": 0.18994413407821228,
+      "lift": 3.697082557417753
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "pokemon shield"
+      ],
+      "support": 0.0047011417058428475,
+      "confidence": 0.09964412811387902,
+      "lift": 3.640984215007751
+    },
+    {
+      "antecedents": [
+        "pokemon shield"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.0047011417058428475,
+      "confidence": 0.17177914110429449,
+      "lift": 3.640984215007751
+    },
+    {
+      "antecedents": [
+        "metroid prime"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.004533243787777031,
+      "confidence": 0.16981132075471697,
+      "lift": 3.59927482709998
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "metroid prime"
+      ],
+      "support": 0.004533243787777031,
+      "confidence": 0.09608540925266904,
+      "lift": 3.5992748270999795
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.020651443922095367,
+      "confidence": 0.43772241992882566,
+      "lift": 3.571335250816556
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.020651443922095367,
+      "confidence": 0.1684931506849315,
+      "lift": 3.5713352508165555
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "ratchet & clank"
+      ],
+      "support": 0.005036937541974479,
+      "confidence": 0.09803921568627451,
+      "lift": 3.560497369679579
+    },
+    {
+      "antecedents": [
+        "ratchet & clank"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.005036937541974479,
+      "confidence": 0.18292682926829268,
+      "lift": 3.560497369679579
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.022330423102753526,
+      "confidence": 0.1821917808219178,
+      "lift": 3.546190348285433
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.022330423102753526,
+      "confidence": 0.434640522875817,
+      "lift": 3.546190348285433
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.012424445936870383,
+      "confidence": 0.24183006535947713,
+      "lift": 3.538918597742127
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.012424445936870383,
+      "confidence": 0.18181818181818182,
+      "lift": 3.538918597742127
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.008562793821356616,
+      "confidence": 0.16666666666666669,
+      "lift": 3.532621589561092
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.008562793821356616,
+      "confidence": 0.1814946619217082,
+      "lift": 3.532621589561092
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "ratchet & clank"
+      ],
+      "support": 0.006548018804566823,
+      "confidence": 0.09582309582309581,
+      "lift": 3.4800143824534064
+    },
+    {
+      "antecedents": [
+        "ratchet & clank"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.006548018804566823,
+      "confidence": 0.23780487804878048,
+      "lift": 3.4800143824534064
+    },
+    {
+      "antecedents": [
+        "final fantasy XX"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.004869039623908664,
+      "confidence": 0.16292134831460675,
+      "lift": 3.4532368347394944
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "final fantasy XX"
+      ],
+      "support": 0.004869039623908664,
+      "confidence": 0.10320284697508898,
+      "lift": 3.453236834739494
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.019979852249832102,
+      "confidence": 0.23564356435643563,
+      "lift": 3.448385919673048
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
       ],
       "consequents": [
         "energy drink"
       ],
-      "support": 0.01068100358422939,
-      "confidence": 0.215007215007215,
-      "lift": 1.740772286332356
+      "support": 0.019979852249832102,
+      "confidence": 0.29238329238329236,
+      "lift": 3.448385919673048
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "gadget for tiktok streaming"
+      ],
+      "support": 0.01175285426460712,
+      "confidence": 0.13861386138613863,
+      "lift": 3.425660408364488
+    },
+    {
+      "antecedents": [
+        "gadget for tiktok streaming"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.01175285426460712,
+      "confidence": 0.29045643153526973,
+      "lift": 3.425660408364488
+    },
+    {
+      "antecedents": [
+        "portal 2"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.0047011417058428475,
+      "confidence": 0.16091954022988506,
+      "lift": 3.4108070519900195
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "portal 2"
+      ],
+      "support": 0.0047011417058428475,
+      "confidence": 0.09964412811387902,
+      "lift": 3.4108070519900195
+    },
+    {
+      "antecedents": [
+        "ring light"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.009570181329751511,
+      "confidence": 0.2326530612244898,
+      "lift": 3.404623176051748
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "ring light"
+      ],
+      "support": 0.009570181329751511,
+      "confidence": 0.14004914004914004,
+      "lift": 3.4046231760517474
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "ratchet & clank 2"
+      ],
+      "support": 0.004869039623908664,
+      "confidence": 0.09477124183006537,
+      "lift": 3.379985127783649
+    },
+    {
+      "antecedents": [
+        "ratchet & clank 2"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.004869039623908664,
+      "confidence": 0.17365269461077845,
+      "lift": 3.3799851277836486
+    },
+    {
+      "antecedents": [
+        "megaman zero 4"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.012592343854936199,
+      "confidence": 0.4120879120879121,
+      "lift": 3.362185759446034
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "megaman zero 4"
+      ],
+      "support": 0.012592343854936199,
+      "confidence": 0.10273972602739727,
+      "lift": 3.362185759446034
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.03475486903962391,
+      "confidence": 0.4099009900990099,
+      "lift": 3.3443428726434288
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.03475486903962391,
+      "confidence": 0.28356164383561644,
+      "lift": 3.3443428726434288
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "minecraft"
+      ],
+      "support": 0.005036937541974479,
+      "confidence": 0.09803921568627451,
+      "lift": 3.3366946778711486
+    },
+    {
+      "antecedents": [
+        "minecraft"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.005036937541974479,
+      "confidence": 0.17142857142857143,
+      "lift": 3.3366946778711486
+    },
+    {
+      "antecedents": [
+        "megaman zero 2"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.007051712558764272,
+      "confidence": 0.22702702702702704,
+      "lift": 3.322292316886912
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "megaman zero 2"
+      ],
+      "support": 0.007051712558764272,
+      "confidence": 0.1031941031941032,
+      "lift": 3.3222923168869114
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "megaman zero 4"
+      ],
+      "support": 0.0052048354600402955,
+      "confidence": 0.10130718954248366,
+      "lift": 3.3153056094232567
+    },
+    {
+      "antecedents": [
+        "megaman zero 4"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.0052048354600402955,
+      "confidence": 0.17032967032967034,
+      "lift": 3.3153056094232567
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.014271323035594358,
+      "confidence": 0.2777777777777778,
+      "lift": 3.276127612761276
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.014271323035594358,
+      "confidence": 0.1683168316831683,
+      "lift": 3.2761276127612757
     }
   ],
   "2": [
     {
       "antecedents": [
-        "whole weat flour"
-      ],
-      "consequents": [
-        "chili"
-      ],
-      "support": 0.01010886469673406,
-      "confidence": 0.08312020460358056,
-      "lift": 1.735269206496828
-    },
-    {
-      "antecedents": [
         "chili"
       ],
       "consequents": [
         "whole weat flour"
       ],
-      "support": 0.01010886469673406,
-      "confidence": 0.21103896103896105,
-      "lift": 1.735269206496828
-    },
-    {
-      "antecedents": [
-        "light mayo"
-      ],
-      "consequents": [
-        "black tea"
-      ],
-      "support": 0.009953343701399688,
-      "confidence": 0.24521072796934862,
-      "lift": 1.5894203435916447
-    },
-    {
-      "antecedents": [
-        "tooth brush"
-      ],
-      "consequents": [
-        "oil"
-      ],
-      "support": 0.007309486780715396,
-      "confidence": 0.18503937007874016,
-      "lift": 1.5411957896454653
-    },
-    {
-      "antecedents": [
-        "burger sauce"
-      ],
-      "consequents": [
-        "mineral water"
-      ],
-      "support": 0.006065318818040436,
-      "confidence": 0.1407942238267148,
-      "lift": 1.5344184054335188
+      "support": 0.009306260575296108,
+      "confidence": 0.2108626198083067,
+      "lift": 1.7802829758101324
     },
     {
       "antecedents": [
@@ -614,196 +1122,9 @@
       "consequents": [
         "chocolate bread"
       ],
-      "support": 0.009642301710730949,
-      "confidence": 0.2246376811594203,
-      "lift": 1.5188436276078574
-    },
-    {
-      "antecedents": [
-        "gums"
-      ],
-      "consequents": [
-        "mineral water"
-      ],
-      "support": 0.006065318818040436,
-      "confidence": 0.1368421052631579,
-      "lift": 1.4913470115967886
-    },
-    {
-      "antecedents": [
-        "pancakes"
-      ],
-      "consequents": [
-        "mineral water"
-      ],
-      "support": 0.006376360808709175,
-      "confidence": 0.13442622950819672,
-      "lift": 1.465018060572381
-    },
-    {
-      "antecedents": [
-        "spaghetti"
-      ],
-      "consequents": [
-        "whole weat flour"
-      ],
-      "support": 0.006998444790046656,
-      "confidence": 0.17786561264822134,
-      "lift": 1.4625011372481627
-    },
-    {
-      "antecedents": [
-        "eggplant"
-      ],
-      "consequents": [
-        "mineral water"
-      ],
-      "support": 0.006065318818040436,
-      "confidence": 0.13402061855670105,
-      "lift": 1.4605975886772673
-    },
-    {
-      "antecedents": [
-        "chocolate"
-      ],
-      "consequents": [
-        "mineral water"
-      ],
-      "support": 0.006220839813374806,
-      "confidence": 0.13245033112582782,
-      "lift": 1.4434841171848694
-    },
-    {
-      "antecedents": [
-        "mashed potato"
-      ],
-      "consequents": [
-        "honey"
-      ],
-      "support": 0.014152410575427682,
-      "confidence": 0.3043478260869565,
-      "lift": 1.4399974405733114
-    },
-    {
-      "antecedents": [
-        "shampoo"
-      ],
-      "consequents": [
-        "oil"
-      ],
-      "support": 0.007931570762052876,
-      "confidence": 0.17288135593220336,
-      "lift": 1.4399315008342843
-    },
-    {
-      "antecedents": [
-        "half-life: alyx"
-      ],
-      "consequents": [
-        "butter"
-      ],
-      "support": 0.009797822706065318,
-      "confidence": 0.5163934426229507,
-      "lift": 1.4287477779972346
-    },
-    {
-      "antecedents": [
-        "final fantasy XX"
-      ],
-      "consequents": [
-        "tea"
-      ],
-      "support": 0.006220839813374806,
-      "confidence": 0.3007518796992481,
-      "lift": 1.422983507333455
-    },
-    {
-      "antecedents": [
-        "cake"
-      ],
-      "consequents": [
-        "black tea"
-      ],
-      "support": 0.009175738724727838,
-      "confidence": 0.21933085501858735,
-      "lift": 1.421670763880561
-    },
-    {
-      "antecedents": [
-        "razor"
-      ],
-      "consequents": [
-        "green tea"
-      ],
-      "support": 0.006842923794712286,
-      "confidence": 0.16,
-      "lift": 1.4151306740027512
-    },
-    {
-      "antecedents": [
-        "yogurt cake"
-      ],
-      "consequents": [
-        "cooking oil"
-      ],
-      "support": 0.009486780715396579,
-      "confidence": 0.21554770318021202,
-      "lift": 1.4113765086036287
-    },
-    {
-      "antecedents": [
-        "nonfat milk"
-      ],
-      "consequents": [
-        "oatmeal"
-      ],
-      "support": 0.013685847589424573,
-      "confidence": 0.302405498281787,
-      "lift": 1.4110793570042746
-    },
-    {
-      "antecedents": [
-        "eggplant"
-      ],
-      "consequents": [
-        "sandwich"
-      ],
-      "support": 0.009642301710730949,
-      "confidence": 0.21305841924398627,
-      "lift": 1.4108811902562635
-    },
-    {
-      "antecedents": [
-        "parmesan cheese"
-      ],
-      "consequents": [
-        "green tea"
-      ],
-      "support": 0.006998444790046656,
-      "confidence": 0.15901060070671377,
-      "lift": 1.4063798659479636
-    },
-    {
-      "antecedents": [
-        "mint green tea"
-      ],
-      "consequents": [
-        "black tea"
-      ],
-      "support": 0.00933125972006221,
-      "confidence": 0.21660649819494585,
-      "lift": 1.4040118784208688
-    },
-    {
-      "antecedents": [
-        "nonfat milk"
-      ],
-      "consequents": [
-        "black tea"
-      ],
-      "support": 0.009797822706065318,
-      "confidence": 0.21649484536082475,
-      "lift": 1.4032881609577652
+      "support": 0.009306260575296108,
+      "confidence": 0.22147651006711408,
+      "lift": 1.4973416676796694
     },
     {
       "antecedents": [
@@ -812,20 +1133,42 @@
       "consequents": [
         "bacon"
       ],
-      "support": 0.015241057542768274,
-      "confidence": 0.3130990415335463,
-      "lift": 1.3990457519532333
+      "support": 0.016779469825155106,
+      "confidence": 0.3361581920903955,
+      "lift": 1.4965686743911393
     },
     {
       "antecedents": [
-        "pasta"
+        "light mayo"
       ],
       "consequents": [
-        "cooking oil"
+        "black tea"
       ],
-      "support": 0.008553654743390357,
-      "confidence": 0.21317829457364337,
-      "lift": 1.3958619491940194
+      "support": 0.009588268471517203,
+      "confidence": 0.2274247491638796,
+      "lift": 1.470279235250897
+    },
+    {
+      "antecedents": [
+        "water spray"
+      ],
+      "consequents": [
+        "chocolate bread"
+      ],
+      "support": 0.008460236886632826,
+      "confidence": 0.21428571428571427,
+      "lift": 1.4487266784692905
+    },
+    {
+      "antecedents": [
+        "extra dark chocolate"
+      ],
+      "consequents": [
+        "black tea"
+      ],
+      "support": 0.010293288212069937,
+      "confidence": 0.22392638036809814,
+      "lift": 1.4476626158345962
     },
     {
       "antecedents": [
@@ -834,185 +1177,64 @@
       "consequents": [
         "cooking oil"
       ],
-      "support": 0.007931570762052876,
-      "confidence": 0.21249999999999997,
-      "lift": 1.3914205702647657
+      "support": 0.008601240834743373,
+      "confidence": 0.22181818181818183,
+      "lift": 1.43928137736006
     },
     {
       "antecedents": [
-        "water spray"
+        "mashed potato"
       ],
       "consequents": [
-        "green tea"
+        "honey"
       ],
-      "support": 0.006220839813374806,
-      "confidence": 0.1568627450980392,
-      "lift": 1.3873830137281873
+      "support": 0.014241398759165257,
+      "confidence": 0.30513595166163143,
+      "lift": 1.4274565759790832
     },
     {
       "antecedents": [
-        "beer"
+        "gums"
       ],
       "consequents": [
-        "eggs"
+        "salt"
       ],
-      "support": 0.010575427682737169,
-      "confidence": 0.49635036496350365,
-      "lift": 1.3780366350238897
+      "support": 0.00916525662718556,
+      "confidence": 0.21381578947368418,
+      "lift": 1.422496790757381
     },
     {
       "antecedents": [
-        "razor"
+        "nonfat milk"
       ],
       "consequents": [
-        "whole weat flour"
+        "oatmeal"
       ],
-      "support": 0.007153965785381027,
-      "confidence": 0.1672727272727273,
-      "lift": 1.3754010695187167
+      "support": 0.013959390862944163,
+      "confidence": 0.3018292682926829,
+      "lift": 1.4213633271790886
     },
     {
       "antecedents": [
-        "candy bars"
-      ],
-      "consequents": [
-        "whole weat flour"
-      ],
-      "support": 0.007465007776049767,
-      "confidence": 0.1672473867595819,
-      "lift": 1.375192706987355
-    },
-    {
-      "antecedents": [
-        "ketchup"
-      ],
-      "consequents": [
-        "oil"
-      ],
-      "support": 0.007153965785381027,
-      "confidence": 0.16487455197132617,
-      "lift": 1.3732427061860457
-    },
-    {
-      "antecedents": [
-        "pasta"
-      ],
-      "consequents": [
-        "green tea"
-      ],
-      "support": 0.006220839813374806,
-      "confidence": 0.15503875968992248,
-      "lift": 1.371250653103441
-    },
-    {
-      "antecedents": [
-        "brownies"
-      ],
-      "consequents": [
-        "whole weat flour"
-      ],
-      "support": 0.006687402799377916,
-      "confidence": 0.16666666666666666,
-      "lift": 1.3704177323103153
-    },
-    {
-      "antecedents": [
-        "cream"
-      ],
-      "consequents": [
-        "oil"
-      ],
-      "support": 0.006376360808709175,
-      "confidence": 0.1626984126984127,
-      "lift": 1.3551176083559504
-    },
-    {
-      "antecedents": [
-        "olive oil"
-      ],
-      "consequents": [
-        "whole weat flour"
-      ],
-      "support": 0.007309486780715396,
-      "confidence": 0.16433566433566432,
-      "lift": 1.3512510507395417
-    },
-    {
-      "antecedents": [
-        "cottage cheese"
-      ],
-      "consequents": [
-        "bacon"
-      ],
-      "support": 0.014152410575427682,
-      "confidence": 0.3023255813953488,
-      "lift": 1.3509058293065275
-    },
-    {
-      "antecedents": [
-        "hand protein bar"
-      ],
-      "consequents": [
-        "cooking oil"
-      ],
-      "support": 0.009175738724727838,
-      "confidence": 0.20629370629370627,
-      "lift": 1.3507826186033924
-    },
-    {
-      "antecedents": [
-        "zucchini"
+        "nonfat milk"
       ],
       "consequents": [
         "black tea"
       ],
-      "support": 0.00933125972006221,
-      "confidence": 0.20833333333333337,
-      "lift": 1.350386424731183
+      "support": 0.01015228426395939,
+      "confidence": 0.21951219512195122,
+      "lift": 1.4191253307245926
     },
     {
       "antecedents": [
-        "toothpaste"
+        "half-life: alyx"
       ],
       "consequents": [
-        "chocolate bread"
+        "butter"
       ],
-      "support": 0.008864696734059098,
-      "confidence": 0.1993006993006993,
-      "lift": 1.3475325935893758
-    },
-    {
-      "antecedents": [
-        "cauliflower"
-      ],
-      "consequents": [
-        "honey"
-      ],
-      "support": 0.01181959564541213,
-      "confidence": 0.2846441947565543,
-      "lift": 1.3467712820343223
-    },
-    {
-      "antecedents": [
-        "vegetables mix"
-      ],
-      "consequents": [
-        "honey"
-      ],
-      "support": 0.01181959564541213,
-      "confidence": 0.2846441947565543,
-      "lift": 1.3467712820343223
-    },
-    {
-      "antecedents": [
-        "energy bar"
-      ],
-      "consequents": [
-        "green tea"
-      ],
-      "support": 0.006998444790046656,
-      "confidence": 0.152027027027027,
-      "lift": 1.344613182646195
+      "support": 0.00972927241962775,
+      "confidence": 0.5073529411764706,
+      "lift": 1.3913948409990446
     },
     {
       "antecedents": [
@@ -1021,31 +1243,108 @@
       "consequents": [
         "cooking oil"
       ],
-      "support": 0.008709175738724729,
-      "confidence": 0.20512820512820515,
-      "lift": 1.3431510783852945
+      "support": 0.008883248730964468,
+      "confidence": 0.21355932203389832,
+      "lift": 1.385693240498085
     },
     {
       "antecedents": [
-        "barbecue sauce"
+        "hand protein bar"
       ],
       "consequents": [
-        "tea"
+        "cooking oil"
       ],
-      "support": 0.013063763608087092,
-      "confidence": 0.28378378378378377,
-      "lift": 1.34270031621025
+      "support": 0.009588268471517203,
+      "confidence": 0.21316614420062696,
+      "lift": 1.3831420811261175
     },
     {
       "antecedents": [
-        "low fat yogurt"
+        "cake"
       ],
       "consequents": [
-        "salt"
+        "black tea"
       ],
-      "support": 0.008864696734059098,
-      "confidence": 0.2,
-      "lift": 1.3409801876955163
+      "support": 0.009024252679075015,
+      "confidence": 0.21333333333333335,
+      "lift": 1.379179580674567
+    },
+    {
+      "antecedents": [
+        "ground beef"
+      ],
+      "consequents": [
+        "black tea"
+      ],
+      "support": 0.008883248730964468,
+      "confidence": 0.21212121212121213,
+      "lift": 1.3713433330570979
+    },
+    {
+      "antecedents": [
+        "pasta"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.008460236886632826,
+      "confidence": 0.2112676056338028,
+      "lift": 1.3708232929139337
+    },
+    {
+      "antecedents": [
+        "salad"
+      ],
+      "consequents": [
+        "black tea"
+      ],
+      "support": 0.010998307952622674,
+      "confidence": 0.2113821138211382,
+      "lift": 1.3665651332903483
+    },
+    {
+      "antecedents": [
+        "cauliflower"
+      ],
+      "consequents": [
+        "honey"
+      ],
+      "support": 0.011562323745064862,
+      "confidence": 0.2918149466192171,
+      "lift": 1.3651395787753875
+    },
+    {
+      "antecedents": [
+        "mint green tea"
+      ],
+      "consequents": [
+        "black tea"
+      ],
+      "support": 0.00916525662718556,
+      "confidence": 0.21035598705501615,
+      "lift": 1.359931321963696
+    },
+    {
+      "antecedents": [
+        "cottage cheese"
+      ],
+      "consequents": [
+        "bacon"
+      ],
+      "support": 0.014241398759165257,
+      "confidence": 0.3042168674698795,
+      "lift": 1.3543666190184467
+    },
+    {
+      "antecedents": [
+        "yogurt cake"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.008883248730964468,
+      "confidence": 0.20860927152317885,
+      "lift": 1.3535745230030964
     },
     {
       "antecedents": [
@@ -1054,20 +1353,86 @@
       "consequents": [
         "bacon"
       ],
-      "support": 0.012597200622083981,
-      "confidence": 0.3,
-      "lift": 1.3405142460041695
+      "support": 0.012831359278059786,
+      "confidence": 0.30333333333333334,
+      "lift": 1.3504331450094162
     },
     {
       "antecedents": [
-        "gluten free bar"
+        "barbecue sauce"
       ],
       "consequents": [
-        "sandwich"
+        "tea"
       ],
-      "support": 0.008242612752721618,
-      "confidence": 0.20229007633587787,
-      "lift": 1.3395728021006126
+      "support": 0.012972363226170333,
+      "confidence": 0.2848297213622291,
+      "lift": 1.3493736699405001
+    },
+    {
+      "antecedents": [
+        "vegetables mix"
+      ],
+      "consequents": [
+        "honey"
+      ],
+      "support": 0.012267343485617596,
+      "confidence": 0.2880794701986755,
+      "lift": 1.3476646455468382
+    },
+    {
+      "antecedents": [
+        "ham"
+      ],
+      "consequents": [
+        "tea"
+      ],
+      "support": 0.013395375070501973,
+      "confidence": 0.2835820895522388,
+      "lift": 1.3434630454939729
+    },
+    {
+      "antecedents": [
+        "low fat yogurt"
+      ],
+      "consequents": [
+        "salt"
+      ],
+      "support": 0.009024252679075015,
+      "confidence": 0.20125786163522014,
+      "lift": 1.3389500513292505
+    },
+    {
+      "antecedents": [
+        "chutney"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.008601240834743373,
+      "confidence": 0.2053872053872054,
+      "lift": 1.3326679420000556
+    },
+    {
+      "antecedents": [
+        "blueberries"
+      ],
+      "consequents": [
+        "black tea"
+      ],
+      "support": 0.008601240834743373,
+      "confidence": 0.2040133779264214,
+      "lift": 1.318926961033893
+    },
+    {
+      "antecedents": [
+        "toothpaste"
+      ],
+      "consequents": [
+        "salt"
+      ],
+      "support": 0.008601240834743373,
+      "confidence": 0.19805194805194806,
+      "lift": 1.3176214029872566
     },
     {
       "antecedents": [
@@ -1076,154 +1441,232 @@
       "consequents": [
         "chocolate bread"
       ],
-      "support": 0.009486780715396579,
-      "confidence": 0.19805194805194806,
-      "lift": 1.3390894069127508
+      "support": 0.008601240834743373,
+      "confidence": 0.19488817891373802,
+      "lift": 1.3175852858495998
     },
     {
       "antecedents": [
-        "parmesan cheese"
+        "eggplant"
       ],
       "consequents": [
         "sandwich"
       ],
-      "support": 0.008864696734059098,
-      "confidence": 0.20141342756183747,
-      "lift": 1.333767599611344
+      "support": 0.00916525662718556,
+      "confidence": 0.19877675840978593,
+      "lift": 1.3077224217460126
     },
     {
       "antecedents": [
-        "burger sauce"
+        "corn"
+      ],
+      "consequents": [
+        "black tea"
+      ],
+      "support": 0.008178228990411731,
+      "confidence": 0.20209059233449475,
+      "lift": 1.3064963362226405
+    },
+    {
+      "antecedents": [
+        "grated cheese"
+      ],
+      "consequents": [
+        "salt"
+      ],
+      "support": 0.008460236886632826,
+      "confidence": 0.19607843137254902,
+      "lift": 1.3044917779494536
+    },
+    {
+      "antecedents": [
+        "tomato sauce"
+      ],
+      "consequents": [
+        "tea"
+      ],
+      "support": 0.010575296108291032,
+      "confidence": 0.2747252747252747,
+      "lift": 1.3015041071153293
+    },
+    {
+      "antecedents": [
+        "herb & pepper"
+      ],
+      "consequents": [
+        "black tea"
+      ],
+      "support": 0.00874224478285392,
+      "confidence": 0.2012987012987013,
+      "lift": 1.3013768364725522
+    },
+    {
+      "antecedents": [
+        "zucchini"
+      ],
+      "consequents": [
+        "black tea"
+      ],
+      "support": 0.00874224478285392,
+      "confidence": 0.2012987012987013,
+      "lift": 1.3013768364725522
+    },
+    {
+      "antecedents": [
+        "yogurt cake"
       ],
       "consequents": [
         "honey"
       ],
-      "support": 0.012130637636080872,
-      "confidence": 0.2815884476534296,
-      "lift": 1.3323132585809805
+      "support": 0.011844331641285956,
+      "confidence": 0.27814569536423844,
+      "lift": 1.3011934508728094
+    },
+    {
+      "antecedents": [
+        "pickles"
+      ],
+      "consequents": [
+        "black tea"
+      ],
+      "support": 0.009447264523406655,
+      "confidence": 0.2012012012012012,
+      "lift": 1.300746507674493
+    },
+    {
+      "antecedents": [
+        "gums"
+      ],
+      "consequents": [
+        "sandwich"
+      ],
+      "support": 0.008460236886632826,
+      "confidence": 0.19736842105263158,
+      "lift": 1.2984571819158284
+    },
+    {
+      "antecedents": [
+        "razor"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.008319232938522278,
+      "confidence": 0.2,
+      "lift": 1.2977127172918574
+    },
+    {
+      "antecedents": [
+        "gums"
+      ],
+      "consequents": [
+        "black tea"
+      ],
+      "support": 0.008601240834743373,
+      "confidence": 0.20065789473684212,
+      "lift": 1.2972340833853093
+    },
+    {
+      "antecedents": [
+        "green beans"
+      ],
+      "consequents": [
+        "bacon"
+      ],
+      "support": 0.012972363226170333,
+      "confidence": 0.2911392405063291,
+      "lift": 1.2961453193163126
+    },
+    {
+      "antecedents": [
+        "pancakes"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.00972927241962775,
+      "confidence": 0.1994219653179191,
+      "lift": 1.2939621025019965
+    },
+    {
+      "antecedents": [
+        "deodorant"
+      ],
+      "consequents": [
+        "tea"
+      ],
+      "support": 0.012267343485617596,
+      "confidence": 0.2727272727272727,
+      "lift": 1.2920386226999452
+    },
+    {
+      "antecedents": [
+        "spaghetti"
+      ],
+      "consequents": [
+        "milk"
+      ],
+      "support": 0.010575296108291032,
+      "confidence": 0.26223776223776224,
+      "lift": 1.2897296877879403
+    },
+    {
+      "antecedents": [
+        "rice"
+      ],
+      "consequents": [
+        "cooking oil"
+      ],
+      "support": 0.00874224478285392,
+      "confidence": 0.1987179487179487,
+      "lift": 1.2893940460271658
+    },
+    {
+      "antecedents": [
+        "sparkling water"
+      ],
+      "consequents": [
+        "honey"
+      ],
+      "support": 0.012972363226170333,
+      "confidence": 0.2754491017964072,
+      "lift": 1.2885785157916356
+    },
+    {
+      "antecedents": [
+        "champagne"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.009588268471517203,
+      "confidence": 0.4857142857142857,
+      "lift": 1.2882145528368416
+    },
+    {
+      "antecedents": [
+        "protein bar"
+      ],
+      "consequents": [
+        "bacon"
+      ],
+      "support": 0.013818386914833615,
+      "confidence": 0.2890855457227139,
+      "lift": 1.2870023165508393
     }
   ],
+  "3": [],
   "4": [
     {
       "antecedents": [
-        "pokemon scarlet"
-      ],
-      "consequents": [
-        "pokemon violet"
-      ],
-      "support": 0.004333023831631074,
-      "confidence": 0.12612612612612614,
-      "lift": 4.244932432432433
-    },
-    {
-      "antecedents": [
-        "pokemon violet"
-      ],
-      "consequents": [
-        "pokemon scarlet"
-      ],
-      "support": 0.004333023831631074,
-      "confidence": 0.14583333333333334,
-      "lift": 4.244932432432433
-    },
-    {
-      "antecedents": [
-        "pokemon scarlet"
-      ],
-      "consequents": [
-        "metroid prime"
-      ],
-      "support": 0.004333023831631074,
-      "confidence": 0.12612612612612614,
-      "lift": 3.9952305246422903
-    },
-    {
-      "antecedents": [
-        "metroid prime"
-      ],
-      "consequents": [
-        "pokemon scarlet"
-      ],
-      "support": 0.004333023831631074,
-      "confidence": 0.13725490196078433,
-      "lift": 3.99523052464229
-    },
-    {
-      "antecedents": [
-        "napkins"
-      ],
-      "consequents": [
-        "dog food"
-      ],
-      "support": 0.0064995357474466105,
-      "confidence": 0.16535433070866143,
-      "lift": 3.987013750146904
-    },
-    {
-      "antecedents": [
-        "dog food"
-      ],
-      "consequents": [
-        "napkins"
-      ],
-      "support": 0.0064995357474466105,
-      "confidence": 0.15671641791044777,
-      "lift": 3.987013750146904
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "airpods"
-      ],
-      "support": 0.034354688950789226,
-      "confidence": 0.49115044247787604,
-      "lift": 3.9672676991150437
-    },
-    {
-      "antecedents": [
-        "airpods"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.034354688950789226,
-      "confidence": 0.27749999999999997,
-      "lift": 3.9672676991150433
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "laptop"
-      ],
-      "support": 0.013308573197152585,
-      "confidence": 0.1902654867256637,
-      "lift": 3.8908087823456925
-    },
-    {
-      "antecedents": [
-        "laptop"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.013308573197152585,
-      "confidence": 0.2721518987341772,
-      "lift": 3.8908087823456925
-    },
-    {
-      "antecedents": [
         "energy drink"
       ],
       "consequents": [
         "bluetooth headphones"
       ],
-      "support": 0.02290312596719282,
-      "confidence": 0.2605633802816901,
-      "lift": 3.725133989779384
+      "support": 0.038199064337525214,
+      "confidence": 0.30732044198895025,
+      "lift": 2.43463413053402
     },
     {
       "antecedents": [
@@ -1232,75 +1675,31 @@
       "consequents": [
         "energy drink"
       ],
-      "support": 0.02290312596719282,
-      "confidence": 0.327433628318584,
-      "lift": 3.725133989779384
+      "support": 0.038199064337525214,
+      "confidence": 0.30261815708942535,
+      "lift": 2.4346341305340196
     },
     {
       "antecedents": [
-        "pokemon sword"
+        "airpods"
       ],
       "consequents": [
-        "laptop"
+        "bluetooth headphones"
       ],
-      "support": 0.005261528938409161,
-      "confidence": 0.17346938775510204,
-      "lift": 3.547339188840093
+      "support": 0.05931585046568522,
+      "confidence": 0.28135179153094464,
+      "lift": 2.2289069673170623
     },
     {
       "antecedents": [
-        "laptop"
+        "bluetooth headphones"
       ],
       "consequents": [
-        "pokemon sword"
+        "airpods"
       ],
-      "support": 0.005261528938409161,
-      "confidence": 0.10759493670886075,
-      "lift": 3.547339188840093
-    },
-    {
-      "antecedents": [
-        "strawberries"
-      ],
-      "consequents": [
-        "salad"
-      ],
-      "support": 0.005261528938409161,
-      "confidence": 0.13934426229508196,
-      "lift": 3.517353995901639
-    },
-    {
-      "antecedents": [
-        "salad"
-      ],
-      "consequents": [
-        "strawberries"
-      ],
-      "support": 0.005261528938409161,
-      "confidence": 0.1328125,
-      "lift": 3.517353995901639
-    },
-    {
-      "antecedents": [
-        "minecraft"
-      ],
-      "consequents": [
-        "final fantasy XXII"
-      ],
-      "support": 0.004642525533890436,
-      "confidence": 0.13157894736842105,
-      "lift": 3.51348412353197
-    },
-    {
-      "antecedents": [
-        "final fantasy XXII"
-      ],
-      "consequents": [
-        "minecraft"
-      ],
-      "support": 0.004642525533890436,
-      "confidence": 0.12396694214876032,
-      "lift": 3.51348412353197
+      "support": 0.05931585046568522,
+      "confidence": 0.46990819449166954,
+      "lift": 2.228906967317062
     },
     {
       "antecedents": [
@@ -1309,9 +1708,9 @@
       "consequents": [
         "energy drink"
       ],
-      "support": 0.03775920767564222,
-      "confidence": 0.30500000000000005,
-      "lift": 3.4699119718309865
+      "support": 0.05802824155543156,
+      "confidence": 0.2752442996742671,
+      "lift": 2.2144050200658665
     },
     {
       "antecedents": [
@@ -1320,770 +1719,506 @@
       "consequents": [
         "airpods"
       ],
-      "support": 0.03775920767564222,
-      "confidence": 0.42957746478873243,
-      "lift": 3.4699119718309865
+      "support": 0.05802824155543156,
+      "confidence": 0.46685082872928174,
+      "lift": 2.2144050200658665
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "pancakes"
+      ],
+      "support": 0.020859264346109276,
+      "confidence": 0.16781767955801105,
+      "lift": 2.1066724763050106
+    },
+    {
+      "antecedents": [
+        "pancakes"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.020859264346109276,
+      "confidence": 0.2618534482758621,
+      "lift": 2.1066724763050106
+    },
+    {
+      "antecedents": [
+        "pancakes"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.020859264346109276,
+      "confidence": 0.2618534482758621,
+      "lift": 2.0744384533761684
     },
     {
       "antecedents": [
         "bluetooth headphones"
       ],
       "consequents": [
-        "pokemon shield"
+        "pancakes"
       ],
-      "support": 0.008047044258743422,
-      "confidence": 0.1150442477876106,
-      "lift": 3.4417404129793505
+      "support": 0.020859264346109276,
+      "confidence": 0.16524991499489972,
+      "lift": 2.0744384533761684
     },
     {
       "antecedents": [
-        "pokemon shield"
+        "protein bar"
       ],
       "consequents": [
         "bluetooth headphones"
       ],
-      "support": 0.008047044258743422,
-      "confidence": 0.2407407407407407,
-      "lift": 3.44174041297935
+      "support": 0.02291943860251513,
+      "confidence": 0.24802601021830004,
+      "lift": 1.9648956178429695
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "protein bar"
+      ],
+      "support": 0.02291943860251513,
+      "confidence": 0.18157089425365522,
+      "lift": 1.9648956178429693
+    },
+    {
+      "antecedents": [
+        "protein bar"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.022318554444396756,
+      "confidence": 0.24152345564328845,
+      "lift": 1.943112911958901
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "protein bar"
+      ],
+      "support": 0.022318554444396756,
+      "confidence": 0.17955801104972374,
+      "lift": 1.9431129119589008
+    },
+    {
+      "antecedents": [
+        "energy bar"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.021674749989269926,
+      "confidence": 0.24013314312886352,
+      "lift": 1.9319275213257565
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "energy bar"
+      ],
+      "support": 0.021674749989269926,
+      "confidence": 0.17437845303867403,
+      "lift": 1.9319275213257565
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.022146873256362935,
+      "confidence": 0.24000000000000002,
+      "lift": 1.9308563535911603
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.022146873256362935,
+      "confidence": 0.1781767955801105,
+      "lift": 1.9308563535911603
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.022318554444396756,
+      "confidence": 0.23604176123468,
+      "lift": 1.899011393303456
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.022318554444396756,
+      "confidence": 0.17955801104972374,
+      "lift": 1.899011393303456
     },
     {
       "antecedents": [
         "airpods"
       ],
       "consequents": [
-        "ring light"
+        "pancakes"
       ],
-      "support": 0.016094088517486844,
-      "confidence": 0.13,
-      "lift": 3.414878048780488
+      "support": 0.0315893385982231,
+      "confidence": 0.14983713355048858,
+      "lift": 1.880956559586656
     },
     {
       "antecedents": [
-        "ring light"
+        "pancakes"
       ],
       "consequents": [
         "airpods"
       ],
-      "support": 0.016094088517486844,
-      "confidence": 0.4227642276422764,
-      "lift": 3.414878048780488
+      "support": 0.0315893385982231,
+      "confidence": 0.396551724137931,
+      "lift": 1.880956559586656
     },
     {
       "antecedents": [
-        "final fantasy XX"
+        "energy bar"
       ],
       "consequents": [
-        "pokemon scarlet"
+        "airpods"
       ],
-      "support": 0.004023522129371711,
-      "confidence": 0.11607142857142856,
-      "lift": 3.3786196911196913
+      "support": 0.035752607408043265,
+      "confidence": 0.39610080836899664,
+      "lift": 1.8788177390450433
     },
     {
       "antecedents": [
-        "pokemon scarlet"
+        "airpods"
       ],
       "consequents": [
-        "final fantasy XX"
+        "energy bar"
       ],
-      "support": 0.004023522129371711,
-      "confidence": 0.11711711711711711,
-      "lift": 3.378619691119691
+      "support": 0.035752607408043265,
+      "confidence": 0.16958469055374592,
+      "lift": 1.8788177390450433
     },
     {
       "antecedents": [
-        "half-life 2"
+        "protein bar"
       ],
       "consequents": [
-        "brownies"
+        "airpods"
       ],
-      "support": 0.004333023831631074,
-      "confidence": 0.18666666666666668,
-      "lift": 3.350666666666667
+      "support": 0.03622473067513627,
+      "confidence": 0.3920111472364143,
+      "lift": 1.8594193239945473
     },
     {
       "antecedents": [
-        "brownies"
+        "airpods"
       ],
       "consequents": [
-        "half-life 2"
+        "protein bar"
       ],
-      "support": 0.004333023831631074,
-      "confidence": 0.07777777777777778,
-      "lift": 3.3506666666666667
+      "support": 0.03622473067513627,
+      "confidence": 0.17182410423452768,
+      "lift": 1.8594193239945473
     },
     {
       "antecedents": [
-        "samsung galaxy 10"
+        "iphone 10"
+      ],
+      "consequents": [
+        "pancakes"
+      ],
+      "support": 0.01360573415168033,
+      "confidence": 0.1474418604651163,
+      "lift": 1.8508878809141942
+    },
+    {
+      "antecedents": [
+        "pancakes"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.01360573415168033,
+      "confidence": 0.17079741379310345,
+      "lift": 1.8508878809141942
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "energy bar"
+      ],
+      "support": 0.020988025237134642,
+      "confidence": 0.16626997619857195,
+      "lift": 1.84209423464124
+    },
+    {
+      "antecedents": [
+        "energy bar"
       ],
       "consequents": [
         "bluetooth headphones"
       ],
-      "support": 0.009594552770040236,
-      "confidence": 0.2330827067669173,
-      "lift": 3.332257635238539
+      "support": 0.020988025237134642,
+      "confidence": 0.23252496433666192,
+      "lift": 1.84209423464124
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.021331387613202284,
+      "confidence": 0.23116279069767443,
+      "lift": 1.8313029107327838
     },
     {
       "antecedents": [
         "bluetooth headphones"
       ],
       "consequents": [
-        "samsung galaxy 10"
+        "iphone 10"
       ],
-      "support": 0.009594552770040236,
-      "confidence": 0.13716814159292035,
-      "lift": 3.3322576352385385
+      "support": 0.021331387613202284,
+      "confidence": 0.16899013940836452,
+      "lift": 1.8313029107327838
     },
     {
       "antecedents": [
         "laptop"
       ],
       "consequents": [
-        "ring light"
+        "bluetooth headphones"
       ],
-      "support": 0.0061900340451872485,
-      "confidence": 0.12658227848101267,
-      "lift": 3.3251003396109913
+      "support": 0.021803510880295293,
+      "confidence": 0.23059464366772586,
+      "lift": 1.826801973075262
     },
     {
       "antecedents": [
-        "ring light"
+        "bluetooth headphones"
       ],
       "consequents": [
         "laptop"
       ],
-      "support": 0.0061900340451872485,
-      "confidence": 0.16260162601626016,
-      "lift": 3.325100339610991
+      "support": 0.021803510880295293,
+      "confidence": 0.17273036382182935,
+      "lift": 1.826801973075262
     },
     {
       "antecedents": [
-        "pokemon scarlet"
+        "energy bar"
       ],
       "consequents": [
-        "ring light"
+        "pancakes"
       ],
-      "support": 0.004333023831631074,
-      "confidence": 0.12612612612612614,
-      "lift": 3.313117996044826
+      "support": 0.01304777029057041,
+      "confidence": 0.1445553970518307,
+      "lift": 1.8146531227966616
     },
     {
       "antecedents": [
-        "ring light"
+        "pancakes"
       ],
       "consequents": [
-        "pokemon scarlet"
+        "energy bar"
       ],
-      "support": 0.004333023831631074,
-      "confidence": 0.11382113821138212,
-      "lift": 3.313117996044826
+      "support": 0.01304777029057041,
+      "confidence": 0.16379310344827586,
+      "lift": 1.8146531227966614
     },
     {
       "antecedents": [
-        "tomatoes"
+        "airpods"
       ],
       "consequents": [
-        "spinach"
+        "iphone 10"
       ],
-      "support": 0.0064995357474466105,
-      "confidence": 0.15,
-      "lift": 3.296938775510204
+      "support": 0.03442207820078115,
+      "confidence": 0.16327361563517917,
+      "lift": 1.7693544049693208
     },
     {
       "antecedents": [
-        "spinach"
+        "iphone 10"
       ],
       "consequents": [
-        "tomatoes"
+        "airpods"
       ],
-      "support": 0.0064995357474466105,
-      "confidence": 0.14285714285714285,
-      "lift": 3.296938775510204
+      "support": 0.03442207820078115,
+      "confidence": 0.3730232558139535,
+      "lift": 1.7693544049693206
     },
     {
       "antecedents": [
-        "cat food"
-      ],
-      "consequents": [
-        "dog food"
-      ],
-      "support": 0.005571030640668524,
-      "confidence": 0.13636363636363638,
-      "lift": 3.287991858887382
-    },
-    {
-      "antecedents": [
-        "dog food"
-      ],
-      "consequents": [
-        "cat food"
-      ],
-      "support": 0.005571030640668524,
-      "confidence": 0.13432835820895522,
-      "lift": 3.2879918588873815
-    },
-    {
-      "antecedents": [
-        "final fantasy XX"
+        "pancakes"
       ],
       "consequents": [
         "laptop"
       ],
-      "support": 0.005571030640668524,
-      "confidence": 0.16071428571428573,
-      "lift": 3.2865054249547923
+      "support": 0.013262371775612687,
+      "confidence": 0.16648706896551724,
+      "lift": 1.7607726826271386
     },
     {
       "antecedents": [
         "laptop"
       ],
       "consequents": [
-        "final fantasy XX"
+        "pancakes"
       ],
-      "support": 0.005571030640668524,
-      "confidence": 0.11392405063291139,
-      "lift": 3.286505424954792
+      "support": 0.013262371775612687,
+      "confidence": 0.14026327734906946,
+      "lift": 1.7607726826271386
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.03498004206189107,
+      "confidence": 0.16592019543973943,
+      "lift": 1.754777409691552
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.03498004206189107,
+      "confidence": 0.36995006808896963,
+      "lift": 1.754777409691552
+    },
+    {
+      "antecedents": [
+        "candy bars"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.013090690587578866,
+      "confidence": 0.21785714285714286,
+      "lift": 1.7527118685872138
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "candy bars"
+      ],
+      "support": 0.013090690587578866,
+      "confidence": 0.10531767955801104,
+      "lift": 1.7527118685872138
+    },
+    {
+      "antecedents": [
+        "chocolate"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.012618567320485857,
+      "confidence": 0.2157006603081438,
+      "lift": 1.7353624601241169
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "chocolate"
+      ],
+      "support": 0.012618567320485857,
+      "confidence": 0.10151933701657458,
+      "lift": 1.7353624601241169
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "chocolate"
+      ],
+      "support": 0.021245547019185372,
+      "confidence": 0.10077361563517916,
+      "lift": 1.722615165578899
+    },
+    {
+      "antecedents": [
+        "chocolate"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.021245547019185372,
+      "confidence": 0.3631694790902421,
+      "lift": 1.7226151655788988
     },
     {
       "antecedents": [
         "gadget for tiktok streaming"
       ],
       "consequents": [
-        "final fantasy XIX"
+        "energy drink"
       ],
-      "support": 0.004952027236149799,
-      "confidence": 0.11347517730496455,
-      "lift": 3.27355623100304
+      "support": 0.016910597021331387,
+      "confidence": 0.2132034632034632,
+      "lift": 1.7152719230585252
     },
     {
       "antecedents": [
-        "final fantasy XIX"
+        "energy drink"
       ],
       "consequents": [
         "gadget for tiktok streaming"
       ],
-      "support": 0.004952027236149799,
-      "confidence": 0.14285714285714285,
-      "lift": 3.2735562310030395
-    },
-    {
-      "antecedents": [
-        "iphone 10"
-      ],
-      "consequents": [
-        "final fantasy XX"
-      ],
-      "support": 0.005880532342927886,
-      "confidence": 0.1130952380952381,
-      "lift": 3.262595663265306
-    },
-    {
-      "antecedents": [
-        "final fantasy XX"
-      ],
-      "consequents": [
-        "iphone 10"
-      ],
-      "support": 0.005880532342927886,
-      "confidence": 0.16964285714285712,
-      "lift": 3.262595663265306
-    },
-    {
-      "antecedents": [
-        "energy drink"
-      ],
-      "consequents": [
-        "ring light"
-      ],
-      "support": 0.010832559579077685,
-      "confidence": 0.12323943661971831,
-      "lift": 3.2372895912057715
-    },
-    {
-      "antecedents": [
-        "ring light"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.010832559579077685,
-      "confidence": 0.2845528455284553,
-      "lift": 3.237289591205771
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "iphone 10"
-      ],
-      "support": 0.011761064685855771,
-      "confidence": 0.16814159292035397,
-      "lift": 3.233723135271808
-    },
-    {
-      "antecedents": [
-        "iphone 10"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.011761064685855771,
-      "confidence": 0.2261904761904762,
-      "lift": 3.2337231352718074
-    },
-    {
-      "antecedents": [
-        "iPad"
-      ],
-      "consequents": [
-        "samsung galaxy 10"
-      ],
-      "support": 0.004642525533890436,
-      "confidence": 0.1327433628318584,
-      "lift": 3.22476545345665
-    },
-    {
-      "antecedents": [
-        "samsung galaxy 10"
-      ],
-      "consequents": [
-        "iPad"
-      ],
-      "support": 0.004642525533890436,
-      "confidence": 0.11278195488721802,
-      "lift": 3.2247654534566497
+      "support": 0.016910597021331387,
+      "confidence": 0.13604972375690608,
+      "lift": 1.7152719230585252
     }
   ],
   "5": [
     {
       "antecedents": [
-        "frozen vegetables"
-      ],
-      "consequents": [
-        "salad"
-      ],
-      "support": 0.048504247199310596,
-      "confidence": 0.41517386722866173,
-      "lift": 1.552696741942182
-    },
-    {
-      "antecedents": [
-        "salad"
-      ],
-      "consequents": [
-        "frozen vegetables"
-      ],
-      "support": 0.048504247199310596,
-      "confidence": 0.18139963167587475,
-      "lift": 1.552696741942182
-    },
-    {
-      "antecedents": [
-        "eggplant"
-      ],
-      "consequents": [
-        "cauliflower"
-      ],
-      "support": 0.027329804259510034,
-      "confidence": 0.24666666666666667,
-      "lift": 1.5213920526449
-    },
-    {
-      "antecedents": [
-        "cauliflower"
-      ],
-      "consequents": [
-        "eggplant"
-      ],
-      "support": 0.027329804259510034,
-      "confidence": 0.16856492027334852,
-      "lift": 1.5213920526449
-    },
-    {
-      "antecedents": [
-        "green grapes"
-      ],
-      "consequents": [
-        "mineral water"
-      ],
-      "support": 0.038532561861381265,
-      "confidence": 0.24132613723978413,
-      "lift": 1.4964062693120357
-    },
-    {
-      "antecedents": [
-        "mineral water"
-      ],
-      "consequents": [
-        "green grapes"
-      ],
-      "support": 0.038532561861381265,
-      "confidence": 0.2389312977099237,
-      "lift": 1.4964062693120355
-    },
-    {
-      "antecedents": [
-        "frozen vegetables"
-      ],
-      "consequents": [
-        "tomatoes"
-      ],
-      "support": 0.047519389388157085,
-      "confidence": 0.40674394099051636,
-      "lift": 1.4929873622530339
-    },
-    {
-      "antecedents": [
-        "tomatoes"
-      ],
-      "consequents": [
-        "frozen vegetables"
-      ],
-      "support": 0.047519389388157085,
-      "confidence": 0.17442385901491186,
-      "lift": 1.4929873622530339
-    },
-    {
-      "antecedents": [
-        "salad"
-      ],
-      "consequents": [
-        "zucchini"
-      ],
-      "support": 0.06266157823464237,
-      "confidence": 0.23434622467771637,
-      "lift": 1.4848630133050627
-    },
-    {
-      "antecedents": [
-        "zucchini"
-      ],
-      "consequents": [
-        "salad"
-      ],
-      "support": 0.06266157823464237,
-      "confidence": 0.3970358814352574,
-      "lift": 1.4848630133050627
-    },
-    {
-      "antecedents": [
-        "spinach"
-      ],
-      "consequents": [
-        "salad"
-      ],
-      "support": 0.10771882309491568,
-      "confidence": 0.39114886008046496,
-      "lift": 1.4628463123543356
-    },
-    {
-      "antecedents": [
-        "salad"
-      ],
-      "consequents": [
-        "spinach"
-      ],
-      "support": 0.10771882309491568,
-      "confidence": 0.40285451197053407,
-      "lift": 1.4628463123543354
-    },
-    {
-      "antecedents": [
-        "spinach"
-      ],
-      "consequents": [
-        "tomatoes"
-      ],
-      "support": 0.10944232426443433,
-      "confidence": 0.3974072418417524,
-      "lift": 1.4587162338366717
-    },
-    {
-      "antecedents": [
-        "tomatoes"
-      ],
-      "consequents": [
-        "spinach"
-      ],
-      "support": 0.10944232426443433,
-      "confidence": 0.4017171260732038,
-      "lift": 1.4587162338366717
-    },
-    {
-      "antecedents": [
-        "eggplant"
-      ],
-      "consequents": [
-        "antioxydant juice"
-      ],
-      "support": 0.019574048996676106,
-      "confidence": 0.1766666666666667,
-      "lift": 1.446636424731183
-    },
-    {
-      "antecedents": [
-        "antioxydant juice"
-      ],
-      "consequents": [
-        "eggplant"
-      ],
-      "support": 0.019574048996676106,
-      "confidence": 0.16028225806451615,
-      "lift": 1.446636424731183
-    },
-    {
-      "antecedents": [
-        "salad"
-      ],
-      "consequents": [
-        "asparagus"
-      ],
-      "support": 0.1697648651975871,
-      "confidence": 0.6348987108655617,
-      "lift": 1.4450216386553538
-    },
-    {
-      "antecedents": [
-        "asparagus"
-      ],
-      "consequents": [
-        "salad"
-      ],
-      "support": 0.1697648651975871,
-      "confidence": 0.3863827402633791,
-      "lift": 1.4450216386553538
-    },
-    {
-      "antecedents": [
-        "eggplant"
-      ],
-      "consequents": [
-        "carrots"
-      ],
-      "support": 0.04247199310599532,
-      "confidence": 0.38333333333333336,
-      "lift": 1.4422494982244867
-    },
-    {
-      "antecedents": [
-        "carrots"
-      ],
-      "consequents": [
-        "eggplant"
-      ],
-      "support": 0.04247199310599532,
-      "confidence": 0.15979620194534505,
-      "lift": 1.4422494982244864
-    },
-    {
-      "antecedents": [
-        "frozen vegetables"
-      ],
-      "consequents": [
-        "zucchini"
-      ],
-      "support": 0.026591160901144897,
-      "confidence": 0.22760800842992626,
-      "lift": 1.4421683716663738
-    },
-    {
-      "antecedents": [
-        "zucchini"
-      ],
-      "consequents": [
-        "frozen vegetables"
-      ],
-      "support": 0.026591160901144897,
-      "confidence": 0.1684867394695788,
-      "lift": 1.4421683716663736
-    },
-    {
-      "antecedents": [
-        "cauliflower"
-      ],
-      "consequents": [
-        "corn"
-      ],
-      "support": 0.02794534039148098,
-      "confidence": 0.1723614274867122,
-      "lift": 1.4419071838049056
-    },
-    {
-      "antecedents": [
-        "corn"
-      ],
-      "consequents": [
-        "cauliflower"
-      ],
-      "support": 0.02794534039148098,
-      "confidence": 0.23377960865087535,
-      "lift": 1.4419071838049053
-    },
-    {
-      "antecedents": [
-        "avocado"
-      ],
-      "consequents": [
-        "salad"
-      ],
-      "support": 0.10402560630308999,
-      "confidence": 0.385492700729927,
-      "lift": 1.4416930055383042
-    },
-    {
-      "antecedents": [
-        "salad"
-      ],
-      "consequents": [
-        "avocado"
-      ],
-      "support": 0.10402560630308999,
-      "confidence": 0.38904235727440145,
-      "lift": 1.4416930055383042
-    },
-    {
-      "antecedents": [
-        "shallot"
-      ],
-      "consequents": [
-        "mint"
-      ],
-      "support": 0.015880832204850426,
-      "confidence": 0.16287878787878787,
-      "lift": 1.4412466164917146
-    },
-    {
-      "antecedents": [
-        "mint"
-      ],
-      "consequents": [
-        "shallot"
-      ],
-      "support": 0.015880832204850426,
-      "confidence": 0.14052287581699346,
-      "lift": 1.4412466164917144
-    },
-    {
-      "antecedents": [
-        "spinach"
-      ],
-      "consequents": [
-        "eggplant"
-      ],
-      "support": 0.0439492798227256,
-      "confidence": 0.1595887349128297,
-      "lift": 1.440376992996573
-    },
-    {
-      "antecedents": [
-        "eggplant"
-      ],
-      "consequents": [
-        "spinach"
-      ],
-      "support": 0.0439492798227256,
-      "confidence": 0.3966666666666667,
-      "lift": 1.440376992996573
-    },
-    {
-      "antecedents": [
-        "green tea"
-      ],
-      "consequents": [
-        "strawberries"
-      ],
-      "support": 0.027329804259510034,
-      "confidence": 0.23100936524453694,
-      "lift": 1.4401297573916911
-    },
-    {
-      "antecedents": [
-        "strawberries"
-      ],
-      "consequents": [
-        "green tea"
-      ],
-      "support": 0.027329804259510034,
-      "confidence": 0.170376055257099,
-      "lift": 1.4401297573916911
-    },
-    {
-      "antecedents": [
-        "strawberries"
-      ],
-      "consequents": [
-        "cauliflower"
-      ],
-      "support": 0.03742459682383356,
-      "confidence": 0.2333077513430545,
-      "lift": 1.4389968596504417
-    },
-    {
-      "antecedents": [
-        "cauliflower"
-      ],
-      "consequents": [
-        "strawberries"
-      ],
-      "support": 0.03742459682383356,
-      "confidence": 0.2308276385725133,
-      "lift": 1.4389968596504417
-    },
-    {
-      "antecedents": [
-        "carrots"
-      ],
-      "consequents": [
-        "salad"
-      ],
-      "support": 0.10217899790717715,
-      "confidence": 0.3844372394627142,
-      "lift": 1.437745716462075
-    },
-    {
-      "antecedents": [
-        "salad"
-      ],
-      "consequents": [
-        "carrots"
-      ],
-      "support": 0.10217899790717715,
-      "confidence": 0.38213627992633514,
-      "lift": 1.437745716462075
-    },
-    {
-      "antecedents": [
-        "cauliflower"
-      ],
-      "consequents": [
-        "salad"
-      ],
-      "support": 0.06229225655545981,
-      "confidence": 0.38420652999240695,
-      "lift": 1.4368828927846784
-    },
-    {
-      "antecedents": [
-        "salad"
-      ],
-      "consequents": [
-        "cauliflower"
-      ],
-      "support": 0.06229225655545981,
-      "confidence": 0.23296500920810312,
-      "lift": 1.4368828927846784
-    },
-    {
-      "antecedents": [
         "salad"
       ],
       "consequents": [
         "strawberries"
       ],
-      "support": 0.06155361319709467,
-      "confidence": 0.2302025782688766,
-      "lift": 1.435100186706128
+      "support": 0.0075368276807125725,
+      "confidence": 0.1692307692307692,
+      "lift": 3.951876923076923
     },
     {
       "antecedents": [
@@ -2092,242 +2227,31 @@
       "consequents": [
         "salad"
       ],
-      "support": 0.06155361319709467,
-      "confidence": 0.3837298541826554,
-      "lift": 1.435100186706128
-    },
-    {
-      "antecedents": [
-        "zucchini"
-      ],
-      "consequents": [
-        "green tea"
-      ],
-      "support": 0.026714268127539086,
-      "confidence": 0.16926677067082685,
-      "lift": 1.4307533591666248
-    },
-    {
-      "antecedents": [
-        "green tea"
-      ],
-      "consequents": [
-        "zucchini"
-      ],
-      "support": 0.026714268127539086,
-      "confidence": 0.22580645161290322,
-      "lift": 1.4307533591666248
-    },
-    {
-      "antecedents": [
-        "avocado"
-      ],
-      "consequents": [
-        "strawberries"
-      ],
-      "support": 0.061799827649883045,
-      "confidence": 0.22901459854014597,
-      "lift": 1.4276942317280168
-    },
-    {
-      "antecedents": [
-        "strawberries"
-      ],
-      "consequents": [
-        "avocado"
-      ],
-      "support": 0.061799827649883045,
-      "confidence": 0.38526477359938605,
-      "lift": 1.4276942317280168
-    },
-    {
-      "antecedents": [
-        "eggplant"
-      ],
-      "consequents": [
-        "mineral water"
-      ],
-      "support": 0.025483195863597194,
-      "confidence": 0.23,
-      "lift": 1.4261755725190841
-    },
-    {
-      "antecedents": [
-        "mineral water"
-      ],
-      "consequents": [
-        "eggplant"
-      ],
-      "support": 0.025483195863597194,
-      "confidence": 0.15801526717557254,
-      "lift": 1.4261755725190841
-    },
-    {
-      "antecedents": [
-        "eggplant"
-      ],
-      "consequents": [
-        "zucchini"
-      ],
-      "support": 0.024867659731626246,
-      "confidence": 0.22444444444444445,
-      "lift": 1.4221234182700642
-    },
-    {
-      "antecedents": [
-        "zucchini"
-      ],
-      "consequents": [
-        "eggplant"
-      ],
-      "support": 0.024867659731626246,
-      "confidence": 0.15756630265210608,
-      "lift": 1.4221234182700642
-    },
-    {
-      "antecedents": [
-        "avocado"
-      ],
-      "consequents": [
-        "spinach"
-      ],
-      "support": 0.10550289301982026,
-      "confidence": 0.39096715328467146,
-      "lift": 1.4196809057359796
-    },
-    {
-      "antecedents": [
-        "spinach"
-      ],
-      "consequents": [
-        "avocado"
-      ],
-      "support": 0.10550289301982026,
-      "confidence": 0.3831023692445239,
-      "lift": 1.4196809057359796
-    }
-  ],
-  "1": [
-    {
-      "antecedents": [
-        "cereals"
-      ],
-      "consequents": [
-        "eggs"
-      ],
-      "support": 0.02195940743478395,
-      "confidence": 0.24351092896174864,
-      "lift": 2.6267629077936934
-    },
-    {
-      "antecedents": [
-        "eggs"
-      ],
-      "consequents": [
-        "cereals"
-      ],
-      "support": 0.02195940743478395,
-      "confidence": 0.23687707641196015,
-      "lift": 2.6267629077936934
-    },
-    {
-      "antecedents": [
-        "fresh bread"
-      ],
-      "consequents": [
-        "cereals"
-      ],
-      "support": 0.021497428316240106,
-      "confidence": 0.22172808132147395,
-      "lift": 2.4587735903097463
-    },
-    {
-      "antecedents": [
-        "cereals"
-      ],
-      "consequents": [
-        "fresh bread"
-      ],
-      "support": 0.021497428316240106,
-      "confidence": 0.2383879781420765,
-      "lift": 2.4587735903097463
-    },
-    {
-      "antecedents": [
-        "cereals"
-      ],
-      "consequents": [
-        "butter"
-      ],
-      "support": 0.021897810218978103,
-      "confidence": 0.24282786885245902,
-      "lift": 2.3805489353171776
-    },
-    {
-      "antecedents": [
-        "butter"
-      ],
-      "consequents": [
-        "cereals"
-      ],
-      "support": 0.021897810218978103,
-      "confidence": 0.21467391304347827,
-      "lift": 2.3805489353171776
-    },
-    {
-      "antecedents": [
-        "eggs"
-      ],
-      "consequents": [
-        "butter"
-      ],
-      "support": 0.022482983769133637,
-      "confidence": 0.24252491694352163,
-      "lift": 2.3775789638403393
-    },
-    {
-      "antecedents": [
-        "butter"
-      ],
-      "consequents": [
-        "eggs"
-      ],
-      "support": 0.022482983769133637,
-      "confidence": 0.2204106280193237,
-      "lift": 2.3775789638403393
-    },
-    {
-      "antecedents": [
-        "airpods"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.027687948504727587,
-      "confidence": 0.18914369871660006,
-      "lift": 2.3368747159928795
+      "support": 0.0075368276807125725,
+      "confidence": 0.176,
+      "lift": 3.951876923076923
     },
     {
       "antecedents": [
         "energy drink"
       ],
       "consequents": [
-        "airpods"
+        "bluetooth headphones"
       ],
-      "support": 0.027687948504727587,
-      "confidence": 0.3420852359208523,
-      "lift": 2.336874715992879
+      "support": 0.025693730729701953,
+      "confidence": 0.29411764705882354,
+      "lift": 3.920225624496374
     },
     {
       "antecedents": [
         "bluetooth headphones"
       ],
       "consequents": [
-        "airpods"
+        "energy drink"
       ],
-      "support": 0.027995934583756814,
-      "confidence": 0.33308904360571634,
-      "lift": 2.2754193471142448
+      "support": 0.025693730729701953,
+      "confidence": 0.3424657534246575,
+      "lift": 3.9202256244963736
     },
     {
       "antecedents": [
@@ -2336,629 +2260,1225 @@
       "consequents": [
         "bluetooth headphones"
       ],
-      "support": 0.027995934583756814,
-      "confidence": 0.1912476330738481,
-      "lift": 2.2754193471142448
+      "support": 0.03699897225077081,
+      "confidence": 0.28125,
+      "lift": 3.7487157534246576
     },
     {
       "antecedents": [
-        "fresh bread"
+        "bluetooth headphones"
       ],
       "consequents": [
-        "eggs"
+        "airpods"
       ],
-      "support": 0.02045027564754073,
-      "confidence": 0.21092757306226173,
-      "lift": 2.2752848404513544
+      "support": 0.03699897225077081,
+      "confidence": 0.4931506849315068,
+      "lift": 3.748715753424657
     },
     {
       "antecedents": [
-        "eggs"
+        "iphone 10"
       ],
       "consequents": [
-        "fresh bread"
+        "final fantasy XX"
       ],
-      "support": 0.02045027564754073,
-      "confidence": 0.22059800664451826,
-      "lift": 2.2752848404513544
+      "support": 0.0075368276807125725,
+      "confidence": 0.13664596273291926,
+      "lift": 3.6260869565217395
     },
     {
       "antecedents": [
-        "fresh bread"
+        "final fantasy XX"
       ],
       "consequents": [
-        "butter"
+        "iphone 10"
       ],
-      "support": 0.02057347007915242,
-      "confidence": 0.2121982210927573,
-      "lift": 2.0802729591366957
+      "support": 0.0075368276807125725,
+      "confidence": 0.2,
+      "lift": 3.6260869565217395
     },
     {
       "antecedents": [
-        "butter"
+        "metroid fusion"
       ],
       "consequents": [
-        "fresh bread"
+        "pokemon sword"
       ],
-      "support": 0.02057347007915242,
-      "confidence": 0.20169082125603863,
-      "lift": 2.0802729591366957
+      "support": 0.0041109969167523125,
+      "confidence": 0.11538461538461538,
+      "lift": 3.6215880893300247
+    },
+    {
+      "antecedents": [
+        "pokemon sword"
+      ],
+      "consequents": [
+        "metroid fusion"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.12903225806451613,
+      "lift": 3.6215880893300243
+    },
+    {
+      "antecedents": [
+        "tomato sauce"
+      ],
+      "consequents": [
+        "pokemon sword"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.1142857142857143,
+      "lift": 3.5870967741935487
+    },
+    {
+      "antecedents": [
+        "pokemon sword"
+      ],
+      "consequents": [
+        "tomato sauce"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.12903225806451613,
+      "lift": 3.5870967741935487
+    },
+    {
+      "antecedents": [
+        "metroid prime"
+      ],
+      "consequents": [
+        "pokemon violet"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.11320754716981132,
+      "lift": 3.553256238587949
+    },
+    {
+      "antecedents": [
+        "pokemon violet"
+      ],
+      "consequents": [
+        "metroid prime"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.12903225806451613,
+      "lift": 3.5532562385879487
+    },
+    {
+      "antecedents": [
+        "gadget for tiktok streaming"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.010962658444672833,
+      "confidence": 0.26229508196721313,
+      "lift": 3.496070065124635
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "gadget for tiktok streaming"
+      ],
+      "support": 0.010962658444672833,
+      "confidence": 0.1461187214611872,
+      "lift": 3.496070065124635
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.040082219938335044,
+      "confidence": 0.3046875,
+      "lift": 3.487775735294117
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.040082219938335044,
+      "confidence": 0.45882352941176463,
+      "lift": 3.4877757352941168
+    },
+    {
+      "antecedents": [
+        "pokemon shield"
+      ],
+      "consequents": [
+        "ratchet & clank 2"
+      ],
+      "support": 0.004796163069544364,
+      "confidence": 0.12280701754385963,
+      "lift": 3.480327031170158
+    },
+    {
+      "antecedents": [
+        "ratchet & clank 2"
+      ],
+      "consequents": [
+        "pokemon shield"
+      ],
+      "support": 0.004796163069544364,
+      "confidence": 0.13592233009708737,
+      "lift": 3.480327031170158
+    },
+    {
+      "antecedents": [
+        "mineral water"
+      ],
+      "consequents": [
+        "carrots"
+      ],
+      "support": 0.0078794107571086,
+      "confidence": 0.1703703703703704,
+      "lift": 3.429731800766284
+    },
+    {
+      "antecedents": [
+        "carrots"
+      ],
+      "consequents": [
+        "mineral water"
+      ],
+      "support": 0.0078794107571086,
+      "confidence": 0.15862068965517243,
+      "lift": 3.429731800766284
+    },
+    {
+      "antecedents": [
+        "carrots"
+      ],
+      "consequents": [
+        "salad"
+      ],
+      "support": 0.0075368276807125725,
+      "confidence": 0.15172413793103448,
+      "lift": 3.4067904509283817
+    },
+    {
+      "antecedents": [
+        "salad"
+      ],
+      "consequents": [
+        "carrots"
+      ],
+      "support": 0.0075368276807125725,
+      "confidence": 0.1692307692307692,
+      "lift": 3.4067904509283817
+    },
+    {
+      "antecedents": [
+        "iPad"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.007194244604316547,
+      "confidence": 0.18750000000000003,
+      "lift": 3.3994565217391313
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "iPad"
+      ],
+      "support": 0.007194244604316547,
+      "confidence": 0.13043478260869568,
+      "lift": 3.3994565217391313
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.013703323055841042,
+      "confidence": 0.25477707006369427,
+      "lift": 3.3958642352325277
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.013703323055841042,
+      "confidence": 0.182648401826484,
+      "lift": 3.3958642352325277
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "ring light"
+      ],
+      "support": 0.0075368276807125725,
+      "confidence": 0.14012738853503184,
+      "lift": 3.3804284887087435
+    },
+    {
+      "antecedents": [
+        "ring light"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.0075368276807125725,
+      "confidence": 0.1818181818181818,
+      "lift": 3.380428488708743
+    },
+    {
+      "antecedents": [
+        "metroid prime"
+      ],
+      "consequents": [
+        "turkey"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.11320754716981132,
+      "lift": 3.304528301886793
+    },
+    {
+      "antecedents": [
+        "turkey"
+      ],
+      "consequents": [
+        "metroid prime"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.12000000000000001,
+      "lift": 3.304528301886793
+    },
+    {
+      "antecedents": [
+        "iPad"
+      ],
+      "consequents": [
+        "samsung galaxy 10"
+      ],
+      "support": 0.005481329222336417,
+      "confidence": 0.14285714285714288,
+      "lift": 3.2834645669291342
+    },
+    {
+      "antecedents": [
+        "samsung galaxy 10"
+      ],
+      "consequents": [
+        "iPad"
+      ],
+      "support": 0.005481329222336417,
+      "confidence": 0.12598425196850394,
+      "lift": 3.2834645669291342
+    },
+    {
+      "antecedents": [
+        "tea"
+      ],
+      "consequents": [
+        "dessert wine"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.12244897959183675,
+      "lift": 3.2791612057667106
+    },
+    {
+      "antecedents": [
+        "dessert wine"
+      ],
+      "consequents": [
+        "tea"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.11009174311926605,
+      "lift": 3.27916120576671
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "pokemon shield"
+      ],
+      "support": 0.009592326139088728,
+      "confidence": 0.1278538812785388,
+      "lift": 3.273732275895217
+    },
+    {
+      "antecedents": [
+        "pokemon shield"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.009592326139088728,
+      "confidence": 0.24561403508771926,
+      "lift": 3.2737322758952168
+    },
+    {
+      "antecedents": [
+        "salad"
+      ],
+      "consequents": [
+        "spinach"
+      ],
+      "support": 0.0078794107571086,
+      "confidence": 0.17692307692307693,
+      "lift": 3.268597857838364
+    },
+    {
+      "antecedents": [
+        "spinach"
+      ],
+      "consequents": [
+        "salad"
+      ],
+      "support": 0.0078794107571086,
+      "confidence": 0.14556962025316456,
+      "lift": 3.268597857838364
+    },
+    {
+      "antecedents": [
+        "carrots"
+      ],
+      "consequents": [
+        "asparagus"
+      ],
+      "support": 0.01473107228502912,
+      "confidence": 0.296551724137931,
+      "lift": 3.2299794132784356
+    },
+    {
+      "antecedents": [
+        "asparagus"
+      ],
+      "consequents": [
+        "carrots"
+      ],
+      "support": 0.01473107228502912,
+      "confidence": 0.16044776119402987,
+      "lift": 3.2299794132784356
+    },
+    {
+      "antecedents": [
+        "bluetooth headphones"
+      ],
+      "consequents": [
+        "iphone 10"
+      ],
+      "support": 0.013360739979445015,
+      "confidence": 0.1780821917808219,
+      "lift": 3.228707564026206
+    },
+    {
+      "antecedents": [
+        "iphone 10"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.013360739979445015,
+      "confidence": 0.24223602484472048,
+      "lift": 3.2287075640262057
+    },
+    {
+      "antecedents": [
+        "fromage blanc"
+      ],
+      "consequents": [
+        "mushroom cream sauce"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.10714285714285715,
+      "lift": 3.224226804123712
+    },
+    {
+      "antecedents": [
+        "mushroom cream sauce"
+      ],
+      "consequents": [
+        "fromage blanc"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.12371134020618559,
+      "lift": 3.224226804123712
+    },
+    {
+      "antecedents": [
+        "candy bars"
+      ],
+      "consequents": [
+        "portal 2"
+      ],
+      "support": 0.006509078451524495,
+      "confidence": 0.1366906474820144,
+      "lift": 3.2177419354838714
+    },
+    {
+      "antecedents": [
+        "portal 2"
+      ],
+      "consequents": [
+        "candy bars"
+      ],
+      "support": 0.006509078451524495,
+      "confidence": 0.1532258064516129,
+      "lift": 3.217741935483871
+    },
+    {
+      "antecedents": [
+        "final fantasy XXII"
+      ],
+      "consequents": [
+        "megaman zero 2"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.1090909090909091,
+      "lift": 3.216528925619835
+    },
+    {
+      "antecedents": [
+        "megaman zero 2"
+      ],
+      "consequents": [
+        "final fantasy XXII"
+      ],
+      "support": 0.0041109969167523125,
+      "confidence": 0.1212121212121212,
+      "lift": 3.2165289256198344
     }
   ],
   "6": [
     {
       "antecedents": [
-        "laptop"
+        "cereals"
       ],
       "consequents": [
-        "bluetooth headphones"
+        "eggs"
       ],
-      "support": 0.01198140200286123,
-      "confidence": 0.2607003891050584,
-      "lift": 3.9294786411738176
+      "support": 0.02856230031948882,
+      "confidence": 0.2630959387875221,
+      "lift": 2.467017041356933
     },
     {
       "antecedents": [
-        "bluetooth headphones"
+        "eggs"
       ],
       "consequents": [
-        "laptop"
+        "cereals"
       ],
-      "support": 0.01198140200286123,
-      "confidence": 0.18059299191374661,
-      "lift": 3.929478641173817
+      "support": 0.02856230031948882,
+      "confidence": 0.2678250449370881,
+      "lift": 2.4670170413569323
     },
     {
       "antecedents": [
-        "airpods"
+        "butter"
       ],
       "consequents": [
-        "bluetooth headphones"
+        "eggs"
       ],
-      "support": 0.030758226037195996,
-      "confidence": 0.2594268476621418,
-      "lift": 3.910282835921016
+      "support": 0.028498402555910542,
+      "confidence": 0.2552947910704064,
+      "lift": 2.3938666748063873
     },
     {
       "antecedents": [
-        "bluetooth headphones"
+        "eggs"
       ],
       "consequents": [
-        "airpods"
+        "butter"
       ],
-      "support": 0.030758226037195996,
-      "confidence": 0.4636118598382749,
-      "lift": 3.9102828359210156
+      "support": 0.028498402555910542,
+      "confidence": 0.26722588376273215,
+      "lift": 2.393866674806387
     },
     {
       "antecedents": [
-        "ratchet & clank 3"
+        "cereals"
       ],
       "consequents": [
-        "bluetooth headphones"
+        "butter"
       ],
-      "support": 0.007689556509298999,
-      "confidence": 0.25443786982248523,
-      "lift": 3.835085089076381
+      "support": 0.02805111821086262,
+      "confidence": 0.2583872866391995,
+      "lift": 2.314688629595577
     },
     {
       "antecedents": [
-        "bluetooth headphones"
+        "butter"
       ],
       "consequents": [
-        "ratchet & clank 3"
+        "cereals"
       ],
-      "support": 0.007689556509298999,
-      "confidence": 0.11590296495956873,
-      "lift": 3.8350850890763803
+      "support": 0.02805111821086262,
+      "confidence": 0.25128792215226103,
+      "lift": 2.314688629595577
     },
     {
       "antecedents": [
-        "iphone 10"
+        "fresh bread"
       ],
       "consequents": [
-        "ratchet & clank 3"
+        "cereals"
       ],
-      "support": 0.006080114449213162,
-      "confidence": 0.11486486486486486,
-      "lift": 3.8007356468894926
+      "support": 0.028115015974440896,
+      "confidence": 0.23048716605552647,
+      "lift": 2.123086609045903
     },
     {
       "antecedents": [
-        "ratchet & clank 3"
+        "cereals"
       ],
       "consequents": [
-        "iphone 10"
+        "fresh bread"
       ],
-      "support": 0.006080114449213162,
-      "confidence": 0.20118343195266272,
-      "lift": 3.8007356468894926
+      "support": 0.028115015974440896,
+      "confidence": 0.2589758681577398,
+      "lift": 2.1230866090459024
     },
     {
       "antecedents": [
-        "bluetooth headphones"
+        "eggs"
       ],
       "consequents": [
-        "metroid prime"
+        "fresh bread"
       ],
-      "support": 0.006437768240343348,
-      "confidence": 0.09703504043126684,
-      "lift": 3.7945450775639458
+      "support": 0.02753993610223642,
+      "confidence": 0.25823846614739365,
+      "lift": 2.117041380412106
     },
     {
       "antecedents": [
-        "metroid prime"
+        "fresh bread"
       ],
       "consequents": [
-        "bluetooth headphones"
+        "eggs"
       ],
-      "support": 0.006437768240343348,
-      "confidence": 0.2517482517482518,
-      "lift": 3.7945450775639458
+      "support": 0.02753993610223642,
+      "confidence": 0.22577265584075432,
+      "lift": 2.117041380412106
     },
     {
       "antecedents": [
-        "bluetooth headphones"
+        "butter"
       ],
       "consequents": [
-        "ratchet & clank"
+        "fresh bread"
       ],
-      "support": 0.006616595135908441,
-      "confidence": 0.09973045822102426,
-      "lift": 3.7429041769930715
+      "support": 0.026964856230031947,
+      "confidence": 0.2415569547796222,
+      "lift": 1.9802861929288043
     },
     {
       "antecedents": [
-        "ratchet & clank"
+        "fresh bread"
       ],
       "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.006616595135908441,
-      "confidence": 0.24832214765100674,
-      "lift": 3.7429041769930715
-    },
-    {
-      "antecedents": [
-        "energy drink"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.0203862660944206,
-      "confidence": 0.24675324675324672,
-      "lift": 3.7192564847551366
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.0203862660944206,
-      "confidence": 0.307277628032345,
-      "lift": 3.7192564847551366
-    },
-    {
-      "antecedents": [
-        "energy drink"
-      ],
-      "consequents": [
-        "gadget for tiktok streaming"
-      ],
-      "support": 0.011623748211731044,
-      "confidence": 0.14069264069264067,
-      "lift": 3.608959847491957
-    },
-    {
-      "antecedents": [
-        "gadget for tiktok streaming"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.011623748211731044,
-      "confidence": 0.2981651376146789,
-      "lift": 3.608959847491957
-    },
-    {
-      "antecedents": [
-        "airpods"
-      ],
-      "consequents": [
-        "iphone 10"
-      ],
-      "support": 0.021995708154506438,
-      "confidence": 0.18552036199095023,
-      "lift": 3.504830622477681
-    },
-    {
-      "antecedents": [
-        "iphone 10"
-      ],
-      "consequents": [
-        "airpods"
-      ],
-      "support": 0.021995708154506438,
-      "confidence": 0.4155405405405405,
-      "lift": 3.504830622477681
-    },
-    {
-      "antecedents": [
-        "laptop"
-      ],
-      "consequents": [
-        "ring light"
-      ],
-      "support": 0.006437768240343348,
-      "confidence": 0.14007782101167315,
-      "lift": 3.4969427459699833
-    },
-    {
-      "antecedents": [
-        "ring light"
-      ],
-      "consequents": [
-        "laptop"
-      ],
-      "support": 0.006437768240343348,
-      "confidence": 0.16071428571428573,
-      "lift": 3.4969427459699833
-    },
-    {
-      "antecedents": [
-        "laptop"
-      ],
-      "consequents": [
-        "airpods"
-      ],
-      "support": 0.018955650929899856,
-      "confidence": 0.41245136186770426,
-      "lift": 3.478775287427153
-    },
-    {
-      "antecedents": [
-        "airpods"
-      ],
-      "consequents": [
-        "laptop"
-      ],
-      "support": 0.018955650929899856,
-      "confidence": 0.15987933634992457,
-      "lift": 3.4787752874271525
-    },
-    {
-      "antecedents": [
-        "airpods"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.033977110157367665,
-      "confidence": 0.2865761689291101,
-      "lift": 3.468688174570527
-    },
-    {
-      "antecedents": [
-        "energy drink"
-      ],
-      "consequents": [
-        "airpods"
-      ],
-      "support": 0.033977110157367665,
-      "confidence": 0.4112554112554112,
-      "lift": 3.468688174570527
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "iphone 10"
-      ],
-      "support": 0.012160228898426323,
-      "confidence": 0.18328840970350405,
-      "lift": 3.462664821155387
-    },
-    {
-      "antecedents": [
-        "iphone 10"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.012160228898426323,
-      "confidence": 0.22972972972972971,
-      "lift": 3.462664821155387
-    },
-    {
-      "antecedents": [
-        "airpods"
-      ],
-      "consequents": [
-        "megaman zero 4"
-      ],
-      "support": 0.01251788268955651,
-      "confidence": 0.10558069381598795,
-      "lift": 3.4326002315058406
-    },
-    {
-      "antecedents": [
-        "megaman zero 4"
-      ],
-      "consequents": [
-        "airpods"
-      ],
-      "support": 0.01251788268955651,
-      "confidence": 0.4069767441860465,
-      "lift": 3.4326002315058406
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "ratchet & clank 2"
-      ],
-      "support": 0.006795422031473534,
-      "confidence": 0.10242587601078167,
-      "lift": 3.4093184443588753
-    },
-    {
-      "antecedents": [
-        "ratchet & clank 2"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.006795422031473534,
-      "confidence": 0.2261904761904762,
-      "lift": 3.4093184443588753
-    },
-    {
-      "antecedents": [
-        "laptop"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.012696709585121603,
-      "confidence": 0.27626459143968873,
-      "lift": 3.343877911971297
-    },
-    {
-      "antecedents": [
-        "energy drink"
-      ],
-      "consequents": [
-        "laptop"
-      ],
-      "support": 0.012696709585121603,
-      "confidence": 0.15367965367965367,
-      "lift": 3.3438779119712967
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "final fantasy XXII"
-      ],
-      "support": 0.006080114449213162,
-      "confidence": 0.09164420485175202,
-      "lift": 3.3277558021493334
-    },
-    {
-      "antecedents": [
-        "final fantasy XXII"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.006080114449213162,
-      "confidence": 0.2207792207792208,
-      "lift": 3.3277558021493334
-    },
-    {
-      "antecedents": [
-        "iphone 10"
-      ],
-      "consequents": [
-        "energy drink"
-      ],
-      "support": 0.014484978540772532,
-      "confidence": 0.27364864864864863,
-      "lift": 3.312214812214812
-    },
-    {
-      "antecedents": [
-        "energy drink"
-      ],
-      "consequents": [
-        "iphone 10"
-      ],
-      "support": 0.014484978540772532,
-      "confidence": 0.1753246753246753,
-      "lift": 3.3122148122148114
-    },
-    {
-      "antecedents": [
-        "laptop"
-      ],
-      "consequents": [
-        "iphone 10"
-      ],
-      "support": 0.008047210300429184,
-      "confidence": 0.17509727626459143,
-      "lift": 3.307918813755389
-    },
-    {
-      "antecedents": [
-        "iphone 10"
-      ],
-      "consequents": [
-        "laptop"
-      ],
-      "support": 0.008047210300429184,
-      "confidence": 0.152027027027027,
-      "lift": 3.3079188137553888
-    },
-    {
-      "antecedents": [
-        "airpods"
-      ],
-      "consequents": [
-        "portal"
-      ],
-      "support": 0.0101931330472103,
-      "confidence": 0.08597285067873303,
-      "lift": 3.2483796013207775
-    },
-    {
-      "antecedents": [
-        "portal"
-      ],
-      "consequents": [
-        "airpods"
-      ],
-      "support": 0.0101931330472103,
-      "confidence": 0.3851351351351351,
-      "lift": 3.2483796013207775
-    },
-    {
-      "antecedents": [
-        "ring light"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.008583690987124463,
-      "confidence": 0.21428571428571427,
-      "lift": 3.2298806314978816
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "ring light"
-      ],
-      "support": 0.008583690987124463,
-      "confidence": 0.12938005390835577,
-      "lift": 3.2298806314978816
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "megaman zero 2"
-      ],
-      "support": 0.006795422031473534,
-      "confidence": 0.10242587601078167,
-      "lift": 3.182030548068284
-    },
-    {
-      "antecedents": [
-        "megaman zero 2"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.006795422031473534,
-      "confidence": 0.2111111111111111,
-      "lift": 3.182030548068284
-    },
-    {
-      "antecedents": [
-        "airpods"
-      ],
-      "consequents": [
-        "portal 2"
-      ],
-      "support": 0.011266094420600859,
-      "confidence": 0.09502262443438915,
-      "lift": 3.1818354241742766
-    },
-    {
-      "antecedents": [
-        "portal 2"
-      ],
-      "consequents": [
-        "airpods"
-      ],
-      "support": 0.011266094420600859,
-      "confidence": 0.37724550898203596,
-      "lift": 3.181835424174276
-    },
-    {
-      "antecedents": [
-        "airpods"
-      ],
-      "consequents": [
-        "gadget for tiktok streaming"
-      ],
-      "support": 0.014663805436337626,
-      "confidence": 0.12368024132730017,
-      "lift": 3.1725683922122134
-    },
-    {
-      "antecedents": [
-        "gadget for tiktok streaming"
-      ],
-      "consequents": [
-        "airpods"
-      ],
-      "support": 0.014663805436337626,
-      "confidence": 0.3761467889908257,
-      "lift": 3.1725683922122134
-    },
-    {
-      "antecedents": [
-        "samsung galaxy 10"
-      ],
-      "consequents": [
-        "bluetooth headphones"
-      ],
-      "support": 0.007868383404864092,
-      "confidence": 0.2085308056872038,
-      "lift": 3.143138181678824
-    },
-    {
-      "antecedents": [
-        "bluetooth headphones"
-      ],
-      "consequents": [
-        "samsung galaxy 10"
-      ],
-      "support": 0.007868383404864092,
-      "confidence": 0.11859838274932614,
-      "lift": 3.143138181678824
+        "butter"
+      ],
+      "support": 0.026964856230031947,
+      "confidence": 0.22105814562598217,
+      "lift": 1.9802861929288043
     }
   ],
-  "0": [
+  "7": [
     {
       "antecedents": [
-        "energy drink"
+        "cereals"
       ],
       "consequents": [
-        "airpods"
+        "eggs"
       ],
-      "support": 0.013075512816078038,
-      "confidence": 0.2097669256381798,
-      "lift": 2.51729018400753
+      "support": 0.009946356727760394,
+      "confidence": 0.1790744466800805,
+      "lift": 3.2634585517176378
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.009946356727760394,
+      "confidence": 0.18126272912423624,
+      "lift": 3.2634585517176378
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.009946356727760394,
+      "confidence": 0.17485265225933203,
+      "lift": 3.148051373071435
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "fresh bread"
+      ],
+      "support": 0.009946356727760394,
+      "confidence": 0.1790744466800805,
+      "lift": 3.148051373071435
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "fresh bread"
+      ],
+      "support": 0.009611086276262852,
+      "confidence": 0.17515274949083504,
+      "lift": 3.079109631520613
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.009611086276262852,
+      "confidence": 0.16895874263261298,
+      "lift": 3.079109631520613
+    },
+    {
+      "antecedents": [
+        "milk"
+      ],
+      "consequents": [
+        "fresh bread"
+      ],
+      "support": 0.0073759499329459095,
+      "confidence": 0.16708860759493668,
+      "lift": 2.937345502474447
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "milk"
+      ],
+      "support": 0.0073759499329459095,
+      "confidence": 0.12966601178781925,
+      "lift": 2.937345502474447
+    },
+    {
+      "antecedents": [
+        "bacon"
+      ],
+      "consequents": [
+        "fresh bread"
+      ],
+      "support": 0.0073759499329459095,
+      "confidence": 0.15980629539951574,
+      "lift": 2.80932560164021
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "bacon"
+      ],
+      "support": 0.0073759499329459095,
+      "confidence": 0.12966601178781925,
+      "lift": 2.80932560164021
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "tea"
+      ],
+      "support": 0.0073759499329459095,
+      "confidence": 0.13441955193482688,
+      "lift": 2.7089778169207905
+    },
+    {
+      "antecedents": [
+        "tea"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.0073759499329459095,
+      "confidence": 0.14864864864864866,
+      "lift": 2.7089778169207905
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.008940545373267769,
+      "confidence": 0.16096579476861167,
+      "lift": 2.697232081628347
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.008940545373267769,
+      "confidence": 0.14981273408239698,
+      "lift": 2.6972320816283464
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "bacon"
+      ],
+      "support": 0.0073759499329459095,
+      "confidence": 0.12359550561797752,
+      "lift": 2.677802867481024
+    },
+    {
+      "antecedents": [
+        "bacon"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.0073759499329459095,
+      "confidence": 0.15980629539951574,
+      "lift": 2.677802867481024
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.008605274921770227,
+      "confidence": 0.1441947565543071,
+      "lift": 2.627809942256497
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.008605274921770227,
+      "confidence": 0.15682281059063136,
+      "lift": 2.627809942256497
+    },
+    {
+      "antecedents": [
+        "milk"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.006817165847116674,
+      "confidence": 0.15443037974683543,
+      "lift": 2.5877210448964107
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "milk"
+      ],
+      "support": 0.006817165847116674,
+      "confidence": 0.1142322097378277,
+      "lift": 2.5877210448964107
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "milk"
+      ],
+      "support": 0.006258381761287439,
+      "confidence": 0.11405295315682282,
+      "lift": 2.583660316068989
+    },
+    {
+      "antecedents": [
+        "milk"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.006258381761287439,
+      "confidence": 0.14177215189873418,
+      "lift": 2.583660316068989
+    },
+    {
+      "antecedents": [
+        "oatmeal"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.00659365221278498,
+      "confidence": 0.14047619047619048,
+      "lift": 2.56004267287363
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "oatmeal"
+      ],
+      "support": 0.00659365221278498,
+      "confidence": 0.12016293279022403,
+      "lift": 2.56004267287363
+    },
+    {
+      "antecedents": [
+        "bacon"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.006481895395619133,
+      "confidence": 0.14043583535108958,
+      "lift": 2.528410170465895
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "bacon"
+      ],
+      "support": 0.006481895395619133,
+      "confidence": 0.11670020120724346,
+      "lift": 2.528410170465895
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "milk"
+      ],
+      "support": 0.0061466249441215915,
+      "confidence": 0.11066398390342053,
+      "lift": 2.506889437893182
+    },
+    {
+      "antecedents": [
+        "milk"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.0061466249441215915,
+      "confidence": 0.13924050632911392,
+      "lift": 2.506889437893182
+    },
+    {
+      "antecedents": [
+        "oatmeal"
+      ],
+      "consequents": [
+        "cereals"
+      ],
+      "support": 0.006481895395619133,
+      "confidence": 0.1380952380952381,
+      "lift": 2.4862700009581298
+    },
+    {
+      "antecedents": [
+        "cereals"
+      ],
+      "consequents": [
+        "oatmeal"
+      ],
+      "support": 0.006481895395619133,
+      "confidence": 0.11670020120724346,
+      "lift": 2.4862700009581298
+    },
+    {
+      "antecedents": [
+        "oatmeal"
+      ],
+      "consequents": [
+        "milk"
+      ],
+      "support": 0.005140813589628967,
+      "confidence": 0.10952380952380952,
+      "lift": 2.4810608800482217
+    },
+    {
+      "antecedents": [
+        "milk"
+      ],
+      "consequents": [
+        "oatmeal"
+      ],
+      "support": 0.005140813589628967,
+      "confidence": 0.11645569620253164,
+      "lift": 2.4810608800482217
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "oatmeal"
+      ],
+      "support": 0.00659365221278498,
+      "confidence": 0.11591355599214147,
+      "lift": 2.4695107119468616
+    },
+    {
+      "antecedents": [
+        "oatmeal"
+      ],
+      "consequents": [
+        "fresh bread"
+      ],
+      "support": 0.00659365221278498,
+      "confidence": 0.14047619047619048,
+      "lift": 2.4695107119468616
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "fresh bread"
+      ],
+      "support": 0.008381761287438535,
+      "confidence": 0.1404494382022472,
+      "lift": 2.4690404185338077
+    },
+    {
+      "antecedents": [
+        "fresh bread"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.008381761287438535,
+      "confidence": 0.14734774066797646,
+      "lift": 2.4690404185338077
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "oatmeal"
+      ],
+      "support": 0.006817165847116674,
+      "confidence": 0.1142322097378277,
+      "lift": 2.4336900303192435
+    },
+    {
+      "antecedents": [
+        "oatmeal"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.006817165847116674,
+      "confidence": 0.14523809523809522,
+      "lift": 2.4336900303192435
     },
     {
       "antecedents": [
         "airpods"
       ],
       "consequents": [
+        "portal 2"
+      ],
+      "support": 0.0042467590523021905,
+      "confidence": 0.07364341085271318,
+      "lift": 2.431591292657113
+    },
+    {
+      "antecedents": [
+        "portal 2"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.0042467590523021905,
+      "confidence": 0.14022140221402213,
+      "lift": 2.4315912926571124
+    },
+    {
+      "antecedents": [
+        "bacon"
+      ],
+      "consequents": [
+        "milk"
+      ],
+      "support": 0.0049172999552972736,
+      "confidence": 0.10653753026634384,
+      "lift": 2.4134122046158093
+    },
+    {
+      "antecedents": [
+        "milk"
+      ],
+      "consequents": [
+        "bacon"
+      ],
+      "support": 0.0049172999552972736,
+      "confidence": 0.11139240506329114,
+      "lift": 2.413412204615809
+    },
+    {
+      "antecedents": [
+        "sandwich"
+      ],
+      "consequents": [
+        "butter"
+      ],
+      "support": 0.00581135449262405,
+      "confidence": 0.14246575342465753,
+      "lift": 2.387235134164486
+    },
+    {
+      "antecedents": [
+        "butter"
+      ],
+      "consequents": [
+        "sandwich"
+      ],
+      "support": 0.00581135449262405,
+      "confidence": 0.09737827715355805,
+      "lift": 2.387235134164486
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "bacon"
+      ],
+      "support": 0.006034868126955744,
+      "confidence": 0.109979633401222,
+      "lift": 2.3828032921891875
+    },
+    {
+      "antecedents": [
+        "bacon"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.006034868126955744,
+      "confidence": 0.13075060532687652,
+      "lift": 2.3828032921891875
+    },
+    {
+      "antecedents": [
+        "bacon"
+      ],
+      "consequents": [
+        "salt"
+      ],
+      "support": 0.0054760840411265084,
+      "confidence": 0.11864406779661017,
+      "lift": 2.3539403961065806
+    },
+    {
+      "antecedents": [
+        "salt"
+      ],
+      "consequents": [
+        "bacon"
+      ],
+      "support": 0.0054760840411265084,
+      "confidence": 0.10864745011086474,
+      "lift": 2.3539403961065806
+    },
+    {
+      "antecedents": [
+        "honey"
+      ],
+      "consequents": [
+        "eggs"
+      ],
+      "support": 0.006258381761287439,
+      "confidence": 0.1275626423690205,
+      "lift": 2.32470575136048
+    },
+    {
+      "antecedents": [
+        "eggs"
+      ],
+      "consequents": [
+        "honey"
+      ],
+      "support": 0.006258381761287439,
+      "confidence": 0.11405295315682282,
+      "lift": 2.3247057513604794
+    }
+  ],
+  "8": [
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
         "energy drink"
       ],
-      "support": 0.013075512816078038,
-      "confidence": 0.15691158156911583,
-      "lift": 2.51729018400753
+      "support": 0.011046761046761047,
+      "confidence": 0.1456859971711457,
+      "lift": 2.4855923835750455
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.011046761046761047,
+      "confidence": 0.18847209515096064,
+      "lift": 2.4855923835750455
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "bluetooth headphones"
+      ],
+      "support": 0.010778635778635779,
+      "confidence": 0.14214992927864217,
+      "lift": 2.420832768208328
     },
     {
       "antecedents": [
@@ -2967,262 +3487,405 @@
       "consequents": [
         "airpods"
       ],
-      "support": 0.012141547614929606,
-      "confidence": 0.19349503858875414,
-      "lift": 2.3220207847913215
+      "support": 0.010778635778635779,
+      "confidence": 0.18356164383561643,
+      "lift": 2.4208327682083275
     },
     {
       "antecedents": [
         "airpods"
+      ],
+      "consequents": [
+        "energy bar"
+      ],
+      "support": 0.008311883311883312,
+      "confidence": 0.10961810466760961,
+      "lift": 2.2763456746565525
+    },
+    {
+      "antecedents": [
+        "energy bar"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.008311883311883312,
+      "confidence": 0.17260579064587972,
+      "lift": 2.2763456746565525
+    },
+    {
+      "antecedents": [
+        "laptop"
       ],
       "consequents": [
         "bluetooth headphones"
       ],
-      "support": 0.012141547614929606,
-      "confidence": 0.14570361145703611,
-      "lift": 2.3220207847913215
+      "support": 0.006274131274131274,
+      "confidence": 0.1263498920086393,
+      "lift": 2.151755969111512
     },
     {
       "antecedents": [
-        "napkins"
+        "bluetooth headphones"
       ],
       "consequents": [
-        "cooking oil"
+        "laptop"
       ],
-      "support": 0.042339755785395554,
-      "confidence": 0.2993396918561996,
-      "lift": 2.1963480080890543
+      "support": 0.006274131274131274,
+      "confidence": 0.10684931506849314,
+      "lift": 2.151755969111512
     },
     {
       "antecedents": [
-        "cooking oil"
+        "bluetooth headphones"
       ],
       "consequents": [
-        "napkins"
+        "energy drink"
       ],
-      "support": 0.042339755785395554,
-      "confidence": 0.31065989847715736,
-      "lift": 2.196348008089054
+      "support": 0.0074002574002574005,
+      "confidence": 0.12602739726027398,
+      "lift": 2.150191129103009
     },
     {
       "antecedents": [
-        "babies food"
+        "energy drink"
       ],
       "consequents": [
-        "cooking oil"
+        "bluetooth headphones"
       ],
-      "support": 0.04268566882285793,
-      "confidence": 0.2781785392245266,
-      "lift": 2.041082078792345
+      "support": 0.0074002574002574005,
+      "confidence": 0.1262580054894785,
+      "lift": 2.150191129103009
     },
     {
       "antecedents": [
-        "cooking oil"
+        "pancakes"
       ],
       "consequents": [
-        "babies food"
+        "bluetooth headphones"
       ],
-      "support": 0.04268566882285793,
-      "confidence": 0.31319796954314716,
-      "lift": 2.041082078792345
+      "support": 0.006006006006006006,
+      "confidence": 0.12527964205816555,
+      "lift": 2.1335294658453616
     },
     {
       "antecedents": [
-        "babies food"
+        "bluetooth headphones"
       ],
       "consequents": [
-        "napkins"
+        "pancakes"
       ],
-      "support": 0.044000138365214984,
-      "confidence": 0.2867448151487827,
-      "lift": 2.0272697141443285
+      "support": 0.006006006006006006,
+      "confidence": 0.10228310502283104,
+      "lift": 2.1335294658453616
     },
     {
       "antecedents": [
-        "napkins"
+        "airpods"
       ],
       "consequents": [
-        "babies food"
+        "laptop"
       ],
-      "support": 0.044000138365214984,
-      "confidence": 0.3110785033015407,
-      "lift": 2.0272697141443285
+      "support": 0.00799013299013299,
+      "confidence": 0.10537482319660538,
+      "lift": 2.122062314222783
     },
     {
       "antecedents": [
-        "dog food"
+        "laptop"
       ],
       "consequents": [
-        "napkins"
+        "airpods"
       ],
-      "support": 0.04517624269258708,
-      "confidence": 0.2750052642661613,
-      "lift": 1.9442717497359883
+      "support": 0.00799013299013299,
+      "confidence": 0.16090712742980562,
+      "lift": 2.122062314222783
     },
     {
       "antecedents": [
-        "napkins"
+        "airpods"
       ],
       "consequents": [
-        "dog food"
+        "pancakes"
       ],
-      "support": 0.04517624269258708,
-      "confidence": 0.3193934947419907,
-      "lift": 1.9442717497359883
+      "support": 0.007614757614757614,
+      "confidence": 0.10042432814710042,
+      "lift": 2.0947571267193834
     },
     {
       "antecedents": [
-        "dog food"
+        "pancakes"
       ],
       "consequents": [
-        "cooking oil"
+        "airpods"
       ],
-      "support": 0.04285862534158912,
-      "confidence": 0.260897030953885,
-      "lift": 1.9142823014837211
+      "support": 0.007614757614757614,
+      "confidence": 0.1588366890380313,
+      "lift": 2.094757126719383
     },
     {
       "antecedents": [
-        "cooking oil"
+        "portal"
       ],
       "consequents": [
-        "dog food"
+        "laptop"
       ],
-      "support": 0.04285862534158912,
-      "confidence": 0.3144670050761421,
-      "lift": 1.9142823014837211
+      "support": 0.004236379236379237,
+      "confidence": 0.10141206675224648,
+      "lift": 2.042259417706147
     },
     {
       "antecedents": [
-        "dog food"
+        "laptop"
       ],
       "consequents": [
-        "babies food"
+        "portal"
       ],
-      "support": 0.04680203396866028,
-      "confidence": 0.28490208464939987,
-      "lift": 1.8566804249615647
+      "support": 0.004236379236379237,
+      "confidence": 0.08531317494600432,
+      "lift": 2.042259417706147
     },
     {
       "antecedents": [
-        "babies food"
+        "energy drink"
       ],
       "consequents": [
-        "dog food"
+        "laptop"
       ],
-      "support": 0.04680203396866028,
-      "confidence": 0.3050045085662759,
-      "lift": 1.8566804249615645
+      "support": 0.005898755898755899,
+      "confidence": 0.10064043915827997,
+      "lift": 2.0267202045611286
     },
     {
       "antecedents": [
-        "pet food"
+        "laptop"
       ],
       "consequents": [
-        "napkins"
+        "energy drink"
       ],
-      "support": 0.02514787782351517,
-      "confidence": 0.26226551226551226,
-      "lift": 1.8542024196829772
+      "support": 0.005898755898755899,
+      "confidence": 0.11879049676025918,
+      "lift": 2.026720204561128
     },
     {
       "antecedents": [
-        "napkins"
+        "airpods"
       ],
       "consequents": [
-        "pet food"
+        "iphone 10"
       ],
-      "support": 0.02514787782351517,
-      "confidence": 0.17779408168256297,
-      "lift": 1.8542024196829772
+      "support": 0.009062634062634063,
+      "confidence": 0.11951909476661952,
+      "lift": 1.9989166629667452
     },
     {
       "antecedents": [
-        "cooking oil"
+        "iphone 10"
       ],
       "consequents": [
-        "pet food"
+        "airpods"
       ],
-      "support": 0.024075547407381784,
-      "confidence": 0.1766497461928934,
-      "lift": 1.842268222471268
+      "support": 0.009062634062634063,
+      "confidence": 0.1515695067264574,
+      "lift": 1.998916662966745
     },
     {
       "antecedents": [
-        "pet food"
+        "laptop"
       ],
       "consequents": [
-        "cooking oil"
+        "megaman zero"
       ],
-      "support": 0.024075547407381784,
-      "confidence": 0.2510822510822511,
-      "lift": 1.842268222471268
+      "support": 0.004772629772629772,
+      "confidence": 0.09611231101511879,
+      "lift": 1.941822725687904
     },
     {
       "antecedents": [
-        "fresh bread"
+        "megaman zero"
       ],
       "consequents": [
-        "napkins"
+        "laptop"
       ],
-      "support": 0.024801964786052785,
-      "confidence": 0.2571736011477762,
-      "lift": 1.8182028944928008
+      "support": 0.004772629772629772,
+      "confidence": 0.09642470205850487,
+      "lift": 1.9418227256879037
     },
     {
       "antecedents": [
-        "napkins"
+        "laptop"
       ],
       "consequents": [
-        "fresh bread"
+        "gadget for tiktok streaming"
       ],
-      "support": 0.024801964786052785,
-      "confidence": 0.17534849596478355,
-      "lift": 1.8182028944928006
+      "support": 0.00429000429000429,
+      "confidence": 0.08639308855291576,
+      "lift": 1.8931355056812846
     },
     {
       "antecedents": [
-        "cooking oil"
+        "gadget for tiktok streaming"
       ],
       "consequents": [
-        "milk"
+        "laptop"
       ],
-      "support": 0.024317686533605453,
-      "confidence": 0.1784263959390863,
-      "lift": 1.802281160098898
+      "support": 0.00429000429000429,
+      "confidence": 0.09400705052878966,
+      "lift": 1.8931355056812846
     },
     {
       "antecedents": [
-        "milk"
+        "ratchet & clank 3"
       ],
       "consequents": [
-        "cooking oil"
+        "laptop"
       ],
-      "support": 0.024317686533605453,
-      "confidence": 0.24563242487770792,
-      "lift": 1.802281160098898
+      "support": 0.004182754182754183,
+      "confidence": 0.09375,
+      "lift": 1.8879589632829372
     },
     {
       "antecedents": [
-        "milk"
+        "laptop"
       ],
       "consequents": [
-        "napkins"
+        "ratchet & clank 3"
       ],
-      "support": 0.02494033000103774,
-      "confidence": 0.25192173305380855,
-      "lift": 1.7810724824780022
+      "support": 0.004182754182754183,
+      "confidence": 0.08423326133909287,
+      "lift": 1.8879589632829372
     },
     {
       "antecedents": [
-        "napkins"
+        "energy drink"
       ],
       "consequents": [
-        "milk"
+        "pancakes"
       ],
-      "support": 0.02494033000103774,
-      "confidence": 0.17632673025189533,
-      "lift": 1.781072482478002
+      "support": 0.005255255255255256,
+      "confidence": 0.08966148215919488,
+      "lift": 1.8702542721528703
+    },
+    {
+      "antecedents": [
+        "pancakes"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.005255255255255256,
+      "confidence": 0.10961968680089486,
+      "lift": 1.8702542721528703
+    },
+    {
+      "antecedents": [
+        "laptop"
+      ],
+      "consequents": [
+        "ratchet & clank 2"
+      ],
+      "support": 0.00429000429000429,
+      "confidence": 0.08639308855291576,
+      "lift": 1.8624951622367318
+    },
+    {
+      "antecedents": [
+        "ratchet & clank 2"
+      ],
+      "consequents": [
+        "laptop"
+      ],
+      "support": 0.00429000429000429,
+      "confidence": 0.09248554913294797,
+      "lift": 1.8624951622367318
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "metroid fusion"
+      ],
+      "support": 0.005308880308880309,
+      "confidence": 0.07001414427157002,
+      "lift": 1.84932544245926
+    },
+    {
+      "antecedents": [
+        "metroid fusion"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.005308880308880309,
+      "confidence": 0.1402266288951841,
+      "lift": 1.8493254424592598
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "portal"
+      ],
+      "support": 0.005845130845130845,
+      "confidence": 0.07708628005657708,
+      "lift": 1.8453208607125153
+    },
+    {
+      "antecedents": [
+        "portal"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.005845130845130845,
+      "confidence": 0.1399229781771502,
+      "lift": 1.8453208607125153
+    },
+    {
+      "antecedents": [
+        "extra dark chocolate"
+      ],
+      "consequents": [
+        "airpods"
+      ],
+      "support": 0.008311883311883312,
+      "confidence": 0.13839285714285715,
+      "lift": 1.8251414427157002
+    },
+    {
+      "antecedents": [
+        "airpods"
+      ],
+      "consequents": [
+        "extra dark chocolate"
+      ],
+      "support": 0.008311883311883312,
+      "confidence": 0.10961810466760961,
+      "lift": 1.8251414427157
+    },
+    {
+      "antecedents": [
+        "energy bar"
+      ],
+      "consequents": [
+        "energy drink"
+      ],
+      "support": 0.005148005148005148,
+      "confidence": 0.10690423162583519,
+      "lift": 1.8239250790105896
+    },
+    {
+      "antecedents": [
+        "energy drink"
+      ],
+      "consequents": [
+        "energy bar"
+      ],
+      "support": 0.005148005148005148,
+      "confidence": 0.08783165599268068,
+      "lift": 1.8239250790105894
     },
     {
       "antecedents": [
@@ -3231,9 +3894,9 @@
       "consequents": [
         "airpods"
       ],
-      "support": 0.01131135632501989,
-      "confidence": 0.14783001808318263,
-      "lift": 1.7740215827176118
+      "support": 0.009438009438009438,
+      "confidence": 0.1381475667189953,
+      "lift": 1.8219065234623937
     },
     {
       "antecedents": [
@@ -3242,251 +3905,97 @@
       "consequents": [
         "protein bar"
       ],
-      "support": 0.01131135632501989,
-      "confidence": 0.1357409713574097,
-      "lift": 1.7740215827176116
+      "support": 0.009438009438009438,
+      "confidence": 0.12446958981612448,
+      "lift": 1.8219065234623935
     },
     {
       "antecedents": [
-        "babies food"
+        "energy bar"
       ],
       "consequents": [
-        "fresh bread"
+        "bluetooth headphones"
       ],
-      "support": 0.025770521290947455,
-      "confidence": 0.16794409377817854,
-      "lift": 1.7414260426948938
+      "support": 0.005148005148005148,
+      "confidence": 0.10690423162583519,
+      "lift": 1.8205937090032644
     },
     {
       "antecedents": [
-        "fresh bread"
+        "bluetooth headphones"
       ],
       "consequents": [
-        "babies food"
+        "energy bar"
       ],
-      "support": 0.025770521290947455,
-      "confidence": 0.26721664275466284,
-      "lift": 1.7414260426948938
+      "support": 0.005148005148005148,
+      "confidence": 0.08767123287671232,
+      "lift": 1.8205937090032642
     },
     {
       "antecedents": [
-        "milk"
+        "bluetooth headphones"
       ],
       "consequents": [
-        "babies food"
+        "metroid fusion"
       ],
-      "support": 0.02642775606212598,
-      "confidence": 0.2669461914744934,
-      "lift": 1.7396635368205884
+      "support": 0.004021879021879022,
+      "confidence": 0.0684931506849315,
+      "lift": 1.809150529706236
     },
     {
       "antecedents": [
-        "babies food"
+        "metroid fusion"
       ],
       "consequents": [
-        "milk"
+        "bluetooth headphones"
       ],
-      "support": 0.02642775606212598,
-      "confidence": 0.1722272317403066,
-      "lift": 1.7396635368205882
+      "support": 0.004021879021879022,
+      "confidence": 0.10623229461756374,
+      "lift": 1.809150529706236
     },
     {
       "antecedents": [
-        "fresh bread"
+        "pokemon sword"
       ],
       "consequents": [
-        "cooking oil"
+        "airpods"
       ],
-      "support": 0.022726486561278493,
-      "confidence": 0.23565279770444764,
-      "lift": 1.7290575453903239
+      "support": 0.005523380523380523,
+      "confidence": 0.13534822601839686,
+      "lift": 1.7849884857079665
     },
     {
       "antecedents": [
-        "cooking oil"
+        "airpods"
       ],
       "consequents": [
-        "fresh bread"
+        "pokemon sword"
       ],
-      "support": 0.022726486561278493,
-      "confidence": 0.16675126903553297,
-      "lift": 1.7290575453903239
+      "support": 0.005523380523380523,
+      "confidence": 0.07284299858557285,
+      "lift": 1.7849884857079663
     },
     {
       "antecedents": [
-        "toilet paper"
+        "laptop"
       ],
       "consequents": [
-        "cooking oil"
+        "pancakes"
       ],
-      "support": 0.02455982565982912,
-      "confidence": 0.232863233847163,
-      "lift": 1.7085896515958465
+      "support": 0.004236379236379237,
+      "confidence": 0.08531317494600432,
+      "lift": 1.7795526693434995
     },
     {
       "antecedents": [
-        "cooking oil"
+        "pancakes"
       ],
       "consequents": [
-        "toilet paper"
+        "laptop"
       ],
-      "support": 0.02455982565982912,
-      "confidence": 0.18020304568527917,
-      "lift": 1.7085896515958465
-    },
-    {
-      "antecedents": [
-        "napkins"
-      ],
-      "consequents": [
-        "toilet paper"
-      ],
-      "support": 0.025390016949738834,
-      "confidence": 0.17950599168500855,
-      "lift": 1.7019805554679936
-    },
-    {
-      "antecedents": [
-        "toilet paper"
-      ],
-      "consequents": [
-        "napkins"
-      ],
-      "support": 0.025390016949738834,
-      "confidence": 0.2407346671039685,
-      "lift": 1.7019805554679934
-    },
-    {
-      "antecedents": [
-        "pet food"
-      ],
-      "consequents": [
-        "dog food"
-      ],
-      "support": 0.026739077795842125,
-      "confidence": 0.27886002886002886,
-      "lift": 1.6975288638270318
-    },
-    {
-      "antecedents": [
-        "dog food"
-      ],
-      "consequents": [
-        "pet food"
-      ],
-      "support": 0.026739077795842125,
-      "confidence": 0.1627711097073068,
-      "lift": 1.6975288638270318
-    },
-    {
-      "antecedents": [
-        "dog food"
-      ],
-      "consequents": [
-        "milk"
-      ],
-      "support": 0.02684285170708084,
-      "confidence": 0.16340282164666245,
-      "lift": 1.6505283616294077
-    },
-    {
-      "antecedents": [
-        "milk"
-      ],
-      "consequents": [
-        "dog food"
-      ],
-      "support": 0.02684285170708084,
-      "confidence": 0.27113906359189377,
-      "lift": 1.6505283616294075
-    },
-    {
-      "antecedents": [
-        "napkins"
-      ],
-      "consequents": [
-        "chicken"
-      ],
-      "support": 0.02528624303850012,
-      "confidence": 0.17877231596967472,
-      "lift": 1.6422398736470691
-    },
-    {
-      "antecedents": [
-        "chicken"
-      ],
-      "consequents": [
-        "napkins"
-      ],
-      "support": 0.02528624303850012,
-      "confidence": 0.23228471560216077,
-      "lift": 1.6422398736470691
-    },
-    {
-      "antecedents": [
-        "dog food"
-      ],
-      "consequents": [
-        "toilet paper"
-      ],
-      "support": 0.028434051679407796,
-      "confidence": 0.17308907138344914,
-      "lift": 1.6411387224087017
-    },
-    {
-      "antecedents": [
-        "toilet paper"
-      ],
-      "consequents": [
-        "dog food"
-      ],
-      "support": 0.028434051679407796,
-      "confidence": 0.2695965890455887,
-      "lift": 1.6411387224087015
-    },
-    {
-      "antecedents": [
-        "babies food"
-      ],
-      "consequents": [
-        "pet food"
-      ],
-      "support": 0.02414473001487426,
-      "confidence": 0.15734896302975657,
-      "lift": 1.640981663862638
-    },
-    {
-      "antecedents": [
-        "pet food"
-      ],
-      "consequents": [
-        "babies food"
-      ],
-      "support": 0.02414473001487426,
-      "confidence": 0.2518037518037518,
-      "lift": 1.6409816638626378
-    },
-    {
-      "antecedents": [
-        "dog food"
-      ],
-      "consequents": [
-        "fresh bread"
-      ],
-      "support": 0.025770521290947455,
-      "confidence": 0.156875131606654,
-      "lift": 1.626651068729111
-    },
-    {
-      "antecedents": [
-        "fresh bread"
-      ],
-      "consequents": [
-        "dog food"
-      ],
-      "support": 0.025770521290947455,
-      "confidence": 0.26721664275466284,
-      "lift": 1.626651068729111
+      "support": 0.004236379236379237,
+      "confidence": 0.0883668903803132,
+      "lift": 1.7795526693434995
     }
   ]
 }

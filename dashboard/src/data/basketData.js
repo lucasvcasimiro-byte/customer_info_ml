@@ -127,11 +127,11 @@ export const sampleRecommendations = {
     segment: 'Vegans',
     nextBestOffer: '15% off Organic Vegetables Subscription',
     propensity: 0.88,
-    items: ['napkins', 'babies food', 'cooking oil'],
+    items: ['salad', 'tomatoes', 'carrots'],
     discount: '15%'
   },
   '1': {
-    segment: 'Loyal core spenders',
+    segment: 'Loyal big spenders',
     nextBestOffer: '10% off Grocery Essentials',
     propensity: 0.32,
     items: ['eggs', 'cereals', 'fresh bread'],
@@ -141,7 +141,7 @@ export const sampleRecommendations = {
     segment: 'Vegans',
     nextBestOffer: '15% off Organic Vegetables Subscription',
     propensity: 0.88,
-    items: ['napkins', 'babies food', 'cooking oil'],
+    items: ['salad', 'tomatoes', 'carrots'],
     discount: '15%'
   },
   '198': {
@@ -197,45 +197,57 @@ export const liftChartData = {
 // ── Discount tiers ───────────────────────────────────────────────────────────
 export const discountTiers = [
   {
-    "segment": "Loyal core spenders",
-    "discount": "5\u201310%",
+    "segment": "Loyal big spenders",
+    "discount": "10%",
     "type": "Loyalty Reward",
-    "icon": "\ud83d\udc51"
+    "icon": "👑"
   },
   {
     "segment": "Vegans",
     "discount": "15%",
     "type": "Healthy Subscriptions",
-    "icon": "\ud83e\udd57"
+    "icon": "🥗"
   },
   {
     "segment": "Bargain hunters",
-    "discount": "20\u201325%",
+    "discount": "25%",
     "type": "Win-Back Promotion",
-    "icon": "\ud83d\udce2"
+    "icon": "📢"
   },
   {
     "segment": "Karens",
     "discount": "10%",
     "type": "Service Resolution",
-    "icon": "\ud83d\udea8"
+    "icon": "🚨"
   },
   {
     "segment": "Tech enthusiasts",
-    "discount": "10\u201315%",
-    "type": "Late Flash Sales",
-    "icon": "\u26a1"
+    "discount": "12%",
+    "type": "Electronics Flash Sale",
+    "icon": "⚡"
   },
   {
     "segment": "Big families (big spenders)",
-    "discount": "15\u201320%",
+    "discount": "15%",
     "type": "Family Essentials",
-    "icon": "\ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66"
+    "icon": "👨‍👩‍👧‍👦"
   },
   {
     "segment": "Gamers",
     "discount": "10%",
     "type": "Bundle Deals",
-    "icon": "\ud83c\udfae"
+    "icon": "🎮"
+  },
+  {
+    "segment": "Clean and healthy",
+    "discount": "10%",
+    "type": "Healthy Choice",
+    "icon": "🟢"
+  },
+  {
+    "segment": "Average customer",
+    "discount": "10%",
+    "type": "Grocery Essentials",
+    "icon": "👤"
   }
 ];
