@@ -58,6 +58,9 @@ def generate_association_rules(
     )
 
     rules = rules[rules["confidence"] >= min_confidence]
+    
+    rules = rules[rules['antecedents'].apply(lambda x: len(x) == 1)]
+    rules = rules[rules['consequents'].apply(lambda x: len(x) == 1)]
 
     return (
         rules[["antecedents", "consequents", "support", "confidence", "lift"]]
