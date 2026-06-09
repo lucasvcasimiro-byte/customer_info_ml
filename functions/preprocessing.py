@@ -158,7 +158,7 @@ def add_dietary_preferences(df):
     fish = df['share_fish']
     veggies = df['share_vegetables']
     
-    conditions = [(meat < 0.02) & (fish < 0.02) & (veggies > 0.10),
+    conditions = [(meat < 0.02) & (fish < 0.02) & (veggies > 0.08),
                 (meat < 0.02) & (fish >= 0.10),
                 (meat >= 0.10) & (fish < 0.02)]
     choices = ['vegetarian', 'pescatarian', 'carnivore']
