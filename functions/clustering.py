@@ -83,68 +83,11 @@ def add_clusters(df_original, labels, cluster_col='cluster'):
     """
     return df_original.assign(**{cluster_col: labels})
 
-
-def cluster_size_summary(clustered_df, cluster_col='cluster'):
-    """
-    Customer count and share per cluster
-    """
-    sizes = clustered_df[cluster_col].value_counts().sort_index()
-    return pd.DataFrame({
-        cluster_col: sizes.index,
-        'n_customers': sizes.values,
-        'customer_share': (sizes.values / len(clustered_df)).round(4)})
-
-
-def profile_clusters(clustered_df, profile_cols, cluster_col='cluster'):
-    """
-    Mean and median of each feature per cluster
-    """
-    return clustered_df.groupby(cluster_col)[profile_cols].agg(['mean', 'median']).round(2)
-
-
 def calculate_group_means(df, cluster_col):
     """
     Calculates the mean of all numeric features grouped by a specific cluster column
     """
     return df.groupby(cluster_col).mean(numeric_only=True).T
-
-
-def cluster_mean_profile(clustered_df, profile_cols, cluster_col='cluster'):
-    """
-    Cluster means joined with size stats in a flat table
-    """
-    profile = clustered_df.groupby(cluster_col)[profile_cols].mean().round(3)
-    sizes = cluster_size_summary(clustered_df, cluster_col).set_index(cluster_col)
-    return sizes.join(profile).reset_index()
-
-
-def cluster_lift_profile(clustered_df, profile_cols, cluster_col='cluster'):
-    """
-    Ratio of each cluster mean to the overall mean (lift > 1 = above average)
-    """
-    cluster_means = clustered_df.groupby(cluster_col)[profile_cols].mean()
-    overall_means = clustered_df[profile_cols].mean().replace(0, np.nan)
-    return cluster_means.divide(overall_means, axis=1).round(3).replace([np.inf, -np.inf], np.nan)
-
-
-def top_cluster_differences(clustered_df, profile_cols, cluster_col='cluster', top_n=6):
-    """
-    Top above/below-average features per cluster, ranked by z-score
-    """
-    cluster_means = clustered_df.groupby(cluster_col)[profile_cols].mean()
-    overall_means = clustered_df[profile_cols].mean()
-    overall_std = clustered_df[profile_cols].std().replace(0, np.nan)
-    z_diffs = cluster_means.subtract(overall_means, axis=1).divide(overall_std, axis=1)
-
-    rows = []
-    for cluster_label, values in z_diffs.iterrows():
-        values = values.dropna().sort_values()
-        for feature, score in values.head(top_n).items():
-            rows.append({cluster_col: cluster_label, 'direction': 'below_average', 'feature': feature, 'z': round(score, 3)})
-        for feature, score in values.tail(top_n).sort_values(ascending=False).items():
-            rows.append({cluster_col: cluster_label, 'direction': 'above_average', 'feature': feature, 'z': round(score, 3)})
-
-    return pd.DataFrame(rows)
 
 
 ####### Plots
@@ -271,9 +214,7 @@ def plot_umap_cluster_map(df_scaled, feature_cols, labels, n_neighbors=15, min_d
 def plot_cluster_geography(df, labels, point_size=12, alpha=0.7, cols=3):
     """
     Plots the geographic distribution of customers as a grid of maps (one per cluster).
-    Other customers are shown in light grey for geographic context.
-    Overlays points on a CartoDB basemap.
-    Note: df must be the original dataframe containing 'latitude' and 'longitude'.
+    Input df has to be the original, not the one used for clustering.
     """
     import math
     import geopandas as gpd
@@ -367,34 +308,3 @@ def plot_cluster_geography(df, labels, point_size=12, alpha=0.7, cols=3):
     fig.suptitle("Geographic Distribution by Cluster", fontsize=16, fontweight="bold", y=1.02)
     fig.tight_layout()
     plt.show()
-
-
-
-
-
-# Export
-
-#### Provavelmente nao vao ser necessarios
-
-def export_customer_clusters(clustered_df, output_path='customer_clusters.csv'):
-    """
-    Export customer_id and cluster to CSV
-    """
-    output_dir = os.path.dirname(output_path)
-    if output_dir:
-        os.makedirs(output_dir, exist_ok=True)
-    output = clustered_df[['customer_id', 'cluster']]
-    output.to_csv(output_path, index=False)
-    return output
-
-
-def export_cluster_profile(clustered_df, profile_cols, output_path='outputs/cluster_profile.csv'):
-    """
-    Export the flat cluster mean profile to CSV
-    """
-    output_dir = os.path.dirname(output_path)
-    if output_dir:
-        os.makedirs(output_dir, exist_ok=True)
-    output = cluster_mean_profile(clustered_df, profile_cols)
-    output.to_csv(output_path, index=False)
-    return output

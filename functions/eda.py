@@ -29,7 +29,7 @@ SPEND_COLS = [
 
 
 
-# Custom palette and styling 
+# AI-generated custom palette and styling for plots
 PALETTE   = "muted"
 BG_COLOR  = "#F8F7F4"
 ACCENT    = "#2D6A4F"
@@ -400,56 +400,6 @@ def plot_geographic_distribution(df):
 
     fig.tight_layout()
     plt.show()
-
-
-# Basket analysis
-
-def plot_basket_analysis(df, top_n: int = 20):
-    """
-    Top N most frequent products and basket size distribution
-    """
-
-    # Parse product lists
-    all_products = []
-    basket_sizes = []
-    for row in df["list_of_goods"].dropna():
-        try:
-            items = ast.literal_eval(row)
-            all_products.extend(items)
-            basket_sizes.append(len(items))
-        except (ValueError, SyntaxError):
-            pass
-
-    top_products = Counter(all_products).most_common(top_n)
-    products_df  = pd.DataFrame(top_products, columns=["product", "count"])
-
-    fig, axes = plt.subplots(1, 2, figsize=(16, 6), facecolor=BG_COLOR)
-    fig.suptitle("Basket Analysis", fontsize=14, fontweight="bold")
-
-    # ── Top products ──────────────────────────────────────────────────────
-    ax1 = axes[0]
-    palette_n = sns.color_palette("muted", top_n)
-    ax1.barh(products_df["product"][::-1], products_df["count"][::-1],
-             color=palette_n[::-1], edgecolor="white", linewidth=0.4)
-    ax1.set_title(f"Top {top_n} Most Frequent Products")
-    ax1.set_xlabel("Appearances in baskets")
-    ax1.xaxis.set_major_formatter(mticker.FuncFormatter(lambda x, _: f"{x/1000:.0f}k"))
-
-    # ── Basket size distribution ──────────────────────────────────────────
-    ax2 = axes[1]
-    sizes = pd.Series(basket_sizes)
-    sns.histplot(sizes, bins=30, kde=True, color=ACCENT,
-                 ax=ax2, edgecolor="white", linewidth=0.4)
-    ax2.axvline(sizes.median(), color=ACCENT2, linestyle="--",
-                linewidth=1.5, label=f"Median: {sizes.median():.0f} items")
-    ax2.set_title("Basket Size Distribution")
-    ax2.set_xlabel("Items per basket")
-    ax2.set_ylabel("Count")
-    ax2.legend(fontsize=8)
-
-    fig.tight_layout()
-    plt.show()
-
 
 
 def plot_correlation_heatmap(df, feature_cols):
