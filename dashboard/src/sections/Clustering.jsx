@@ -17,10 +17,10 @@ import { clustersByK, clusterConfigs } from '../data/clusterData'
 
 export default function Clustering() {
   const [selectedScaler, setSelectedScaler] = useState('RobustScaler')
-  const [selectedK, setSelectedK]           = useState(7)
+  const [selectedK, setSelectedK]           = useState(9)
 
   // ── Derive the active cluster list from the selected k ─────────────────────
-  const activeClusters = clustersByK[selectedK] ?? clustersByK[6]
+  const activeClusters = clustersByK[selectedK] ?? clustersByK[9]
 
   // ── Metrics for the current scaler × k combination ──────────────────────────
   const configKey      = `${selectedScaler}__${selectedK}`
@@ -35,7 +35,7 @@ export default function Clustering() {
           badgeClass="badge-teal"
           title="Customer "
           highlight="Segments"
-          subtitle="Hierarchical clustering (Ward linkage) applied to RFM + demographic features. Change the scaler or k below — the charts and cards update immediately."
+          subtitle="K-Means clustering (RobustScaler, k=8 + Vegans isolated) applied to RFM + demographic features. Change the scaler or k below — the metrics and cards update immediately."
         />
 
         {/* ── Interactive Controls ──────────────────────────────── */}

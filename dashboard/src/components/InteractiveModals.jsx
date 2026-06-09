@@ -299,11 +299,11 @@ export function SupportModal({ onClose }) {
   const faqs = [
     {
       q: 'How does clustering work in ClusterNova?',
-      a: 'ClusterNova utilizes the Hierarchical Clustering algorithm (with Ward linkage) to group customers based on purchase behavior metrics like frequency and total spend. This helps segment customers into distinct behavioral profiles (like "Vegans" or "Loyal Core Spenders"), enabling targeted marketing campaigns.'
+      a: 'ClusterNova utilizes the K-Means clustering algorithm (with RobustScaler, k=8) combined with an isolated Vegans segment (K=9 total segments) to group customers based on purchase behavior metrics like frequency and total spend. This helps segment customers into distinct behavioral profiles (like "Vegans" or "Average customer"), enabling targeted marketing campaigns.'
     },
     {
       q: 'What is the optimal number of clusters (k)?',
-      a: 'Based on the Silhouette Score and WCSS (elbow method) analyses, the optimal value chosen for this dataset was k=7. This balances internal cohesion (compactness) with clear group boundaries.'
+      a: 'Based on the Silhouette Score and WCSS (elbow method) analyses, the optimal value chosen for the K-Means algorithm was k=8, which when combined with our isolated Vegans cohort results in a final partition of 9 clusters.'
     },
     {
       q: 'How was data preprocessing and cleaning handled?',
@@ -312,10 +312,6 @@ export function SupportModal({ onClose }) {
     {
       q: 'Why did you select RobustScaler to scale features?',
       a: 'Since purchase histories and lifetime spend have highly skewed distributions with long tails, StandardScaler would be heavily distorted by outliers. RobustScaler scales features using the median and Interquartile Range (IQR), mitigating the impact of large outliers.'
-    },
-    {
-      q: 'How does UMAP dimensionality reduction work in this project?',
-      a: 'We utilized UMAP to project our 10+ scaled RFM and demographic dimensions onto a 2D coordinate space. This allowed us to plot the scatter visualization in the gallery, revealing the true topological layout of the segments.'
     },
     {
       q: 'How do the Apriori Association Rules work?',
@@ -327,7 +323,7 @@ export function SupportModal({ onClose }) {
     },
     {
       q: 'Will Professor Ivo give us a 20/20 grade?',
-      a: 'We certainly hope so! We went far beyond the basic requirements: implementing Hierarchical clustering, segment-decoupled basket analysis, a live simulated store, hidden promo codes, the wheel of fortune, and this interactive support chat. Hopefully, the effort is well rewarded! 😉'
+      a: 'We certainly hope so! We went far beyond the basic requirements: implementing K-Means clustering, segment-decoupled basket analysis, a live simulated store, hidden promo codes, the wheel of fortune, and this interactive support chat. Hopefully, the effort is well rewarded! 😉'
     },
     {
       q: 'How do the discount coupons work?',
@@ -427,20 +423,17 @@ export function AboutUsModal({ onClose }) {
   const students = [
     {
       name: 'Lucas Casemiro',
-      role: 'ML & Basket Engineer',
-      desc: 'The brain behind the association rules. Spent nights tuning the Apriori algorithm to ensure vegan/vegetarian customers wouldn\'t get suggested sausages... unless they were soy sausages!',
+      role: "Bachelor's in Data Science",
       color: 'var(--purple)'
     },
     {
       name: 'Lourenço Lima',
-      role: 'Data & Analytics Guru',
-      desc: 'The master of interactive plots. Projected the UMAP coordinates onto 2D interactive charts so anyone can visualize the core distribution of our customer segments.',
+      role: "Bachelor's in Data Science",
       color: 'var(--teal)'
     },
     {
       name: 'Afonso Lince',
-      role: 'UX & Frontend Architect',
-      desc: 'The interaction designer. Added the wheel of fortune, the anti-bot captcha, and the support chat to prove that Data Science and UI/UX design go hand in hand.',
+      role: "Bachelor's in Data Science",
       color: 'var(--amber)'
     }
   ]
@@ -457,22 +450,22 @@ export function AboutUsModal({ onClose }) {
 
         <div className="about-grid">
           {students.map((student, i) => (
-            <div key={i} className="student-card" style={{ borderColor: `${student.color}33` }}>
+            <div key={i} className="student-card" style={{ borderColor: `${student.color}33`, padding: '1.5rem' }}>
               <div className="student-avatar" style={{ background: `${student.color}15`, color: student.color }}>
                 {student.name.charAt(0)}
               </div>
-              <h3 style={{ color: student.color }}>{student.name}</h3>
-              <span className="student-role">{student.role}</span>
-              <p>{student.desc}</p>
+              <h3 style={{ color: student.color, marginBottom: '0.25rem' }}>{student.name}</h3>
+              <span className="student-role" style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>{student.role}</span>
             </div>
           ))}
         </div>
 
         <div className="about-dedication">
-          <h4>🏫 Machine Learning II</h4>
+          <h4>🏫 Machine Learning II Project</h4>
           <p>
-            Special thanks to <strong>Professor Ivo</strong> for his dedication, academic rigor, and the
-            continuous challenge that pushed us to elevate this practical project to a professional standard of software engineering and data analytics.
+            This project was developed as a practical assignment for the Machine Learning II course. 
+            It applies K-Means clustering for customer segmentation and the Apriori algorithm for market basket analysis, 
+            allowing the exploration of customer profiles and purchasing behaviors.
           </p>
         </div>
       </div>

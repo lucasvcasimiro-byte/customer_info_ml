@@ -32,7 +32,7 @@ export default function Overview() {
           <div className="hero-pills">
             {[
               { label: 'Python / Scikit-learn', dot: '#7c3aed' },
-              { label: 'Hierarchical Clustering', dot: '#2dd4bf' },
+              { label: 'K-Means Clustering', dot: '#2dd4bf' },
               { label: 'Apriori / mlxtend',     dot: '#f59e0b' },
               { label: 'RobustScaler scaling',  dot: '#3b82f6' },
               { label: 'Silhouette Analysis',    dot: '#f43f5e' },
@@ -86,21 +86,22 @@ export default function Overview() {
               subtitle=""
             />
             <p>
-              Applying Hierarchical Clustering (Ward linkage, k=7, RobustScaler) to the customer database of <strong style={{ color: 'var(--teal)' }}>32,571</strong> customers revealed seven distinct behavioral segments with a silhouette score of <strong style={{ color: 'var(--teal)' }}>0.132</strong> — balancing segment cohesion and model complexity. Features were scaled using RobustScaler to minimize the impact of purchase frequency and lifetime value outliers.
+              Applying K-Means Clustering (RobustScaler, k=8) combined with an isolated Vegans segment (resulting in <strong style={{ color: 'var(--teal)' }}>9 segments</strong> in total) to the customer database of <strong style={{ color: 'var(--teal)' }}>32,571</strong> customers revealed distinct behavioral segments with a K-Means silhouette score of <strong style={{ color: 'var(--teal)' }}>0.138</strong>. Features were scaled using RobustScaler to minimize the impact of purchase frequency and LTV outliers.
             </p>
             <p>
-              Basket analysis using the Apriori algorithm was subsequently run for each cluster separately, surfacing strong product affinities (with lift scores reaching up to <strong style={{ color: 'var(--teal)' }}>9.15×</strong>) that can directly inform personalized promotion bundles and discount strategies.
+              Basket analysis using the Apriori algorithm was subsequently run for each cluster separately, surfacing strong product affinities that can directly inform personalized promotion bundles and discount strategies.
             </p>
 
             <ul className="insight-list" style={{ marginTop: '1.25rem' }}>
               {[
-                '35.6% of customers are Loyal Core Spenders — the largest segment and primary revenue drivers',
-                '20.4% are Vegans — healthy lifestyle focus, buying vegetables and organic produce (Coupon: lima5)',
-                '17.4% are Bargain Hunters — promo-driven — higher complaints & promotion focus',
-                '9.6% are Karens — critical segment with the highest rate of customer complaints and churn risk',
-                '6.7% are Tech Enthusiasts & 3.8% are Gamers — evening shoppers buying electronics and entertainment',
-                '6.5% are Big Families — high transaction variety and largest dependants count',
-                'Airpods + Iphone 10 → Energy Drink + Bluetooth Headphones: highest lift rule at 9.15×',
+                '27.3% of customers belong to the Average Customer segment — the largest cohort',
+                '16.6% are Loyal Big Spenders — primary revenue drivers with the highest LTV',
+                '13.7% are Vegans — healthy lifestyle focus, buying vegetables and organic produce (Coupon: lima5)',
+                '10.7% are Karens — critical segment with the highest rate of customer complaints and churn risk',
+                '7.6% are Bargain Hunters — promo-driven — higher discount sensitivity (Coupon: lince5)',
+                '7.3% are Big Families — largest household size with 6+ dependants and bulk spending',
+                '7.1% are Tech Enthusiasts & 3.4% are Gamers — tech-driven shopping segments',
+                '6.2% are Clean and Healthy — health-focused groceries purchases',
               ].map(item => (
                 <li key={item}>
                   <span className="insight-check">✓</span>

@@ -339,9 +339,8 @@ export default function Promotions({ onVoucherChange }) {
             <div class="dashed"></div>
             
             <div style="font-size: 0.82rem; line-height: 1.45; color: #333;">
-              <div class="bold" style="color: #000;">SEGMENTATION INFO:</div>
               <div>• Purchase Propensity: ${(rec.propensity * 100).toFixed(0)}%</div>
-              <div>• Algorithm: ${rec.algorithm || 'Hierarchical (Ward, K=7)'}</div>
+              <div>• Algorithm: ${rec.algorithm || 'K-Means (k=8 + Vegans, K=9)'}</div>
             </div>
             
             <div class="dashed"></div>
@@ -447,7 +446,7 @@ export default function Promotions({ onVoucherChange }) {
                 🔍 Promotion Simulator <span className="badge badge-teal" style={{ fontSize: '0.7rem' }}>Interactive</span>
               </h3>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
-                Enter any numeric ID (0 to 32938) or test ID to dynamically compute the customer segment and cross-selling recommendations using the Hierarchical Clustering (Ward linkage) model.
+                Enter any numeric ID (0 to 32938) or test ID to dynamically compute the customer segment and cross-selling recommendations using the K-Means (RobustScaler, k=8 + Vegans) model.
               </p>
             </div>
 
@@ -711,7 +710,7 @@ export default function Promotions({ onVoucherChange }) {
                   {/* Segmentation Details */}
                   <div style={{ fontSize: '0.72rem', display: 'flex', flexDirection: 'column', gap: '2px', color: '#333' }}>
                     <div>• Purchase Propensity: <strong>{(recommendation.propensity * 100).toFixed(0)}%</strong></div>
-                    <div>• Algorithm: <strong>{recommendation.algorithm || 'Hierarchical (Ward, K=7) + Apriori'}</strong></div>
+                    <div>• Algorithm: <strong>{recommendation.algorithm || 'K-Means (k=8 + Vegans, K=9) + Apriori'}</strong></div>
                   </div>
 
                   <div className="receipt-divider" />

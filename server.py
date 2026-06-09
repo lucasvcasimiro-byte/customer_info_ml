@@ -67,27 +67,27 @@ if os.path.exists(RULES_FILE):
     print("Regras de associação carregadas com sucesso!")
 else:
     print("AVISO: Ficheiro de regras não encontrado. A inicializar vazio.")
-    cluster_rules = {str(i): [] for i in range(7)}
+    cluster_rules = {str(i): [] for i in range(9)}
 
 # 5. Mapeamento estrito dos clusters com base na análise de centróides
 # campaignItems = itens sobre os quais o desconto se aplica (devem bater com nextBestOffer)
 # items         = itens default de fallback para cross-selling (da análise de cestas)
 CLUSTER_SEGMENTS = {
     0: {
-        'segment': 'Vegans',
-        'discount': '15%',
-        'nextBestOffer': '15% off Organic Vegetables Subscription',
-        'campaignItems': ['salad', 'tomatoes', 'carrots', 'frozen vegetables'],
-        'items': ['salad', 'tomatoes', 'carrots', 'frozen vegetables'],
-        'propensity': 0.88
+        'segment': 'Bargain hunters',
+        'discount': '25%',
+        'nextBestOffer': '25% off Promotional Items',
+        'campaignItems': ['laptop', 'energy drink', 'bluetooth headphones'],
+        'items': ['laptop', 'energy drink', 'bluetooth headphones'],
+        'propensity': 0.454
     },
     1: {
-        'segment': 'Loyal core spenders',
-        'discount': '10%',
-        'nextBestOffer': '10% off Grocery Essentials',
-        'campaignItems': ['eggs', 'cereals', 'fresh bread'],
-        'items': ['eggs', 'cereals', 'fresh bread'],
-        'propensity': 0.32
+        'segment': 'Tech enthusiasts',
+        'discount': '12%',
+        'nextBestOffer': '12% off Late-Hour Electronics Deals',
+        'campaignItems': ['energy drink', 'airpods', 'gadget for tiktok streaming', 'bluetooth headphones'],
+        'items': ['energy drink', 'airpods', 'gadget for tiktok streaming', 'bluetooth headphones'],
+        'propensity': 0.79
     },
     2: {
         'segment': 'Big families (big spenders)',
@@ -98,14 +98,22 @@ CLUSTER_SEGMENTS = {
         'propensity': 0.85
     },
     3: {
-        'segment': 'Bargain hunters',
-        'discount': '25%',
-        'nextBestOffer': '25% off Promotional Items',
-        'campaignItems': ['laptop', 'energy drink', 'bluetooth headphones'],
-        'items': ['laptop', 'energy drink', 'bluetooth headphones'],
-        'propensity': 0.55
+        'segment': 'Clean and healthy',
+        'discount': '10%',
+        'nextBestOffer': '10% off Healthy & Fresh Choice Products',
+        'campaignItems': ['salad', 'tomatoes', 'carrots', 'frozen vegetables'],
+        'items': ['salad', 'tomatoes', 'carrots', 'frozen vegetables'],
+        'propensity': 0.65
     },
     4: {
+        'segment': 'Average customer',
+        'discount': '10%',
+        'nextBestOffer': '10% off Grocery Essentials',
+        'campaignItems': ['eggs', 'cereals', 'fresh bread'],
+        'items': ['eggs', 'cereals', 'fresh bread'],
+        'propensity': 0.32
+    },
+    5: {
         'segment': 'Gamers',
         'discount': '10%',
         'nextBestOffer': '10% off Gaming Snack Bundles',
@@ -113,7 +121,15 @@ CLUSTER_SEGMENTS = {
         'items': ['airpods', 'iphone 10', 'energy drink', 'bluetooth headphones'],
         'propensity': 0.77
     },
-    5: {
+    6: {
+        'segment': 'Loyal big spenders',
+        'discount': '10%',
+        'nextBestOffer': '10% off Grocery Essentials',
+        'campaignItems': ['eggs', 'cereals', 'fresh bread'],
+        'items': ['eggs', 'cereals', 'fresh bread'],
+        'propensity': 0.32
+    },
+    7: {
         'segment': 'Karens',
         'discount': '10%',
         'nextBestOffer': '10% off Next Purchase & Priority Support',
@@ -121,13 +137,13 @@ CLUSTER_SEGMENTS = {
         'items': ['napkins', 'babies food', 'cooking oil'],
         'propensity': 0.65
     },
-    6: {
-        'segment': 'Tech enthusiasts',
-        'discount': '12%',
-        'nextBestOffer': '12% off Late-Hour Electronics Deals',
-        'campaignItems': ['energy drink', 'airpods', 'gadget for tiktok streaming', 'bluetooth headphones'],
-        'items': ['energy drink', 'airpods', 'gadget for tiktok streaming', 'bluetooth headphones'],
-        'propensity': 0.79
+    8: {
+        'segment': 'Vegans',
+        'discount': '15%',
+        'nextBestOffer': '15% off Organic Vegetables Subscription',
+        'campaignItems': ['salad', 'tomatoes', 'carrots', 'frozen vegetables'],
+        'items': ['salad', 'tomatoes', 'carrots', 'frozen vegetables'],
+        'propensity': 0.88
     }
 }
 
@@ -148,7 +164,7 @@ def recommend_items(cluster_idx, basket_items):
                     
     # Camada 2: Regras dos outros clusters (caso falte recomendações)
     if len(matched_consequents) < 3:
-        for c_id in range(7):
+        for c_id in range(9):
             if c_id == cluster_idx:
                 continue
             other_rules = cluster_rules.get(str(c_id), [])
@@ -245,9 +261,9 @@ def get_recommendations():
     has_meat = any(x in basket_lower for x in ['ground beef', 'chicken', 'salmon', 'bacon', 'beef', 'fish', 'shrimp', 'pork'])
     has_electronics = any(x in basket_lower for x in ['ring light', 'airpods', 'headphones', 'earbuds', 'samsung', 'galaxy', 'iphone'])
     
-    # Adaptação dinâmica para o Cluster 0 (Vegans)
+    # Adaptação dinâmica para o Cluster 8 (Vegans)
     campaign_items = profile['campaignItems'][:]
-    if cluster_idx == 0:
+    if cluster_idx == 8:
         if has_meat:
             segment_name = 'Vegan / Flexitarian'
             next_best_offer = '15% off Fresh Produce & Protein Bundle'
@@ -273,9 +289,9 @@ def get_recommendations():
         'basket': basket_found,
         'campaignItems': campaign_items,         # itens sobre os quais o desconto se aplica
         'items': cross_sell_items,               # sugestões adicionais de cross-selling
-        'propensity': float(row['percentage_of_products_bought_promotion'] if cluster_idx == 3 else profile['propensity']),
+        'propensity': float(row['percentage_of_products_bought_promotion'] if cluster_idx == 0 else profile['propensity']),
         'totalSpend': float(row['total_spend']),
-        'algorithm': 'RobustScaler Ward (K=7) + Apriori (Real-Time)'
+        'algorithm': 'RobustScaler K-Means (K=9) + Apriori (Real-Time)'
     }
     return jsonify(response)
 

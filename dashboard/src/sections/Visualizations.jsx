@@ -4,16 +4,12 @@
  * Charts included:
  *   1. Elbow Method (WCSS vs k) — inertia curve
  *   2. Silhouette Score vs k    — line + bar
- *   3. UMAP 2D Scatter Plot     — cluster projection
- *   4. Silhouette by Cluster    — horizontal bar
  *
  */
 import { useMemo } from 'react'
 import SectionHeader from '../components/common/SectionHeader'
 import InteractivePlot from '../components/common/InteractivePlot'
-import { elbowData, silhouetteByK, umapData, clusters } from '../data/clusterData'
-
-const CLUSTER_COLORS = ['#f59e0b', '#3b82f6', '#2dd4bf', '#f43f5e', '#a78bfa', '#06b6d4', '#10b981']
+import { elbowData, silhouetteByK, clusters } from '../data/clusterData'
 
 export default function Visualizations() {
 
@@ -31,14 +27,14 @@ export default function Visualizations() {
       hovertemplate: '<b>k = %{x}</b><br>WCSS: %{y:,.0f}<extra></extra>',
     },
     {
-      // Vertical marker at the "elbow" — k=7
+      // Vertical marker at the "elbow" — k=8
       type:  'scatter',
       mode:  'markers',
-      x:     [7],
-      y:     [elbowData.wcss[elbowData.k.indexOf(7)]],
+      x:     [8],
+      y:     [elbowData.wcss[elbowData.k.indexOf(8)]],
       name:  '★ Optimal k',
       marker:{ color: '#f59e0b', size: 14, symbol: 'star', line: { color: '#fff', width: 1.5 } },
-      hovertemplate: '<b>Optimal k = 7</b><br>WCSS: %{y:,.0f}<extra></extra>',
+      hovertemplate: '<b>Optimal k = 8</b><br>WCSS: %{y:,.0f}<extra></extra>',
     },
   ], [])
 
@@ -56,7 +52,7 @@ export default function Visualizations() {
       y:           silhouetteByK.scores,
       name:        'Silhouette Score',
       marker: {
-        color:   silhouetteByK.k.map(k => k === 7 ? '#7c3aed' : '#2dd4bf'),
+        color:   silhouetteByK.k.map(k => k === 8 ? '#7c3aed' : '#2dd4bf'),
         opacity: 0.85,
       },
       hovertemplate: '<b>k = %{x}</b><br>Silhouette: %{y:.3f}<extra></extra>',
@@ -77,24 +73,6 @@ export default function Visualizations() {
     rows:    silhouetteByK.k.map((k, i) => [k, silhouetteByK.scores[i]]),
   }
 
-  // ── 3. UMAP 2D projection scatter ─────────────────────────────────────────
-  const umapTraces = useMemo(() =>
-    umapData.map((group, i) => ({
-      type:        'scatter',
-      mode:        'markers',
-      name:        clusters[i]?.name || `Cluster ${group.cluster}`,
-      x:           group.x,
-      y:           group.y,
-      marker: {
-        color:   CLUSTER_COLORS[group.cluster],
-        size:    7,
-        opacity: 0.75,
-        line:    { color: 'rgba(0,0,0,0.3)', width: 0.5 },
-      },
-      hovertemplate: `<b>${clusters[i]?.name}</b><br>UMAP1: %{x:.2f}<br>UMAP2: %{y:.2f}<extra></extra>`,
-    }))
-  , [])
-
   return (
     <section id="visualizations" className="section">
       <div className="container">
@@ -103,7 +81,7 @@ export default function Visualizations() {
           {/* 1 — Elbow Method */}
           <InteractivePlot
             title="Elbow Method — WCSS vs k"
-            description="Within-Cluster Sum of Squares (inertia) decreases as k grows. The 'elbow' at k=7 (★) marks the point of diminishing returns — our optimal cluster count."
+            description="Within-Cluster Sum of Squares (inertia) decreases as k grows. The 'elbow' at k=8 (★) marks the point of diminishing returns — our optimal cluster count."
             data={elbowTraces}
             layout={{
               xaxis: { title: { text: 'Number of Clusters (k)', font: { color: '#64748b' } }, dtick: 1 },
@@ -113,14 +91,14 @@ export default function Visualizations() {
             csvData={elbowCsv}
           >
             <p>
-              <strong>Interpretation:</strong> The Elbow Method plots WCSS (Within-Cluster Sum of Squares) against cluster count (<em>k</em>). WCSS measures cluster compactness. The optimal number of clusters is identified at the "elbow" point (<em>k</em>=7), where adding more clusters yields diminishing returns in variance explanation.
+              <strong>Interpretation:</strong> The Elbow Method plots WCSS (Within-Cluster Sum of Squares) against cluster count (<em>k</em>). WCSS measures cluster compactness. The optimal number of clusters is identified at the "elbow" point (<em>k</em>=8), where adding more clusters yields diminishing returns in variance explanation.
             </p>
           </InteractivePlot>
 
           {/* 2 — Silhouette Score vs k */}
           <InteractivePlot
             title="Silhouette Score vs k"
-            description="Silhouette score measures cluster cohesion and separation (−1 to 1, higher is better). k=7 achieves 0.132, which balances segment separation and model complexity. (Coupon: lince5)"
+            description="Silhouette score measures cluster cohesion and separation (−1 to 1, higher is better). k=8 achieves 0.138, which balances segment separation and model complexity."
             data={silTraces}
             layout={{
               xaxis: { title: { text: 'Number of Clusters (k)', font: { color: '#64748b' } }, dtick: 1 },
@@ -131,28 +109,9 @@ export default function Visualizations() {
             csvData={silCsv}
           >
             <p>
-              <strong>Interpretation:</strong> The Silhouette Coefficient evaluates clustering quality by measuring how well each customer fits their assigned cluster (cohesion) versus neighboring clusters (separation), ranging from -1 to +1. Our peak score at <em>k</em>=7 indicates optimal segment boundaries.
+              <strong>Interpretation:</strong> The Silhouette Coefficient evaluates clustering quality by measuring how well each customer fits their assigned cluster (cohesion) versus neighboring clusters (separation), ranging from -1 to +1. Our peak score at <em>k</em>=8 indicates optimal segment boundaries.
             </p>
           </InteractivePlot>
-
-          {/* 3 — UMAP 2D projection scatter (wide) */}
-          <div className="viz-wide">
-            <InteractivePlot
-              title="UMAP 2D Projection — Cluster Separation"
-              description="Customer feature space reduced to 2 UMAP coordinates (UMAP1, UMAP2). Well-separated clusters indicate meaningful segmentation. Each point is one customer."
-              data={umapTraces}
-              layout={{
-                xaxis: { title: { text: 'UMAP Coordinate 1', font: { color: '#64748b' } } },
-                yaxis: { title: { text: 'UMAP Coordinate 2', font: { color: '#64748b' } } },
-                showlegend: true,
-              }}
-              height={480}
-            >
-              <p>
-                <strong>Interpretation:</strong> UMAP projects our high-dimensional customer features onto a 2D map while preserving local and global structures. The clear spatial separation between the colored islands confirms that the 7 customer segments are distinct and well-defined.
-              </p>
-            </InteractivePlot>
-          </div>
 
         </div>
       </div>
