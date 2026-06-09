@@ -41,13 +41,6 @@ const sections = [
     emoji: '🛒',
     bg: 'rgba(192,57,43,0.15)',
   },
-  {
-    id: 'future',
-    label: 'Future Analysis',
-    desc: 'Upcoming features & roadmap',
-    emoji: '🚀',
-    bg: 'rgba(244,63,94,0.12)',
-  },
 ]
 
 export default function CartNavigation({ onNavigate, activeSection, onOpenWheel, onOpenSupport, onOpenAbout }) {

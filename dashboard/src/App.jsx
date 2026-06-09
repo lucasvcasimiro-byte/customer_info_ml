@@ -15,12 +15,11 @@ import Clustering     from './sections/Clustering'
 import Visualizations from './sections/Visualizations'
 import Promotions     from './sections/Promotions'
 import Store          from './sections/Store'
-import Future         from './sections/Future'
 import { CaptchaModal, WheelModal, SupportModal, AboutUsModal } from './components/InteractiveModals'
 import EvaluationForm from './components/EvaluationForm'
 
 // Section IDs must match the ids used in CartNavigation
-const SECTION_IDS = ['overview', 'clustering', 'visualizations', 'promotions', 'store', 'future']
+const SECTION_IDS = ['overview', 'clustering', 'visualizations', 'promotions', 'store']
 
 export default function App() {
   // One ref per section, keyed by section id
@@ -59,7 +58,6 @@ export default function App() {
         {activeSection === 'visualizations' && <Visualizations />}
         {activeSection === 'promotions' && <Promotions onVoucherChange={setActiveVoucher} />}
         {activeSection === 'store' && <Store activeVoucher={activeVoucher} />}
-        {activeSection === 'future' && <Future />}
         <EvaluationForm />
       </main>
 
