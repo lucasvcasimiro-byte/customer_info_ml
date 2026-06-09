@@ -928,18 +928,169 @@ export default function Promotions({ onVoucherChange }) {
           Segment Discount Strategy
         </h3>
         <div className="grid-4">
-          {discountTiers.map((tier, i) => (
-            <div key={i} className="card" style={{ textAlign: 'center', animationDelay: `${i * 0.1}s` }}>
-              <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>{tier.icon}</div>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.25rem' }}>
-                {tier.segment}
+          {discountTiers.map((tier, i) => {
+            const activeSegment = recommendation && !recommendation.notFound ? recommendation.segment : null;
+            const hasActiveSearch = activeSegment !== null;
+            const isActive = activeSegment === tier.segment;
+
+            const cardStyle = {
+              textAlign: 'center',
+              animationDelay: `${i * 0.1}s`,
+              position: 'relative',
+              transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+              ...(hasActiveSearch ? (
+                isActive ? {
+                  border: '2px solid var(--purple-light)',
+                  boxShadow: '0 0 20px rgba(167, 139, 250, 0.45)',
+                  transform: 'scale(1.06)',
+                  background: 'var(--bg-elevated)',
+                  zIndex: 2,
+                } : {
+                  opacity: 0.35,
+                  transform: 'scale(0.95)',
+                  filter: 'grayscale(30%)',
+                }
+              ) : {})
+            };
+
+            return (
+              <div key={i} className="card" style={cardStyle}>
+                {isActive && (
+                  <span style={{
+                    position: 'absolute',
+                    top: '0.6rem',
+                    right: '0.6rem',
+                    fontSize: '0.62rem',
+                    fontWeight: 700,
+                    background: 'var(--purple-light)',
+                    color: '#fff',
+                    padding: '0.2rem 0.5rem',
+                    borderRadius: '4px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.05em',
+                    boxShadow: '0 0 8px rgba(167, 139, 250, 0.6)',
+                  }}>
+                    Matched
+                  </span>
+                )}
+                <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>{tier.icon}</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '0.95rem', marginBottom: '0.25rem' }}>
+                  {tier.segment}
+                </div>
+                <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.6rem', fontWeight: 800, color: 'var(--amber)', margin: '0.5rem 0' }}>
+                  {tier.discount}
+                </div>
+                <span className="badge badge-amber" style={{ marginBottom: '0.75rem' }}>{tier.type}</span>
+                
+                {/* Associated Products list */}
+                <div style={{ marginTop: '0.75rem', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.75rem' }}>
+                  <span style={{ fontSize: '0.65rem', color: 'var(--text-muted)', display: 'block', marginBottom: '0.4rem', fontWeight: 600, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+                    Associated Products
+                  </span>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.25rem', justifyContent: 'center' }}>
+                    {tier.items?.map((prod, idx) => (
+                      <span key={idx} style={{
+                        fontSize: '0.65rem',
+                        background: 'rgba(255, 255, 255, 0.04)',
+                        border: '1px solid var(--border-soft)',
+                        padding: '0.12rem 0.4rem',
+                        borderRadius: '4px',
+                        color: 'var(--text-secondary)'
+                      }}>
+                        {prod}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div style={{ fontFamily: 'var(--font-display)', fontSize: '1.6rem', fontWeight: 800, color: 'var(--amber)', margin: '0.5rem 0' }}>
-                {tier.discount}
+            )
+          })}
+        </div>
+
+        <div className="divider" style={{ margin: '3rem 0' }} />
+
+        {/* ── Customer Segment Promotions Strategy ────────────────── */}
+        <div className="card" style={{ background: 'var(--bg-surface)', border: '1px solid var(--border-soft)', padding: '2.5rem', textAlign: 'left' }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.4rem', fontWeight: 800, marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+            🎯 Customer Segment Promotions Strategy
+          </h3>
+          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: 1.6 }}>
+            Based on the Apriori association rules derived from actual basket co-occurrences, we have designed targeted promotions for each customer segment. These promotions leverage high-lift item pairings to drive cross-selling and increase average order value.
+          </p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1.5rem' }}>
+            
+            {/* Gamers & Tech Enthusiasts */}
+            <div className="card" style={{ background: 'rgba(255, 255, 255, 0.02)', padding: '1.5rem', border: '1px solid var(--border-soft)' }}>
+              <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', color: 'var(--purple-light)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                🎮 Gamers & Tech Enthusiasts
+              </h4>
+              <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
+                <strong>Key Associations:</strong> Energy Drinks ↔ AirPods ↔ Bluetooth Headphones ↔ Laptops
+              </p>
+              <div style={{ background: 'rgba(167, 139, 250, 0.05)', padding: '0.75rem 1rem', borderRadius: '6px', borderLeft: '3px solid var(--purple-light)', fontSize: '0.8rem', lineHeight: 1.5 }}>
+                <strong>Promotion:</strong> "Level Up Your Setup" <br />
+                <strong>Offer:</strong> Buy any premium wireless audio device (AirPods or Bluetooth Headphones) and get a 12-pack of Energy Drinks for 50% off.
               </div>
-              <span className="badge badge-amber">{tier.type}</span>
             </div>
-          ))}
+
+            {/* Vegans */}
+            <div className="card" style={{ background: 'rgba(255, 255, 255, 0.02)', padding: '1.5rem', border: '1px solid var(--border-soft)' }}>
+              <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', color: 'var(--teal)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                🥗 Vegans
+              </h4>
+              <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
+                <strong>Key Associations:</strong> Salad ↔ Asparagus ↔ Avocado ↔ Spinach ↔ Tomatoes
+              </p>
+              <div style={{ background: 'rgba(45, 212, 191, 0.05)', padding: '0.75rem 1rem', borderRadius: '6px', borderLeft: '3px solid var(--teal)', fontSize: '0.8rem', lineHeight: 1.5 }}>
+                <strong>Promotion:</strong> "Fresh Harvest Bundle" <br />
+                <strong>Offer:</strong> 15% off a "Green Core" bundle (Asparagus, Spinach, and Tomatoes) when purchased alongside any pre-made Salad or Avocado.
+              </div>
+            </div>
+
+            {/* Big Families */}
+            <div className="card" style={{ background: 'rgba(255, 255, 255, 0.02)', padding: '1.5rem', border: '1px solid var(--border-soft)' }}>
+              <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', color: '#60a5fa', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                👨‍👩‍👧‍👦 Big Families
+              </h4>
+              <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
+                <strong>Key Associations:</strong> Dog Food ↔ Babies Food ↔ Napkins ↔ Toilet Paper
+              </p>
+              <div style={{ background: 'rgba(59, 130, 246, 0.05)', padding: '0.75rem 1rem', borderRadius: '6px', borderLeft: '3px solid #3b82f6', fontSize: '0.8rem', lineHeight: 1.5 }}>
+                <strong>Promotion:</strong> "Family & Furry Friends Stock-Up" <br />
+                <strong>Offer:</strong> Buy 2 large bags of Pet Food, get a jumbo pack of household paper goods (Napkins/Toilet Paper) or Baby Food for 20% off.
+              </div>
+            </div>
+
+            {/* Clean & Healthy / Karens */}
+            <div className="card" style={{ background: 'rgba(255, 255, 255, 0.02)', padding: '1.5rem', border: '1px solid var(--border-soft)' }}>
+              <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', color: 'var(--rose)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                🧼 Clean & Healthy / Karens
+              </h4>
+              <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
+                <strong>Key Associations:</strong> Deodorant ↔ Shampoo ↔ Shower Gel ↔ Toothpaste
+              </p>
+              <div style={{ background: 'rgba(244, 63, 94, 0.05)', padding: '0.75rem 1rem', borderRadius: '6px', borderLeft: '3px solid var(--rose)', fontSize: '0.8rem', lineHeight: 1.5 }}>
+                <strong>Promotion:</strong> "Premium Personal Care Package" <br />
+                <strong>Offer:</strong> Buy any 3 daily personal care items (Shampoo, Shower Gel, Deodorant) and get a free travel-size premium toothpaste or 10% off the total.
+              </div>
+            </div>
+
+            {/* Average Customers & Loyal Big Spenders */}
+            <div className="card" style={{ background: 'rgba(255, 255, 255, 0.02)', padding: '1.5rem', border: '1px solid var(--border-soft)', gridColumn: 'span 2' }}>
+              <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', color: 'var(--amber)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                🍞 Average Customers & Loyal Big Spenders
+              </h4>
+              <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.75rem' }}>
+                <strong>Key Associations:</strong> Eggs ↔ Butter ↔ Honey ↔ Cereals ↔ Fresh Bread
+              </p>
+              <div style={{ background: 'rgba(245, 158, 11, 0.05)', padding: '0.75rem 1rem', borderRadius: '6px', borderLeft: '3px solid var(--amber)', fontSize: '0.8rem', lineHeight: 1.5 }}>
+                <strong>Promotion:</strong> "Morning Essentials Weekend Special" <br />
+                <strong>Offer:</strong> The Ultimate Breakfast Bundle — Fresh Bread, Butter, and a dozen Eggs for a fixed discounted price (e.g., €5.99).
+              </div>
+            </div>
+
+          </div>
         </div>
 
       </div>
