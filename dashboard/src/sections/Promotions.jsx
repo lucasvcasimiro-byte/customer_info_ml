@@ -13,7 +13,7 @@
 import { useState, useMemo } from 'react'
 import SectionHeader from '../components/common/SectionHeader'
 import InteractivePlot from '../components/common/InteractivePlot'
-import { associationRules, liftChartData, discountTiers, sampleRecommendations } from '../data/basketData'
+import { liftChartData, discountTiers, sampleRecommendations } from '../data/basketData'
 
 // Função auxiliar de preço case-insensitive para os 164 produtos
 const getItemPrice = (item) => {
@@ -107,7 +107,6 @@ const getItemPrice = (item) => {
 export default function Promotions({ onVoucherChange }) {
   const [customerId, setCustomerId] = useState('')
   const [recommendation, setRecommendation] = useState(null)
-  const [sortBy, setSortBy] = useState('lift')
   
   // Interactive send panel states
   const [showSendPanel, setShowSendPanel] = useState(false)
@@ -119,11 +118,6 @@ export default function Promotions({ onVoucherChange }) {
   // Real-time API connection states
   const [isSearchingRealtime, setIsSearchingRealtime] = useState(false)
   const [isRealtimeApiActive, setIsRealtimeApiActive] = useState(false)
-
-  // Sort rules table
-  const sortedRules = useMemo(() =>
-    [...associationRules].sort((a, b) => b[sortBy] - a[sortBy])
-  , [sortBy])
 
   // Mock/Real-time customer lookup
   const handleLookup = async () => {
@@ -864,61 +858,6 @@ export default function Promotions({ onVoucherChange }) {
               TODO: Connect to a real recommendation model. Replace <code>sampleRecommendations</code> in basketData.js with model outputs.
             </p>
           </div>
-        </div>
-
-        <div className="divider" />
-
-        {/* ── Association rules table ───────────────────────────── */}
-        <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.15rem', marginBottom: '0.5rem' }}>
-          Top Association Rules
-        </h3>
-        <p style={{ fontSize: '0.82rem', color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
-          Sort by any metric. Support = how often the rule occurs. Confidence = precision. Lift = strength above random.
-        </p>
-
-        {/* Sort controls */}
-        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1rem' }}>
-          {['lift','confidence','support'].map(col => (
-            <button
-              key={col}
-              id={`sort-${col}`}
-              className={`btn ${sortBy === col ? 'btn-primary' : 'btn-ghost'} btn-sm`}
-              onClick={() => setSortBy(col)}
-            >
-              Sort by {col}
-            </button>
-          ))}
-        </div>
-
-        <div className="card" style={{ padding: 0, overflow: 'hidden' }}>
-          <table className="promo-rules-table">
-            <thead>
-              <tr>
-                <th>Antecedents → Consequents</th>
-                <th>Support</th>
-                <th>Confidence</th>
-                <th>Lift</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sortedRules.map((rule, i) => (
-                <tr key={i}>
-                  <td style={{ color: 'var(--text-primary)', fontWeight: 500 }}>
-                    <span style={{ color: 'var(--text-muted)' }}>{rule.antecedents}</span>
-                    {' → '}
-                    <span style={{ color: 'var(--purple-light)', fontWeight: 600 }}>{rule.consequents}</span>
-                  </td>
-                  <td>{(rule.support * 100).toFixed(1)}%</td>
-                  <td>{(rule.confidence * 100).toFixed(0)}%</td>
-                  <td>
-                    <span className={`lift-badge ${rule.lift > 3 ? 'lift-high' : rule.lift > 2 ? 'lift-medium' : 'lift-low'}`}>
-                      {rule.lift.toFixed(2)}×
-                    </span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
         </div>
 
         <div className="divider" />
