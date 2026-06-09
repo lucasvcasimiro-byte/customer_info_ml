@@ -15,5 +15,6 @@ contextily
 geopandas
 pyproj
 shapely
-
+flask
+flask-cors
 mlxtend
