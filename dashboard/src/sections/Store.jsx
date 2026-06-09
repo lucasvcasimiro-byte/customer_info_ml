@@ -18,7 +18,7 @@ function capitalize(str) {
 // ═══════════════════════════════════════════════════════════════════════════
 export default function Store({ activeVoucher }) {
   const [search,         setSearch]        = useState('')
-  const [activeCategory, setCategory]     = useState('Todas')
+  const [activeCategory, setCategory]     = useState('All')
   const [priceFilter,    setPriceFilter]   = useState(null)   // PRICE_RANGES index | null
   const [onlyDiscount,   setOnlyDiscount]  = useState(false)
   const [onlyFavorites,  setOnlyFavorites] = useState(false)
@@ -48,11 +48,11 @@ export default function Store({ activeVoucher }) {
     const code = couponInput.trim().toLowerCase()
     if (!code) return
     if (code !== 'lucas5' && code !== 'lima5' && code !== 'lince5') {
-      setCouponError('Cupão inválido!')
+      setCouponError('Invalid coupon!')
       return
     }
     if (appliedCoupons.has(code)) {
-      setCouponError('Cupão já aplicado!')
+      setCouponError('Coupon already applied!')
       return
     }
     setAppliedCoupons(prev => {
@@ -106,7 +106,7 @@ export default function Store({ activeVoucher }) {
     return activeVoucher.basket.map(itemName => {
       const matched = PRODUCTS.find(p => p.id.toLowerCase() === itemName.toLowerCase())
       if (matched) return matched
-      return { id: itemName.toLowerCase(), name: itemName, category: 'Despensa', price: 1.99 }
+      return { id: itemName.toLowerCase(), name: itemName, category: 'Pantry', price: 1.99 }
     })
   }, [activeVoucher])
 
@@ -142,7 +142,7 @@ export default function Store({ activeVoucher }) {
     return PRODUCTS.filter(p => {
       const q = search.toLowerCase()
       if (q && !p.name.toLowerCase().includes(q) && !p.id.toLowerCase().includes(q)) return false
-      if (activeCategory !== 'Todas' && p.category !== activeCategory) return false
+      if (activeCategory !== 'All' && p.category !== activeCategory) return false
       if (priceFilter !== null) {
         const { min, max } = PRICE_RANGES[priceFilter]
         if (p.price < min || p.price > max) return false
@@ -214,7 +214,7 @@ export default function Store({ activeVoucher }) {
           <div style={{ flex: 1, position: 'relative' }}>
             <input
               type="text"
-              placeholder="O que procura?"
+              placeholder="What are you looking for?"
               value={search}
               onChange={e => setSearch(e.target.value)}
               style={{
@@ -239,7 +239,7 @@ export default function Store({ activeVoucher }) {
               transition: 'all 0.2s', whiteSpace: 'nowrap',
             }}
           >
-            🛒 Carrinho
+            🛒 Cart
             {cartCount > 0 && (
               <span style={{
                 background: '#c0392b', color: '#fff', borderRadius: '50%',
@@ -272,9 +272,9 @@ export default function Store({ activeVoucher }) {
             maxWidth: '1400px', margin: '0 auto',
           }}>
             <span style={{ color: 'rgba(255,255,255,0.75)', fontSize: '0.82rem' }}>
-              💡 Pesquisa o teu ID de cliente na secção{' '}
-              <strong style={{ color: '#ffe082' }}>Promoções</strong>{' '}
-              para ativar o teu voucher personalizado!
+              💡 Search for your customer ID in the{' '}
+              <strong style={{ color: '#ffe082' }}>Promotions</strong>{' '}
+              section to activate your personalized voucher!
             </span>
           </div>
         )}
@@ -304,12 +304,12 @@ export default function Store({ activeVoucher }) {
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <span style={{ fontSize: '1.2rem' }}>🏷️</span>
                 <span style={{ fontWeight: 700, color: onlyDiscount ? '#fff' : 'var(--text-primary)', fontSize: '0.9rem' }}>
-                  Só com Desconto
+                  Only with Discount
                 </span>
               </div>
               {onlyDiscount && (
                 <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.85)', marginTop: '0.35rem' }}>
-                  A mostrar {activeVoucher.discount} off nos produtos da campanha
+                  Showing {activeVoucher.discount} off on campaign products
                 </div>
               )}
             </div>
@@ -329,12 +329,12 @@ export default function Store({ activeVoucher }) {
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
               <span style={{ fontSize: '1.2rem' }}>❤️</span>
               <span style={{ fontWeight: 700, color: onlyFavorites ? '#fff' : 'var(--text-primary)', fontSize: '0.9rem' }}>
-                Os meus Favoritos
+                My Favorites
               </span>
             </div>
             {onlyFavorites && (
               <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.85)', marginTop: '0.35rem' }}>
-                A mostrar os teus favoritos ({favorites.size})
+                Showing your favorites ({favorites.size})
               </div>
             )}
           </div>
@@ -345,7 +345,7 @@ export default function Store({ activeVoucher }) {
             border: '1px solid var(--border-subtle)',
           }}>
             <div style={{ fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.75rem', fontSize: '0.88rem' }}>
-              📦 Categoria
+              📦 Category
             </div>
             {CATEGORIES.map(cat => (
               <button
@@ -361,7 +361,7 @@ export default function Store({ activeVoucher }) {
                   transition: 'all 0.15s',
                 }}
               >
-                {cat === 'Todas' ? '🛒 Todas' : cat}
+                {cat === 'All' ? '🛒 All' : cat}
               </button>
             ))}
           </div>
@@ -372,7 +372,7 @@ export default function Store({ activeVoucher }) {
             border: '1px solid var(--border-subtle)',
           }}>
             <div style={{ fontWeight: 700, color: 'var(--text-primary)', marginBottom: '0.75rem', fontSize: '0.88rem' }}>
-              💶 Preço
+              💶 Price
             </div>
             <button
               onClick={() => setPriceFilter(null)}
@@ -386,7 +386,7 @@ export default function Store({ activeVoucher }) {
                 transition: 'all 0.15s',
               }}
             >
-              Todos os preços
+              All prices
             </button>
             {PRICE_RANGES.map((r, i) => (
               <button
@@ -425,10 +425,10 @@ export default function Store({ activeVoucher }) {
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
                 <div>
                   <h4 style={{ fontFamily: 'var(--font-display)', fontSize: '0.98rem', fontWeight: 800, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: '0.4rem', margin: 0 }}>
-                    📋 Histórico de Compras (Fatura #{activeVoucher.invoiceId || 'N/A'})
+                    📋 Purchase History (Invoice #{activeVoucher.invoiceId || 'N/A'})
                   </h4>
                   <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '2px', marginBottom: 0 }}>
-                    Artigos adquiridos na última transação do cliente <strong>{activeVoucher.customerName || `C-${activeVoucher.customerId}`}</strong>.
+                    Items purchased in the last transaction of customer <strong>{activeVoucher.customerName || `C-${activeVoucher.customerId}`}</strong>.
                   </p>
                 </div>
                 <button
@@ -449,7 +449,7 @@ export default function Store({ activeVoucher }) {
                   onMouseEnter={e => e.currentTarget.style.opacity = '0.9'}
                   onMouseLeave={e => e.currentTarget.style.opacity = '1'}
                 >
-                  🔁 Repetir Carrinho
+                  🔁 Repeat Cart
                 </button>
               </div>
 
@@ -480,7 +480,7 @@ export default function Store({ activeVoucher }) {
                       e.currentTarget.style.borderColor = 'var(--border-subtle)'
                       e.currentTarget.style.color = 'var(--text-secondary)'
                     }}
-                    title="Adicionar artigo ao carrinho"
+                    title="Add item to cart"
                   >
                     <span>{capitalize(prod.name)}</span>
                     <span style={{ fontWeight: 700, color: 'var(--text-muted)' }}>€{prod.price.toFixed(2)}</span>
@@ -493,10 +493,10 @@ export default function Store({ activeVoucher }) {
 
           {/* Result count */}
           <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '1rem' }}>
-            {filtered.length} produto{filtered.length !== 1 ? 's' : ''} encontrado{filtered.length !== 1 ? 's' : ''}
+            {filtered.length} product{filtered.length !== 1 ? 's' : ''} found
             {activeVoucher && onlyDiscount && (
               <span style={{ marginLeft: '0.5rem', color: '#e74c3c', fontWeight: 700 }}>
-                · Filtro: {activeVoucher.discount} OFF ativo
+                · Filter: {activeVoucher.discount} OFF active
               </span>
             )}
           </div>
@@ -506,8 +506,8 @@ export default function Store({ activeVoucher }) {
               textAlign: 'center', padding: '4rem 2rem',
               color: 'var(--text-muted)', fontSize: '1.1rem',
             }}>
-              🔍 Nenhum produto encontrado.<br />
-              <span style={{ fontSize: '0.9rem' }}>Tenta outro filtro ou pesquisa.</span>
+              🔍 No products found.<br />
+              <span style={{ fontSize: '0.9rem' }}>Try another filter or search query.</span>
             </div>
           ) : (
             <div style={{
@@ -588,7 +588,7 @@ export default function Store({ activeVoucher }) {
                         e.currentTarget.style.transform = ''
                         e.currentTarget.style.background = 'rgba(20,24,50,0.6)'
                       }}
-                      title={isFav ? "Remover dos favoritos" : "Adicionar aos favoritos"}
+                      title={isFav ? "Remove from favorites" : "Add to favorites"}
                     >
                       {isFav ? '❤️' : '🤍'}
                     </button>
@@ -666,7 +666,7 @@ export default function Store({ activeVoucher }) {
                         onMouseEnter={e => e.currentTarget.style.opacity = '0.85'}
                         onMouseLeave={e => e.currentTarget.style.opacity = '1'}
                       >
-                        {inCart ? `✓ Adicionado (${inCart.qty})` : '+ Adicionar'}
+                        {inCart ? `✓ Added (${inCart.qty})` : '+ Add to Cart'}
                       </button>
                     </div>
                   </div>
@@ -693,7 +693,7 @@ export default function Store({ activeVoucher }) {
             background: 'linear-gradient(135deg,#c0392b,#e74c3c)',
           }}>
             <span style={{ fontWeight: 900, fontSize: '1.1rem', color: '#fff' }}>
-              🛒 Carrinho ({cartCount})
+              🛒 Cart ({cartCount})
             </span>
             <button
               onClick={() => setCartOpen(false)}
@@ -713,7 +713,7 @@ export default function Store({ activeVoucher }) {
             }}>
               <span style={{ fontSize: '1rem' }}>🎟️</span>
               <span style={{ fontSize: '0.82rem', color: '#c0392b', fontWeight: 600 }}>
-                Voucher aplicado — {activeVoucher.discount} off em produtos elegíveis
+                Voucher applied — {activeVoucher.discount} off on eligible products
               </span>
             </div>
           )}
@@ -725,8 +725,8 @@ export default function Store({ activeVoucher }) {
                 textAlign: 'center', padding: '3rem 1rem',
                 color: 'var(--text-muted)', fontSize: '0.95rem',
               }}>
-                🛒 O carrinho está vazio.<br />
-                <span style={{ fontSize: '0.85rem' }}>Adiciona produtos para começar!</span>
+                🛒 The cart is empty.<br />
+                <span style={{ fontSize: '0.85rem' }}>Add products to start shopping!</span>
               </div>
             ) : (
               cart.map(({ product, qty }) => {
@@ -793,7 +793,7 @@ export default function Store({ activeVoucher }) {
                               €{discLineTotal.toFixed(2)}
                             </div>
                             <div style={{ fontSize: '0.72rem', color: '#e74c3c' }}>
-                              -€{lineSaving.toFixed(2)} poupança
+                              -€{lineSaving.toFixed(2)} savings
                             </div>
                           </>
                         ) : (
@@ -819,12 +819,12 @@ export default function Store({ activeVoucher }) {
               {/* Coupon Code Input */}
               <div style={{ marginBottom: '0.85rem' }}>
                 <label style={{ fontSize: '0.7rem', color: 'var(--text-muted)', fontWeight: 700, display: 'block', marginBottom: '0.3rem', letterSpacing: '0.5px' }}>
-                  🎫 APLICAR CUPÃO (lucas5, lima5, lince5)
+                  🎫 APPLY COUPON (lucas5, lima5, lince5)
                 </label>
                 <div style={{ display: 'flex', gap: '0.4rem' }}>
                   <input
                     type="text"
-                    placeholder="Código (ex: lucas5)"
+                    placeholder="Code (e.g., lucas5)"
                     value={couponInput}
                     onChange={e => setCouponInput(e.target.value)}
                     style={{
@@ -851,7 +851,7 @@ export default function Store({ activeVoucher }) {
                       cursor: 'pointer',
                     }}
                   >
-                    Aplicar
+                    Apply
                   </button>
                 </div>
                 {couponError && (
@@ -890,7 +890,7 @@ export default function Store({ activeVoucher }) {
 
               {/* Subtotal without discount */}
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.4rem' }}>
-                <span style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>Subtotal (sem desconto)</span>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.88rem' }}>Subtotal (before discounts)</span>
                 <span style={{ color: 'var(--text-secondary)', fontSize: '0.88rem' }}>€{cartSubtotal.toFixed(2)}</span>
               </div>
 
@@ -898,7 +898,7 @@ export default function Store({ activeVoucher }) {
               {cartSavings > 0 && (
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.4rem' }}>
                   <span style={{ color: '#e74c3c', fontWeight: 600, fontSize: '0.88rem' }}>
-                    🎟️ Desconto ({activeVoucher.discount})
+                    🎟️ Discount ({activeVoucher.discount})
                   </span>
                   <span style={{ color: '#e74c3c', fontWeight: 700, fontSize: '0.88rem' }}>
                     -€{cartSavings.toFixed(2)}
@@ -910,7 +910,7 @@ export default function Store({ activeVoucher }) {
               {couponSavings > 0 && (
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.4rem' }}>
                   <span style={{ color: '#10b981', fontWeight: 600, fontSize: '0.88rem' }}>
-                    🎫 Desconto Cupões (-{appliedCoupons.size * 5}%)
+                    🎫 Coupon Discount (-{appliedCoupons.size * 5}%)
                   </span>
                   <span style={{ color: '#10b981', fontWeight: 700, fontSize: '0.88rem' }}>
                     -€{couponSavings.toFixed(2)}
@@ -924,7 +924,7 @@ export default function Store({ activeVoucher }) {
               {/* Total */}
               <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1rem' }}>
                 <span style={{ fontWeight: 900, fontSize: '1.05rem', color: 'var(--text-primary)' }}>
-                  TOTAL A PAGAR
+                  TOTAL TO PAY
                 </span>
                 <span style={{ fontWeight: 900, fontSize: '1.25rem', color: 'var(--accent-primary)' }}>
                   €{finalPayableTotal.toFixed(2)}
@@ -938,7 +938,7 @@ export default function Store({ activeVoucher }) {
                   fontSize: '0.82rem', color: '#c0392b', fontWeight: 600,
                   textAlign: 'center',
                 }}>
-                  🎉 Poupaste €{cartSavings.toFixed(2)} com o voucher de {activeVoucher.discount}!
+                  🎉 You saved €{cartSavings.toFixed(2)} with the {activeVoucher.discount} voucher!
                 </div>
               )}
 
@@ -953,9 +953,9 @@ export default function Store({ activeVoucher }) {
                 }}
                 onMouseEnter={e => e.currentTarget.style.opacity = '0.9'}
                 onMouseLeave={e => e.currentTarget.style.opacity = '1'}
-                onClick={() => alert(`Pedido confirmado!\nTotal a pagar: €${finalPayableTotal.toFixed(2)}${cartSavings > 0 ? `\nPoupança Voucher: €${cartSavings.toFixed(2)}` : ''}${couponSavings > 0 ? `\nPoupança Cupões: €${couponSavings.toFixed(2)}` : ''}`)}
+                onClick={() => alert(`Order confirmed!\nTotal to pay: €${finalPayableTotal.toFixed(2)}${cartSavings > 0 ? `\nVoucher Savings: €${cartSavings.toFixed(2)}` : ''}${couponSavings > 0 ? `\nCoupon Savings: €${couponSavings.toFixed(2)}` : ''}`)}
               >
-                Finalizar Compra →
+                Checkout →
               </button>
             </div>
           )}

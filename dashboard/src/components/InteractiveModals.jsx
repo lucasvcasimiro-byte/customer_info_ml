@@ -26,8 +26,8 @@ export function CaptchaModal({ onClose }) {
       <div className="modal-card captcha-card animate-in">
         <div className="captcha-header">
           <div className="captcha-shield-icon">🛡️</div>
-          <h2>Verificação de Segurança</h2>
-          <p>Confirme que é um utilizador legítimo antes de aceder ao painel.</p>
+          <h2>Security Verification</h2>
+          <p>Please confirm you are a legitimate user before accessing the dashboard.</p>
         </div>
 
         <div className="captcha-body">
@@ -38,12 +38,12 @@ export function CaptchaModal({ onClose }) {
               onChange={(e) => setNotRobot(e.target.checked)}
             />
             <span className="checkbox-custom" />
-            <span className="label-text">Não sou um Robô (I am not a robot)</span>
+            <span className="label-text">I am not a robot</span>
           </label>
 
           {notRobot && (
             <div className="captcha-subpanel animate-slide-down">
-              <p className="subpanel-title">Verifique as seguintes declarações adicionais:</p>
+              <p className="subpanel-title">Please verify the following additional declarations:</p>
               
               <label className="captcha-row sub-row">
                 <input
@@ -52,7 +52,7 @@ export function CaptchaModal({ onClose }) {
                   onChange={(e) => setAgreeML(e.target.checked)}
                 />
                 <span className="checkbox-custom" />
-                <span className="label-text">Prometo que acho a cadeira de ML2 a melhor de toda a NOVA IMS.</span>
+                <span className="label-text">I promise that I find the Machine Learning II course the best at NOVA IMS.</span>
               </label>
 
               <label className="captcha-row sub-row">
@@ -62,7 +62,7 @@ export function CaptchaModal({ onClose }) {
                   onChange={(e) => setAgreeIvo(e.target.checked)}
                 />
                 <span className="checkbox-custom" />
-                <span className="label-text">Reconheço que o Professor Ivo é um excelente e motivador docente.</span>
+                <span className="label-text">I acknowledge that Professor Ivo is an outstanding and motivating lecturer.</span>
               </label>
 
               <label className="captcha-row sub-row">
@@ -72,7 +72,7 @@ export function CaptchaModal({ onClose }) {
                   onChange={(e) => setAgreeWheel(e.target.checked)}
                 />
                 <span className="checkbox-custom" />
-                <span className="label-text">Tenho consciência que a roleta de descontos me pode dar o cupão lucas5.</span>
+                <span className="label-text">I am aware that the discount wheel can reward me with the 'lucas5' coupon.</span>
               </label>
             </div>
           )}
@@ -84,7 +84,7 @@ export function CaptchaModal({ onClose }) {
             disabled={!canSubmit}
             onClick={onClose}
           >
-            Aceder ao Dashboard
+            Access Dashboard
           </button>
         </div>
       </div>
@@ -104,14 +104,14 @@ export function WheelModal({ onClose }) {
 
   // 8 segments
   const slices = [
-    { text: 'Tenta Novamente 😢', color: '#1e1b4b' },
-    { text: 'Quase... 😭', color: '#111827' },
-    { text: 'lima5? Não! 🍋', color: '#0f172a' },
+    { text: 'Try Again 😢', color: '#1e1b4b' },
+    { text: 'So Close... 😭', color: '#111827' },
+    { text: 'lima5? No! 🍋', color: '#0f172a' },
     { text: 'lucas5 🎉', color: '#7c3aed' }, // WINNER at index 3
-    { text: 'Tenta Novamente 😢', color: '#1e1b4b' },
-    { text: 'lince5? Não! 🐱', color: '#0f172a' },
-    { text: 'Outra vez... 🔄', color: '#111827' },
-    { text: 'Mais perto... 🎯', color: '#0f172a' },
+    { text: 'Try Again 😢', color: '#1e1b4b' },
+    { text: 'lince5? No! 🐱', color: '#0f172a' },
+    { text: 'Try Again... 🔄', color: '#111827' },
+    { text: 'Getting Closer... 🎯', color: '#0f172a' },
   ]
 
   const handleSpin = () => {
@@ -143,10 +143,10 @@ export function WheelModal({ onClose }) {
       setIsSpinning(false)
       const chosenSlice = slices[targetSlice]
       if (targetSlice === 3) {
-        setResult('Parabéns! Ganhaste o cupão de desconto!')
+        setResult('Congratulations! You won the discount coupon!')
         setCouponCode('lucas5')
       } else {
-        setResult(`Não foi desta vez! Calhou em: "${chosenSlice.text}"`)
+        setResult(`Better luck next time! It landed on: "${chosenSlice.text}"`)
       }
     }, 3200)
   }
@@ -154,14 +154,14 @@ export function WheelModal({ onClose }) {
   const copyToClipboard = () => {
     if (couponCode) {
       navigator.clipboard.writeText(couponCode)
-      alert('Cupão copiado para a área de transferência!')
+      alert('Coupon code copied to clipboard!')
     }
   }
 
   const applyToCart = () => {
     if (couponCode) {
       window.dispatchEvent(new CustomEvent('apply-coupon-event', { detail: couponCode }))
-      alert(`Cupão "${couponCode}" aplicado diretamente no carrinho!`)
+      alert(`Coupon "${couponCode}" applied directly to your cart!`)
       onClose()
     }
   }
@@ -172,8 +172,8 @@ export function WheelModal({ onClose }) {
         <button className="modal-close-btn" onClick={onClose}>✕</button>
         
         <div className="wheel-modal-header">
-          <h2>🎰 Roleta da Sorte</h2>
-          <p>Tens 25% de probabilidade de ganhar o cupão <strong>lucas5</strong> (5% desconto acumulável na loja!).</p>
+          <h2>🎰 Wheel of Fortune</h2>
+          <p>You have a 25% chance of winning the coupon code <strong>lucas5</strong> (5% accumulative store discount!).</p>
         </div>
 
         <div className="wheel-container">
@@ -245,7 +245,7 @@ export function WheelModal({ onClose }) {
             onClick={handleSpin}
             disabled={isSpinning}
           >
-            {isSpinning ? 'A girar...' : 'GIRAR ROLETA'}
+            {isSpinning ? 'Spinning...' : 'SPIN WHEEL'}
           </button>
         </div>
 
@@ -253,24 +253,24 @@ export function WheelModal({ onClose }) {
           <div className={`wheel-result-box ${couponCode ? 'win' : 'lose'} animate-in`}>
             {couponCode ? (
               <>
-                <p className="result-title">🎉 Parabéns! Ganhaste!</p>
-                <p className="result-text">Descobriste o cupão especial <strong>{couponCode}</strong>!</p>
+                <p className="result-title">🎉 Congratulations! You won!</p>
+                <p className="result-text">You discovered the special coupon code <strong>{couponCode}</strong>!</p>
                 <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', marginBottom: '0.75rem' }}>
-                  Este código concede 5% de desconto extra acumulável na nossa mercearia.
+                  This code grants an extra 5% accumulative discount on our virtual store.
                 </p>
                 <div style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>
                   <button className="copy-btn" onClick={copyToClipboard}>
-                    📋 Copiar Código
+                    📋 Copy Code
                   </button>
                   <button className="apply-btn" onClick={applyToCart}>
-                    🛒 Aplicar no Carrinho
+                    🛒 Apply to Cart
                   </button>
                 </div>
               </>
             ) : (
               <>
                 <p className="result-title">😢 {result}</p>
-                <p className="result-text">Podes tentar girar a roleta novamente para obter o desconto!</p>
+                <p className="result-text">You can try spinning the wheel again to win the discount!</p>
               </>
             )}
           </div>
@@ -289,7 +289,7 @@ export function SupportModal({ onClose }) {
     {
       id: 1,
       sender: 'agent',
-      text: 'Olá! Sou o assistente virtual do ClusterNova. Como posso ajudar hoje? 😊',
+      text: 'Hello! I am the virtual assistant for ClusterNova. How can I help you today? 😊',
       time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
     }
   ])
@@ -298,40 +298,40 @@ export function SupportModal({ onClose }) {
 
   const faqs = [
     {
-      q: 'Como funciona o clustering no ClusterNova?',
-      a: 'O ClusterNova utiliza o algoritmo de Agrupamento Hierárquico (com ligação de Ward) para agrupar clientes com base em métricas como Frequência e Valor de compras. Isso ajuda a segmentar os clientes em grupos como "Premium Loyalists" ou "At-Risk", permitindo campanhas de marketing direcionadas!'
+      q: 'How does clustering work in ClusterNova?',
+      a: 'ClusterNova utilizes the Hierarchical Clustering algorithm (with Ward linkage) to group customers based on purchase behavior metrics like frequency and total spend. This helps segment customers into distinct behavioral profiles (like "Vegans" or "Loyal Core Spenders"), enabling targeted marketing campaigns.'
     },
     {
-      q: 'Qual o número ideal de clusters (k)?',
-      a: 'Com base na análise do Silhouette Score e da Inércia (método do cotovelo), o valor ideal determinado para este conjunto de dados foi k=7. Esse valor equilibra perfeitamente a coesão interna com a separação dos grupos.'
+      q: 'What is the optimal number of clusters (k)?',
+      a: 'Based on the Silhouette Score and WCSS (elbow method) analyses, the optimal value chosen for this dataset was k=7. This balances internal cohesion (compactness) with clear group boundaries.'
     },
     {
-      q: 'Como foi feito o pré-processamento e limpeza dos dados?',
-      a: 'Limpámos registos com valores nulos ou logicamente inconsistentes nos notebooks de EDA. Identificámos e retirámos clientes institucionais/empresariais que agiam como outliers (valores e volumes de compra massivos), focando a análise nos consumidores finais.'
+      q: 'How was data preprocessing and cleaning handled?',
+      a: 'We cleaned records with null or logically inconsistent variables in our EDA notebooks. We also identified and removed wholesale/business accounts acting as LTV outliers, ensuring the model focuses strictly on end-consumers.'
     },
     {
-      q: 'Porque escolheram o RobustScaler para escalar os dados?',
-      a: 'Como o histórico de compras e valor gasto têm distribuições muito enviesadas e com caudas longas (outliers), o StandardScaler seria distorcido pelas observações extremas. O RobustScaler utiliza a mediana e o intervalo interquartílico (IQR), mitigando a influência de grandes outliers.'
+      q: 'Why did you select RobustScaler to scale features?',
+      a: 'Since purchase histories and lifetime spend have highly skewed distributions with long tails, StandardScaler would be heavily distorted by outliers. RobustScaler scales features using the median and Interquartile Range (IQR), mitigating the impact of large outliers.'
     },
     {
-      q: 'Como funciona o UMAP (Uniform Manifold Approximation and Projection) neste projeto?',
-      a: 'Utilizámos o UMAP para reduzir as 10+ variáveis de comportamento e perfil de compra a apenas 2 coordenadas bidimensionais. Isso permitiu projetar o gráfico de dispersão 2D na galeria, exibindo a topologia real dos dados e a excelente separação dos 7 clusters.'
+      q: 'How does UMAP dimensionality reduction work in this project?',
+      a: 'We utilized UMAP to project our 10+ scaled RFM and demographic dimensions onto a 2D coordinate space. This allowed us to plot the scatter visualization in the gallery, revealing the true topological layout of the segments.'
     },
     {
-      q: 'Como funciona a recomendação por Regras de Associação (Apriori)?',
-      a: 'Corremos o algoritmo Apriori para cada cluster separadamente nos notebooks. Ajustando limiares de suporte e confiança mínimos específicos por grupo (e.g. suporte de 2% para Loyal Core, mas 0.4% para Gamers devido ao tamanho do cluster), extraímos regras fortes como "Airpods -> Iphone" para sugerir itens adicionais no carrinho!'
+      q: 'How do the Apriori Association Rules work?',
+      a: 'We ran the Apriori algorithm separately for each cluster in our basket analysis notebooks. By tuning minimum support and confidence thresholds per segment (e.g. 2% support for Loyal Core, but 0.4% for Gamers), we extracted high-lift associations (such as "Airpods -> Iphone") to drive our cross-selling engine.'
     },
     {
-      q: 'Quem são os criadores deste projeto?',
-      a: 'Este projeto foi desenvolvido por três alunos da Licenciatura em Ciência de Dados da NOVA IMS: Afonso Lince, Lourenço Lima e Lucas Casemiro, combinando modelação estatística com design de interfaces moderno.'
+      q: 'Who are the creators of this project?',
+      a: 'This project was designed and built by three Data Science undergraduate students at NOVA IMS: Afonso Lince, Lourenço Lima, and Lucas Casemiro, merging advanced statistical modeling with modern web design.'
     },
     {
-      q: 'O Professor Ivo vai dar-nos um 20?',
-      a: 'Esperamos que sim! Focámo-nos em ir muito além dos requisitos: implementámos clustering rigoroso, basket analysis com regras dinâmicas, uma loja simulada, cupões escondidos, a roleta da sorte e este chat. Professor Ivo, o 20 está ganho? 😉'
+      q: 'Will Professor Ivo give us a 20/20 grade?',
+      a: 'We certainly hope so! We went far beyond the basic requirements: implementing Hierarchical clustering, segment-decoupled basket analysis, a live simulated store, hidden promo codes, the wheel of fortune, and this interactive support chat. Hopefully, the effort is well rewarded! 😉'
     },
     {
-      q: 'Como funcionam os cupões de desconto?',
-      a: 'Podes encontrar os códigos escondidos pelo site (há um na Overview e outro nas Visualizações). O código da roleta é "lucas5". Cada código dá 5% de desconto acumulável e pode ser aplicado na nossa mercearia virtual!'
+      q: 'How do the discount coupons work?',
+      a: 'You can find special codes hidden across the dashboard (there is one in the Overview and another in the Visualizations). The wheel code is "lucas5". Each coupon code grants an extra 5% discount that can be stacked up to 15% off at checkout!'
     }
   ]
 
@@ -373,7 +373,7 @@ export function SupportModal({ onClose }) {
         <div className="chat-header">
           <div className="chat-avatar">🤖</div>
           <div>
-            <h3>Apoio ao Cliente</h3>
+            <h3>Customer Support</h3>
             <span className="chat-status"><span className="status-dot" /> Online</span>
           </div>
         </div>
@@ -400,7 +400,7 @@ export function SupportModal({ onClose }) {
         </div>
 
         <div className="chat-faq-list">
-          <p className="faq-title">Selecione uma dúvida frequente:</p>
+          <p className="faq-title">Select a frequently asked question:</p>
           <div className="faq-buttons">
             {faqs.map((faq, i) => (
               <button
@@ -428,19 +428,19 @@ export function AboutUsModal({ onClose }) {
     {
       name: 'Lucas Casemiro',
       role: 'ML & Basket Engineer',
-      desc: 'O cérebro das regras de associação. Passou noites a afinar o Apriori para garantir que os clientes vegetarianos não recebessem sugestões de salsichas... a menos que fossem de soja!',
+      desc: 'The brain behind the association rules. Spent nights tuning the Apriori algorithm to ensure vegan/vegetarian customers wouldn\'t get suggested sausages... unless they were soy sausages!',
       color: 'var(--purple)'
     },
     {
       name: 'Lourenço Lima',
       role: 'Data & Analytics Guru',
-      desc: 'O mestre dos gráficos interativos. Projetou as coordenadas do UMAP em gráficos interativos bidimensionais para que qualquer pessoa consiga ver a alma de um Premium Loyalist.',
+      desc: 'The master of interactive plots. Projected the UMAP coordinates onto 2D interactive charts so anyone can visualize the core distribution of our customer segments.',
       color: 'var(--teal)'
     },
     {
       name: 'Afonso Lince',
       role: 'UX & Frontend Architect',
-      desc: 'O designer de interações. Adicionou a roleta, o captcha anti-robô e o chat para provar que a Ciência de Dados e o design andam sempre de mãos dadas.',
+      desc: 'The interaction designer. Added the wheel of fortune, the anti-bot captcha, and the support chat to prove that Data Science and UI/UX design go hand in hand.',
       color: 'var(--amber)'
     }
   ]
@@ -451,8 +451,8 @@ export function AboutUsModal({ onClose }) {
         <button className="modal-close-btn" onClick={onClose}>✕</button>
 
         <div className="about-header">
-          <h2>👥 Sobre Nós</h2>
-          <p>A equipa por trás do ClusterNova — Licenciatura em Ciência de Dados na NOVA IMS.</p>
+          <h2>👥 About Us</h2>
+          <p>The team behind ClusterNova — Bachelor's in Data Science at NOVA IMS.</p>
         </div>
 
         <div className="about-grid">
@@ -471,8 +471,8 @@ export function AboutUsModal({ onClose }) {
         <div className="about-dedication">
           <h4>🏫 Machine Learning II</h4>
           <p>
-            Um agradecimento especial ao <strong>Professor Ivo</strong> pela dedicação, exigência académica e pelo 
-            desafio contínuo que nos impulsionou a elevar este trabalho prático a um patamar profissional de engenharia de software e análise de dados.
+            Special thanks to <strong>Professor Ivo</strong> for his dedication, academic rigor, and the
+            continuous challenge that pushed us to elevate this practical project to a professional standard of software engineering and data analytics.
           </p>
         </div>
       </div>

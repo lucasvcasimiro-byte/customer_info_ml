@@ -36,8 +36,8 @@ const sections = [
   },
   {
     id: 'store',
-    label: 'Loja NOVAIMS Grocery',
-    desc: 'Carrinho de compras com voucher',
+    label: 'NOVAIMS Grocery Store',
+    desc: 'Shopping cart with voucher',
     emoji: '🛒',
     bg: 'rgba(192,57,43,0.15)',
   },
@@ -108,9 +108,9 @@ export default function CartNavigation({ onNavigate, activeSection, onOpenWheel,
 
         {/* Header navigation actions */}
         <div className="header-nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginRight: '0.75rem' }}>
-          <HeaderButton onClick={onOpenWheel} label="Roleta" emoji="🎰" />
-          <HeaderButton onClick={onOpenSupport} label="Apoio" emoji="💬" />
-          <HeaderButton onClick={onOpenAbout} label="Sobre Nós" emoji="👥" />
+          <HeaderButton onClick={onOpenWheel} label="Wheel" emoji="🎰" />
+          <HeaderButton onClick={onOpenSupport} label="Support" emoji="💬" />
+          <HeaderButton onClick={onOpenAbout} label="About Us" emoji="👥" />
         </div>
 
         {/* Cart / Menu button */}

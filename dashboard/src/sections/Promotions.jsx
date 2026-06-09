@@ -182,7 +182,7 @@ export default function Promotions({ onVoucherChange }) {
 
     const printWindow = window.open('', '_blank', 'width=450,height=720');
     if (!printWindow) {
-      alert('Por favor, ative os pop-ups no seu browser para poder imprimir o talão!');
+      alert('Please enable pop-ups in your browser to print the receipt!');
       return;
     }
 
@@ -208,7 +208,7 @@ export default function Promotions({ onVoucherChange }) {
       crossSellHtml = `
         <div class="dashed"></div>
         <div style="font-size: 0.82rem;">
-          <div class="bold" style="margin-bottom: 6px;">SUGESTÕES ADICIONAIS:</div>
+          <div class="bold" style="margin-bottom: 6px;">ADDITIONAL SUGGESTIONS:</div>
           ${rows}
         </div>
       `;
@@ -222,7 +222,7 @@ export default function Promotions({ onVoucherChange }) {
     printWindow.document.write(`
       <html>
         <head>
-          <title>Talão de Supermercado - Cliente ${rec.customerId || id}</title>
+          <title>Supermarket Receipt - Customer ${rec.customerId || id}</title>
           <style>
             @media print {
               body { margin: 0; padding: 0; background: #fff; }
@@ -281,41 +281,41 @@ export default function Promotions({ onVoucherChange }) {
           </style>
         </head>
         <body>
-          <button class="btn-print no-print" onclick="window.print()">🖨️ Confirmar Impressão / Guardar em PDF</button>
+          <button class="btn-print no-print" onclick="window.print()">🖨️ Confirm Print / Save as PDF</button>
           <div class="receipt">
             <div class="center bold" style="font-size: 1.1em; letter-spacing: 1px;">NOVAIMS GROCERY</div>
             <div class="center" style="font-size: 0.82rem; margin-top: 4px; color: #444;">Rua de Campolide, 1070-312 Lisboa</div>
             <div class="center" style="font-size: 0.82rem; color: #444;">NIF: 501234567 | Tel: 213 828 610</div>
             <div class="center" style="margin-top: 5px;">
               <span style="font-size: 0.65rem; border: 1px solid #777; padding: 2px 6px; font-weight: bold; text-transform: uppercase;">
-                ${isRealtimeApiActive ? 'API REAL-TIME (ONLINE)' : 'SIMULAÇÃO (OFFLINE)'}
+                ${isRealtimeApiActive ? 'REAL-TIME API (ONLINE)' : 'SIMULATION (OFFLINE)'}
               </span>
             </div>
             
             <div class="dashed"></div>
             
-            <div class="center bold" style="font-size: 0.88rem; letter-spacing: 0.5px;">VOUCHER DE DESCONTO</div>
+            <div class="center bold" style="font-size: 0.88rem; letter-spacing: 0.5px;">DISCOUNT VOUCHER</div>
             
             <div class="dashed"></div>
             
             <div style="font-size: 0.82rem; line-height: 1.45;">
-              <div class="flex"><span>OPERADOR:</span> <span>Group 31</span></div>
-              <div class="flex"><span>DATA:</span> <span>${new Date().toLocaleString('pt-PT')}</span></div>
-              <div class="flex"><span>CLIENTE ID:</span> <span class="bold">${rec.customerId || id}</span></div>
-              <div class="flex"><span>SEGMENTO:</span> <span>${rec.segment}</span></div>
+              <div class="flex"><span>CASHIER:</span> <span>Group 31</span></div>
+              <div class="flex"><span>DATE:</span> <span>${new Date().toLocaleString('en-GB')}</span></div>
+              <div class="flex"><span>CUSTOMER ID:</span> <span class="bold">${rec.customerId || id}</span></div>
+              <div class="flex"><span>SEGMENT:</span> <span>${rec.segment}</span></div>
             </div>
             
             <div class="dashed"></div>
 
             <div style="font-size: 0.82rem;">
-              <div class="bold" style="margin-bottom: 2px;">CAMPANHA / OFERTA:</div>
+              <div class="bold" style="margin-bottom: 2px;">CAMPAIGN / OFFER:</div>
               <div style="margin-bottom: 6px; font-weight: bold; color: #7c3aed;">${rec.nextBestOffer}</div>
             </div>
 
             <div class="dashed"></div>
             
             <div style="font-size: 0.82rem;">
-              <div class="bold" style="margin-bottom: 6px;">ITENS SUGERIDOS (CROSS-SELLING):</div>
+              <div class="bold" style="margin-bottom: 6px;">SUGGESTED ITEMS (CROSS-SELLING):</div>
               ${itemsHtml}
             </div>
             
@@ -326,12 +326,12 @@ export default function Promotions({ onVoucherChange }) {
             <div style="font-size: 0.82rem; line-height: 1.45;">
               <div class="flex"><span>SUBTOTAL</span> <span>${subtotal.toFixed(2)} EUR</span></div>
               <div class="flex bold" style="color: #b91c1c;">
-                <span>DESCONTO (${rec.discount})</span> 
+                <span>DISCOUNT (${rec.discount})</span> 
                 <span>-${discountVal.toFixed(2)} EUR</span>
               </div>
               <div class="dashed"></div>
               <div class="flex bold" style="font-size: 1.05em;">
-                <span>TOTAL A PAGAR</span> 
+                <span>TOTAL TO PAY</span> 
                 <span>${total.toFixed(2)} EUR</span>
               </div>
             </div>
@@ -339,9 +339,9 @@ export default function Promotions({ onVoucherChange }) {
             <div class="dashed"></div>
             
             <div style="font-size: 0.82rem; line-height: 1.45; color: #333;">
-              <div class="bold" style="color: #000;">INFO SEGMENTAÇÃO:</div>
-              <div>• Afinidade de Compra: ${(rec.propensity * 100).toFixed(0)}%</div>
-              <div>• Algoritmo: ${rec.algorithm || 'Hierarchical (Ward, K=7)'}</div>
+              <div class="bold" style="color: #000;">SEGMENTATION INFO:</div>
+              <div>• Purchase Propensity: ${(rec.propensity * 100).toFixed(0)}%</div>
+              <div>• Algorithm: ${rec.algorithm || 'Hierarchical (Ward, K=7)'}</div>
             </div>
             
             <div class="dashed"></div>
@@ -356,7 +356,7 @@ export default function Promotions({ onVoucherChange }) {
             <div class="dashed"></div>
             
             <div class="center" style="font-size: 0.8em; margin-top: 10px; font-style: italic; color: #444;">
-              Obrigado pela sua preferência!<br>
+              Thank you for shopping with us!<br>
               NOVAIMS Analytics - ML2 2026
             </div>
           </div>
@@ -419,7 +419,7 @@ export default function Promotions({ onVoucherChange }) {
         />
 
         <div className="placeholder-notice">
-          🔌 <strong>Linhagem do Modelo</strong>. Ligado à API local de Inteligência Artificial na porta <code>5000</code>. Se o servidor Flask estiver offline, reverte automaticamente para simulação local. IDs suportados: Qualquer ID de cliente (ex: 1, 42, 198, 222, 1000, 32900).
+          🔌 <strong>Model Lineage</strong>. Connected to the local AI API on port <code>5000</code>. If the Flask server is offline, it automatically reverts to local simulation. Supported IDs: Any customer ID (e.g., 1, 42, 198, 222, 1000, 32900).
         </div>
 
         {/* ── Top row: lift chart + customer lookup ─────────────── */}
@@ -447,7 +447,7 @@ export default function Promotions({ onVoucherChange }) {
                 🔍 Promotion Simulator <span className="badge badge-teal" style={{ fontSize: '0.7rem' }}>Interactive</span>
               </h3>
               <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary)', lineHeight: 1.5 }}>
-                Escreva qualquer ID numérico (0 a 32938) ou ID de teste para calcular dinamicamente o segmento do cliente e sugestões de cross-selling através do modelo de Agrupamento Hierárquico (ligação de Ward).
+                Enter any numeric ID (0 to 32938) or test ID to dynamically compute the customer segment and cross-selling recommendations using the Hierarchical Clustering (Ward linkage) model.
               </p>
             </div>
 
@@ -457,7 +457,7 @@ export default function Promotions({ onVoucherChange }) {
                 id="customer-id-input"
                 className="input"
                 type="text"
-                placeholder="ID Cliente ou ID Fatura (ex: 3032 ou 10011206)"
+                placeholder="Customer ID or Invoice ID (e.g., 3032 or 10011206)"
                 value={customerId}
                 onChange={e => setCustomerId(e.target.value)}
                 onKeyDown={e => e.key === 'Enter' && handleLookup()}
@@ -468,16 +468,16 @@ export default function Promotions({ onVoucherChange }) {
                 onClick={handleLookup}
                 disabled={isSearchingRealtime || !customerId.trim()}
               >
-                {isSearchingRealtime ? 'A processar...' : 'Simular'}
+                {isSearchingRealtime ? 'Processing...' : 'Simulate'}
               </button>
             </div>
 
             {/* Quick-select test IDs */}
             <div style={{ display: 'flex', gap: '0.4rem', alignItems: 'center', flexWrap: 'wrap' }}>
-              <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Pesquisas Rápidas:</span>
+              <span style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>Quick Search:</span>
               {[
-                { label: 'Cliente 3032 (Vegetarian/Flex)', value: '3032' },
-                { label: 'Fatura 10011206 (Cesto 3032)', value: '10011206' },
+                { label: 'Customer 3032 (Vegetarian/Flex)', value: '3032' },
+                { label: 'Invoice 10011206 (Basket 3032)', value: '10011206' },
                 { label: 'C042', value: 'C042' },
                 { label: 'C198', value: 'C198' }
               ].map(item => (
@@ -502,7 +502,7 @@ export default function Promotions({ onVoucherChange }) {
                         throw new Error('404')
                       }
                     } catch (err) {
-                      console.warn('Fallback offline para ID rápido:', item.value)
+                      console.warn('Offline fallback for quick ID:', item.value)
                       const offlineRec = sampleRecommendations[item.value]
                       if (offlineRec && onVoucherChange) onVoucherChange(offlineRec)
                       setRecommendation(offlineRec || { notFound: true })
@@ -600,7 +600,7 @@ export default function Promotions({ onVoucherChange }) {
                         border: isRealtimeApiActive ? '1px solid rgba(16,185,129,0.2)' : '1px solid rgba(245,158,11,0.2)',
                         letterSpacing: '0.5px'
                       }}>
-                        {isRealtimeApiActive ? '● API REAL-TIME (ONLINE)' : '○ SIMULAÇÃO (OFFLINE)'}
+                        {isRealtimeApiActive ? '● REAL-TIME API (ONLINE)' : '○ SIMULATION (OFFLINE)'}
                       </span>
                     </div>
                   </div>
@@ -610,25 +610,25 @@ export default function Promotions({ onVoucherChange }) {
                   {/* Voucher Header Info */}
                   <div style={{ fontSize: '0.72rem', display: 'flex', flexDirection: 'column', gap: '3px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                      <span>OPERADOR:</span>
+                      <span>CASHIER:</span>
                       <span>Group 31</span>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                      <span>DATA:</span>
-                      <span>{new Date().toLocaleString('pt-PT')}</span>
+                      <span>DATE:</span>
+                      <span>{new Date().toLocaleString('en-GB')}</span>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                      <span>CLIENTE:</span>
+                      <span>CUSTOMER:</span>
                       <span style={{ fontWeight: 'bold' }}>{recommendation.customerId || customerId.toUpperCase()}</span>
                     </div>
                     {recommendation.invoiceId && recommendation.invoiceId !== 'N/A' && (
                       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <span>FATURA ID:</span>
+                        <span>INVOICE ID:</span>
                         <span style={{ fontWeight: 'bold' }}>{recommendation.invoiceId}</span>
                       </div>
                     )}
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                      <span>SEGMENTO:</span>
+                      <span>SEGMENT:</span>
                       <span style={{ fontWeight: 'bold' }}>{recommendation.segment}</span>
                     </div>
                   </div>
@@ -637,7 +637,7 @@ export default function Promotions({ onVoucherChange }) {
 
                   {/* Campaign / Offer Details */}
                   <div style={{ fontSize: '0.72rem' }}>
-                    <div style={{ fontWeight: 'bold', marginBottom: '2px' }}>CAMPANHA / OFERTA:</div>
+                    <div style={{ fontWeight: 'bold', marginBottom: '2px' }}>CAMPAIGN / OFFER:</div>
                     <div style={{ fontWeight: 'bold', color: 'var(--purple-light)', marginBottom: '6px' }}>{recommendation.nextBestOffer}</div>
                   </div>
 
@@ -656,7 +656,7 @@ export default function Promotions({ onVoucherChange }) {
                       <>
                         {/* Produtos com desconto */}
                         <div style={{ fontSize: '0.72rem' }}>
-                          <div style={{ fontWeight: 'bold', marginBottom: '6px' }}>PRODUTOS COM DESCONTO ({recommendation.discount}):</div>
+                          <div style={{ fontWeight: 'bold', marginBottom: '6px' }}>PRODUCTS WITH DISCOUNT ({recommendation.discount}):</div>
                           {campaignItems.map(item => {
                             const price = getItemPrice(item);
                             return (
@@ -677,12 +677,12 @@ export default function Promotions({ onVoucherChange }) {
                             <span>{subtotal.toFixed(2)} EUR</span>
                           </div>
                           <div style={{ display: 'flex', justifyContent: 'space-between', color: '#b91c1c', fontWeight: 'bold' }}>
-                            <span>DESCONTO ({recommendation.discount})</span>
+                            <span>DISCOUNT ({recommendation.discount})</span>
                             <span>-{discountVal.toFixed(2)} EUR</span>
                           </div>
                           <div className="receipt-divider" />
                           <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: 'bold', fontSize: '0.88rem' }}>
-                            <span>TOTAL A PAGAR</span>
+                            <span>TOTAL TO PAY</span>
                             <span>{total.toFixed(2)} EUR</span>
                           </div>
                         </div>
@@ -692,11 +692,11 @@ export default function Promotions({ onVoucherChange }) {
                           <>
                             <div className="receipt-divider" />
                             <div style={{ fontSize: '0.72rem' }}>
-                              <div style={{ fontWeight: 'bold', marginBottom: '6px', color: '#555' }}>SUGESTÕES ADICIONAIS:</div>
+                              <div style={{ fontWeight: 'bold', marginBottom: '6px', color: '#555' }}>ADDITIONAL SUGGESTIONS:</div>
                               {crossSell.map(item => (
                                 <div key={item} style={{ display: 'flex', justifyContent: 'space-between', margin: '2px 0', color: '#555' }}>
                                   <span>1x {item}</span>
-                                  <span style={{ fontSize: '0.65rem', color: '#888' }}>ver loja</span>
+                                  <span style={{ fontSize: '0.65rem', color: '#888' }}>view store</span>
                                 </div>
                               ))}
                             </div>
@@ -710,8 +710,8 @@ export default function Promotions({ onVoucherChange }) {
 
                   {/* Segmentation Details */}
                   <div style={{ fontSize: '0.72rem', display: 'flex', flexDirection: 'column', gap: '2px', color: '#333' }}>
-                    <div>• Afinidade de Compra: <strong>{(recommendation.propensity * 100).toFixed(0)}%</strong></div>
-                    <div>• Algoritmo: <strong>{recommendation.algorithm || 'Hierarchical (Ward, K=7) + Apriori'}</strong></div>
+                    <div>• Purchase Propensity: <strong>{(recommendation.propensity * 100).toFixed(0)}%</strong></div>
+                    <div>• Algorithm: <strong>{recommendation.algorithm || 'Hierarchical (Ward, K=7) + Apriori'}</strong></div>
                   </div>
 
                   <div className="receipt-divider" />
@@ -735,7 +735,7 @@ export default function Promotions({ onVoucherChange }) {
                   <div className="receipt-divider" />
 
                   <div style={{ textAlign: 'center', fontSize: '0.7rem', fontStyle: 'italic', color: '#555', marginTop: '4px' }}>
-                    Obrigado pela sua preferência!<br />
+                    Thank you for shopping with us!<br />
                     NOVAIMS Analytics - ML2 2026
                   </div>
                 </div>
@@ -748,14 +748,14 @@ export default function Promotions({ onVoucherChange }) {
                       style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem' }}
                       onClick={() => handlePrint(recommendation, customerId)}
                     >
-                      🖨️ Imprimir / Guardar PDF
+                      🖨️ Print / Save PDF
                     </button>
                     <button
                       className="btn btn-ghost btn-sm"
                       style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem', border: '1px solid var(--border-soft)' }}
                       onClick={() => setShowSendPanel(!showSendPanel)}
                     >
-                      ✉️ {showSendPanel ? 'Fechar Envio' : 'Enviar Cupão'}
+                      ✉️ {showSendPanel ? 'Close Sending' : 'Send Coupon'}
                     </button>
                   </div>
 
@@ -775,7 +775,7 @@ export default function Promotions({ onVoucherChange }) {
                           style={{ flex: 1, height: 'auto', padding: '0.25rem' }}
                           onClick={() => { setSendChannel('sms'); setContactInput(''); }}
                         >
-                          📱 Telemóvel
+                          📱 Mobile
                         </button>
                       </div>
 
@@ -794,7 +794,7 @@ export default function Promotions({ onVoucherChange }) {
                           disabled={isSending || !contactInput.trim()}
                           style={{ height: 'auto', padding: '0 0.8rem', fontSize: '0.78rem' }}
                         >
-                          {isSending ? 'A enviar...' : 'Enviar'}
+                          {isSending ? 'Sending...' : 'Send'}
                         </button>
                       </div>
                     </div>
@@ -805,7 +805,7 @@ export default function Promotions({ onVoucherChange }) {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', background: 'var(--bg-elevated)', padding: '0.75rem', borderRadius: '8px', border: '1px solid var(--border-soft)', animation: 'fadeInUp 0.4s ease' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--teal)', fontSize: '0.78rem', fontWeight: 600 }}>
                         <span>✅</span>
-                        <span>Enviado com sucesso para {contactInput}!</span>
+                        <span>Successfully sent to {contactInput}!</span>
                       </div>
 
                       {/* Chat Bubble Mockup */}
@@ -813,10 +813,10 @@ export default function Promotions({ onVoucherChange }) {
                         <div className="phone-sms-mockup" style={{ marginTop: '0.25rem' }}>
                           <div style={{ fontSize: '0.65rem', color: 'var(--text-muted)', marginBottom: '0.25rem', display: 'flex', justifyContent: 'space-between' }}>
                             <span>💬 SMS NOVAIMS Grocery</span>
-                            <span>Agora mesmo</span>
+                            <span>Just now</span>
                           </div>
                           <div style={{ background: '#1e293b', padding: '0.5rem 0.75rem', borderRadius: '12px 12px 12px 0', fontSize: '0.72rem', color: '#fff', lineHeight: 1.4 }}>
-                            Olá! Como pertences ao segmento <b>{recommendation.segment}</b>, tens <b>{recommendation.discount}</b> de desconto no teu próximo cabaz. Apresenta o código <b>*C-{customerId.toUpperCase()}*</b> na caixa!
+                            Hello! Since you belong to the <b>{recommendation.segment}</b> segment, you have a <b>{recommendation.discount}</b> discount on your next basket. Present the code <b>*C-{customerId.toUpperCase()}*</b> at checkout!
                           </div>
                         </div>
                       )}
@@ -829,14 +829,14 @@ export default function Promotions({ onVoucherChange }) {
                             <div><b>Para:</b> {contactInput}</div>
                           </div>
                           <div style={{ fontSize: '0.7rem', color: '#fff', lineHeight: 1.4, padding: '0.25rem 0' }}>
-                            Olá!<br />Como pertences ao segmento <b>{recommendation.segment}</b>, oferecemos-te <b>{recommendation.discount}</b> nas tuas próximas compras.
+                            Hello!<br />Since you belong to the <b>{recommendation.segment}</b> segment, we offer you <b>{recommendation.discount}</b> off on your next purchases.
                             <br /><br />
-                            <b>Produtos sugeridos:</b><br />
+                            <b>Suggested products:</b><br />
                             {recommendation.items.map(item => (
                               <div key={item}>• {item}</div>
                             ))}
                             <br />
-                            Apresenta o código <b>C-{customerId.toUpperCase()}</b> na caixa.
+                            Present the code <b>C-{customerId.toUpperCase()}</b> at checkout.
                           </div>
                         </div>
                       )}
@@ -846,7 +846,7 @@ export default function Promotions({ onVoucherChange }) {
                         style={{ marginTop: '0.25rem', width: '100%', fontSize: '0.68rem', height: 'auto', padding: '0.1rem' }}
                         onClick={() => { setSendSuccess(false); setContactInput(''); }}
                       >
-                        Enviar Novamente
+                        Send Again
                       </button>
                     </div>
                   )}

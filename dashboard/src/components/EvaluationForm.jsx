@@ -9,7 +9,7 @@ export default function EvaluationForm() {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (rating === 0) {
-      alert('Por favor, selecione uma classificação de 1 a 5 estrelas.')
+      alert('Please select a rating between 1 and 5 stars.')
       return
     }
     // Save to localStorage
@@ -32,12 +32,12 @@ export default function EvaluationForm() {
           {!submitted ? (
             <form onSubmit={handleSubmit}>
               <div style={{ marginBottom: '1.5rem' }}>
-                <span className="badge badge-purple" style={{ marginBottom: '0.5rem', background: 'rgba(124,58,237,0.18)', color: 'var(--purple-light)', padding: '0.2rem 0.65rem', borderRadius: '999px', fontSize: '0.72rem', fontWeight: 700, border: '1px solid rgba(124,58,237,0.4)' }}>⭐ Avaliação</span>
+                <span className="badge badge-purple" style={{ marginBottom: '0.5rem', background: 'rgba(124,58,237,0.18)', color: 'var(--purple-light)', padding: '0.2rem 0.65rem', borderRadius: '999px', fontSize: '0.72rem', fontWeight: 700, border: '1px solid rgba(124,58,237,0.4)' }}>⭐ Evaluation</span>
                 <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-display)', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-                  O que achou do ClusterNova?
+                  What did you think of ClusterNova?
                 </h2>
                 <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
-                  A sua opinião é muito importante para nós! Por favor, classifique o nosso trabalho prático de Machine Learning II.
+                  Your opinion is very important to us! Please rate our Machine Learning II practical project.
                 </p>
               </div>
 
@@ -80,12 +80,12 @@ export default function EvaluationForm() {
                     letterSpacing: '0.05em'
                   }}
                 >
-                  COMENTÁRIOS OU FEEDBACK
+                  COMMENTS OR FEEDBACK
                 </label>
                 <textarea
                   id="eval-comments"
                   rows="4"
-                  placeholder="Deixe aqui o seu feedback, críticas ou sugestões..."
+                  placeholder="Leave your feedback, comments, or suggestions here..."
                   value={comment}
                   onChange={(e) => setComment(e.target.value)}
                   style={{
@@ -120,17 +120,17 @@ export default function EvaluationForm() {
                   cursor: 'pointer',
                 }}
               >
-                Submeter Avaliação
+                Submit Evaluation
               </button>
             </form>
           ) : (
             <div className="animate-in" style={{ padding: '1.5rem 0' }}>
               <div style={{ fontSize: '3rem', color: 'var(--teal)', marginBottom: '1rem' }}>✓</div>
               <h2 style={{ fontSize: '1.75rem', fontFamily: 'var(--font-display)', marginBottom: '0.5rem', color: 'var(--text-primary)' }}>
-                Muito Obrigado!
+                Thank You Very Much!
               </h2>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
-                A sua avaliação de <strong>{rating} estrelas</strong> foi registada com sucesso. Agradecemos o seu feedback!
+                Your rating of <strong>{rating} stars</strong> has been successfully recorded. We appreciate your feedback!
               </p>
               <button
                 type="button"
@@ -146,7 +146,7 @@ export default function EvaluationForm() {
                   cursor: 'pointer',
                 }}
               >
-                Editar Avaliação
+                Edit Evaluation
               </button>
             </div>
           )}

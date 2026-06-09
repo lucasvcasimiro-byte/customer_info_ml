@@ -141,7 +141,7 @@ export default function Visualizations() {
           {/* 2 — Silhouette Score vs k */}
           <InteractivePlot
             title="Silhouette Score vs k"
-            description="Silhouette score measures cluster cohesion and separation (−1 to 1, higher is better). k=7 achieves 0.132, which balances segment separation and model complexity. (Cupão: lince5)"
+            description="Silhouette score measures cluster cohesion and separation (−1 to 1, higher is better). k=7 achieves 0.132, which balances segment separation and model complexity. (Coupon: lince5)"
             data={silTraces}
             layout={{
               xaxis: { title: { text: 'Number of Clusters (k)', font: { color: '#64748b' } }, dtick: 1 },

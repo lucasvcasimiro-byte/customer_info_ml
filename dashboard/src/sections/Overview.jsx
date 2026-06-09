@@ -5,63 +5,13 @@
  *   • Hero headline with animated gradient text
  *   • Tech-stack pills
  *   • KPI metric cards
- *   • Overview donut chart (cluster distribution)
  *   • Written project summary
  */
-import { useMemo } from 'react'
 import KPICard from '../components/common/KPICard'
 import SectionHeader from '../components/common/SectionHeader'
-import InteractivePlot from '../components/common/InteractivePlot'
-import { kpiData, clusters } from '../data/clusterData'
-
-// Colour palette for the donut slices
-const DONUT_COLORS = ['#2dd4bf', '#f43f5e', '#3b82f6', '#f59e0b', '#a78bfa', '#ec4899', '#06b6d4']
+import { kpiData } from '../data/clusterData'
 
 export default function Overview() {
-  // Donut values and pulling configs for ALL customers
-  const totalCustomers = 32571
-  const donutValues = [6636, 11606, 2131, 5662, 1228, 3123, 2185]
-  const donutPull = [0, 0.04, 0, 0, 0, 0, 0]
-
-  // Build Plotly donut chart trace statically
-  const donutTrace = useMemo(() => ({
-    type:      'pie',
-    hole:      0.52,
-    labels:    clusters.map(c => c.name),
-    values:    donutValues,
-    marker:    { colors: DONUT_COLORS, line: { color: '#07091a', width: 3 } },
-    textinfo:  'percent',
-    hovertemplate: '<b>%{label}</b><br>Customers: %{value}<br>Share: %{percent}<extra></extra>',
-    textfont:  { color: '#eef2ff', size: 12 },
-    pull:      donutPull,
-  }), [])
-
-  const donutLayout = useMemo(() => ({
-    showlegend: true,
-    legend: {
-      orientation: 'v',
-      x: 1.05,
-      y: 0.5,
-    },
-    annotations: [{
-      text: `<b>${totalCustomers.toLocaleString()}</b><br>customers`,
-      x: 0.5, y: 0.5,
-      font: { size: 14, color: '#eef2ff', family: 'Space Grotesk' },
-      showarrow: false,
-    }],
-    margin: { l: 20, r: 120, t: 20, b: 20 },
-  }), [])
-
-  // CSV download payload for the donut
-  const donutCsv = useMemo(() => ({
-    headers: ['Cluster', 'Name', 'Count', 'Percentage'],
-    rows:    clusters.map((c, idx) => {
-      const val = donutValues[idx]
-      const pct = ((val / totalCustomers) * 100).toFixed(1)
-      return [c.id, c.name, val, `${pct}%`]
-    }),
-  }), [])
-
   return (
     <section id="overview" className="section">
       <div className="container">
@@ -95,6 +45,22 @@ export default function Overview() {
           </div>
         </div>
 
+        {/* Academic Data Lineage Warning Notice */}
+        <div className="placeholder-notice animate-in" style={{
+          padding: '1.25rem 1.5rem',
+          marginBottom: '2.5rem',
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: '0.75rem',
+          background: 'rgba(245, 158, 11, 0.05)',
+          border: '1px solid rgba(245, 158, 11, 0.2)'
+        }}>
+          <span style={{ fontSize: '1.25rem', marginTop: '-2px' }}>⚠️</span>
+          <div>
+            <strong>Data Lineage Notice:</strong> While customer transaction histories, segment sizes, and association rules represent real metrics computed directly from the dataset, the individual customer demographic cards, Value Scores, and customer service complaint status are synthesized parameters generated to enrich the interactive simulator experience.
+          </div>
+        </div>
+
         {/* ── KPI Cards ──────────────────────────────────────────── */}
         <div className="overview-kpis" style={{ marginBottom: '2rem' }}>
           <div className="grid-4" style={{ gridTemplateColumns: 'repeat(5, 1fr)' }}>
@@ -109,10 +75,10 @@ export default function Overview() {
         <div className="divider" />
 
         {/* ── Overview insight row ───────────────────────────────── */}
-        <div className="overview-insight">
+        <div className="overview-insight" style={{ gridTemplateColumns: '1fr' }}>
 
           {/* Left: written summary */}
-          <div className="insight-text card animate-in delay-1">
+          <div className="insight-text card animate-in delay-1" style={{ width: '100%' }}>
             <SectionHeader
               badge="📋 Executive Summary"
               title="What we "
@@ -129,7 +95,7 @@ export default function Overview() {
             <ul className="insight-list" style={{ marginTop: '1.25rem' }}>
               {[
                 '35.6% of customers are Loyal Core Spenders — the largest segment and primary revenue drivers',
-                '20.4% are Vegans — healthy lifestyle focus, buying vegetables and organic produce (Cupão: lima5)',
+                '20.4% are Vegans — healthy lifestyle focus, buying vegetables and organic produce (Coupon: lima5)',
                 '17.4% are Bargain Hunters — promo-driven — higher complaints & promotion focus',
                 '9.6% are Karens — critical segment with the highest rate of customer complaints and churn risk',
                 '6.7% are Tech Enthusiasts & 3.8% are Gamers — evening shoppers buying electronics and entertainment',
@@ -142,18 +108,6 @@ export default function Overview() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Right: cluster distribution donut */}
-          <div className="animate-in delay-2">
-            <InteractivePlot
-              title="Customer Segment Distribution"
-              description="Share of customers in each Hierarchical cluster (k=7, RobustScaler, Ward linkage). The largest segment is Loyal Core Spenders (35.6%), while the smallest is Gamers (3.8%)."
-              data={[donutTrace]}
-              layout={donutLayout}
-              csvData={donutCsv}
-              height={360}
-            />
           </div>
         </div>
 
